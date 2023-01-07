@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "dpm12345 • All posts by \"等差数列\" tag",
+    "description": "学习记录",
+    "home_page_url": "http://dpm12345.github.io",
+    "items": [
+        {
+            "id": "http://dpm12345.github.io/2021/11/22/leetcode/regular-exercise/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/",
+            "url": "http://dpm12345.github.io/2021/11/22/leetcode/regular-exercise/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/",
+            "title": "等差数列划分",
+            "date_published": "2021-11-22T07:20:40.000Z",
+            "content_html": "<p><span class=\"orange\">题目链接:</span><span class=\"exturl\" data-url=\"aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYXJpdGhtZXRpYy1zbGljZXMv\"> 等差数列划分</span></p>\n<p><span class=\"orange\">题目详情</span></p>\n<p><img data-src=\"/%E7%B4%A0%E6%9D%90/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.png\" alt=\"\" /></p>\n<p><span class=\"blue\">【思想】数学方法 </span></p>\n<p><span class=\"blue\">主要在于明白，数列从长度 3 开始，每增加一个元素，其个数从 2 开始加，一次加 2，3，4...</span></p>\n<p><span class=\"orange\">代码如下</span></p>\n<pre><code class=\"language-c++\">class Solution &#123;\npublic:\n\tint numberOfArithmeticSlices(vector&lt;int&gt;&amp; nums) &#123;\n\t\tif (nums.size()&lt;3)return 0;\n\t\tint count = 1, ans = 0;\n\t\tfor (int i = 1; i&lt;nums.size() - 1; i++)\n\t\t&#123;\n\t\t\tif (nums[i] * 2 == nums[i - 1] + nums[i + 1])\n\t\t\t\tans += count++;\n\t\t\telse count = 1;\n\t\t&#125;\n\t\treturn ans;\n\t&#125;\n&#125;;\n</code></pre>\n",
+            "tags": [
+                "等差数列"
+            ]
+        }
+    ]
+}

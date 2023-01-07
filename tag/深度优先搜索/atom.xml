@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://dpm12345.github.io</id>
+    <title>dpm12345 • Posts by &#34;深度优先搜索&#34; tag</title>
+    <link href="http://dpm12345.github.io" />
+    <updated>2021-12-07T07:54:40.000Z</updated>
+    <category term="git" />
+    <category term="Qt" />
+    <category term="ms17" />
+    <category term="msf" />
+    <category term="CTF" />
+    <category term="sql注入" />
+    <category term="Misc" />
+    <category term="笔记" />
+    <category term="SSRF" />
+    <category term="kali" />
+    <category term="nmap" />
+    <category term="MFC" />
+    <category term="树" />
+    <category term="二叉树" />
+    <category term="数据结构" />
+    <category term="队列" />
+    <category term="ctfshow" />
+    <category term="Web" />
+    <category term="前缀和" />
+    <category term="动态规划" />
+    <category term="滑动窗口" />
+    <category term="数组" />
+    <category term="哈希表" />
+    <category term="链表" />
+    <category term="矩阵" />
+    <category term="递归" />
+    <category term="贪心" />
+    <category term="子序列" />
+    <category term="最长公共子序列" />
+    <category term="最长回文子序列" />
+    <category term="字符串" />
+    <category term="括号" />
+    <category term="vector" />
+    <category term="栈" />
+    <category term="排列组合" />
+    <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
+    <category term="深度优先搜索" />
+    <category term="广度优先搜索" />
+    <entry>
+        <id>http://dpm12345.github.io/2021/12/07/leetcode/regular-exercise/%E8%BE%B9%E7%95%8C%E7%9D%80%E8%89%B2%20%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</id>
+        <title>边界着色 岛屿数量</title>
+        <link rel="alternate" href="http://dpm12345.github.io/2021/12/07/leetcode/regular-exercise/%E8%BE%B9%E7%95%8C%E7%9D%80%E8%89%B2%20%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/"/>
+        <content type="html">&lt;h1 id=&#34;边界着色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#边界着色&#34;&gt;#&lt;/a&gt; 边界着色&lt;/h1&gt;
+&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvY29sb3JpbmctYS1ib3JkZXIv&#34;&gt;边界着色&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;题目详情：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E8%BE%B9%E7%95%8C%E7%9D%80%E8%89%B2.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;思路：与 200. 岛屿数量题相类似，可以使用深度优先搜索或广度优先搜索进行解题。先找出满足连通分量的位置，再判断是否为边界&lt;/p&gt;
+&lt;h2 id=&#34;深度优先搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#深度优先搜索&#34;&gt;#&lt;/a&gt; 深度优先搜索&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;以下为代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
+public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; colorBorder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; grid, int row, int col, int color) {
+        int m = grid.size(), n = grid[0].size();
+        vector&amp;lt;vector&amp;lt;bool&amp;gt;&amp;gt; visited(m, vector&amp;lt;bool&amp;gt;(n, false));
+        vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; borders;
+        int originalColor = grid[row][col];
+        visited[row][col] = true;
+        dfs(grid, row, col, visited, borders, originalColor);
+        for (auto &amp;amp; [x, y] : borders) {
+            grid[x][y] = color;
+        }
+        return grid;
+    }
+
+    void dfs(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; grid, int x, int y, vector&amp;lt;vector&amp;lt;bool&amp;gt;&amp;gt; &amp;amp; visited, vector&amp;lt;pii&amp;gt; &amp;amp; borders, int originalColor) {
+        int m = grid.size(), n = grid[0].size();
+        bool isBorder = false;
+        int direc[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        for (int i = 0; i &amp;lt; 4; i++) {
+            int nx = direc[i][0] + x, ny = direc[i][1] + y;
+            if (!(nx &amp;gt;= 0 &amp;amp;&amp;amp; nx &amp;lt; m &amp;amp;&amp;amp; ny &amp;gt;= 0 &amp;amp;&amp;amp; ny &amp;lt; n &amp;amp;&amp;amp; grid[nx][ny] == originalColor)) {
+                isBorder = true;
+            } else if (!visited[nx][ny]) {
+                visited[nx][ny] = true;
+                dfs(grid, nx, ny, visited, borders, originalColor);
+            }                
+        }
+        if (isBorder) {
+            borders.emplace_back(x, y);
+        }
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;广度优先搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#广度优先搜索&#34;&gt;#&lt;/a&gt; 广度优先搜索&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
+public:
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; colorBorder(vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp; grid, int row, int col, int color) {
+        int m = grid.size(), n = grid[0].size();
+        vector&amp;lt;vector&amp;lt;bool&amp;gt;&amp;gt; visited(m, vector&amp;lt;bool&amp;gt;(n, false));
+        vector&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; borders;
+        int originalColor = grid[row][col];
+        int direc[4][2] = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        queue&amp;lt;pair&amp;lt;int, int&amp;gt;&amp;gt; q;
+        q.emplace(row, col);
+        visited[row][col] = true;
+        while (!q.empty()) {
+            pair&amp;lt;int, int&amp;gt; &amp;amp; node = q.front();
+            q.pop();
+            int x = node.first, y = node.second;
+
+            bool isBorder = false;
+            for (int i = 0; i &amp;lt; 4; i++) {
+                int nx = direc[i][0] + x, ny = direc[i][1] + y;
+                if (!(nx &amp;gt;= 0 &amp;amp;&amp;amp; nx &amp;lt; m &amp;amp;&amp;amp; ny &amp;gt;= 0 &amp;amp;&amp;amp; ny &amp;lt; n &amp;amp;&amp;amp; grid[nx][ny] == originalColor)) {
+                    isBorder = true;
+                } else if (!visited[nx][ny]) {
+                    visited[nx][ny] = true;
+                    q.emplace(nx, ny);
+                }         
+            }
+            if (isBorder) {
+                borders.emplace_back(x, y);
+            }
+        }
+        for (auto &amp;amp; [x, y] : borders) {
+            grid[x][y] = color;
+        }
+        return grid;
+    }
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;岛屿数量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#岛屿数量&#34;&gt;#&lt;/a&gt; 岛屿数量&lt;/h1&gt;
+&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbnVtYmVyLW9mLWlzbGFuZHMv&#34;&gt;岛屿数量&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;题目详情：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;深度优先搜索-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#深度优先搜索-2&#34;&gt;#&lt;/a&gt; 深度优先搜索&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    void dfs(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid,int r,int c)
+        &amp;#123;
+            int m=grid.size(),n=grid[0].size();
+            grid[r][c]=&#39;0&#39;;
+            if(r-1&amp;gt;=0&amp;amp;&amp;amp;grid[r-1][c]==&#39;1&#39;)  dfs(grid,r-1,c);
+            if(r+1&amp;lt;m&amp;amp;&amp;amp;grid[r+1][c]==&#39;1&#39;)  dfs(grid,r+1,c);
+            if(c-1&amp;gt;=0&amp;amp;&amp;amp;grid[r][c-1]==&#39;1&#39;)  dfs(grid,r,c-1);
+            if(c+1&amp;lt;n&amp;amp;&amp;amp;grid[r][c+1]==&#39;1&#39;)  dfs(grid,r,c+1);
+        &amp;#125;
+    int numIslands(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid) &amp;#123;
+        int m=grid.size(),n=grid[0].size();
+        if(m==0)return 0;
+        int ans=0;
+        for(int i=0;i&amp;lt;m;i++)
+        &amp;#123;
+            for(int j=0;j&amp;lt;n;j++)
+            &amp;#123;
+                if(grid[i][j]==&#39;1&#39;)
+                &amp;#123;
+                    ans++;
+                    dfs(grid,i,j);
+                &amp;#125;
+            &amp;#125;
+        &amp;#125;
+        return ans;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;广度优先搜索-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#广度优先搜索-2&#34;&gt;#&lt;/a&gt; 广度优先搜索&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    int numIslands(vector&amp;lt;vector&amp;lt;char&amp;gt;&amp;gt;&amp;amp; grid) &amp;#123;
+        int m=grid.size(),n=grid[0].size();
+        if(m==0)  
+            return 0;
+        int ans=0;
+        for(int i=0;i&amp;lt;m;i++)
+        &amp;#123;
+            for(int j=0;j&amp;lt;n;j++)
+            &amp;#123;
+                if(grid[i][j]==&#39;1&#39;)
+                &amp;#123;
+                    ans++;
+                    grid[i][j]=&#39;0&#39;;
+                    queue&amp;lt;pair&amp;lt;int,int&amp;gt;&amp;gt;s;
+                    s.push(&amp;#123;i,j&amp;#125;);
+                    while(!s.empty())
+                    &amp;#123;
+                        auto [r,c]=s.front();
+                        s.pop();
+                        if(r-1&amp;gt;=0&amp;amp;&amp;amp;grid[r-1][c]==&#39;1&#39;)
+                        &amp;#123;
+                            grid[r-1][c]=&#39;0&#39;;
+                            s.push(&amp;#123;r-1,c&amp;#125;);
+                        &amp;#125;
+                        if(r+1&amp;lt;m&amp;amp;&amp;amp;grid[r+1][c]==&#39;1&#39;)
+                        &amp;#123;
+                            grid[r+1][c]=&#39;0&#39;;
+                            s.push(&amp;#123;r+1,c&amp;#125;);
+                        &amp;#125;
+                        if(c-1&amp;gt;=0&amp;amp;&amp;amp;grid[r][c-1]==&#39;1&#39;)
+                        &amp;#123;    
+                            grid[r][c-1]=&#39;0&#39;;
+                            s.push(&amp;#123;r,c-1&amp;#125;);
+                        &amp;#125;
+                        if(c+1&amp;lt;n&amp;amp;&amp;amp;grid[r][c+1]==&#39;1&#39;)
+                        &amp;#123;
+                            grid[r][c+1]=&#39;0&#39;;
+                            s.push(&amp;#123;r,c+1&amp;#125;);
+                        &amp;#125;
+
+                    &amp;#125;
+                &amp;#125;
+            &amp;#125;
+        &amp;#125;
+        return ans;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="深度优先搜索" />
+        <category term="广度优先搜索" />
+        <updated>2021-12-07T07:54:40.000Z</updated>
+    </entry>
+</feed>

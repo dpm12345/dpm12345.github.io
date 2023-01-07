@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://dpm12345.github.io</id>
+    <title>dpm12345 • Posts by &#34;递归&#34; tag</title>
+    <link href="http://dpm12345.github.io" />
+    <updated>2021-12-24T01:54:40.000Z</updated>
+    <category term="git" />
+    <category term="Qt" />
+    <category term="ms17" />
+    <category term="msf" />
+    <category term="CTF" />
+    <category term="sql注入" />
+    <category term="Misc" />
+    <category term="笔记" />
+    <category term="SSRF" />
+    <category term="kali" />
+    <category term="nmap" />
+    <category term="MFC" />
+    <category term="树" />
+    <category term="二叉树" />
+    <category term="数据结构" />
+    <category term="队列" />
+    <category term="ctfshow" />
+    <category term="Web" />
+    <category term="前缀和" />
+    <category term="动态规划" />
+    <category term="滑动窗口" />
+    <category term="数组" />
+    <category term="哈希表" />
+    <category term="链表" />
+    <category term="矩阵" />
+    <category term="递归" />
+    <category term="贪心" />
+    <category term="子序列" />
+    <category term="最长公共子序列" />
+    <category term="最长回文子序列" />
+    <category term="字符串" />
+    <category term="括号" />
+    <category term="vector" />
+    <category term="栈" />
+    <category term="排列组合" />
+    <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
+    <category term="深度优先搜索" />
+    <category term="广度优先搜索" />
+    <entry>
+        <id>http://dpm12345.github.io/2021/12/24/leetcode/regular-exercise/%E5%85%A8%E6%8E%92%E5%88%97/</id>
+        <title>全排列</title>
+        <link rel="alternate" href="http://dpm12345.github.io/2021/12/24/leetcode/regular-exercise/%E5%85%A8%E6%8E%92%E5%88%97/"/>
+        <content type="html">&lt;h1 id=&#34;无重复数字的全排列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无重复数字的全排列&#34;&gt;#&lt;/a&gt; 无重复数字的全排列&lt;/h1&gt;
+&lt;p&gt;先考虑 2 个数的全排列，很明显就是只有两种，一种两个数字的顺序不改变，另一种改变两个数字的顺序&lt;/p&gt;
+&lt;p&gt;然后再考虑 3 个数的全排列，比如 &lt;code&gt;1，2，3&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;那么总共排列的种类总共为&lt;/p&gt;
+&lt;p&gt;1，2，3&lt;br /&gt;
+1，3，2&lt;br /&gt;
+2，1，3&lt;br /&gt;
+2，3，1&lt;br /&gt;
+3，1，2&lt;br /&gt;
+3，2，1&lt;/p&gt;
+&lt;p&gt;由此不难发现，每一次的排列总个数（不同的数字开头）都可以看作是在前一种的基础上交换两个数的结果&lt;/p&gt;
+&lt;p&gt;例如 &lt;code&gt;1，3，2&lt;/code&gt;  是在 &lt;code&gt;1，2，3&lt;/code&gt;  的基础上交换 2，3 位置后得到的。以此类推，4 个数，5 个数，n 个数也一样。那么在这里可以采用递归方法，与汉诺塔问题相似，我们将 n 个数划分为 1 和 n-1 个数，先交换两部分得到一种情况，然后以此为基础再进行交换，结束此种情况后将数字交换回来进入下一种情况&lt;/p&gt;
+&lt;p&gt;因此我们可以构造 perm 函数，第一个形参为数组，第二个为未交换数，第三个为数组的末尾下标&lt;/p&gt;
+&lt;p&gt;因此核心代码为:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;// 假设这里的递归函数为 perm，数组为 nums，交换的对象为 nums [i] 和 nums [k]
+	for(int i=k;i&amp;lt;=m;i++)        // 这里用于把后面的数进行交换
+	&amp;#123;
+        swap(nums[i],nums[k]);            // 交换，创造新的情况
+	    perm(nums,k+1,m);                 // 进入新的情况，k+1 为之后未交换的情况
+		swap(nums[i],nums[k]);           // 交换回来
+	&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里我们需要考虑原来的情况，也就是说此时不需要交换，所以为了保持代码的一致性，可以一开始使其与自身交换，因此为 &lt;code&gt;swap(nums[i],nums[k])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    void swap(int*p,int*q)
+    &amp;#123;
+        int temp=*p;
+        *p=*q;
+        *q=temp;
+    &amp;#125;
+    void out(vector&amp;lt;int&amp;gt;&amp;amp;nums,vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;&amp;amp;ans,int k,int m)
+    &amp;#123;
+        if(k==m)
+        &amp;#123;
+            ans.push_back(nums);
+        &amp;#125;
+        else
+        &amp;#123;
+            for(int i=k;i&amp;lt;=m;i++)
+            &amp;#123;
+                swap(&amp;amp;nums[i],&amp;amp;nums[k]);
+                out(nums,ans,k+1,m);
+                swap(&amp;amp;nums[i],&amp;amp;nums[k]);
+            &amp;#125;
+        &amp;#125;
+    &amp;#125;
+    vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt; permute(vector&amp;lt;int&amp;gt;&amp;amp; nums) &amp;#123;
+        vector&amp;lt;vector&amp;lt;int&amp;gt;&amp;gt;ans;
+        out(nums,ans,0,nums.size()-1);
+        return ans;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;该问题在 leetcode 也有题目&lt;/p&gt;
+&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcGVybXV0YXRpb25zLw==&#34;&gt;全排列&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;有重复数字的全排列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有重复数字的全排列&#34;&gt;#&lt;/a&gt; 有重复数字的全排列&lt;/h1&gt;
+</content>
+        <category term="递归" />
+        <updated>2021-12-24T01:54:40.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://dpm12345.github.io/2021/12/05/leetcode/regular-exercise/%E5%BF%AB%E9%80%9F%E5%B9%82/</id>
+        <title>快速幂</title>
+        <link rel="alternate" href="http://dpm12345.github.io/2021/12/05/leetcode/regular-exercise/%E5%BF%AB%E9%80%9F%E5%B9%82/"/>
+        <content type="html">&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcG93eC1uLw==&#34;&gt;快速幂&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;题目详情：实现 Pow (x,n)&lt;/p&gt;
+&lt;h1 id=&#34;递归&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#递归&#34;&gt;#&lt;/a&gt; 递归&lt;/h1&gt;
+&lt;p&gt;思路：要实现&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;Pow(x,n)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;P&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02691em;&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，显然不可能用 for 或 while 循环进行一个一个&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 相乘，这样时间相对较长，那么可以做以下简化，若要求&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.664392em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.664392em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，当 n 为奇数时，那么&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.664392em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.664392em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 就等于&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mfrac&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^{\frac{n}{2}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.84708em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.84708em;&#34;&gt;&lt;span style=&#34;top:-3.363em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mopen nulldelimiter sizing reset-size3 size6&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.6915428571428572em;&#34;&gt;&lt;span style=&#34;top:-2.656em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2255000000000003em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line mtight&#34; style=&#34;border-bottom-width:0.049em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.384em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.344em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter sizing reset-size3 size6&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 次方的的平方再乘一个&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;；当 n 为偶数时，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.664392em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.664392em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 等于&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mfrac&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^{\frac{n}{2}}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.84708em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.84708em;&#34;&gt;&lt;span style=&#34;top:-3.363em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mopen nulldelimiter sizing reset-size3 size6&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mfrac&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.6915428571428572em;&#34;&gt;&lt;span style=&#34;top:-2.656em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.2255000000000003em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;frac-line mtight&#34; style=&#34;border-bottom-width:0.049em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;top:-3.384em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:3em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size3 size1 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.344em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mclose nulldelimiter sizing reset-size3 size6&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的平方，以此类推，递归方程就可写出以下为代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    double quickMul(double x, long long N) &amp;#123;
+        if (N == 0) &amp;#123;
+            return 1.0;
+        &amp;#125;
+        double y = quickMul(x, N / 2);
+        return N % 2 == 0 ? y * y : y * y * x;
+    &amp;#125;
+
+    double myPow(double x, int n) &amp;#123;
+        long long N = n;
+        return N &amp;gt;= 0 ? quickMul(x, N) : 1.0 / quickMul(x, -N);
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：代码中递归结束条件为 &lt;code&gt;N==0&lt;/code&gt; ，而不是 &lt;code&gt;N==1&lt;/code&gt; ；原因为考虑一开始 &lt;code&gt;N==0&lt;/code&gt;  的情况&lt;/p&gt;
+&lt;h1 id=&#34;迭代优化&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#迭代优化&#34;&gt;#&lt;/a&gt; 迭代优化&lt;/h1&gt;
+&lt;p&gt;在递归方法中，我们是通过倒序来进行判断什么时候乘 x，什么时候不乘 x 的，而要实现迭代优化，那么必然要正序遍历，所以现在的目的便是要找到怎样正序遍历的方法。&lt;/p&gt;
+&lt;p&gt;我们再仔细想一下第一种确定乘 x 和不乘 x 的方法，是偶数不乘，是奇数则乘 x，倒序遍历，或许这样说还不够明白，那么换一种说法，偶数乘 x 的零次方 (和不乘结果相同), 而奇数乘 x 的 1 次方，倒序排列，换成这样的说法，我们很容易得到，这便是 n 的二进制形式，它的二进制的每一位表示着乘 x 的权，而每次计算时又会平方，那么也就是幂的二进制乘 2，若偶数末尾即零，奇数末尾即 1，如此继续下去，最后得到的值便为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;x^n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.664392em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.664392em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的值，因此这样便可得到迭代优化后的程序&lt;/p&gt;
+&lt;p&gt;代码如下:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    double myPow(double x, int n) &amp;#123;
+        double ans=1;
+        int flag=n;
+        double xc=x;         // 记录每一位如果为 1 应乘的 x 次方
+        while(n!=0)
+        &amp;#123;
+            if(n%2)
+                ans*=xc;
+            xc=xc*xc;               // 每进一位则平方一次 xc
+            n/=2;
+        &amp;#125;
+        return flag&amp;gt;0?ans:1.0/ans;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="递归" />
+        <updated>2021-12-05T02:54:40.000Z</updated>
+    </entry>
+</feed>

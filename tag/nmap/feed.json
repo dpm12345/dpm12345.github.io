@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "dpm12345 • All posts by \"nmap\" tag",
+    "description": "学习记录",
+    "home_page_url": "http://dpm12345.github.io",
+    "items": [
+        {
+            "id": "http://dpm12345.github.io/2022/07/22/CTF/kali_linux%20%E5%B7%A5%E5%85%B7/",
+            "url": "http://dpm12345.github.io/2022/07/22/CTF/kali_linux%20%E5%B7%A5%E5%85%B7/",
+            "title": "MD5常见绕过",
+            "date_published": "2022-07-22T15:10:32.000Z",
+            "content_html": "<h1 id=\"maltego\"><a class=\"anchor\" href=\"#maltego\">#</a> Maltego</h1>\n<h1 id=\"nmap\"><a class=\"anchor\" href=\"#nmap\">#</a> Nmap</h1>\n<h2 id=\"扫描类型\"><a class=\"anchor\" href=\"#扫描类型\">#</a> 扫描类型</h2>\n<ul>\n<li>\n<p>-sT TCP 连接扫描，需要建立三次握手，会在目标主机中记录大量的链接请求和错误信息</p>\n</li>\n<li>\n<p>-sS SYN 扫描，不建立三次握手，很少有系统记入日志，默认使用，需要 root (admin) 权</p>\n</li>\n<li>\n<p>-sP Ping 扫描，默认使用，只有能 Ping 得通才会继续扫描</p>\n</li>\n<li>\n<p>-PO 扫描之前不需要 Ping，用于绕过防火墙禁 Ping 功能</p>\n</li>\n<li>\n<p>-sA 用来穿过防火墙的规则集 (ACK 置位)，扫描端口时效果不好:</p>\n</li>\n<li>\n<p>-sV 探测服务版本信息 (服务指纹)</p>\n</li>\n<li>\n<p>-sU UDP 扫描，扫描主机开启的 UDP 的服务，速度慢，结果不可靠</p>\n</li>\n</ul>\n<h2 id=\"扫描参数\"><a class=\"anchor\" href=\"#扫描参数\">#</a> 扫描参数</h2>\n<ul>\n<li>\n<p>-v 显示扫描过程，推荐使用</p>\n</li>\n<li>\n<p>-p 指定端口号，如 [1-65535],[22, 135, 1 433,3306,] 等格式</p>\n</li>\n<li>\n<p>-O 启动远程操作系统监测，存在误报</p>\n</li>\n<li>\n<p>-A 全面系统监测，使用脚本检测，扫描等，系统指纹)</p>\n</li>\n<li>\n<p>-T4 针对 TCP 端口禁止动态扫描延迟超过 10ms</p>\n</li>\n<li>\n<p>-iL 批量扫描，读取主机列表，如 [-iL /home/ip.txt]</p>\n</li>\n<li>\n<p>-oG 将扫描结果输出到某个文件</p>\n</li>\n<li>\n<p>fping -a-g 192.1 68.157.0192.1 68.157.200 -q &gt;/tmp/alive.txt</p>\n</li>\n<li>\n<p>Nmap -sS -iL /tmp/alive.txt</p>\n</li>\n<li>\n<p>Nmap -p80，443 --script=http-waf-detect <span class=\"exturl\" data-url=\"aHR0cDovL3NhZmVkb2cuY24=\">safedog.cn</span> // 扫描 waf</p>\n</li>\n<li>\n<p>wafw0Of <span class=\"exturl\" data-url=\"aHR0cDovL3NhZmVkb2cuY24=\">safedog.cn</span> // 扫描 waf</p>\n</li>\n</ul>\n<h1 id=\"p0f\"><a class=\"anchor\" href=\"#p0f\">#</a> P0f</h1>\n<p>被动指纹识别工具，通过分析目标主机发出的数据包，对主机上的操作系统进行鉴别，即使目标主机上安装有防火墙设备。</p>\n<p>能识别以下信息:</p>\n<ul>\n<li>操作系统类型</li>\n<li>端口</li>\n<li>系统启动时间</li>\n<li>是否运行于防火墙之后</li>\n<li>是否运行于 NAT 模式</li>\n</ul>\n<p>使用：</p>\n<ul>\n<li>p0f [.. 选项..] [' 过滤规则 ' ]\n<ul>\n<li>-i 指定监听的网络接口</li>\n<li>-r 分析已抓取到的网络数据文件</li>\n<li>-p 将网卡设置为混杂模式</li>\n<li>-L 列出所有可用接口</li>\n<li>-o 将信息写入指定的文件</li>\n</ul>\n</li>\n</ul>\n<h1 id=\"google-hack-google-搜索\"><a class=\"anchor\" href=\"#google-hack-google-搜索\">#</a> Google Hack (Google 搜索)</h1>\n<ul>\n<li>\n<p>默认模糊搜索，会自动进行词语拆分，加引号，会严格搜索被引住的内容，如 (web 渗透测试)</p>\n</li>\n<li>\n<p>通配符，与双引号同时使用， * 表示匹配任意关键字，. 表示匹配任意字符，如 (“web * 渗透测试”)</p>\n</li>\n<li>\n<p>布尔逻辑，默认情况下，多个关键字之间带空格时，表示逻辑与的关系，如果是逻辑或，用 | 来分隔 (可配置括号使用)，如 (web (渗透 | 测试))。</p>\n</li>\n<li>\n<p>逻辑非用 (- 关键字)，如 (“web 测试”- 渗透), intitle 在网页标题中进行搜索，如 ( intitle: “web 渗透”)</p>\n</li>\n<li>\n<p>Intext 在网页或文档正文中进行搜索，如 (intitle: 渗透 intext:(kali|web) )</p>\n</li>\n<li>\n<p>inurl 网页链接中搜索，如: (inurl:phpmyadmin/index.php (intext:username password))</p>\n</li>\n<li>\n<p>filetype , 对搜索的文档类型进行限定，支持的文档有: pdf、 ppt、 doC、xls， 支持的网页文件有: htm、asp、php，如: (web 渗透 filetype:pdf)</p>\n</li>\n<li>\n<p>cache, 想要搜索某个被修改之前的网页，如: cache:aliyun.com</p>\n</li>\n<li>\n<p>related, 搜索某 - - 类相关的网址，如: related:aliyun.com</p>\n</li>\n<li>\n<p>link，搜索所有链接到某一个特定 URL 上的页面，如：(link:freebuf. com -site:freebuf.com)</p>\n</li>\n<li>\n<p>site，将搜索范围限制在某个网站或域名中，如：(web 渗透 site:freebuf.com)</p>\n</li>\n</ul>\n",
+            "tags": [
+                "CTF",
+                "kali",
+                "nmap"
+            ]
+        }
+    ]
+}

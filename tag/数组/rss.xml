@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>dpm12345 • Posts by &#34;数组&#34; tag</title>
+        <link>http://dpm12345.github.io</link>
+        <description>学习记录</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 18 Mar 2022 22:54:40 +0800</pubDate>
+        <lastBuildDate>Fri, 18 Mar 2022 22:54:40 +0800</lastBuildDate>
+        <category>git</category>
+        <category>Qt</category>
+        <category>ms17</category>
+        <category>msf</category>
+        <category>CTF</category>
+        <category>sql注入</category>
+        <category>Misc</category>
+        <category>笔记</category>
+        <category>SSRF</category>
+        <category>kali</category>
+        <category>nmap</category>
+        <category>MFC</category>
+        <category>树</category>
+        <category>二叉树</category>
+        <category>数据结构</category>
+        <category>队列</category>
+        <category>ctfshow</category>
+        <category>Web</category>
+        <category>前缀和</category>
+        <category>动态规划</category>
+        <category>滑动窗口</category>
+        <category>数组</category>
+        <category>哈希表</category>
+        <category>链表</category>
+        <category>矩阵</category>
+        <category>递归</category>
+        <category>贪心</category>
+        <category>子序列</category>
+        <category>最长公共子序列</category>
+        <category>最长回文子序列</category>
+        <category>字符串</category>
+        <category>括号</category>
+        <category>vector</category>
+        <category>栈</category>
+        <category>排列组合</category>
+        <category>双指针（快慢指针）</category>
+        <category>等差数列</category>
+        <category>深度优先搜索</category>
+        <category>广度优先搜索</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+            <title>两数之和</title>
+            <link>http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+            <category>数组</category>
+            <category>哈希表</category>
+            <pubDate>Fri, 18 Mar 2022 22:54:40 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy90d28tc3VtLw==&#34;&gt;两数之和&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;题目详情：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    vector&amp;lt;int&amp;gt; twoSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;
+        unordered_map&amp;lt;int,int&amp;gt;temp;
+        for(int i=0;i&amp;lt;nums.size();i++)
+        &amp;#123;
+            int num = nums[i];
+            if(temp.find(target-num)!=temp.end())
+                return &amp;#123;temp[target-num],i&amp;#125;;
+            else
+                temp.insert(&amp;#123;num,i&amp;#125;);
+        &amp;#125;
+        return &amp;#123;&amp;#125;;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

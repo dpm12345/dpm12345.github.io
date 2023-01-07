@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "dpm12345 • All posts by \"qt\" tag",
+    "description": "学习记录",
+    "home_page_url": "http://dpm12345.github.io",
+    "items": [
+        {
+            "id": "http://dpm12345.github.io/2022/06/21/Qt/",
+            "url": "http://dpm12345.github.io/2022/06/21/Qt/",
+            "title": "Qt",
+            "date_published": "2022-06-21T12:46:09.000Z",
+            "content_html": "<h1 id=\"操作\"><a class=\"anchor\" href=\"#操作\">#</a> 操作</h1>\n<h2 id=\"设置控件根据内容自动调整大小\"><a class=\"anchor\" href=\"#设置控件根据内容自动调整大小\">#</a> 设置控件根据内容自动调整大小</h2>\n<p><code>adjustSize()</code>  方法</p>\n<p>将会根据内容自动调整大小，需将该方法调用放在设置内容之后，否则调整的大小为之前的内容适应大小</p>\n<h2 id=\"设置窗口大小不可改变\"><a class=\"anchor\" href=\"#设置窗口大小不可改变\">#</a> 设置窗口大小不可改变</h2>\n<pre><code class=\"language-c++\">this-&gt;setWindowFlags (Qt::MSWindowsFixedSizeDialogHint); // 最大化没有，但仍能通过右下角改变大小 \n\nthis-&gt;setFixedSize (this-&gt;geometry ().size ()); // 最大化和右下角变化都没有\n</code></pre>\n<h2 id=\"设置字体样式\"><a class=\"anchor\" href=\"#设置字体样式\">#</a> 设置字体样式</h2>\n<p>首先需要创建 QFont 类对象</p>\n<ul>\n<li><code>setFamily(const QString &amp;)</code>  设置字体类型</li>\n<li><code>setPointSize(int)</code>  设置字体大小</li>\n</ul>\n<p>之后调用 <code>setFont(const QFont &amp;)</code>  方法设置字体</p>\n<h2 id=\"设置是否可见\"><a class=\"anchor\" href=\"#设置是否可见\">#</a> 设置是否可见</h2>\n<p><code>setVisible(bool)</code>  true 为可见，false 为不可见</p>\n<p><code>setHidden(bool)</code>  true 为不可见，false 为可见！</p>\n<p>可通过 <code>isVisible()</code> , <code>isHidden()</code>  查询状态</p>\n<h2 id=\"textedit\"><a class=\"anchor\" href=\"#textedit\">#</a> TextEdit</h2>\n<ul>\n<li>\n<p><code>clear()</code>  清空所有内容</p>\n</li>\n<li>\n<p><code>setText(const QString &amp;text)</code>  设置文本编辑框内容，会覆盖原有内容</p>\n</li>\n<li>\n<p><code>setGeometry(int ax, int ay, int w, int h)</code>  设置文本编辑框的位置及大小，依次为 x，y，宽，高，其中 x ()，y (),width (),height (), 获取控件的这四个值</p>\n</li>\n<li>\n<p><code>append(const QString &amp;text)</code>  追加内容，会在文本编辑框中另起一行，添加内容，不会覆盖原有内容</p>\n</li>\n</ul>\n<h2 id=\"当窗口大小放生变化时进行其他控件的大小改变\"><a class=\"anchor\" href=\"#当窗口大小放生变化时进行其他控件的大小改变\">#</a> 当窗口大小放生变化时进行其他控件的大小改变</h2>\n<p>重写继承自 <code>QWidget</code>  的虚函数 <code>virtual void resizeEvent (QResizeEvent *event);</code></p>\n<p>在不设置布局的情况下手动改变大小</p>\n<h1 id=\"报错\"><a class=\"anchor\" href=\"#报错\">#</a> 报错</h1>\n<h2 id=\"qobjectconnect-cannot-queue-arguments-of-type\"><a class=\"anchor\" href=\"#qobjectconnect-cannot-queue-arguments-of-type\">#</a> QObject::connect: Cannot queue arguments of type</h2>\n<h3 id=\"原因\"><a class=\"anchor\" href=\"#原因\">#</a> 原因</h3>\n<p>当一个 signal 被放到队列中（queued）时，它的参数 (arguments) 也会被一起一起放到队列中（queued 起来），这就意味着参数在被传送到 slot 之前需要被拷贝、存储在队列中（queue）中；为了能够在队列中存储这些参数 (argument)，Qt 需要去 construct、destruct、copy 这些对象，而为了让 Qt 知道怎样去做这些事情，参数的类型需要使用 qRegisterMetaType 来注册（如错误提示中的说明）</p>\n<h3 id=\"解决方法\"><a class=\"anchor\" href=\"#解决方法\">#</a> 解决方法</h3>\n<p>在使用该类型的文件中包含头文件 <code>QMetatype</code> ，并且在构造函数中注册</p>\n<p>如，我在 <code>Myclass</code>  类中使用了自定义结构体 <code>info</code> ， <code>QVector</code> ，如果不进行以上操作，会产生以上报错，改正内容为</p>\n<pre><code class=\"language-c++\">#include&lt;QMetatype&gt;\n\nclass Myclass&#123;\n    Myclass();\n    ~Myclass();\n    ···\n    ···\n&#125;\n\nMyclass::Myclass()\n&#123;\n    qRegisterMetaType&lt;QVector&lt;info&gt;&gt;(&quot;QVector&lt;info&gt;&quot;);\n    // 双引号的内容即为使用的内容，即定义类型\n&#125;\n</code></pre>\n<h2 id=\"widgets-cannot-be-moved-to-a-new-thread\"><a class=\"anchor\" href=\"#widgets-cannot-be-moved-to-a-new-thread\">#</a> Widgets cannot be moved to a new thread</h2>\n",
+            "tags": [
+                "Qt"
+            ]
+        }
+    ]
+}

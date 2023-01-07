@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://dpm12345.github.io</id>
+    <title>dpm12345 • Posts by &#34;qt&#34; tag</title>
+    <link href="http://dpm12345.github.io" />
+    <updated>2022-06-21T12:46:09.000Z</updated>
+    <category term="git" />
+    <category term="Qt" />
+    <category term="ms17" />
+    <category term="msf" />
+    <category term="CTF" />
+    <category term="sql注入" />
+    <category term="Misc" />
+    <category term="笔记" />
+    <category term="SSRF" />
+    <category term="kali" />
+    <category term="nmap" />
+    <category term="MFC" />
+    <category term="树" />
+    <category term="二叉树" />
+    <category term="数据结构" />
+    <category term="队列" />
+    <category term="ctfshow" />
+    <category term="Web" />
+    <category term="前缀和" />
+    <category term="动态规划" />
+    <category term="滑动窗口" />
+    <category term="数组" />
+    <category term="哈希表" />
+    <category term="链表" />
+    <category term="矩阵" />
+    <category term="递归" />
+    <category term="贪心" />
+    <category term="子序列" />
+    <category term="最长公共子序列" />
+    <category term="最长回文子序列" />
+    <category term="字符串" />
+    <category term="括号" />
+    <category term="vector" />
+    <category term="栈" />
+    <category term="排列组合" />
+    <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
+    <category term="深度优先搜索" />
+    <category term="广度优先搜索" />
+    <entry>
+        <id>http://dpm12345.github.io/2022/06/21/Qt/</id>
+        <title>Qt</title>
+        <link rel="alternate" href="http://dpm12345.github.io/2022/06/21/Qt/"/>
+        <content type="html">&lt;h1 id=&#34;操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作&#34;&gt;#&lt;/a&gt; 操作&lt;/h1&gt;
+&lt;h2 id=&#34;设置控件根据内容自动调整大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置控件根据内容自动调整大小&#34;&gt;#&lt;/a&gt; 设置控件根据内容自动调整大小&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;adjustSize()&lt;/code&gt;  方法&lt;/p&gt;
+&lt;p&gt;将会根据内容自动调整大小，需将该方法调用放在设置内容之后，否则调整的大小为之前的内容适应大小&lt;/p&gt;
+&lt;h2 id=&#34;设置窗口大小不可改变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置窗口大小不可改变&#34;&gt;#&lt;/a&gt; 设置窗口大小不可改变&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;this-&amp;gt;setWindowFlags (Qt::MSWindowsFixedSizeDialogHint); // 最大化没有，但仍能通过右下角改变大小 
+
+this-&amp;gt;setFixedSize (this-&amp;gt;geometry ().size ()); // 最大化和右下角变化都没有
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;设置字体样式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置字体样式&#34;&gt;#&lt;/a&gt; 设置字体样式&lt;/h2&gt;
+&lt;p&gt;首先需要创建 QFont 类对象&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;setFamily(const QString &amp;amp;)&lt;/code&gt;  设置字体类型&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;setPointSize(int)&lt;/code&gt;  设置字体大小&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;之后调用 &lt;code&gt;setFont(const QFont &amp;amp;)&lt;/code&gt;  方法设置字体&lt;/p&gt;
+&lt;h2 id=&#34;设置是否可见&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设置是否可见&#34;&gt;#&lt;/a&gt; 设置是否可见&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;setVisible(bool)&lt;/code&gt;  true 为可见，false 为不可见&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;setHidden(bool)&lt;/code&gt;  true 为不可见，false 为可见！&lt;/p&gt;
+&lt;p&gt;可通过 &lt;code&gt;isVisible()&lt;/code&gt; , &lt;code&gt;isHidden()&lt;/code&gt;  查询状态&lt;/p&gt;
+&lt;h2 id=&#34;textedit&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#textedit&#34;&gt;#&lt;/a&gt; TextEdit&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;clear()&lt;/code&gt;  清空所有内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;setText(const QString &amp;amp;text)&lt;/code&gt;  设置文本编辑框内容，会覆盖原有内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;setGeometry(int ax, int ay, int w, int h)&lt;/code&gt;  设置文本编辑框的位置及大小，依次为 x，y，宽，高，其中 x ()，y (),width (),height (), 获取控件的这四个值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;append(const QString &amp;amp;text)&lt;/code&gt;  追加内容，会在文本编辑框中另起一行，添加内容，不会覆盖原有内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;当窗口大小放生变化时进行其他控件的大小改变&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#当窗口大小放生变化时进行其他控件的大小改变&#34;&gt;#&lt;/a&gt; 当窗口大小放生变化时进行其他控件的大小改变&lt;/h2&gt;
+&lt;p&gt;重写继承自 &lt;code&gt;QWidget&lt;/code&gt;  的虚函数 &lt;code&gt;virtual void resizeEvent (QResizeEvent *event);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在不设置布局的情况下手动改变大小&lt;/p&gt;
+&lt;h1 id=&#34;报错&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错&#34;&gt;#&lt;/a&gt; 报错&lt;/h1&gt;
+&lt;h2 id=&#34;qobjectconnect-cannot-queue-arguments-of-type&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#qobjectconnect-cannot-queue-arguments-of-type&#34;&gt;#&lt;/a&gt; QObject::connect: Cannot queue arguments of type&lt;/h2&gt;
+&lt;h3 id=&#34;原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原因&#34;&gt;#&lt;/a&gt; 原因&lt;/h3&gt;
+&lt;p&gt;当一个 signal 被放到队列中（queued）时，它的参数 (arguments) 也会被一起一起放到队列中（queued 起来），这就意味着参数在被传送到 slot 之前需要被拷贝、存储在队列中（queue）中；为了能够在队列中存储这些参数 (argument)，Qt 需要去 construct、destruct、copy 这些对象，而为了让 Qt 知道怎样去做这些事情，参数的类型需要使用 qRegisterMetaType 来注册（如错误提示中的说明）&lt;/p&gt;
+&lt;h3 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h3&gt;
+&lt;p&gt;在使用该类型的文件中包含头文件 &lt;code&gt;QMetatype&lt;/code&gt; ，并且在构造函数中注册&lt;/p&gt;
+&lt;p&gt;如，我在 &lt;code&gt;Myclass&lt;/code&gt;  类中使用了自定义结构体 &lt;code&gt;info&lt;/code&gt; ， &lt;code&gt;QVector&lt;/code&gt; ，如果不进行以上操作，会产生以上报错，改正内容为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;QMetatype&amp;gt;
+
+class Myclass&amp;#123;
+    Myclass();
+    ~Myclass();
+    ···
+    ···
+&amp;#125;
+
+Myclass::Myclass()
+&amp;#123;
+    qRegisterMetaType&amp;lt;QVector&amp;lt;info&amp;gt;&amp;gt;(&amp;quot;QVector&amp;lt;info&amp;gt;&amp;quot;);
+    // 双引号的内容即为使用的内容，即定义类型
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;widgets-cannot-be-moved-to-a-new-thread&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#widgets-cannot-be-moved-to-a-new-thread&#34;&gt;#&lt;/a&gt; Widgets cannot be moved to a new thread&lt;/h2&gt;
+</content>
+        <category term="Qt" />
+        <updated>2022-06-21T12:46:09.000Z</updated>
+    </entry>
+</feed>

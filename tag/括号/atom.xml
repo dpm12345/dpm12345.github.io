@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://dpm12345.github.io</id>
+    <title>dpm12345 • Posts by &#34;括号&#34; tag</title>
+    <link href="http://dpm12345.github.io" />
+    <updated>2021-12-26T02:20:40.000Z</updated>
+    <category term="git" />
+    <category term="Qt" />
+    <category term="ms17" />
+    <category term="msf" />
+    <category term="CTF" />
+    <category term="sql注入" />
+    <category term="Misc" />
+    <category term="笔记" />
+    <category term="SSRF" />
+    <category term="kali" />
+    <category term="nmap" />
+    <category term="MFC" />
+    <category term="树" />
+    <category term="二叉树" />
+    <category term="数据结构" />
+    <category term="队列" />
+    <category term="ctfshow" />
+    <category term="Web" />
+    <category term="前缀和" />
+    <category term="动态规划" />
+    <category term="滑动窗口" />
+    <category term="数组" />
+    <category term="哈希表" />
+    <category term="链表" />
+    <category term="矩阵" />
+    <category term="递归" />
+    <category term="贪心" />
+    <category term="子序列" />
+    <category term="最长公共子序列" />
+    <category term="最长回文子序列" />
+    <category term="字符串" />
+    <category term="括号" />
+    <category term="vector" />
+    <category term="栈" />
+    <category term="排列组合" />
+    <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
+    <category term="深度优先搜索" />
+    <category term="广度优先搜索" />
+    <entry>
+        <id>http://dpm12345.github.io/2021/12/26/leetcode/regular-exercise/%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</id>
+        <title>方法总结</title>
+        <link rel="alternate" href="http://dpm12345.github.io/2021/12/26/leetcode/regular-exercise/%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+        <content type="html">&lt;h1 id=&#34;括号问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#括号问题&#34;&gt;#&lt;/a&gt; 括号问题&lt;/h1&gt;
+&lt;h2 id=&#34;是否为有效括号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#是否为有效括号&#34;&gt;#&lt;/a&gt; 是否为有效括号&lt;/h2&gt;
+&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvdmFsaWQtcGFyZW50aGVzZXMv&#34;&gt;有效的括号&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;可采用栈的先入后出特性，一个个匹配&lt;/p&gt;
+&lt;h2 id=&#34;判断一段字符串经过部分修改后是否能够成为有效括号字符串可以修改的位置由-locked-存储&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#判断一段字符串经过部分修改后是否能够成为有效括号字符串可以修改的位置由-locked-存储&#34;&gt;#&lt;/a&gt; 判断一段字符串经过部分修改后是否能够成为有效括号字符串，可以修改的位置由 locked 存储&lt;/h2&gt;
+&lt;p&gt;如 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvdmFsaWQtcGFyZW50aGVzaXMtc3RyaW5nLw==&#34;&gt;有效的括号字符串&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvY2hlY2staWYtYS1wYXJlbnRoZXNlcy1zdHJpbmctY2FuLWJlLXZhbGlkLw==&#34;&gt;判断一个括号字符串是否有效&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;利用平衡值的方法，一个字符串是否为有效括号，那么在某个位置前的右括号之前必然有左括号相匹配，在某个某个位置的左括号之后必然有右括号相匹配&lt;/p&gt;
+&lt;p&gt;以下为几种不同的具体方法&lt;/p&gt;
+&lt;h3 id=&#34;两次遍历正序遍历和逆序遍历&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#两次遍历正序遍历和逆序遍历&#34;&gt;#&lt;/a&gt; 两次遍历，正序遍历和逆序遍历。&lt;/h3&gt;
+&lt;p&gt;正序遍历时，用 count 记录此时未匹配左括号数，其中如果 &lt;code&gt;locked[i]=′0′&lt;/code&gt; ，那么以左括号来记，当匹配到不可变的右括号时， &lt;code&gt;count−−&lt;/code&gt; ，如果 &lt;code&gt;count &amp;lt; 0&lt;/code&gt;  出现了，那么该字符串不是有效的括号字符串&lt;/p&gt;
+&lt;p&gt;逆序遍历时，同正序遍历时的方法，用 count 记录此时未匹配右括号数，其中如果 &lt;code&gt;locked[i]=′0′&lt;/code&gt; ，那么以右括号来记，当匹配到不可变的左括号时， &lt;code&gt;count−−&lt;/code&gt; ，如果 &lt;code&gt;count &amp;lt; 0&lt;/code&gt;  出现了，那么该字符串不是有效的括号字符串&lt;/p&gt;
+&lt;p&gt;以下为参考代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    bool checkValidString(string s) &amp;#123;
+        int count=0;
+        for(int i=0;i&amp;lt;s.size();i++)
+        &amp;#123;
+            if(s[i]==&#39;(&#39;||s[i]==&#39;*&#39;)
+                count++;
+            else
+                count--;
+            if(count&amp;lt;0)
+                return false;
+        &amp;#125;
+        count=0;
+        for(int i=s.size()-1;i&amp;gt;=0;i--)
+        &amp;#123;
+            if(s[i]==&#39;)&#39;||s[i]==&#39;*&#39;)
+                count++;
+            else
+                count--;
+            if(count&amp;lt;0)
+                return false;
+        &amp;#125;
+        return true;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;贪心算法一次遍历用-maxc-记录最大未匹配数minc-记录最小未匹配数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#贪心算法一次遍历用-maxc-记录最大未匹配数minc-记录最小未匹配数&#34;&gt;#&lt;/a&gt; 贪心算法：一次遍历，用 maxc 记录最大未匹配数，minc 记录最小未匹配数&lt;/h3&gt;
+&lt;p&gt;当遇到不可变的右 (左) 括号时 &lt;code&gt;maxc&lt;/code&gt; ，和 &lt;code&gt;minc&lt;/code&gt;  都加一 (减一), 如果在此期间， &lt;code&gt;maxc &amp;lt; 0&lt;/code&gt; ，那么证明有右括号不能被匹配那么这串字符串是无效的&lt;/p&gt;
+&lt;p&gt;当遇到可变的位置时，由于既可以变也可以不变，那么 &lt;code&gt;maxc++&lt;/code&gt; ， &lt;code&gt;minc--&lt;/code&gt; ；其中如果 &lt;code&gt;minc&lt;/code&gt;  减之前如果是 0，那么 &lt;code&gt;minc&lt;/code&gt;  就变为 1，因为会增加 (如果是 &lt;code&gt;*&lt;/code&gt;  可代表左右括号或者空字符，那么只需维护 &lt;code&gt;minc&amp;gt;=0&lt;/code&gt;  即可，因为 &lt;code&gt;*&lt;/code&gt;  有三种状态)&lt;/p&gt;
+&lt;p&gt;如果在遍历过程中， &lt;code&gt;minc &amp;gt; maxc&lt;/code&gt; ，那么证明该串是无效的&lt;/p&gt;
+&lt;p&gt;最后如果该串是有效，那么 &lt;code&gt;minc&lt;/code&gt;  必为 0，所以返回值为 &lt;code&gt;minc == 0&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;代码示例&lt;/p&gt;
+&lt;h4 id=&#34;第一道&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一道&#34;&gt;#&lt;/a&gt; 第一道&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    bool checkValidString(string s) &amp;#123;
+        int minc=0,maxc=0;
+        for(int i=0;i&amp;lt;s.size();i++)
+        &amp;#123;
+            if(s[i]==&#39;(&#39;)
+            &amp;#123;
+                minc++;
+                maxc++;
+            &amp;#125;
+            else if(s[i]==&#39;)&#39;)
+            &amp;#123;
+                minc=minc==0?0:minc-1;
+                maxc--;
+                if(maxc&amp;lt;0)
+                    return false;
+            &amp;#125;
+            else
+            &amp;#123;
+                minc=minc==0?0:minc-1;
+                maxc++;
+            &amp;#125;
+        &amp;#125;
+        return minc==0;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;第二道&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第二道&#34;&gt;#&lt;/a&gt; 第二道&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    bool canBeValid(string s, string locked) &amp;#123;
+        if(s.size()%2==1)  return false;
+        int minc=0,maxc=0;
+        for(int i=0;i&amp;lt;s.size();i++)
+        &amp;#123;
+            if(locked[i]==&#39;1&#39;)
+            &amp;#123;
+                if(s[i]==&#39;(&#39;)
+                &amp;#123;
+                    minc++;
+                    maxc++;
+                &amp;#125;
+                if(s[i]==&#39;)&#39;)
+                &amp;#123;
+                    maxc--;
+                    minc=minc==0?1:minc-1;
+                    if(maxc&amp;lt;0)
+                        return false;
+                &amp;#125;
+            &amp;#125;
+            else
+            &amp;#123;
+                minc=minc==0?1:minc-1;
+                maxc++;
+            &amp;#125;
+            if(minc&amp;gt;maxc)
+                return false;
+        &amp;#125;
+        return minc==0;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+        <category term="贪心" />
+        <category term="括号" />
+        <updated>2021-12-26T02:20:40.000Z</updated>
+    </entry>
+</feed>

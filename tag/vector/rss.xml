@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>dpm12345 • Posts by &#34;vector&#34; tag</title>
+        <link>http://dpm12345.github.io</link>
+        <description>学习记录</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 24 Jan 2022 22:54:40 +0800</pubDate>
+        <lastBuildDate>Mon, 24 Jan 2022 22:54:40 +0800</lastBuildDate>
+        <category>git</category>
+        <category>Qt</category>
+        <category>ms17</category>
+        <category>msf</category>
+        <category>CTF</category>
+        <category>sql注入</category>
+        <category>Misc</category>
+        <category>笔记</category>
+        <category>SSRF</category>
+        <category>kali</category>
+        <category>nmap</category>
+        <category>MFC</category>
+        <category>树</category>
+        <category>二叉树</category>
+        <category>数据结构</category>
+        <category>队列</category>
+        <category>ctfshow</category>
+        <category>Web</category>
+        <category>前缀和</category>
+        <category>动态规划</category>
+        <category>滑动窗口</category>
+        <category>数组</category>
+        <category>哈希表</category>
+        <category>链表</category>
+        <category>矩阵</category>
+        <category>递归</category>
+        <category>贪心</category>
+        <category>子序列</category>
+        <category>最长公共子序列</category>
+        <category>最长回文子序列</category>
+        <category>字符串</category>
+        <category>括号</category>
+        <category>vector</category>
+        <category>栈</category>
+        <category>排列组合</category>
+        <category>双指针（快慢指针）</category>
+        <category>等差数列</category>
+        <category>深度优先搜索</category>
+        <category>广度优先搜索</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.github.io/2022/01/24/leetcode/regular-exercise/%E6%9C%80%E5%B0%8F%E6%A0%88/</guid>
+            <title>最小栈</title>
+            <link>http://dpm12345.github.io/2022/01/24/leetcode/regular-exercise/%E6%9C%80%E5%B0%8F%E6%A0%88/</link>
+            <category>vector</category>
+            <category>栈</category>
+            <pubDate>Mon, 24 Jan 2022 22:54:40 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWluLXN0YWNrLw==&#34;&gt; 最小栈&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;题目详情:&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E6%9C%80%E5%B0%8F%E6%A0%88.png&#34; alt=&#34;最小栈详情&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;要完成题目所要的功能，首先至少需要一个栈存储压入数据&lt;/p&gt;
+&lt;p&gt;而对于该栈的使用方法有所不同&lt;/p&gt;
+&lt;h2 id=&#34;用一个栈存储数据使用-vector-数组存最小值&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用一个栈存储数据使用-vector-数组存最小值&#34;&gt;#&lt;/a&gt; 用一个栈存储数据，使用 vector 数组存最小值&lt;/h2&gt;
+&lt;p&gt;在该方法中，入栈时，用&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;vector&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.61508em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 存储最小值，当栈为空即可直接将要压入栈的值作为最小值，放入数组末尾，而如果栈不为空，那么根据压入值与最小值的比较，将较小值放入&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;vector&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.61508em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 数组末尾，这样做的好处是在&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;pop()&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 操作时，不需判断&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;pop()&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的值是否为最小值，可直接&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;_&lt;/mi&gt;&lt;mi&gt;b&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;pop\_back()&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1.06em;vertical-align:-0.31em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord&#34; style=&#34;margin-right:0.02778em;&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;vector&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.61508em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 数组末尾值&lt;/p&gt;
+&lt;p&gt;代码如下:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class MinStack &amp;#123;
+private:
+    stack&amp;lt;int&amp;gt;a;
+    vector&amp;lt;int&amp;gt;m;
+public:
+    MinStack() &amp;#123;
+
+    &amp;#125;
+    
+    void push(int val) &amp;#123;
+        if(a.empty())
+        &amp;#123;
+            a.push(val);
+            m.push_back(val);
+        &amp;#125;
+        else
+        &amp;#123;
+            a.push(val);
+            if(val&amp;lt;m.back())
+            &amp;#123;
+                m.push_back(val);
+            &amp;#125;
+            else
+            &amp;#123;
+                m.push_back(m.back());
+            &amp;#125;
+        &amp;#125;
+    &amp;#125;
+    
+    void pop() &amp;#123;
+        a.pop();
+        m.pop_back();
+    &amp;#125;
+    
+    int top() &amp;#123;
+        return a.top();
+      
+    &amp;#125;
+    
+    int getMin() &amp;#123;
+       return m.back();
+    &amp;#125;
+&amp;#125;;
+
+/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack* obj = new MinStack();
+ * obj-&amp;gt;push(val);
+ * obj-&amp;gt;pop();
+ * int param_3 = obj-&amp;gt;top();
+ * int param_4 = obj-&amp;gt;getMin();
+ */
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;栈不用于存储数据同时不需要额外空间存储&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#栈不用于存储数据同时不需要额外空间存储&#34;&gt;#&lt;/a&gt; 栈不用于存储数据，同时不需要额外空间存储&lt;/h2&gt;
+&lt;p&gt;在该方法中，栈中存储的数值为压入栈值与当前最小值的差值&lt;/p&gt;
+&lt;p&gt;代码如下:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class MinStack &amp;#123;
+public:
+    stack&amp;lt;long long&amp;gt; st;   // 使用 long long 防止数据溢出
+    long long minv;
+
+    MinStack() &amp;#123;
+        minv = -1;
+    &amp;#125;
+
+    void push(int val) &amp;#123;
+        if (!st.size()) &amp;#123;
+            st.push(0);
+            minv = val;
+        &amp;#125;
+        else &amp;#123;// 这次的值减去已有的最小值
+            long long diff = val - minv;
+            st.push(diff);
+            minv = diff &amp;lt; 0 ? val : minv;
+        &amp;#125;
+    &amp;#125;
+
+    void pop() &amp;#123;
+        if (st.size()) &amp;#123;
+            long long diff = st.top();
+            st.pop();
+            if (diff &amp;lt; 0)
+                minv -= diff;
+        &amp;#125;
+    &amp;#125;
+
+    int top() &amp;#123;
+        long long diff = st.top();
+        if (diff &amp;lt; 0)
+            return minv;
+        else 
+            return minv + diff;
+    &amp;#125;
+    
+    int getMin() &amp;#123;
+        return minv;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
