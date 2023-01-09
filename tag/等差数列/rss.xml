@@ -7,49 +7,49 @@
         <language>zh-CN</language>
         <pubDate>Mon, 22 Nov 2021 15:20:40 +0800</pubDate>
         <lastBuildDate>Mon, 22 Nov 2021 15:20:40 +0800</lastBuildDate>
-        <category>git</category>
         <category>Qt</category>
         <category>ms17</category>
         <category>msf</category>
         <category>CTF</category>
         <category>sql注入</category>
+        <category>git</category>
         <category>Misc</category>
         <category>笔记</category>
         <category>SSRF</category>
         <category>kali</category>
         <category>nmap</category>
         <category>MFC</category>
+        <category>ctfshow</category>
+        <category>Web</category>
         <category>树</category>
         <category>二叉树</category>
         <category>数据结构</category>
         <category>队列</category>
-        <category>ctfshow</category>
-        <category>Web</category>
-        <category>前缀和</category>
         <category>动态规划</category>
+        <category>前缀和</category>
         <category>滑动窗口</category>
         <category>数组</category>
         <category>哈希表</category>
         <category>链表</category>
+        <category>贪心</category>
         <category>矩阵</category>
         <category>递归</category>
-        <category>贪心</category>
         <category>子序列</category>
         <category>最长公共子序列</category>
         <category>最长回文子序列</category>
         <category>字符串</category>
-        <category>括号</category>
         <category>vector</category>
         <category>栈</category>
         <category>排列组合</category>
-        <category>双指针（快慢指针）</category>
         <category>等差数列</category>
+        <category>括号</category>
+        <category>双指针（快慢指针）</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/22/leetcode/regular-exercise/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/80d626cb/</guid>
             <title>等差数列划分</title>
-            <link>http://dpm12345.github.io/2021/11/22/leetcode/regular-exercise/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</link>
+            <link>http://dpm12345.github.io/posts/80d626cb/</link>
             <category>等差数列</category>
             <pubDate>Mon, 22 Nov 2021 15:20:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;orange&#34;&gt;题目链接:&lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYXJpdGhtZXRpYy1zbGljZXMv&#34;&gt; 等差数列划分&lt;/span&gt;&lt;/p&gt;

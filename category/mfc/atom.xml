@@ -4,49 +4,49 @@
     <title>dpm12345 • Posts by &#34;mfc&#34; category</title>
     <link href="http://dpm12345.github.io" />
     <updated>2022-01-08T04:07:26.000Z</updated>
-    <category term="git" />
     <category term="Qt" />
     <category term="ms17" />
     <category term="msf" />
     <category term="CTF" />
     <category term="sql注入" />
+    <category term="git" />
     <category term="Misc" />
     <category term="笔记" />
     <category term="SSRF" />
     <category term="kali" />
     <category term="nmap" />
     <category term="MFC" />
+    <category term="ctfshow" />
+    <category term="Web" />
     <category term="树" />
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="ctfshow" />
-    <category term="Web" />
-    <category term="前缀和" />
     <category term="动态规划" />
+    <category term="前缀和" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
+    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
-    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
-    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="双指针（快慢指针）" />
     <category term="等差数列" />
+    <category term="括号" />
+    <category term="双指针（快慢指针）" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/2022/01/08/MFC/MFC%20%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/</id>
+        <id>http://dpm12345.github.io/posts/c3305e01/</id>
         <title>MFC 相关操作汇总</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/01/08/MFC/MFC%20%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/c3305e01/"/>
         <content type="html">&lt;h2 id=&#34;edit-编辑框文本不覆盖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#edit-编辑框文本不覆盖&#34;&gt;#&lt;/a&gt; edit 编辑框文本不覆盖&lt;/h2&gt;
 &lt;p&gt;edit 框如果使用 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mtext&gt;变量名&lt;/mtext&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;.&lt;/mi&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;W&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;w&lt;/mi&gt;&lt;mi&gt;T&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;W&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;变量名.SetWindowTextW()&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;变&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;量&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;名&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.05764em;&#34;&gt;S&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;W&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02691em;&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.13889em;&#34;&gt;W&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;那么 edit 框内的内容就会被覆盖&lt;/p&gt;

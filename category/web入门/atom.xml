@@ -4,49 +4,49 @@
     <title>dpm12345 • Posts by &#34;web入门&#34; category</title>
     <link href="http://dpm12345.github.io" />
     <updated>2022-10-04T14:16:40.000Z</updated>
-    <category term="git" />
     <category term="Qt" />
     <category term="ms17" />
     <category term="msf" />
     <category term="CTF" />
     <category term="sql注入" />
+    <category term="git" />
     <category term="Misc" />
     <category term="笔记" />
     <category term="SSRF" />
     <category term="kali" />
     <category term="nmap" />
     <category term="MFC" />
+    <category term="ctfshow" />
+    <category term="Web" />
     <category term="树" />
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="ctfshow" />
-    <category term="Web" />
-    <category term="前缀和" />
     <category term="动态规划" />
+    <category term="前缀和" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
+    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
-    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
-    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="双指针（快慢指针）" />
     <category term="等差数列" />
+    <category term="括号" />
+    <category term="双指针（快慢指针）" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+        <id>http://dpm12345.github.io/posts/d3333ead/</id>
         <title>反序列化</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/d3333ead/"/>
         <content type="html">&lt;h1 id=&#34;web-258&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-258&#34;&gt;#&lt;/a&gt; web 258&lt;/h1&gt;
 &lt;p&gt;相比于上一题多了正则匹配： &lt;code&gt;if(!preg_match(&#39;/[oc]:\d+:/i&#39;, $_COOKIE[&#39;user&#39;]))&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;由构造的序列化字符串，只需将 &lt;code&gt;O:&lt;/code&gt;  改为 &lt;code&gt;O:+&lt;/code&gt;  即可&lt;/p&gt;
@@ -194,9 +194,9 @@
         <updated>2022-10-04T14:16:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/SQL%20%E6%B3%A8%E5%85%A5/</id>
+        <id>http://dpm12345.github.io/posts/35cb7ca5/</id>
         <title>SQL 注入</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/SQL%20%E6%B3%A8%E5%85%A5/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/35cb7ca5/"/>
         <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;若对返回值进行过滤&lt;/p&gt;
@@ -288,9 +288,9 @@
         <updated>2022-10-04T14:15:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</id>
+        <id>http://dpm12345.github.io/posts/592e5fba/</id>
         <title>文件上传</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/592e5fba/"/>
         <content type="html">&lt;h1 id=&#34;情况&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#情况&#34;&gt;#&lt;/a&gt; 情况&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -364,9 +364,9 @@
         <updated>2022-10-04T14:14:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/php%20%E7%89%B9%E6%80%A7/</id>
+        <id>http://dpm12345.github.io/posts/98069c85/</id>
         <title>php 特性</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/php%20%E7%89%B9%E6%80%A7/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/98069c85/"/>
         <content type="html">&lt;h1 id=&#34;web-98&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-98&#34;&gt;#&lt;/a&gt; web 98&lt;/h1&gt;
 &lt;p&gt;根据源码，可知，当传入 get 参数时。会将 get 改为 post 参数（后面的 get 会变成 post，即 highlight_file () 的判断 get 参数时，会判断 post 参数下的值)&lt;/p&gt;
 &lt;p&gt;所以说该题的解是，先随便传入一个 get 值，之后通过 post 传入 &lt;code&gt;HTTP_FLAG=flag&lt;/code&gt;&lt;/p&gt;
@@ -641,9 +641,9 @@
         <updated>2022-10-04T14:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</id>
+        <id>http://dpm12345.github.io/posts/31915a1e/</id>
         <title>文件包含</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/31915a1e/"/>
         <content type="html">&lt;h1 id=&#34;web-78&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-78&#34;&gt;#&lt;/a&gt; web 78&lt;/h1&gt;
 &lt;p&gt;php 伪协议&lt;/p&gt;
 &lt;h1 id=&#34;web-79&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-79&#34;&gt;#&lt;/a&gt; web 79&lt;/h1&gt;
@@ -674,9 +674,9 @@
         <updated>2022-10-04T14:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%20%E7%88%86%E7%A0%B4%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</id>
+        <id>http://dpm12345.github.io/posts/b013ba57/</id>
         <title>信息收集 爆破 命令执行</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%20%E7%88%86%E7%A0%B4%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/b013ba57/"/>
         <content type="html">&lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;robots #&lt;/li&gt;

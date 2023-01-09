@@ -4,49 +4,49 @@
     <title>dpm12345 • Posts by &#34;ctf&#34; tag</title>
     <link href="http://dpm12345.github.io" />
     <updated>2022-11-25T15:10:32.000Z</updated>
-    <category term="git" />
     <category term="Qt" />
     <category term="ms17" />
     <category term="msf" />
     <category term="CTF" />
     <category term="sql注入" />
+    <category term="git" />
     <category term="Misc" />
     <category term="笔记" />
     <category term="SSRF" />
     <category term="kali" />
     <category term="nmap" />
     <category term="MFC" />
+    <category term="ctfshow" />
+    <category term="Web" />
     <category term="树" />
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="ctfshow" />
-    <category term="Web" />
-    <category term="前缀和" />
     <category term="动态规划" />
+    <category term="前缀和" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
+    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
-    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
-    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="双指针（快慢指针）" />
     <category term="等差数列" />
+    <category term="括号" />
+    <category term="双指针（快慢指针）" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/2022/11/25/CTF/ctfshow/%E8%8F%9C%E7%8B%97%E6%9D%AF/</id>
+        <id>http://dpm12345.github.io/posts/79d29fb/</id>
         <title>菜狗杯</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/11/25/CTF/ctfshow/%E8%8F%9C%E7%8B%97%E6%9D%AF/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/79d29fb/"/>
         <content type="html">&lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
 &lt;h2 id=&#34;杂项签到&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#杂项签到&#34;&gt;#&lt;/a&gt; 杂项签到&lt;/h2&gt;
 &lt;p&gt;得到 1 张图片。010 打开，直接搜索 &lt;code&gt;ctfshow&lt;/code&gt;  得到 flag&lt;/p&gt;
@@ -134,9 +134,9 @@
         <updated>2022-11-25T15:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/11/15/CTF/Misc/</id>
+        <id>http://dpm12345.github.io/posts/df95b584/</id>
         <title>Misc</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/11/15/CTF/Misc/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/df95b584/"/>
         <content type="html">&lt;h1 id=&#34;文件操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件操作&#34;&gt;#&lt;/a&gt; 文件操作&lt;/h1&gt;
 &lt;h2 id=&#34;文件类型判断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件类型判断&#34;&gt;#&lt;/a&gt; 文件类型判断&lt;/h2&gt;
 &lt;p&gt;Linux 下的 file 命令&lt;/p&gt;
@@ -442,9 +442,9 @@
         <updated>2022-11-15T12:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/11/15/CTF/c1game2022/</id>
+        <id>http://dpm12345.github.io/posts/a9a9d995/</id>
         <title>c1game2022</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/11/15/CTF/c1game2022/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/a9a9d995/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;流离&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流离&#34;&gt;#&lt;/a&gt; 流离&lt;/h2&gt;
 &lt;p&gt;访问 flag.php&lt;/p&gt;
@@ -492,9 +492,9 @@
         <updated>2022-11-15T12:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/10/CTF/ctfshow/Misc%E5%85%A5%E9%97%A8/</id>
+        <id>http://dpm12345.github.io/posts/e58b935e/</id>
         <title>Misc入门</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/10/CTF/ctfshow/Misc%E5%85%A5%E9%97%A8/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/e58b935e/"/>
         <content type="html">&lt;h1 id=&#34;图片篇-基础操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#图片篇-基础操作&#34;&gt;#&lt;/a&gt; 图片篇 (基础操作)&lt;/h1&gt;
 &lt;h2 id=&#34;misc1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc1&#34;&gt;#&lt;/a&gt; misc1&lt;/h2&gt;
 &lt;p&gt;图片就是&lt;/p&gt;
@@ -745,9 +745,9 @@
         <updated>2022-10-10T15:12:29.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%86%85%E9%83%A8%E8%B5%9B/</id>
+        <id>http://dpm12345.github.io/posts/cf9eb9c9/</id>
         <title>内部赛</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%86%85%E9%83%A8%E8%B5%9B/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/cf9eb9c9/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;签到&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#签到&#34;&gt;#&lt;/a&gt; 签到&lt;/h2&gt;
 &lt;p&gt;进入后，发现是一个登录界面，很明显为 sql 注入，访问 www.zip 得到源码 login.php&lt;/p&gt;
@@ -864,9 +864,9 @@ PHP 远程代码执行漏洞复现（CVE-2019-11043）【反弹 shell 成功】&
         <updated>2022-10-04T15:38:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/AK%E8%B5%9B/</id>
+        <id>http://dpm12345.github.io/posts/b63ac8f1/</id>
         <title>AK赛</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/AK%E8%B5%9B/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/b63ac8f1/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;签到_观己&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#签到_观己&#34;&gt;#&lt;/a&gt; 签到_观己&lt;/h2&gt;
 &lt;p&gt;nginx 日志包含&lt;/p&gt;
@@ -904,9 +904,9 @@ PHP 远程代码执行漏洞复现（CVE-2019-11043）【反弹 shell 成功】&
         <updated>2022-10-04T15:25:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF/</id>
+        <id>http://dpm12345.github.io/posts/26d2b0d0/</id>
         <title>36D杯</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/26d2b0d0/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;给你-shell&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#给你-shell&#34;&gt;#&lt;/a&gt; 给你 shell&lt;/h2&gt;
 &lt;p&gt;进入后查看源码，可以发现标签&lt;/p&gt;
@@ -1014,9 +1014,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T15:22:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF%E7%BB%83%E6%89%8B%E8%B5%9B/</id>
+        <id>http://dpm12345.github.io/posts/ba492ba4/</id>
         <title>36D杯练手赛</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF%E7%BB%83%E6%89%8B%E8%B5%9B/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/ba492ba4/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;easy-shell&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#easy-shell&#34;&gt;#&lt;/a&gt; easy shell&lt;/h2&gt;
 &lt;p&gt;进入后查看源码，看到注释 &lt;code&gt;&amp;lt;!--md5($secret.$name)===$pass --&amp;gt;&lt;/code&gt;&lt;/p&gt;
@@ -1037,9 +1037,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T15:20:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%8D%95%E8%BA%AB%E6%9D%AF/</id>
+        <id>http://dpm12345.github.io/posts/f685e8f8/</id>
         <title>单身杯</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%8D%95%E8%BA%AB%E6%9D%AF/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/f685e8f8/"/>
         <content type="html">&lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
 &lt;h2 id=&#34;没大没小的串串&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#没大没小的串串&#34;&gt;#&lt;/a&gt; 没大没小的串串&lt;/h2&gt;
 &lt;p&gt;爆破即可&lt;/p&gt;
@@ -1070,9 +1070,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T15:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+        <id>http://dpm12345.github.io/posts/d3333ead/</id>
         <title>反序列化</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/d3333ead/"/>
         <content type="html">&lt;h1 id=&#34;web-258&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-258&#34;&gt;#&lt;/a&gt; web 258&lt;/h1&gt;
 &lt;p&gt;相比于上一题多了正则匹配： &lt;code&gt;if(!preg_match(&#39;/[oc]:\d+:/i&#39;, $_COOKIE[&#39;user&#39;]))&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;由构造的序列化字符串，只需将 &lt;code&gt;O:&lt;/code&gt;  改为 &lt;code&gt;O:+&lt;/code&gt;  即可&lt;/p&gt;
@@ -1220,9 +1220,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T14:16:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/SQL%20%E6%B3%A8%E5%85%A5/</id>
+        <id>http://dpm12345.github.io/posts/35cb7ca5/</id>
         <title>SQL 注入</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/SQL%20%E6%B3%A8%E5%85%A5/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/35cb7ca5/"/>
         <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;若对返回值进行过滤&lt;/p&gt;
@@ -1314,9 +1314,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T14:15:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</id>
+        <id>http://dpm12345.github.io/posts/592e5fba/</id>
         <title>文件上传</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/592e5fba/"/>
         <content type="html">&lt;h1 id=&#34;情况&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#情况&#34;&gt;#&lt;/a&gt; 情况&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1390,9 +1390,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T14:14:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/php%20%E7%89%B9%E6%80%A7/</id>
+        <id>http://dpm12345.github.io/posts/98069c85/</id>
         <title>php 特性</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/php%20%E7%89%B9%E6%80%A7/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/98069c85/"/>
         <content type="html">&lt;h1 id=&#34;web-98&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-98&#34;&gt;#&lt;/a&gt; web 98&lt;/h1&gt;
 &lt;p&gt;根据源码，可知，当传入 get 参数时。会将 get 改为 post 参数（后面的 get 会变成 post，即 highlight_file () 的判断 get 参数时，会判断 post 参数下的值)&lt;/p&gt;
 &lt;p&gt;所以说该题的解是，先随便传入一个 get 值，之后通过 post 传入 &lt;code&gt;HTTP_FLAG=flag&lt;/code&gt;&lt;/p&gt;
@@ -1667,9 +1667,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T14:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</id>
+        <id>http://dpm12345.github.io/posts/31915a1e/</id>
         <title>文件包含</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/31915a1e/"/>
         <content type="html">&lt;h1 id=&#34;web-78&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-78&#34;&gt;#&lt;/a&gt; web 78&lt;/h1&gt;
 &lt;p&gt;php 伪协议&lt;/p&gt;
 &lt;h1 id=&#34;web-79&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-79&#34;&gt;#&lt;/a&gt; web 79&lt;/h1&gt;
@@ -1700,9 +1700,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T14:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%20%E7%88%86%E7%A0%B4%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</id>
+        <id>http://dpm12345.github.io/posts/b013ba57/</id>
         <title>信息收集 爆破 命令执行</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%20%E7%88%86%E7%A0%B4%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/b013ba57/"/>
         <content type="html">&lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;robots #&lt;/li&gt;
@@ -1813,9 +1813,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T14:11:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web_other/</id>
+        <id>http://dpm12345.github.io/posts/96bab31d/</id>
         <title>Web_other</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web_other/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/96bab31d/"/>
         <content type="html">&lt;h1 id=&#34;web-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-4&#34;&gt;#&lt;/a&gt; web 4&lt;/h1&gt;
 &lt;p&gt;日志文件   蚁剑&lt;/p&gt;
 &lt;h1 id=&#34;web-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-5&#34;&gt;#&lt;/a&gt; web 5&lt;/h1&gt;
@@ -1977,9 +1977,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T03:43:10.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E6%96%B0%E6%98%A5%E6%AC%A2%E4%B9%90%E8%B5%9B_2022/</id>
+        <id>http://dpm12345.github.io/posts/25b29fe5/</id>
         <title>新春欢乐赛_2022</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E6%96%B0%E6%98%A5%E6%AC%A2%E4%B9%90%E8%B5%9B_2022/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/25b29fe5/"/>
         <content type="html">&lt;h1 id=&#34;热身&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#热身&#34;&gt;#&lt;/a&gt; 热身&lt;/h1&gt;
 &lt;p&gt;开局看到源码，但是却没有显示源码的代码。那么只能是被包含进去了，直接 phpinfo 搜 append 可以看到包含的文件，查看之得到 flag&lt;/p&gt;
 &lt;p&gt;涉及到： &lt;code&gt;phpinfo()&lt;/code&gt; , &lt;code&gt;append &lt;/code&gt;&lt;/p&gt;
@@ -2061,9 +2061,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T03:07:26.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0/</id>
+        <id>http://dpm12345.github.io/posts/7c4924dd/</id>
         <title>萌新</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/7c4924dd/"/>
         <content type="html">&lt;p&gt;常见的一些命令执行的语句&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;system()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passthru()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;exec()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;shell_exec()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;popen()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;proc_open()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pcntl_exec()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;各种绕过姿势，总结一下&lt;/p&gt;
 &lt;ol&gt;
@@ -2163,9 +2163,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-04T02:28:52.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0%E8%B5%9B/</id>
+        <id>http://dpm12345.github.io/posts/dd66f6b6/</id>
         <title>萌新赛</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0%E8%B5%9B/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/dd66f6b6/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;给他&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#给他&#34;&gt;#&lt;/a&gt; 给他&lt;/h2&gt;
 &lt;p&gt;源码&lt;/p&gt;
@@ -2217,9 +2217,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-10-03T16:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/09/23/CTF/sqli-labs%E7%BB%83%E4%B9%A0/</id>
+        <id>http://dpm12345.github.io/posts/ca25cf0b/</id>
         <title>sqli-labs练习</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/09/23/CTF/sqli-labs%E7%BB%83%E4%B9%A0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/ca25cf0b/"/>
         <content type="html">&lt;h1 id=&#34;less-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-1&#34;&gt;#&lt;/a&gt; less 1&lt;/h1&gt;
 &lt;p&gt;输入 &lt;code&gt;id&lt;/code&gt;  值，测试为字符型注入 (此处注释符不能用 &lt;code&gt;#&lt;/code&gt; ，可用 &lt;code&gt;--+&lt;/code&gt; )&lt;/p&gt;
 &lt;p&gt;然后使用 &lt;code&gt;order by x&lt;/code&gt; ，确认列数，为 3 列&lt;/p&gt;
@@ -2265,9 +2265,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-09-22T18:48:08.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/09/23/sqli-labs-%E7%BB%83%E4%B9%A0/</id>
+        <id>http://dpm12345.github.io/posts/29fef1ad/</id>
         <title>sqli-labs 练习</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/09/23/sqli-labs-%E7%BB%83%E4%B9%A0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/29fef1ad/"/>
         <content type="html">&lt;h1 id=&#34;less-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-1&#34;&gt;#&lt;/a&gt; less 1&lt;/h1&gt;
 &lt;p&gt;输入 id 值，测试为字符型注入 (此处注释符不能用  &lt;code&gt;#&lt;/code&gt;  ，可用  &lt;code&gt;--+&lt;/code&gt;  )&lt;/p&gt;
 &lt;p&gt;然后使用  &lt;code&gt;order by x&lt;/code&gt; ，确认列数，为  &lt;code&gt;3&lt;/code&gt;  列 然后传入&lt;/p&gt;
@@ -2311,9 +2311,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-09-22T16:07:26.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/09/09/CTF/SSRF/</id>
+        <id>http://dpm12345.github.io/posts/813434ca/</id>
         <title>SSRF</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/09/09/CTF/SSRF/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/813434ca/"/>
         <content type="html">&lt;h1 id=&#34;对于-ip-的绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#对于-ip-的绕过&#34;&gt;#&lt;/a&gt; 对于 IP 的绕过&lt;/h1&gt;
 &lt;h2 id=&#34;绕过姿势&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过姿势&#34;&gt;#&lt;/a&gt; 绕过姿势&lt;/h2&gt;
 &lt;ul&gt;
@@ -2354,9 +2354,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-09-09T12:56:46.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/08/28/CTF/SQL%E6%B3%A8%E5%85%A5/</id>
+        <id>http://dpm12345.github.io/posts/e73517db/</id>
         <title>SQL注入</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/08/28/CTF/SQL%E6%B3%A8%E5%85%A5/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/e73517db/"/>
         <content type="html">&lt;h1 id=&#34;联合查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#联合查询&#34;&gt;#&lt;/a&gt; 联合查询&lt;/h1&gt;
 &lt;h1 id=&#34;报错注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错注入&#34;&gt;#&lt;/a&gt; 报错注入&lt;/h1&gt;
 &lt;h2 id=&#34;updatexml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#updatexml&#34;&gt;#&lt;/a&gt; updatexml&lt;/h2&gt;
@@ -2393,9 +2393,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-08-28T05:01:48.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/07/23/CTF/MD5%E5%B8%B8%E8%A7%81%E7%BB%95%E8%BF%87/</id>
+        <id>http://dpm12345.github.io/posts/558506d6/</id>
         <title>MD5常见绕过</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/07/23/CTF/MD5%E5%B8%B8%E8%A7%81%E7%BB%95%E8%BF%87/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/558506d6/"/>
         <content type="html">&lt;h1 id=&#34;0e-绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0e-绕过&#34;&gt;#&lt;/a&gt; 0e 绕过&lt;/h1&gt;
 &lt;p&gt;在弱类型比较时，可利用 md5 值为 0e 进行绕过&lt;/p&gt;
 &lt;figure class=&#34;highlight php&#34;&gt;&lt;figcaption data-lang=&#34;PHP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;isset&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;b&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;!==&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;b&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;md5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;a&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;md5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$_POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;b&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string double-quoted-string&#34;&gt;&#34;Yes&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string double-quoted-string&#34;&gt;&#34;No&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string double-quoted-string&#34;&gt;&#34;not set&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;常见的 MD5 值为  &lt;code&gt;0e&lt;/code&gt;  开头的有&lt;/p&gt;
@@ -2472,9 +2472,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-07-23T15:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/07/23/CTF/HFUTC1CTF2021/</id>
+        <id>http://dpm12345.github.io/posts/d762243c/</id>
         <title>HFUTC1CTF2021</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/07/23/CTF/HFUTC1CTF2021/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/d762243c/"/>
         <content type="html">&lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
 &lt;h2 id=&#34;warmup&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#warmup&#34;&gt;#&lt;/a&gt; warmup&lt;/h2&gt;
 &lt;h2 id=&#34;version&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#version&#34;&gt;#&lt;/a&gt; version&lt;/h2&gt;
@@ -2529,9 +2529,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-07-23T12:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/07/22/CTF/kali_linux%20%E5%B7%A5%E5%85%B7/</id>
+        <id>http://dpm12345.github.io/posts/558506d6/</id>
         <title>MD5常见绕过</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/07/22/CTF/kali_linux%20%E5%B7%A5%E5%85%B7/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/558506d6/"/>
         <content type="html">&lt;h1 id=&#34;maltego&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#maltego&#34;&gt;#&lt;/a&gt; Maltego&lt;/h1&gt;
 &lt;h1 id=&#34;nmap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nmap&#34;&gt;#&lt;/a&gt; Nmap&lt;/h1&gt;
 &lt;h2 id=&#34;扫描类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#扫描类型&#34;&gt;#&lt;/a&gt; 扫描类型&lt;/h2&gt;
@@ -2659,9 +2659,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-07-22T15:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/07/04/CTF/CTF/</id>
+        <id>http://dpm12345.github.io/posts/ccf5967e/</id>
         <title>CTF</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/07/04/CTF/CTF/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/ccf5967e/"/>
         <content type="html">&lt;h4 id=&#34;常见的网站源码备份文件后缀&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的网站源码备份文件后缀&#34;&gt;#&lt;/a&gt; 常见的网站源码备份文件后缀&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;tar&lt;/li&gt;
@@ -2869,9 +2869,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
         <updated>2022-07-04T12:10:32.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/04/08/CTF/Bugku%20CTF/</id>
+        <id>http://dpm12345.github.io/posts/7c4ba2c4/</id>
         <title>Bugku CTF</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/04/08/CTF/Bugku%20CTF/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/7c4ba2c4/"/>
         <content type="html">&lt;h1 id=&#34;签到&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#签到&#34;&gt;#&lt;/a&gt; 签到&lt;/h1&gt;
 &lt;p&gt;关注公众号即可获得&lt;/p&gt;
 &lt;h1 id=&#34;simple_ssti_1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#simple_ssti_1&#34;&gt;#&lt;/a&gt; Simple_SSTI_1&lt;/h1&gt;

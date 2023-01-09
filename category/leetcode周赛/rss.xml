@@ -7,49 +7,119 @@
         <language>zh-CN</language>
         <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
         <lastBuildDate>Tue, 28 Dec 2021 23:20:34 +0800</lastBuildDate>
-        <category>git</category>
         <category>Qt</category>
         <category>ms17</category>
         <category>msf</category>
         <category>CTF</category>
         <category>sql注入</category>
+        <category>git</category>
         <category>Misc</category>
         <category>笔记</category>
         <category>SSRF</category>
         <category>kali</category>
         <category>nmap</category>
         <category>MFC</category>
+        <category>ctfshow</category>
+        <category>Web</category>
         <category>树</category>
         <category>二叉树</category>
         <category>数据结构</category>
         <category>队列</category>
-        <category>ctfshow</category>
-        <category>Web</category>
-        <category>前缀和</category>
         <category>动态规划</category>
+        <category>前缀和</category>
         <category>滑动窗口</category>
         <category>数组</category>
         <category>哈希表</category>
         <category>链表</category>
+        <category>贪心</category>
         <category>矩阵</category>
         <category>递归</category>
-        <category>贪心</category>
         <category>子序列</category>
         <category>最长公共子序列</category>
         <category>最长回文子序列</category>
         <category>字符串</category>
-        <category>括号</category>
         <category>vector</category>
         <category>栈</category>
         <category>排列组合</category>
-        <category>双指针（快慢指针）</category>
         <category>等差数列</category>
+        <category>括号</category>
+        <category>双指针（快慢指针）</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%2068%20%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/80d31d12/</guid>
+            <title>leetcode 第 273 场周赛</title>
+            <link>http://dpm12345.github.io/posts/80d31d12/</link>
+            <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC273%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;leetcode第273场周赛_战绩&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;总结:&lt;/p&gt;
+&lt;p&gt;此次周赛，成绩差，只做出来了两题，并且第一题还提交错误一次。总的来说题目看得不够清楚，对题目的 推导还比较欠缺&lt;/p&gt;
+&lt;p&gt;总结到此，下面是题目解析&lt;/p&gt;
+&lt;h1 id=&#34;反转两次的数字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反转两次的数字&#34;&gt;#&lt;/a&gt; 反转两次的数字&lt;/h1&gt;
+&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYS1udW1iZXItYWZ0ZXItYS1kb3VibGUtcmV2ZXJzYWwv&#34;&gt; 反转两次的数字&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;这道题比较简单，可以直接暴力进行两次数字反转得到答案&lt;/p&gt;
+&lt;p&gt;但仔细想想会发现，如果一个数字反转两次后是元素，那么原数字末尾必不为 0 (0 除外) ，因为如果存在 0 时 在进行反转后 0 会被删去，数字总位数减少，从而再次进行反转得到的数字必然不会是原来的数字&lt;/p&gt;
+&lt;p&gt;以下为代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    bool isSameAfterReversals(int num) &amp;#123;
+        return num==0||num%10!=0;
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;执行所有后缀指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行所有后缀指令&#34;&gt;#&lt;/a&gt; 执行所有后缀指令&lt;/h1&gt;
+&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXhlY3V0aW9uLW9mLWFsbC1zdWZmaXgtaW5zdHJ1Y3Rpb25zLXN0YXlpbmctaW4tYS1ncmlkLw==&#34;&gt; 执行所有后缀指令&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;按照题目要求模拟即可，注意什么时候是行，什么时候是列即可&lt;/p&gt;
+&lt;p&gt;代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+public:
+    vector&amp;lt;int&amp;gt; executeInstructions(int n, vector&amp;lt;int&amp;gt;&amp;amp; startPos, string s) &amp;#123;
+        vector&amp;lt;int&amp;gt;ans(s.size());
+        for(int i=0;i&amp;lt;s.size();i++)
+        &amp;#123;
+            int j=0,num=0;
+            vector&amp;lt;int&amp;gt;cur=startPos;
+            for(j=i;j&amp;lt;s.size();j++)
+            &amp;#123;
+                if(s[j]==&#39;L&#39;&amp;amp;&amp;amp;cur[1]&amp;gt;0)
+                &amp;#123;
+                    cur[1]--;
+                    num++;
+                &amp;#125;
+                else if(s[j]==&#39;R&#39;&amp;amp;&amp;amp;cur[1]&amp;lt;n-1)
+                &amp;#123;
+                    cur[1]++;
+                    num++;
+                &amp;#125;
+                else if(s[j]==&#39;U&#39;&amp;amp;&amp;amp;cur[0]&amp;gt;0)
+                &amp;#123;
+                    cur[0]--;
+                    num++;
+                &amp;#125;   
+                else if(s[j]==&#39;D&#39;&amp;amp;&amp;amp;cur[0]&amp;lt;n-1)
+                &amp;#123;
+                    cur[0]++;
+                    num++;
+                &amp;#125;
+                else
+                    break;
+            &amp;#125;
+            ans[i]=num;
+            
+        &amp;#125;
+        return ans;
+        
+    &amp;#125;
+&amp;#125;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;相同元素的间隔之和&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相同元素的间隔之和&#34;&gt;#&lt;/a&gt; 相同元素的间隔之和&lt;/h1&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/274338ea/</guid>
             <title>leetcode 第 68 场双周赛</title>
-            <link>http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%2068%20%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/274338ea/</link>
             <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC68%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -256,79 +326,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%20273%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</guid>
-            <title>leetcode 第 273 场周赛</title>
-            <link>http://dpm12345.github.io/2021/12/28/leetcode/week-competition/leetcode%20%E7%AC%AC%20273%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</link>
-            <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC273%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;leetcode第273场周赛_战绩&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;总结:&lt;/p&gt;
-&lt;p&gt;此次周赛，成绩差，只做出来了两题，并且第一题还提交错误一次。总的来说题目看得不够清楚，对题目的 推导还比较欠缺&lt;/p&gt;
-&lt;p&gt;总结到此，下面是题目解析&lt;/p&gt;
-&lt;h1 id=&#34;反转两次的数字&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反转两次的数字&#34;&gt;#&lt;/a&gt; 反转两次的数字&lt;/h1&gt;
-&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYS1udW1iZXItYWZ0ZXItYS1kb3VibGUtcmV2ZXJzYWwv&#34;&gt; 反转两次的数字&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;这道题比较简单，可以直接暴力进行两次数字反转得到答案&lt;/p&gt;
-&lt;p&gt;但仔细想想会发现，如果一个数字反转两次后是元素，那么原数字末尾必不为 0 (0 除外) ，因为如果存在 0 时 在进行反转后 0 会被删去，数字总位数减少，从而再次进行反转得到的数字必然不会是原来的数字&lt;/p&gt;
-&lt;p&gt;以下为代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
-public:
-    bool isSameAfterReversals(int num) &amp;#123;
-        return num==0||num%10!=0;
-    &amp;#125;
-&amp;#125;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;执行所有后缀指令&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#执行所有后缀指令&#34;&gt;#&lt;/a&gt; 执行所有后缀指令&lt;/h1&gt;
-&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvZXhlY3V0aW9uLW9mLWFsbC1zdWZmaXgtaW5zdHJ1Y3Rpb25zLXN0YXlpbmctaW4tYS1ncmlkLw==&#34;&gt; 执行所有后缀指令&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;按照题目要求模拟即可，注意什么时候是行，什么时候是列即可&lt;/p&gt;
-&lt;p&gt;代码如下&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
-public:
-    vector&amp;lt;int&amp;gt; executeInstructions(int n, vector&amp;lt;int&amp;gt;&amp;amp; startPos, string s) &amp;#123;
-        vector&amp;lt;int&amp;gt;ans(s.size());
-        for(int i=0;i&amp;lt;s.size();i++)
-        &amp;#123;
-            int j=0,num=0;
-            vector&amp;lt;int&amp;gt;cur=startPos;
-            for(j=i;j&amp;lt;s.size();j++)
-            &amp;#123;
-                if(s[j]==&#39;L&#39;&amp;amp;&amp;amp;cur[1]&amp;gt;0)
-                &amp;#123;
-                    cur[1]--;
-                    num++;
-                &amp;#125;
-                else if(s[j]==&#39;R&#39;&amp;amp;&amp;amp;cur[1]&amp;lt;n-1)
-                &amp;#123;
-                    cur[1]++;
-                    num++;
-                &amp;#125;
-                else if(s[j]==&#39;U&#39;&amp;amp;&amp;amp;cur[0]&amp;gt;0)
-                &amp;#123;
-                    cur[0]--;
-                    num++;
-                &amp;#125;   
-                else if(s[j]==&#39;D&#39;&amp;amp;&amp;amp;cur[0]&amp;lt;n-1)
-                &amp;#123;
-                    cur[0]++;
-                    num++;
-                &amp;#125;
-                else
-                    break;
-            &amp;#125;
-            ans[i]=num;
-            
-        &amp;#125;
-        return ans;
-        
-    &amp;#125;
-&amp;#125;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;相同元素的间隔之和&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#相同元素的间隔之和&#34;&gt;#&lt;/a&gt; 相同元素的间隔之和&lt;/h1&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/19/leetcode/week-competition/leetcode%20%E7%AC%AC%20272%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/415dc2d2/</guid>
             <title>leetcode 第 272 场周赛</title>
-            <link>http://dpm12345.github.io/2021/12/19/leetcode/week-competition/leetcode%20%E7%AC%AC%20272%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/415dc2d2/</link>
             <pubDate>Sun, 19 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC272%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -562,9 +562,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/2021/12/12/leetcode/week-competition/leetcode%20%E7%AC%AC%20271%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</guid>
+            <guid isPermalink="true">http://dpm12345.github.io/posts/d8bfa4d3/</guid>
             <title>leetcode 第 271 场周赛</title>
-            <link>http://dpm12345.github.io/2021/12/12/leetcode/week-competition/leetcode%20%E7%AC%AC%20271%20%E5%9C%BA%E5%91%A8%E8%B5%9B/</link>
+            <link>http://dpm12345.github.io/posts/d8bfa4d3/</link>
             <pubDate>Sun, 12 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;写在前面：这次是自己报名的第一场周赛，但最后忘记了有这一回事了，所以要记得给自己设个闹钟，提醒自己&lt;/p&gt;
 &lt;p&gt;弥补：虽然错过了，但题目不能不做&lt;/p&gt;
