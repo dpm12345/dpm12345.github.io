@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>dpm12345 • Posts by &#34;递归&#34; tag</title>
-        <link>http://dpm12345.github.io</link>
+        <link>http://dpm12345.cn</link>
         <description>学习记录</description>
         <language>zh-CN</language>
         <pubDate>Fri, 24 Dec 2021 09:54:40 +0800</pubDate>
@@ -47,9 +47,9 @@
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/12ad1f11/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/12ad1f11/</guid>
             <title>全排列</title>
-            <link>http://dpm12345.github.io/posts/12ad1f11/</link>
+            <link>http://dpm12345.cn/posts/12ad1f11/</link>
             <category>递归</category>
             <pubDate>Fri, 24 Dec 2021 09:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;无重复数字的全排列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无重复数字的全排列&#34;&gt;#&lt;/a&gt; 无重复数字的全排列&lt;/h1&gt;
@@ -113,9 +113,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/20c47d09/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/20c47d09/</guid>
             <title>快速幂</title>
-            <link>http://dpm12345.github.io/posts/20c47d09/</link>
+            <link>http://dpm12345.cn/posts/20c47d09/</link>
             <category>递归</category>
             <pubDate>Sun, 05 Dec 2021 10:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcG93eC1uLw==&#34;&gt;快速幂&lt;/span&gt;&lt;/p&gt;

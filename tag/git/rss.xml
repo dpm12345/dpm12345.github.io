@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>dpm12345 • Posts by &#34;git&#34; tag</title>
-        <link>http://dpm12345.github.io</link>
+        <link>http://dpm12345.cn</link>
         <description>学习记录</description>
         <language>zh-CN</language>
         <pubDate>Sat, 23 Jul 2022 03:28:35 +0800</pubDate>
@@ -47,9 +47,9 @@
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/e28ceec1/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/e28ceec1/</guid>
             <title>git学习</title>
-            <link>http://dpm12345.github.io/posts/e28ceec1/</link>
+            <link>http://dpm12345.cn/posts/e28ceec1/</link>
             <category>git</category>
             <pubDate>Sat, 23 Jul 2022 03:28:35 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Git 为分布式版本控制工具&lt;/p&gt;

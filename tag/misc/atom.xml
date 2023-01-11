@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://dpm12345.github.io</id>
+    <id>http://dpm12345.cn</id>
     <title>dpm12345 • Posts by &#34;misc&#34; tag</title>
-    <link href="http://dpm12345.github.io" />
+    <link href="http://dpm12345.cn" />
     <updated>2022-11-15T12:10:32.000Z</updated>
     <category term="Qt" />
     <category term="ms17" />
@@ -44,9 +44,9 @@
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/posts/df95b584/</id>
+        <id>http://dpm12345.cn/posts/df95b584/</id>
         <title>Misc</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/df95b584/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/df95b584/"/>
         <content type="html">&lt;h1 id=&#34;文件操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件操作&#34;&gt;#&lt;/a&gt; 文件操作&lt;/h1&gt;
 &lt;h2 id=&#34;文件类型判断&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件类型判断&#34;&gt;#&lt;/a&gt; 文件类型判断&lt;/h2&gt;
 &lt;p&gt;Linux 下的 file 命令&lt;/p&gt;

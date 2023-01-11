@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://dpm12345.github.io</id>
+    <id>http://dpm12345.cn</id>
     <title>dpm12345 • Posts by &#34;web&#34; tag</title>
-    <link href="http://dpm12345.github.io" />
+    <link href="http://dpm12345.cn" />
     <updated>2022-10-04T03:43:10.000Z</updated>
     <category term="Qt" />
     <category term="ms17" />
@@ -44,9 +44,9 @@
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/posts/96bab31d/</id>
+        <id>http://dpm12345.cn/posts/96bab31d/</id>
         <title>Web_other</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/96bab31d/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/96bab31d/"/>
         <content type="html">&lt;h1 id=&#34;web-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-4&#34;&gt;#&lt;/a&gt; web 4&lt;/h1&gt;
 &lt;p&gt;日志文件   蚁剑&lt;/p&gt;
 &lt;h1 id=&#34;web-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-5&#34;&gt;#&lt;/a&gt; web 5&lt;/h1&gt;
@@ -208,9 +208,9 @@
         <updated>2022-10-04T03:43:10.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/25b29fe5/</id>
+        <id>http://dpm12345.cn/posts/25b29fe5/</id>
         <title>新春欢乐赛_2022</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/25b29fe5/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/25b29fe5/"/>
         <content type="html">&lt;h1 id=&#34;热身&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#热身&#34;&gt;#&lt;/a&gt; 热身&lt;/h1&gt;
 &lt;p&gt;开局看到源码，但是却没有显示源码的代码。那么只能是被包含进去了，直接 phpinfo 搜 append 可以看到包含的文件，查看之得到 flag&lt;/p&gt;
 &lt;p&gt;涉及到： &lt;code&gt;phpinfo()&lt;/code&gt; , &lt;code&gt;append &lt;/code&gt;&lt;/p&gt;
@@ -292,9 +292,9 @@
         <updated>2022-10-04T03:07:26.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/7c4924dd/</id>
+        <id>http://dpm12345.cn/posts/7c4924dd/</id>
         <title>萌新</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/7c4924dd/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/7c4924dd/"/>
         <content type="html">&lt;p&gt;常见的一些命令执行的语句&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;system()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passthru()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;exec()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;shell_exec()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;popen()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;proc_open()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pcntl_exec()&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;各种绕过姿势，总结一下&lt;/p&gt;
 &lt;ol&gt;

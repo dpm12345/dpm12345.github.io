@@ -2,11 +2,11 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "dpm12345 • All posts by \"字符串\" tag",
     "description": "学习记录",
-    "home_page_url": "http://dpm12345.github.io",
+    "home_page_url": "http://dpm12345.cn",
     "items": [
         {
-            "id": "http://dpm12345.github.io/posts/d10e2ef2/",
-            "url": "http://dpm12345.github.io/posts/d10e2ef2/",
+            "id": "http://dpm12345.cn/posts/d10e2ef2/",
+            "url": "http://dpm12345.cn/posts/d10e2ef2/",
             "title": "无重复字符的最长字串",
             "date_published": "2022-03-18T12:54:40.000Z",
             "content_html": "<p>题目链接：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9sb25nZXN0LXN1YnN0cmluZy13aXRob3V0LXJlcGVhdGluZy1jaGFyYWN0ZXJzLw==\">无重复字符的最长字串</span></p>\n<p>题目详情：</p>\n<p><img data-src=\"/%E7%B4%A0%E6%9D%90/%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%97%E4%B8%B2_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg\" alt=\"\" /></p>\n<pre><code class=\"language-c++\">class Solution &#123;\npublic:\n    int lengthOfLongestSubstring(string s) &#123;\n        if(s.size()==0)\n            return 0;\n        int ans = 1;\n        int left = 0;\n        unordered_set&lt;char&gt;temp;\n        for(int i=0;i&lt;s.size();i++)         // 遍历每个元素\n        &#123;\n            while(temp.find(s[i])!=temp.end())          // 如果出现过了，由于求的是子串，故以此为开头的字符必不成立，故删去开头\n            &#123;\n                temp.erase(s[left]);\n                left++;\n            &#125;\n            temp.insert(s[i]);                         // 找到没有出现过的字符，加入\n            ans = max(ans,i-left+1);\n        &#125;\n        return ans;\n    &#125;\n&#125;;\n</code></pre>\n",
@@ -17,8 +17,8 @@
             ]
         },
         {
-            "id": "http://dpm12345.github.io/posts/6ba8ad80/",
-            "url": "http://dpm12345.github.io/posts/6ba8ad80/",
+            "id": "http://dpm12345.cn/posts/6ba8ad80/",
+            "url": "http://dpm12345.cn/posts/6ba8ad80/",
             "title": "整数拆分",
             "date_published": "2021-11-21T07:54:40.000Z",
             "content_html": "<p><span class=\"orange\">题目链接:</span><span class=\"exturl\" data-url=\"aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvaW50ZWdlci1icmVhay8=\"> 整数拆分</span></p>\n<p><span class=\"orange\">题目详情</span></p>\n<p><img data-src=\"/%E7%B4%A0%E6%9D%90/%E6%95%B4%E6%95%B0%E6%8B%86%E5%88%86_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.png\" alt=\"整数拆分_1\" /></p>\n<p><span class=\"blue\">数学方法可以证明乘积最大时，因子最终都可以分解为若干个 3 和若干个 2，且 3 的个数尽可能多</span></p>\n<pre><code class=\"language-c++\">class Solution &#123;\npublic:\n\tint integerBreak(int n) &#123;\n\t\tif (n == 2)return 1;\n\t\tif (n == 3)return 2;\n\t\tint num_3 = n / 3, num_2 = (n % 3) / 2;\n\t\tif (n % 3 == 1)\n\t\t&#123;\n\t\t\tnum_3--;\n\t\t\tnum_2 += 2;\n\t\t&#125;\n\t\treturn pow(3, num_3)*pow(2, num_2);\n\t&#125;\n&#125;;\n</code></pre>\n",

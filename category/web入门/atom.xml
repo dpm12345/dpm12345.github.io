@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://dpm12345.github.io</id>
+    <id>http://dpm12345.cn</id>
     <title>dpm12345 • Posts by &#34;web入门&#34; category</title>
-    <link href="http://dpm12345.github.io" />
+    <link href="http://dpm12345.cn" />
     <updated>2022-10-04T14:16:40.000Z</updated>
     <category term="Qt" />
     <category term="ms17" />
@@ -44,9 +44,9 @@
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/posts/d3333ead/</id>
+        <id>http://dpm12345.cn/posts/d3333ead/</id>
         <title>反序列化</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/d3333ead/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/d3333ead/"/>
         <content type="html">&lt;h1 id=&#34;web-258&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-258&#34;&gt;#&lt;/a&gt; web 258&lt;/h1&gt;
 &lt;p&gt;相比于上一题多了正则匹配： &lt;code&gt;if(!preg_match(&#39;/[oc]:\d+:/i&#39;, $_COOKIE[&#39;user&#39;]))&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;由构造的序列化字符串，只需将 &lt;code&gt;O:&lt;/code&gt;  改为 &lt;code&gt;O:+&lt;/code&gt;  即可&lt;/p&gt;
@@ -194,9 +194,9 @@
         <updated>2022-10-04T14:16:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/35cb7ca5/</id>
+        <id>http://dpm12345.cn/posts/35cb7ca5/</id>
         <title>SQL 注入</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/35cb7ca5/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/35cb7ca5/"/>
         <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;若对返回值进行过滤&lt;/p&gt;
@@ -288,9 +288,9 @@
         <updated>2022-10-04T14:15:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/592e5fba/</id>
+        <id>http://dpm12345.cn/posts/592e5fba/</id>
         <title>文件上传</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/592e5fba/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/592e5fba/"/>
         <content type="html">&lt;h1 id=&#34;情况&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#情况&#34;&gt;#&lt;/a&gt; 情况&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -364,9 +364,9 @@
         <updated>2022-10-04T14:14:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/98069c85/</id>
+        <id>http://dpm12345.cn/posts/98069c85/</id>
         <title>php 特性</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/98069c85/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/98069c85/"/>
         <content type="html">&lt;h1 id=&#34;web-98&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-98&#34;&gt;#&lt;/a&gt; web 98&lt;/h1&gt;
 &lt;p&gt;根据源码，可知，当传入 get 参数时。会将 get 改为 post 参数（后面的 get 会变成 post，即 highlight_file () 的判断 get 参数时，会判断 post 参数下的值)&lt;/p&gt;
 &lt;p&gt;所以说该题的解是，先随便传入一个 get 值，之后通过 post 传入 &lt;code&gt;HTTP_FLAG=flag&lt;/code&gt;&lt;/p&gt;
@@ -641,9 +641,9 @@
         <updated>2022-10-04T14:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/31915a1e/</id>
+        <id>http://dpm12345.cn/posts/31915a1e/</id>
         <title>文件包含</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/31915a1e/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/31915a1e/"/>
         <content type="html">&lt;h1 id=&#34;web-78&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-78&#34;&gt;#&lt;/a&gt; web 78&lt;/h1&gt;
 &lt;p&gt;php 伪协议&lt;/p&gt;
 &lt;h1 id=&#34;web-79&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-79&#34;&gt;#&lt;/a&gt; web 79&lt;/h1&gt;
@@ -674,9 +674,9 @@
         <updated>2022-10-04T14:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/b013ba57/</id>
+        <id>http://dpm12345.cn/posts/b013ba57/</id>
         <title>信息收集 爆破 命令执行</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/b013ba57/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/b013ba57/"/>
         <content type="html">&lt;h1 id=&#34;信息收集&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#信息收集&#34;&gt;#&lt;/a&gt; 信息收集&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;robots #&lt;/li&gt;

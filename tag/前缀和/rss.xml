@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>dpm12345 • Posts by &#34;前缀和&#34; tag</title>
-        <link>http://dpm12345.github.io</link>
+        <link>http://dpm12345.cn</link>
         <description>学习记录</description>
         <language>zh-CN</language>
         <pubDate>Wed, 08 Dec 2021 09:54:40 +0800</pubDate>
@@ -47,9 +47,9 @@
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/ca7417e/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/ca7417e/</guid>
             <title>三个无重叠子数组的最大和</title>
-            <link>http://dpm12345.github.io/posts/ca7417e/</link>
+            <link>http://dpm12345.cn/posts/ca7417e/</link>
             <category>动态规划</category>
             <category>前缀和</category>
             <category>滑动窗口</category>

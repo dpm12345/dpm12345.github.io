@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://dpm12345.github.io</id>
+    <id>http://dpm12345.cn</id>
     <title>dpm12345 • Posts by &#34;最长公共子序列&#34; tag</title>
-    <link href="http://dpm12345.github.io" />
+    <link href="http://dpm12345.cn" />
     <updated>2021-12-09T01:54:40.000Z</updated>
     <category term="Qt" />
     <category term="ms17" />
@@ -44,9 +44,9 @@
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/posts/9e6e8fdc/</id>
+        <id>http://dpm12345.cn/posts/9e6e8fdc/</id>
         <title>子序列问题</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/9e6e8fdc/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/9e6e8fdc/"/>
         <content type="html">&lt;h1 id=&#34;最长公共子序列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最长公共子序列&#34;&gt;#&lt;/a&gt; 最长公共子序列&lt;/h1&gt;
 &lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG9uZ2VzdC1jb21tb24tc3Vic2VxdWVuY2Uv&#34;&gt; 最长公共子序列&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情:&lt;/p&gt;

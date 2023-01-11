@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>dpm12345 • Posts by &#34;mfc&#34; category</title>
-        <link>http://dpm12345.github.io</link>
+        <link>http://dpm12345.cn</link>
         <description>学习记录</description>
         <language>zh-CN</language>
         <pubDate>Sat, 08 Jan 2022 12:07:26 +0800</pubDate>
@@ -47,9 +47,9 @@
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/c3305e01/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/c3305e01/</guid>
             <title>MFC 相关操作汇总</title>
-            <link>http://dpm12345.github.io/posts/c3305e01/</link>
+            <link>http://dpm12345.cn/posts/c3305e01/</link>
             <category>MFC</category>
             <pubDate>Sat, 08 Jan 2022 12:07:26 +0800</pubDate>
             <description><![CDATA[ &lt;h2 id=&#34;edit-编辑框文本不覆盖&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#edit-编辑框文本不覆盖&#34;&gt;#&lt;/a&gt; edit 编辑框文本不覆盖&lt;/h2&gt;

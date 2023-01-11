@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://dpm12345.github.io</id>
+    <id>http://dpm12345.cn</id>
     <title>dpm12345 • Posts by &#34;动态规划&#34; tag</title>
-    <link href="http://dpm12345.github.io" />
+    <link href="http://dpm12345.cn" />
     <updated>2022-01-14T14:54:40.000Z</updated>
     <category term="Qt" />
     <category term="ms17" />
@@ -44,9 +44,9 @@
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
-        <id>http://dpm12345.github.io/posts/73645ce2/</id>
+        <id>http://dpm12345.cn/posts/73645ce2/</id>
         <title>丑数</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/73645ce2/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/73645ce2/"/>
         <content type="html">&lt;p&gt;丑数，其所有因数均属于所给的数字集合，如对于因数 2，3，5，&lt;/p&gt;
 &lt;p&gt;2，6，10 均为满足条件的丑数&lt;/p&gt;
 &lt;p&gt;以下为 leetcode 上丑数的相关问题&lt;/p&gt;
@@ -153,9 +153,9 @@ public:
         <updated>2022-01-14T14:54:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/9e6e8fdc/</id>
+        <id>http://dpm12345.cn/posts/9e6e8fdc/</id>
         <title>子序列问题</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/9e6e8fdc/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/9e6e8fdc/"/>
         <content type="html">&lt;h1 id=&#34;最长公共子序列&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#最长公共子序列&#34;&gt;#&lt;/a&gt; 最长公共子序列&lt;/h1&gt;
 &lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbG9uZ2VzdC1jb21tb24tc3Vic2VxdWVuY2Uv&#34;&gt; 最长公共子序列&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情:&lt;/p&gt;
@@ -252,9 +252,9 @@ public:
         <updated>2021-12-09T01:54:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/ca7417e/</id>
+        <id>http://dpm12345.cn/posts/ca7417e/</id>
         <title>三个无重叠子数组的最大和</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/ca7417e/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/ca7417e/"/>
         <content type="html">&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvcm90YXRlLWZ1bmN0aW9uLw==&#34;&gt;旋转函数&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情：&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E6%97%8B%E8%BD%AC%E5%87%BD%E6%95%B0.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -320,9 +320,9 @@ public:
         <updated>2021-12-09T01:54:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/ca7417e/</id>
+        <id>http://dpm12345.cn/posts/ca7417e/</id>
         <title>三个无重叠子数组的最大和</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/ca7417e/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/ca7417e/"/>
         <content type="html">&lt;p&gt;题目链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWF4aW11bS1zdW0tb2YtMy1ub24tb3ZlcmxhcHBpbmctc3ViYXJyYXlzLw==&#34;&gt; 三个无重叠子数组的最大和&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情：&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%B8%89%E4%B8%AA%E6%97%A0%E9%87%8D%E5%8F%A0%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -558,9 +558,9 @@ public:
         <updated>2021-12-08T01:54:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/5beb97b2/</id>
+        <id>http://dpm12345.cn/posts/5beb97b2/</id>
         <title>无重叠区间</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/5beb97b2/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/5beb97b2/"/>
         <content type="html">&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbm9uLW92ZXJsYXBwaW5nLWludGVydmFscy8=&#34;&gt;无重叠区间&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情：&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E6%97%A0%E9%87%8D%E5%8F%A0%E5%8C%BA%E9%97%B4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -626,9 +626,9 @@ public:
         <updated>2021-12-06T11:54:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/6f1a75f/</id>
+        <id>http://dpm12345.cn/posts/6f1a75f/</id>
         <title>跳跃游戏 VI</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/6f1a75f/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/6f1a75f/"/>
         <content type="html">&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvanVtcC1nYW1lLXZpLw==&#34;&gt;跳跃游戏 VI&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情:&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/1696%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8FVI.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -698,9 +698,9 @@ public:
         <updated>2021-12-05T06:54:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/ccc6bc8a/</id>
+        <id>http://dpm12345.cn/posts/ccc6bc8a/</id>
         <title>下降路径最小和</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/ccc6bc8a/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/ccc6bc8a/"/>
         <content type="html">&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWluaW11bS1mYWxsaW5nLXBhdGgtc3VtLw==&#34;&gt;下降路径最小和&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情：&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%B8%8B%E9%99%8D%E8%B7%AF%E5%BE%84%E6%9C%80%E5%B0%8F%E5%92%8C_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -780,9 +780,9 @@ public:
         <updated>2021-11-26T07:20:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://dpm12345.github.io/posts/723dcd0c/</id>
+        <id>http://dpm12345.cn/posts/723dcd0c/</id>
         <title>摆动序列</title>
-        <link rel="alternate" href="http://dpm12345.github.io/posts/723dcd0c/"/>
+        <link rel="alternate" href="http://dpm12345.cn/posts/723dcd0c/"/>
         <content type="html">&lt;p&gt;&lt;span class=&#34;orange&#34;&gt;题目链接:&lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvd2lnZ2xlLXN1YnNlcXVlbmNlLw==&#34;&gt; 摆动序列&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;orange&#34;&gt;题目详情:&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E6%91%86%E5%8A%A8%E5%BA%8F%E5%88%97_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34; alt=&#34;摆动序列_题目详情&#34; /&gt;&lt;/p&gt;

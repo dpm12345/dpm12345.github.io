@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>dpm12345 • Posts by &#34;leetcode周赛&#34; category</title>
-        <link>http://dpm12345.github.io</link>
+        <link>http://dpm12345.cn</link>
         <description>学习记录</description>
         <language>zh-CN</language>
         <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
@@ -47,9 +47,9 @@
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/80d31d12/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/80d31d12/</guid>
             <title>leetcode 第 273 场周赛</title>
-            <link>http://dpm12345.github.io/posts/80d31d12/</link>
+            <link>http://dpm12345.cn/posts/80d31d12/</link>
             <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC273%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;leetcode第273场周赛_战绩&#34; /&gt;&lt;/p&gt;
@@ -117,9 +117,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/274338ea/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/274338ea/</guid>
             <title>leetcode 第 68 场双周赛</title>
-            <link>http://dpm12345.github.io/posts/274338ea/</link>
+            <link>http://dpm12345.cn/posts/274338ea/</link>
             <pubDate>Tue, 28 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC68%E5%9C%BA%E5%8F%8C%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -326,9 +326,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/415dc2d2/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/415dc2d2/</guid>
             <title>leetcode 第 272 场周赛</title>
-            <link>http://dpm12345.github.io/posts/415dc2d2/</link>
+            <link>http://dpm12345.cn/posts/415dc2d2/</link>
             <pubDate>Sun, 19 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/leetcode%E7%AC%AC272%E5%9C%BA%E5%91%A8%E8%B5%9B_%E6%88%98%E7%BB%A9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
@@ -562,9 +562,9 @@ public:
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://dpm12345.github.io/posts/d8bfa4d3/</guid>
+            <guid isPermalink="true">http://dpm12345.cn/posts/d8bfa4d3/</guid>
             <title>leetcode 第 271 场周赛</title>
-            <link>http://dpm12345.github.io/posts/d8bfa4d3/</link>
+            <link>http://dpm12345.cn/posts/d8bfa4d3/</link>
             <pubDate>Sun, 12 Dec 2021 23:20:34 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;写在前面：这次是自己报名的第一场周赛，但最后忘记了有这一回事了，所以要记得给自己设个闹钟，提醒自己&lt;/p&gt;
 &lt;p&gt;弥补：虽然错过了，但题目不能不做&lt;/p&gt;
