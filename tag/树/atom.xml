@@ -4,17 +4,17 @@
     <title>dpm12345 • Posts by &#34;树&#34; tag</title>
     <link href="http://dpm12345.cn" />
     <updated>2022-02-20T12:07:26.000Z</updated>
-    <category term="Qt" />
+    <category term="git" />
     <category term="ms17" />
     <category term="msf" />
+    <category term="Qt" />
     <category term="CTF" />
     <category term="sql注入" />
-    <category term="git" />
-    <category term="Misc" />
     <category term="笔记" />
-    <category term="SSRF" />
+    <category term="Misc" />
     <category term="kali" />
     <category term="nmap" />
+    <category term="SSRF" />
     <category term="MFC" />
     <category term="ctfshow" />
     <category term="Web" />
@@ -22,25 +22,25 @@
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="动态规划" />
     <category term="前缀和" />
+    <category term="动态规划" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
-    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
+    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
+    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="等差数列" />
-    <category term="括号" />
     <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
@@ -64,7 +64,7 @@
 &lt;p&gt;只有两个子树&lt;/p&gt;
 &lt;p&gt;基本组成形式为 节点 + 左子树 + 右子树&lt;/p&gt;
 &lt;p&gt;如图:&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%BA%8C%E5%8F%89%E6%A0%91.jpeg&#34; alt=&#34;&#34; title=&#34;二叉树&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%BA%8C%E5%8F%89%E6%A0%91.jpeg&#34; alt=&#34;&#34; title=&#34;二叉树&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;特殊的二叉树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特殊的二叉树&#34;&gt;#&lt;/a&gt; 特殊的二叉树&lt;/h1&gt;
 &lt;p&gt;** 满二叉树:** 一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。也就是说，如果一个二叉树的层数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，且结点总数是&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;2^k-1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.932438em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.849108em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，则它就是满二叉树。&lt;/p&gt;
 &lt;p&gt;** 完全二叉树:** 完全二叉树是效率很高的数据结构，完全二叉树是由满二叉树而引出来的。对于深度为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的，有&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 个结点的二叉树，当且仅当其每一个结点都与深度为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的满二叉树中编号从 1 至 n 的结点一一对应时称之为完全二叉树。要注意的是满二叉树是一种特殊的完全二叉树。&lt;/p&gt;
@@ -97,18 +97,18 @@
 
 // 每个结点的定义
 template&amp;lt;class T&amp;gt;
-class RNode&amp;#123;
+class RNode{
 public:
 	T data;
 	class RNode&amp;lt;T&amp;gt; * lNode;
 	class RNode&amp;lt;T&amp;gt; * rNode;
-&amp;#125;;
+};
 
 #endif
 
 //tree.c
 void test1()
-&amp;#123;
+{
 	//A
 	RNode&amp;lt;int&amp;gt;* A = new RNode&amp;lt;int&amp;gt;;
 	A-&amp;gt;data = 5;
@@ -140,7 +140,7 @@ void test1()
 	A-&amp;gt;rNode = C;
 	B-&amp;gt;lNode = D;
 	C-&amp;gt;rNode = E;
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;遍历&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#遍历&#34;&gt;#&lt;/a&gt; 遍历&lt;/h4&gt;
 &lt;h5 id=&#34;前序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前序&#34;&gt;#&lt;/a&gt; 前序&lt;/h5&gt;
@@ -148,21 +148,21 @@ void test1()
 &lt;p&gt;leetcode 相关链接: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtcHJlb3JkZXItdHJhdmVyc2FsLw==&#34;&gt;二叉树的前序遍历&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;代码&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void PrevOrder(RNode&amp;lt;int&amp;gt;* P)
-&amp;#123;
+{
 	if (P == nullptr)
-	&amp;#123;
-		cout &amp;lt;&amp;lt; &amp;quot;NULL &amp;quot;;
+	{
+		cout &amp;lt;&amp;lt; &#34;NULL &#34;;
 		return;
-	&amp;#125;
-	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
+	}
+	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
 	PrevOrder(P-&amp;gt;lNode);
 	PrevOrder(P-&amp;gt;rNode);
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;附上 leetcode 上的迭代写法&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
 public:
-    vector&amp;lt;int&amp;gt; preorderTraversal(TreeNode* root) &amp;#123;
+    vector&amp;lt;int&amp;gt; preorderTraversal(TreeNode* root) {
         vector&amp;lt;int&amp;gt;ans;
         if(root==nullptr)
             return ans;
@@ -170,108 +170,108 @@ public:
         stack&amp;lt;TreeNode*&amp;gt;record;
         TreeNode* node=root;
         while(!record.empty()||node!=nullptr)
-        &amp;#123;
+        {
             while(node!=nullptr)
-            &amp;#123;
+            {
                 ans.push_back(node-&amp;gt;val);
                 record.push(node);
                 node=node-&amp;gt;left;
-            &amp;#125;
+            }
             node=record.top();
             record.pop();
             node=node-&amp;gt;right;
-        &amp;#125;
+        }
         return ans;
-    &amp;#125;
-&amp;#125;;
+    }
+};
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h5 id=&#34;中序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#中序&#34;&gt;#&lt;/a&gt; 中序&lt;/h5&gt;
 &lt;p&gt;左子树 --&amp;gt; 根 --&amp;gt; 右子树&lt;/p&gt;
 &lt;p&gt;leetcode 相关链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtaW5vcmRlci10cmF2ZXJzYWwv&#34;&gt; 二叉树的中序遍历&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;代码&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void MidOrder(RNode&amp;lt;int&amp;gt;* P)
-&amp;#123;
+{
 	if (P == nullptr)
-	&amp;#123;
-		cout &amp;lt;&amp;lt; &amp;quot;NULL &amp;quot;;
+	{
+		cout &amp;lt;&amp;lt; &#34;NULL &#34;;
 		return;
-	&amp;#125;
+	}
 	MidOrder(P-&amp;gt;lNode);
-	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
+	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
 	MidOrder(P-&amp;gt;rNode);
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;附上 leetcode 上的迭代写法&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
 public:
-    vector&amp;lt;int&amp;gt; inorderTraversal(TreeNode* root) &amp;#123;
+    vector&amp;lt;int&amp;gt; inorderTraversal(TreeNode* root) {
         vector&amp;lt;int&amp;gt;ans;
         if(root==nullptr)
             return ans;
         stack&amp;lt;TreeNode*&amp;gt;re;
         TreeNode* node=root;
         while(!re.empty()||node!=nullptr)
-        &amp;#123;
+        {
             while(node!=nullptr)
-            &amp;#123;
+            {
                 re.push(node);
                 node=node-&amp;gt;left;
-            &amp;#125;
+            }
             node=re.top();
             ans.push_back(node-&amp;gt;val);
             re.pop();
             node=node-&amp;gt;right;
-        &amp;#125;
+        }
         return ans;
-    &amp;#125;
-&amp;#125;;
+    }
+};
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h5 id=&#34;后序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后序&#34;&gt;#&lt;/a&gt; 后序&lt;/h5&gt;
 &lt;p&gt;左子树 --&amp;gt; 右子树 --&amp;gt; 根&lt;/p&gt;
 &lt;p&gt;leetcode 相关链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtcHJlb3JkZXItdHJhdmVyc2FsLw==&#34;&gt; 二叉树的后序遍历&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;代码&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void LastOrder(RNode&amp;lt;int&amp;gt;* P)
-&amp;#123;
+{
 	if (P == nullptr)
-	&amp;#123;
-		cout &amp;lt;&amp;lt; &amp;quot;NULL &amp;quot;;
+	{
+		cout &amp;lt;&amp;lt; &#34;NULL &#34;;
 		return;
-	&amp;#125;
+	}
 	LastOrder(P-&amp;gt;lNode);
 	LastOrder(P-&amp;gt;rNode);
-	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &amp;quot; &amp;quot;;
-&amp;#125;
+	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;附上 leetcode 上的迭代写法&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
 public:
-    vector&amp;lt;int&amp;gt; postorderTraversal(TreeNode *root) &amp;#123;
+    vector&amp;lt;int&amp;gt; postorderTraversal(TreeNode *root) {
         vector&amp;lt;int&amp;gt; res;
-        if (root == nullptr) &amp;#123;
+        if (root == nullptr) {
             return res;
-        &amp;#125;
+        }
 
         stack&amp;lt;TreeNode *&amp;gt; stk;
         TreeNode *prev = nullptr;
-        while (root != nullptr || !stk.empty()) &amp;#123;
-            while (root != nullptr) &amp;#123;
+        while (root != nullptr || !stk.empty()) {
+            while (root != nullptr) {
                 stk.emplace(root);
                 root = root-&amp;gt;left;
-            &amp;#125;
+            }
             root = stk.top();
             stk.pop();
-            if (root-&amp;gt;right == nullptr || root-&amp;gt;right == prev) &amp;#123;
+            if (root-&amp;gt;right == nullptr || root-&amp;gt;right == prev) {
                 res.emplace_back(root-&amp;gt;val);
                 prev = root;
                 root = nullptr;
-            &amp;#125; else &amp;#123;
+            } else {
                 stk.emplace(root);
                 root = root-&amp;gt;right;
-            &amp;#125;
-        &amp;#125;
+            }
+        }
         return res;
-    &amp;#125;
-&amp;#125;;
+    }
+};
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;相关解释&lt;/p&gt;
 &lt;p&gt;为了实现这一顺序，该方法中&lt;/p&gt;

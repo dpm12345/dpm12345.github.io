@@ -4,17 +4,17 @@
     <title>dpm12345 • Posts by &#34;数组&#34; tag</title>
     <link href="http://dpm12345.cn" />
     <updated>2022-03-18T14:54:40.000Z</updated>
-    <category term="Qt" />
+    <category term="git" />
     <category term="ms17" />
     <category term="msf" />
+    <category term="Qt" />
     <category term="CTF" />
     <category term="sql注入" />
-    <category term="git" />
-    <category term="Misc" />
     <category term="笔记" />
-    <category term="SSRF" />
+    <category term="Misc" />
     <category term="kali" />
     <category term="nmap" />
+    <category term="SSRF" />
     <category term="MFC" />
     <category term="ctfshow" />
     <category term="Web" />
@@ -22,25 +22,25 @@
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="动态规划" />
     <category term="前缀和" />
+    <category term="动态规划" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
-    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
+    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
+    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="等差数列" />
-    <category term="括号" />
     <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
@@ -49,22 +49,22 @@
         <link rel="alternate" href="http://dpm12345.cn/posts/d98ef1d2/"/>
         <content type="html">&lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy90d28tc3VtLw==&#34;&gt;两数之和&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution &amp;#123;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
 public:
-    vector&amp;lt;int&amp;gt; twoSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) &amp;#123;
+    vector&amp;lt;int&amp;gt; twoSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) {
         unordered_map&amp;lt;int,int&amp;gt;temp;
         for(int i=0;i&amp;lt;nums.size();i++)
-        &amp;#123;
+        {
             int num = nums[i];
             if(temp.find(target-num)!=temp.end())
-                return &amp;#123;temp[target-num],i&amp;#125;;
+                return {temp[target-num],i};
             else
-                temp.insert(&amp;#123;num,i&amp;#125;);
-        &amp;#125;
-        return &amp;#123;&amp;#125;;
-    &amp;#125;
-&amp;#125;;
+                temp.insert({num,i});
+        }
+        return {};
+    }
+};
 &lt;/code&gt;&lt;/pre&gt;
 </content>
         <category term="数组" />

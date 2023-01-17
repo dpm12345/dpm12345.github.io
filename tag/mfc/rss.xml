@@ -7,17 +7,17 @@
         <language>zh-CN</language>
         <pubDate>Sat, 08 Jan 2022 12:07:26 +0800</pubDate>
         <lastBuildDate>Sat, 08 Jan 2022 12:07:26 +0800</lastBuildDate>
-        <category>Qt</category>
+        <category>git</category>
         <category>ms17</category>
         <category>msf</category>
+        <category>Qt</category>
         <category>CTF</category>
         <category>sql注入</category>
-        <category>git</category>
-        <category>Misc</category>
         <category>笔记</category>
-        <category>SSRF</category>
+        <category>Misc</category>
         <category>kali</category>
         <category>nmap</category>
+        <category>SSRF</category>
         <category>MFC</category>
         <category>ctfshow</category>
         <category>Web</category>
@@ -25,25 +25,25 @@
         <category>二叉树</category>
         <category>数据结构</category>
         <category>队列</category>
-        <category>动态规划</category>
         <category>前缀和</category>
+        <category>动态规划</category>
         <category>滑动窗口</category>
         <category>数组</category>
         <category>哈希表</category>
         <category>链表</category>
-        <category>贪心</category>
         <category>矩阵</category>
         <category>递归</category>
+        <category>贪心</category>
         <category>子序列</category>
         <category>最长公共子序列</category>
         <category>最长回文子序列</category>
         <category>字符串</category>
+        <category>括号</category>
         <category>vector</category>
         <category>栈</category>
         <category>排列组合</category>
-        <category>等差数列</category>
-        <category>括号</category>
         <category>双指针（快慢指针）</category>
+        <category>等差数列</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
@@ -58,37 +58,37 @@
 &lt;p&gt;如果想要追加内容，可采用以下代码&lt;/p&gt;
 &lt;p&gt;假设 edit 框关联的变量名为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;outcome&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.61508em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;m&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;outcome.SetSel(-1);        // 定位到文末
-outcome.ReplaceSel(TEXT(&amp;quot;读取文件失败\r\n&amp;quot;));     // 输出并换行
+outcome.ReplaceSel(TEXT(&#34;读取文件失败\r\n&#34;));     // 输出并换行
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;使用按钮选择文件并获取路径&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用按钮选择文件并获取路径&#34;&gt;#&lt;/a&gt; 使用按钮选择文件并获取路径&lt;/h2&gt;
 &lt;p&gt;在进行选择相关文件的相关操作时，如果想要在弹出的一个对话框内选择文件，并且能够获取到路径名，那么可以使用以下代码&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;CString filename;           // 保存路径
-CFileDialog opendlg(TRUE, _T(&amp;quot;*&amp;quot;), _T(&amp;quot;&amp;quot;), OFN_OVERWRITEPROMPT, _T(&amp;quot;所有文件(*.*;)|*.*||&amp;quot;), NULL);
+CFileDialog opendlg(TRUE, _T(&#34;*&#34;), _T(&#34;&#34;), OFN_OVERWRITEPROMPT, _T(&#34;所有文件(*.*;)|*.*||&#34;), NULL);
 if (opendlg.DoModal() == IDOK)
-&amp;#123;
+{
 	filename = opendlg.GetPathName();
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这一段代码结束后，filename 就存储了文件的路径&lt;/p&gt;
 &lt;h2 id=&#34;修改控件的字体及大小&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改控件的字体及大小&#34;&gt;#&lt;/a&gt; 修改控件的字体及大小&lt;/h2&gt;
 &lt;p&gt;首先要为控件关联一个变量，假设该变量名为 text&lt;/p&gt;
 &lt;p&gt;然后定义一个 CFont 类型的 font，用于创建一个字体&lt;/p&gt;
-&lt;p&gt;使用 &lt;code&gt;font.CreatePointFont(&amp;quot;100&amp;quot;,&amp;quot;楷体&amp;quot;)&lt;/code&gt;  其中 100 为字体大小，楷体为字体类型&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;font.CreatePointFont(&#34;100&#34;,&#34;楷体&#34;)&lt;/code&gt;  其中 100 为字体大小，楷体为字体类型&lt;/p&gt;
 &lt;p&gt;创建好字体后，便使用 &lt;code&gt;$SetFont()&lt;/code&gt;  函数，将 font 的地址作为参数&lt;/p&gt;
 &lt;p&gt;那么代码即为&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;CFont font;
-font.CreatePointFont(100, _T(&amp;quot;楷体&amp;quot;));
+font.CreatePointFont(100, _T(&#34;楷体&#34;));
 text.SetFont(&amp;amp;font);
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;修改控件颜色&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#修改控件颜色&#34;&gt;#&lt;/a&gt; 修改控件颜色&lt;/h2&gt;
 &lt;p&gt;右键对话框，点击类向导，在出现的对话框内，选择消息，找到其中的 &lt;code&gt;WM_CTLCOLOR&lt;/code&gt; ，并添加处理程序&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/MFC_color_1.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/MFC_color_2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/MFC_color_1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/MFC_color_2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在程序中找到该成员函数实现&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/MFC_color_3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/MFC_color_3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;在代码中写上如下代码&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;if (pWnd-&amp;gt;GetDlgCtrlID() == IDC_Display)// IDC_Display 为所选文本框 ID, 如果想选择其他控件则可以改为相应的 ID
-&amp;#123;
+{
 
 	pDC-&amp;gt;SetTextColor(RGB(255, 0, 0));// 设置字体颜色
 
@@ -96,14 +96,14 @@ text.SetFont(&amp;amp;font);
  
 	//pDC-&amp;gt;SetBkMode (TRANSPARENT);// 设置背景透明
 
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;上面是针对指定控件来修改的，同时也可以对指定空间类型进行修改&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;if (nCtlColor == CTLCOLOR_STATIC)   //CTLCOLOR_STATIC 为控件类型
-&amp;#123;
+{
 	pDC-&amp;gt;SetTextColor(RGB(0, 255, 0));// 设置字体颜色
 	pDC-&amp;gt;SetBkColor(RGB(255, 0, 0));// 设置背景颜色
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;支持的控件类型如下:&lt;/p&gt;
 &lt;ul&gt;

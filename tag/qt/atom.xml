@@ -4,17 +4,17 @@
     <title>dpm12345 • Posts by &#34;qt&#34; tag</title>
     <link href="http://dpm12345.cn" />
     <updated>2022-06-21T12:46:09.000Z</updated>
-    <category term="Qt" />
+    <category term="git" />
     <category term="ms17" />
     <category term="msf" />
+    <category term="Qt" />
     <category term="CTF" />
     <category term="sql注入" />
-    <category term="git" />
-    <category term="Misc" />
     <category term="笔记" />
-    <category term="SSRF" />
+    <category term="Misc" />
     <category term="kali" />
     <category term="nmap" />
+    <category term="SSRF" />
     <category term="MFC" />
     <category term="ctfshow" />
     <category term="Web" />
@@ -22,25 +22,25 @@
     <category term="二叉树" />
     <category term="数据结构" />
     <category term="队列" />
-    <category term="动态规划" />
     <category term="前缀和" />
+    <category term="动态规划" />
     <category term="滑动窗口" />
     <category term="数组" />
     <category term="哈希表" />
     <category term="链表" />
-    <category term="贪心" />
     <category term="矩阵" />
     <category term="递归" />
+    <category term="贪心" />
     <category term="子序列" />
     <category term="最长公共子序列" />
     <category term="最长回文子序列" />
     <category term="字符串" />
+    <category term="括号" />
     <category term="vector" />
     <category term="栈" />
     <category term="排列组合" />
-    <category term="等差数列" />
-    <category term="括号" />
     <category term="双指针（快慢指针）" />
+    <category term="等差数列" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
     <entry>
@@ -94,18 +94,18 @@ this-&amp;gt;setFixedSize (this-&amp;gt;geometry ().size ()); // 最大化和右
 &lt;p&gt;如，我在 &lt;code&gt;Myclass&lt;/code&gt;  类中使用了自定义结构体 &lt;code&gt;info&lt;/code&gt; ， &lt;code&gt;QVector&lt;/code&gt; ，如果不进行以上操作，会产生以上报错，改正内容为&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;QMetatype&amp;gt;
 
-class Myclass&amp;#123;
+class Myclass{
     Myclass();
     ~Myclass();
     ···
     ···
-&amp;#125;
+}
 
 Myclass::Myclass()
-&amp;#123;
-    qRegisterMetaType&amp;lt;QVector&amp;lt;info&amp;gt;&amp;gt;(&amp;quot;QVector&amp;lt;info&amp;gt;&amp;quot;);
+{
+    qRegisterMetaType&amp;lt;QVector&amp;lt;info&amp;gt;&amp;gt;(&#34;QVector&amp;lt;info&amp;gt;&#34;);
     // 双引号的内容即为使用的内容，即定义类型
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;widgets-cannot-be-moved-to-a-new-thread&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#widgets-cannot-be-moved-to-a-new-thread&#34;&gt;#&lt;/a&gt; Widgets cannot be moved to a new thread&lt;/h2&gt;
 </content>

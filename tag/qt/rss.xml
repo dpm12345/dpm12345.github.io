@@ -7,17 +7,17 @@
         <language>zh-CN</language>
         <pubDate>Tue, 21 Jun 2022 20:46:09 +0800</pubDate>
         <lastBuildDate>Tue, 21 Jun 2022 20:46:09 +0800</lastBuildDate>
-        <category>Qt</category>
+        <category>git</category>
         <category>ms17</category>
         <category>msf</category>
+        <category>Qt</category>
         <category>CTF</category>
         <category>sql注入</category>
-        <category>git</category>
-        <category>Misc</category>
         <category>笔记</category>
-        <category>SSRF</category>
+        <category>Misc</category>
         <category>kali</category>
         <category>nmap</category>
+        <category>SSRF</category>
         <category>MFC</category>
         <category>ctfshow</category>
         <category>Web</category>
@@ -25,25 +25,25 @@
         <category>二叉树</category>
         <category>数据结构</category>
         <category>队列</category>
-        <category>动态规划</category>
         <category>前缀和</category>
+        <category>动态规划</category>
         <category>滑动窗口</category>
         <category>数组</category>
         <category>哈希表</category>
         <category>链表</category>
-        <category>贪心</category>
         <category>矩阵</category>
         <category>递归</category>
+        <category>贪心</category>
         <category>子序列</category>
         <category>最长公共子序列</category>
         <category>最长回文子序列</category>
         <category>字符串</category>
+        <category>括号</category>
         <category>vector</category>
         <category>栈</category>
         <category>排列组合</category>
-        <category>等差数列</category>
-        <category>括号</category>
         <category>双指针（快慢指针）</category>
+        <category>等差数列</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
         <item>
@@ -99,18 +99,18 @@ this-&amp;gt;setFixedSize (this-&amp;gt;geometry ().size ()); // 最大化和右
 &lt;p&gt;如，我在 &lt;code&gt;Myclass&lt;/code&gt;  类中使用了自定义结构体 &lt;code&gt;info&lt;/code&gt; ， &lt;code&gt;QVector&lt;/code&gt; ，如果不进行以上操作，会产生以上报错，改正内容为&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;#include&amp;lt;QMetatype&amp;gt;
 
-class Myclass&amp;#123;
+class Myclass{
     Myclass();
     ~Myclass();
     ···
     ···
-&amp;#125;
+}
 
 Myclass::Myclass()
-&amp;#123;
-    qRegisterMetaType&amp;lt;QVector&amp;lt;info&amp;gt;&amp;gt;(&amp;quot;QVector&amp;lt;info&amp;gt;&amp;quot;);
+{
+    qRegisterMetaType&amp;lt;QVector&amp;lt;info&amp;gt;&amp;gt;(&#34;QVector&amp;lt;info&amp;gt;&#34;);
     // 双引号的内容即为使用的内容，即定义类型
-&amp;#125;
+}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;widgets-cannot-be-moved-to-a-new-thread&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#widgets-cannot-be-moved-to-a-new-thread&#34;&gt;#&lt;/a&gt; Widgets cannot be moved to a new thread&lt;/h2&gt;
  ]]></description>
