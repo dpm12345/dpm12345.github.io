@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>dpm12345 • Posts by &#34;shoka&#34; category</title>
+        <link>http://dpm12345.cn</link>
+        <description>学习记录</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 20 Jan 2023 23:50:11 +0800</pubDate>
+        <lastBuildDate>Fri, 20 Jan 2023 23:50:11 +0800</lastBuildDate>
+        <category>Qt</category>
+        <category>git</category>
+        <category>ms17</category>
+        <category>msf</category>
+        <category>CTF</category>
+        <category>sql注入</category>
+        <category>笔记</category>
+        <category>Misc</category>
+        <category>SSRF</category>
+        <category>kali</category>
+        <category>nmap</category>
+        <category>MFC</category>
+        <category>ctfshow</category>
+        <category>Web</category>
+        <category>树</category>
+        <category>二叉树</category>
+        <category>数据结构</category>
+        <category>队列</category>
+        <category>前缀和</category>
+        <category>动态规划</category>
+        <category>滑动窗口</category>
+        <category>数组</category>
+        <category>哈希表</category>
+        <category>链表</category>
+        <category>递归</category>
+        <category>矩阵</category>
+        <category>贪心</category>
+        <category>子序列</category>
+        <category>最长公共子序列</category>
+        <category>最长回文子序列</category>
+        <category>字符串</category>
+        <category>括号</category>
+        <category>vector</category>
+        <category>栈</category>
+        <category>排列组合</category>
+        <category>双指针（快慢指针）</category>
+        <category>等差数列</category>
+        <category>深度优先搜索</category>
+        <category>广度优先搜索</category>
+        <category>hexo</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/f5c52549/</guid>
+            <title>shoka主题添加文章统计</title>
+            <link>http://dpm12345.cn/posts/f5c52549/</link>
+            <category>hexo</category>
+            <pubDate>Fri, 20 Jan 2023 23:50:11 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;添加统计页面&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#添加统计页面&#34;&gt;#&lt;/a&gt; 添加统计页面&lt;/h1&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo new page statistics&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;可以看到 &lt;code&gt;source&lt;/code&gt;  目录下 (如果没改) 多了一个 &lt;code&gt;statistics&lt;/code&gt;  文件夹，其中有一个 &lt;code&gt;index.md&lt;/code&gt;  文件&lt;/p&gt;
+&lt;p&gt;之后复制以下内容，作为页面内容&lt;/p&gt;
+&lt;figure class=&#34;highlight html&#34;&gt;&lt;figcaption data-lang=&#34;HTML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+function switchPostChart () {
+  // 这里为了统一颜色选取的是 “明暗模式” 下的两种字体颜色，也可以自己定义
+  let color = document.documentElement.getAttribute(&#39;data-theme&#39;) === null ? &#39;#fff&#39; : &#39;#000&#39;
+
+  if (document.getElementById(&#39;posts-calendar&#39;)) {
+    let postsCalendarNew = postsCalendarOption
+    postsCalendarNew.textStyle.color = color
+    postsCalendarNew.title.textStyle.color = color
+    postsCalendarNew.visualMap.textStyle.color = color
+    postsCalendarNew.calendar.itemStyle.color = color
+    postsCalendarNew.calendar.yearLabel.color = color
+    postsCalendarNew.calendar.monthLabel.color = color
+    postsCalendarNew.calendar.dayLabel.color = color
+    postsCalendar.setOption(postsCalendarNew)
+  }
+  if (document.getElementById(&#39;posts-chart&#39;)) {
+    let postsOptionNew = postsOption
+    postsOptionNew.textStyle.color = color
+    postsOptionNew.title.textStyle.color = color
+    postsOptionNew.xAxis.axisLine.lineStyle.color = color
+    postsOptionNew.yAxis.axisLine.lineStyle.color = color
+    postsChart.setOption(postsOptionNew)
+  }
+  if (document.getElementById(&#39;tags-chart&#39;)) {
+    let tagsOptionNew = tagsOption
+    tagsOptionNew.textStyle.color = color
+    tagsOptionNew.title.textStyle.color = color
+    tagsOptionNew.xAxis.axisLine.lineStyle.color = color
+    tagsOptionNew.yAxis.axisLine.lineStyle.color = color
+    tagsChart.setOption(tagsOptionNew)
+  }
+  if (document.getElementById(&#39;categories-chart&#39;)) {
+    let categoriesOptionNew = categoriesOption
+    categoriesOptionNew.textStyle.color = color
+    categoriesOptionNew.title.textStyle.color = color
+    categoriesOptionNew.legend.textStyle.color = color
+    categoriesChart.setOption(categoriesOptionNew)
+  }
+}
+
+document.getElementsByClassName(&#34;theme&#34;)[0].addEventListener(&#34;click&#34;, function () { setTimeout(switchPostChart, 100) })
+&lt;/script&gt;
+&lt;!-- 文章发布日历 --&gt;
+&lt;div id=&#34;posts-calendar&#34; style=&#34;border-radius: 8px; height: 300px; padding: 10px;&#34;&gt;&lt;/div&gt;
+&lt;!-- 文章发布时间统计图 --&gt;
+&lt;div id=&#34;posts-chart&#34; style=&#34;border-radius: 8px; height: 300px; padding: 10px;&#34;&gt;&lt;/div&gt;
+&lt;!-- 文章标签统计图 --&gt;
+&lt;div id=&#34;tags-chart&#34; data-length=&#34;10&#34; style=&#34;border-radius: 8px; height: 300px; padding: 10px;&#34;&gt;&lt;/div&gt;
+&lt;!-- 文章分类统计图 --&gt;
+&lt;div id=&#34;categories-chart&#34; style=&#34;border-radius: 8px; height: 300px; padding: 10px;&#34;&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "dpm12345 • All posts by \"hexo\" tag",
+    "description": "学习记录",
+    "home_page_url": "http://dpm12345.cn",
+    "items": [
+        {
+            "id": "http://dpm12345.cn/posts/f5c52549/",
+            "url": "http://dpm12345.cn/posts/f5c52549/",
+            "title": "shoka主题添加文章统计",
+            "date_published": "2023-01-20T15:50:11.000Z",
+            "content_html": "<h1 id=\"添加统计页面\"><a class=\"anchor\" href=\"#添加统计页面\">#</a> 添加统计页面</h1>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre>hexo new page statistics</pre></td></tr></tbody></table></figure><p>可以看到 <code>source</code>  目录下 (如果没改) 多了一个 <code>statistics</code>  文件夹，其中有一个 <code>index.md</code>  文件</p>\n<p>之后复制以下内容，作为页面内容</p>\n<figure class=\"highlight html\"><figcaption data-lang=\"HTML\"></figcaption><table><tbody><tr><td data-num=\"1\"></td><td><pre><span class=\"token comment\">\n<script src=\"https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js\"></script>\n<script>\nfunction switchPostChart () {\n  // 这里为了统一颜色选取的是 “明暗模式” 下的两种字体颜色，也可以自己定义\n  let color = document.documentElement.getAttribute('data-theme') === null ? '#fff' : '#000'\n\n  if (document.getElementById('posts-calendar')) {\n    let postsCalendarNew = postsCalendarOption\n    postsCalendarNew.textStyle.color = color\n    postsCalendarNew.title.textStyle.color = color\n    postsCalendarNew.visualMap.textStyle.color = color\n    postsCalendarNew.calendar.itemStyle.color = color\n    postsCalendarNew.calendar.yearLabel.color = color\n    postsCalendarNew.calendar.monthLabel.color = color\n    postsCalendarNew.calendar.dayLabel.color = color\n    postsCalendar.setOption(postsCalendarNew)\n  }\n  if (document.getElementById('posts-chart')) {\n    let postsOptionNew = postsOption\n    postsOptionNew.textStyle.color = color\n    postsOptionNew.title.textStyle.color = color\n    postsOptionNew.xAxis.axisLine.lineStyle.color = color\n    postsOptionNew.yAxis.axisLine.lineStyle.color = color\n    postsChart.setOption(postsOptionNew)\n  }\n  if (document.getElementById('tags-chart')) {\n    let tagsOptionNew = tagsOption\n    tagsOptionNew.textStyle.color = color\n    tagsOptionNew.title.textStyle.color = color\n    tagsOptionNew.xAxis.axisLine.lineStyle.color = color\n    tagsOptionNew.yAxis.axisLine.lineStyle.color = color\n    tagsChart.setOption(tagsOptionNew)\n  }\n  if (document.getElementById('categories-chart')) {\n    let categoriesOptionNew = categoriesOption\n    categoriesOptionNew.textStyle.color = color\n    categoriesOptionNew.title.textStyle.color = color\n    categoriesOptionNew.legend.textStyle.color = color\n    categoriesChart.setOption(categoriesOptionNew)\n  }\n}\n\ndocument.getElementsByClassName(\"theme\")[0].addEventListener(\"click\", function () { setTimeout(switchPostChart, 100) })\n</script>\n<!-- 文章发布日历 -->\n<div id=\"posts-calendar\" style=\"border-radius: 8px; height: 300px; padding: 10px;\"></div>\n<!-- 文章发布时间统计图 -->\n<div id=\"posts-chart\" style=\"border-radius: 8px; height: 300px; padding: 10px;\"></div>\n<!-- 文章标签统计图 -->\n<div id=\"tags-chart\" data-length=\"10\" style=\"border-radius: 8px; height: 300px; padding: 10px;\"></div>\n<!-- 文章分类统计图 -->\n<div id=\"categories-chart\" style=\"border-radius: 8px; height: 300px; padding: 10px;\"></div>\n</span></pre></td></tr></tbody></table></figure>",
+            "tags": [
+                "hexo"
+            ]
+        }
+    ]
+}

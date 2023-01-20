@@ -43,6 +43,7 @@
     <category term="等差数列" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
+    <category term="hexo" />
     <entry>
         <id>http://dpm12345.cn/posts/ca7417e/</id>
         <title>三个无重叠子数组的最大和</title>
