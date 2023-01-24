@@ -5,8 +5,8 @@
         <link>http://dpm12345.cn</link>
         <description>学习记录</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 20 Jan 2023 23:50:11 +0800</pubDate>
-        <lastBuildDate>Fri, 20 Jan 2023 23:50:11 +0800</lastBuildDate>
+        <pubDate>Tue, 24 Jan 2023 08:20:29 +0800</pubDate>
+        <lastBuildDate>Tue, 24 Jan 2023 08:20:29 +0800</lastBuildDate>
         <category>git</category>
         <category>ms17</category>
         <category>msf</category>
@@ -47,6 +47,15 @@
         <category>hexo</category>
         <category>ctfshow</category>
         <category>Web</category>
+        <category>cryptography</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/7821492f/</guid>
+            <title>第四章</title>
+            <link>http://dpm12345.cn/posts/7821492f/</link>
+            <category>cryptography</category>
+            <pubDate>Tue, 24 Jan 2023 08:20:29 +0800</pubDate>
+            <description><![CDATA[  ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://dpm12345.cn/posts/f5c52549/</guid>
             <title>shoka主题添加文章统计</title>

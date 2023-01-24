@@ -44,6 +44,7 @@
     <category term="hexo" />
     <category term="ctfshow" />
     <category term="Web" />
+    <category term="cryptography" />
     <entry>
         <id>http://dpm12345.cn/posts/65c00a51/</id>
         <title>边界着色 岛屿数量</title>

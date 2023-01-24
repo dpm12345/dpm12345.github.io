@@ -44,6 +44,7 @@
     <category term="hexo" />
     <category term="ctfshow" />
     <category term="Web" />
+    <category term="cryptography" />
     <entry>
         <id>http://dpm12345.cn/posts/558506d6/</id>
         <title>MD5常见绕过</title>

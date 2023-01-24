@@ -44,6 +44,7 @@
     <category term="hexo" />
     <category term="ctfshow" />
     <category term="Web" />
+    <category term="cryptography" />
     <entry>
         <id>http://dpm12345.cn/posts/65089f0a/</id>
         <title>ms17-010 漏洞复现</title>

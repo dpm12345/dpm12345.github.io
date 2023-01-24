@@ -47,6 +47,7 @@
         <category>hexo</category>
         <category>ctfshow</category>
         <category>Web</category>
+        <category>cryptography</category>
         <item>
             <guid isPermalink="true">http://dpm12345.cn/posts/ca7417e/</guid>
             <title>三个无重叠子数组的最大和</title>
