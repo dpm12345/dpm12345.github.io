@@ -45,16 +45,24 @@
     <category term="等差数列" />
     <category term="深度优先搜索" />
     <category term="广度优先搜索" />
+    <category term="ciscn" />
+    <category term="SSTI" />
+    <category term="arm-linux" />
+    <category term="Tiny6410" />
+    <category term="信息安全" />
+    <category term="linux" />
+    <category term="web" />
+    <category term="javascript" />
+    <category term="XXE" />
     <entry>
         <id>http://dpm12345.cn/posts/e85d694a/</id>
         <title>二叉树</title>
         <link rel="alternate" href="http://dpm12345.cn/posts/e85d694a/"/>
-        <content type="html">&lt;h1 id=&#34;树的相关定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#树的相关定义&#34;&gt;#&lt;/a&gt; 树的相关定义&lt;/h1&gt;
-&lt;p&gt;![](/ 素材 / 树.jpeg “树”)&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;树的相关定义&#34;&gt;&lt;a href=&#34;#树的相关定义&#34; class=&#34;headerlink&#34; title=&#34;树的相关定义&#34;&gt;&lt;/a&gt;树的相关定义&lt;/h1&gt;&lt;p&gt;![](../../../post_images/树.jpeg “树”)&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;组成：树由若干个节点构成，根节点在最上方，如图 1 为根节点&lt;/li&gt;
-&lt;li&gt;度：节点下方延申的部分称为子树，其个数被称为度，如图 2，3，4，5 为 1 的度，个数为 4 叶子节点和分支节点：度为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;0&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的节点被称为&lt;/li&gt;
-&lt;li&gt;叶子节点或终端节点，不为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;0&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 被称为非终端节点或分支节点，如 13 为叶子节点，3 为分支节点&lt;/li&gt;
+&lt;li&gt;度：节点下方延申的部分称为子树，其个数被称为度，如图 2，3，4，5 为 1 的度，个数为 4叶子节点和分支节点：度为$0$ 的节点被称为&lt;/li&gt;
+&lt;li&gt;叶子节点或终端节点，不为$0$ 被称为非终端节点或分支节点，如 13 为叶子节点，3 为分支节点&lt;/li&gt;
 &lt;li&gt;父节点：若一个节点含有子节点，那么称为该子节点的父节点，如 6 为 13 的父节点&lt;/li&gt;
 &lt;li&gt;兄弟节点：具有相同父节点的节点互称为兄弟节点，如 2，3，4，5&lt;/li&gt;
 &lt;li&gt;树的度：一棵树中，最大的节点的度称为树的度&lt;/li&gt;
@@ -62,38 +70,30 @@
 &lt;li&gt;节点的祖先：从根到该节点所经分支上的所有节点；如上图：1 是所有节点的祖先&lt;/li&gt;
 &lt;li&gt;子孙：以某节点为根的子树中任一节点都称为该节点的子孙。如上图：所有节点都是 1 的子孙&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;二叉树的定义&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二叉树的定义&#34;&gt;#&lt;/a&gt; 二叉树的定义&lt;/h1&gt;
-&lt;p&gt;只有两个子树&lt;/p&gt;
-&lt;p&gt;基本组成形式为 节点 + 左子树 + 右子树&lt;/p&gt;
+&lt;h1 id=&#34;二叉树的定义&#34;&gt;&lt;a href=&#34;#二叉树的定义&#34; class=&#34;headerlink&#34; title=&#34;二叉树的定义&#34;&gt;&lt;/a&gt;二叉树的定义&lt;/h1&gt;&lt;p&gt;只有两个子树&lt;/p&gt;
+&lt;p&gt;基本组成形式为 节点 + 左子树 + 右子树 &lt;/p&gt;
 &lt;p&gt;如图:&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%BA%8C%E5%8F%89%E6%A0%91.jpeg&#34; alt=&#34;&#34; title=&#34;二叉树&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;特殊的二叉树&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#特殊的二叉树&#34;&gt;#&lt;/a&gt; 特殊的二叉树&lt;/h1&gt;
-&lt;p&gt;** 满二叉树:** 一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。也就是说，如果一个二叉树的层数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，且结点总数是&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;2^k-1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.932438em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.849108em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，则它就是满二叉树。&lt;/p&gt;
-&lt;p&gt;** 完全二叉树:** 完全二叉树是效率很高的数据结构，完全二叉树是由满二叉树而引出来的。对于深度为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的，有&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 个结点的二叉树，当且仅当其每一个结点都与深度为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;K&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;K&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.68333em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.07153em;&#34;&gt;K&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的满二叉树中编号从 1 至 n 的结点一一对应时称之为完全二叉树。要注意的是满二叉树是一种特殊的完全二叉树。&lt;/p&gt;
-&lt;p&gt;![](/ 素材 / 满二叉树.png “满二叉树”)&lt;/p&gt;
-&lt;h1 id=&#34;二叉树的性质&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二叉树的性质&#34;&gt;#&lt;/a&gt; 二叉树的性质&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;若规定根节点的层数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，则一棵非空二叉树的第&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;i&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.65952em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 层上最多有&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;2^{i-1}&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.824664em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.824664em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mbin mtight&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mord mtight&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 个结点.&lt;/li&gt;
-&lt;li&gt;若规定根节点的层数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，则深度为 h 的二叉树的最大结点数是&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;2^h-1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.932438em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.849108em;&#34;&gt;&lt;span style=&#34;top:-3.063em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34;&gt;h&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/li&gt;
-&lt;li&gt;对任何一棵二叉树，如果度为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;0&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 其叶结点个数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n_0&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.58056em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, 度为 2 的分支结点个数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n_2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.58056em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;, 则有&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mtext&gt;＝&lt;/mtext&gt;&lt;msub&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n_0＝n_2+1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.83333em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;0&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mord cjk_fallback&#34;&gt;＝&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.30110799999999993em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mtight&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;若规定根节点的层数为&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;，具有&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;n&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.43056em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 个结点的满二叉树的深度，&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;h=LogN&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.69444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8777699999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;L&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;o&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10903em;&#34;&gt;N&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../../../post_images/%E4%BA%8C%E5%8F%89%E6%A0%91.jpeg&#34; title=&#34;二叉树&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;特殊的二叉树&#34;&gt;&lt;a href=&#34;#特殊的二叉树&#34; class=&#34;headerlink&#34; title=&#34;特殊的二叉树&#34;&gt;&lt;/a&gt;特殊的二叉树&lt;/h1&gt;&lt;p&gt;**满二叉树:**一个二叉树，如果每一个层的结点数都达到最大值，则这个二叉树就是满二叉树。也就是说，如果一个二叉树的层数为$K$，且结点总数是$2^k-1$，则它就是满二叉树。&lt;/p&gt;
+&lt;p&gt;**完全二叉树:**完全二叉树是效率很高的数据结构，完全二叉树是由满二叉树而引出来的。对于深度为$K$的，有$n$个结点的二叉树，当且仅当其每一个结点都与深度为$K$的满二叉树中编号从1至n的结点一一对应时称之为完全二叉树。要注意的是满二叉树是一种特殊的完全二叉树。&lt;/p&gt;
+&lt;p&gt;![](../../../post_images/满二叉树.png “满二叉树”)&lt;/p&gt;
+&lt;h1 id=&#34;二叉树的性质&#34;&gt;&lt;a href=&#34;#二叉树的性质&#34; class=&#34;headerlink&#34; title=&#34;二叉树的性质&#34;&gt;&lt;/a&gt;二叉树的性质&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;若规定根节点的层数为$1$，则一棵非空二叉树的第$i$层上最多有$2^{i-1}$个结点.&lt;/li&gt;
+&lt;li&gt;若规定根节点的层数为$1$，则深度为h的二叉树的最大结点数是$2^h-1$.&lt;/li&gt;
+&lt;li&gt;对任何一棵二叉树，如果度为$0$其叶结点个数为$n_0$, 度为2的分支结点个数为$n_2$, 则有$n_0＝n_2+1$&lt;/li&gt;
+&lt;li&gt;若规定根节点的层数为$1$，具有$n$个结点的满二叉树的深度，$h=LogN$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;二叉树的实现形式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二叉树的实现形式&#34;&gt;#&lt;/a&gt; 二叉树的实现形式&lt;/h1&gt;
-&lt;h2 id=&#34;顺序形式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#顺序形式&#34;&gt;#&lt;/a&gt; 顺序形式&lt;/h2&gt;
-&lt;p&gt;采用数组的方式，一个存放一个节点，可能会存在空，大小需要变化&lt;/p&gt;
+&lt;h1 id=&#34;二叉树的实现形式&#34;&gt;&lt;a href=&#34;#二叉树的实现形式&#34; class=&#34;headerlink&#34; title=&#34;二叉树的实现形式&#34;&gt;&lt;/a&gt;二叉树的实现形式&lt;/h1&gt;&lt;h2 id=&#34;顺序形式&#34;&gt;&lt;a href=&#34;#顺序形式&#34; class=&#34;headerlink&#34; title=&#34;顺序形式&#34;&gt;&lt;/a&gt;顺序形式&lt;/h2&gt;&lt;p&gt;采用数组的方式，一个存放一个节点，可能会存在空，大小需要变化&lt;/p&gt;
 &lt;p&gt;采用该种方式构建的完全二叉树&lt;/p&gt;
 &lt;p&gt;性质&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;左子树根节点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;leftchild=parent*2+1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.80952em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.72777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;右子树根节点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;∗&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;leftchild=parent*2+1&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.8888799999999999em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.80952em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;∗&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.72777em;vertical-align:-0.08333em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.64444em;vertical-align:0em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;根节点 &lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo stretchy=&#34;false&#34;&gt;(&lt;/mo&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mo&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;mi mathvariant=&#34;normal&#34;&gt;/&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;parent=(child-1)/2&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.80952em;vertical-align:-0.19444em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;p&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mrel&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2777777777777778em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;d&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mbin&#34;&gt;−&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.2222222222222222em;&#34;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;左子树根节点 $leftchild=parent*2+1$&lt;/li&gt;
+&lt;li&gt;右子树根节点 $leftchild=parent*2+1$&lt;/li&gt;
+&lt;li&gt;根节点 $parent=(child-1)/2$&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;链式形式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#链式形式&#34;&gt;#&lt;/a&gt; 链式形式&lt;/h2&gt;
-&lt;p&gt;可以定义出每一个节点，用地址进行链接&lt;/p&gt;
-&lt;h3 id=&#34;二叉树的链式实现及相关遍历&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#二叉树的链式实现及相关遍历&#34;&gt;#&lt;/a&gt; 二叉树的链式实现及相关遍历&lt;/h3&gt;
-&lt;h4 id=&#34;实现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#实现&#34;&gt;#&lt;/a&gt; 实现&lt;/h4&gt;
-&lt;p&gt;代码如下&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;//tree.h
+&lt;h2 id=&#34;链式形式&#34;&gt;&lt;a href=&#34;#链式形式&#34; class=&#34;headerlink&#34; title=&#34;链式形式&#34;&gt;&lt;/a&gt;链式形式&lt;/h2&gt;&lt;p&gt;可以定义出每一个节点，用地址进行链接&lt;/p&gt;
+&lt;h3 id=&#34;二叉树的链式实现及相关遍历&#34;&gt;&lt;a href=&#34;#二叉树的链式实现及相关遍历&#34; class=&#34;headerlink&#34; title=&#34;二叉树的链式实现及相关遍历&#34;&gt;&lt;/a&gt;二叉树的链式实现及相关遍历&lt;/h3&gt;&lt;h4 id=&#34;实现&#34;&gt;&lt;a href=&#34;#实现&#34; class=&#34;headerlink&#34; title=&#34;实现&#34;&gt;&lt;/a&gt;实现&lt;/h4&gt;&lt;p&gt;代码如下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;//tree.h
 #ifndef TREE_H
 #define TREE_H
 
@@ -101,9 +101,9 @@
 template&amp;lt;class T&amp;gt;
 class RNode{
 public:
-	T data;
-	class RNode&amp;lt;T&amp;gt; * lNode;
-	class RNode&amp;lt;T&amp;gt; * rNode;
+    T data;
+    class RNode&amp;lt;T&amp;gt; * lNode;
+    class RNode&amp;lt;T&amp;gt; * rNode;
 };
 
 #endif
@@ -111,58 +111,56 @@ public:
 //tree.c
 void test1()
 {
-	//A
-	RNode&amp;lt;int&amp;gt;* A = new RNode&amp;lt;int&amp;gt;;
-	A-&amp;gt;data = 5;
-	A-&amp;gt;lNode = nullptr;
-	A-&amp;gt;rNode = nullptr;
-	//B
-	RNode&amp;lt;int&amp;gt;* B = new RNode&amp;lt;int&amp;gt;;
-	B-&amp;gt;data = 3;
-	B-&amp;gt;lNode = nullptr;
-	B-&amp;gt;rNode = nullptr;
-	//C
-	RNode&amp;lt;int&amp;gt;* C = new RNode&amp;lt;int&amp;gt;;
-	C-&amp;gt;data = 4;
-	C-&amp;gt;lNode = nullptr;
-	C-&amp;gt;rNode = nullptr;
-	//D
-	RNode&amp;lt;int&amp;gt;* D = new RNode&amp;lt;int&amp;gt;;
-	D-&amp;gt;data = 7;
-	D-&amp;gt;lNode = nullptr;
-	D-&amp;gt;rNode = nullptr;
-	//E
-	RNode&amp;lt;int&amp;gt;* E = new RNode&amp;lt;int&amp;gt;;
-	E-&amp;gt;data = 12;
-	E-&amp;gt;lNode = nullptr;
-	E-&amp;gt;rNode = nullptr;
+    //A
+    RNode&amp;lt;int&amp;gt;* A = new RNode&amp;lt;int&amp;gt;;
+    A-&amp;gt;data = 5;
+    A-&amp;gt;lNode = nullptr;
+    A-&amp;gt;rNode = nullptr;
+    //B
+    RNode&amp;lt;int&amp;gt;* B = new RNode&amp;lt;int&amp;gt;;
+    B-&amp;gt;data = 3;
+    B-&amp;gt;lNode = nullptr;
+    B-&amp;gt;rNode = nullptr;
+    //C
+    RNode&amp;lt;int&amp;gt;* C = new RNode&amp;lt;int&amp;gt;;
+    C-&amp;gt;data = 4;
+    C-&amp;gt;lNode = nullptr;
+    C-&amp;gt;rNode = nullptr;
+    //D
+    RNode&amp;lt;int&amp;gt;* D = new RNode&amp;lt;int&amp;gt;;
+    D-&amp;gt;data = 7;
+    D-&amp;gt;lNode = nullptr;
+    D-&amp;gt;rNode = nullptr;
+    //E
+    RNode&amp;lt;int&amp;gt;* E = new RNode&amp;lt;int&amp;gt;;
+    E-&amp;gt;data = 12;
+    E-&amp;gt;lNode = nullptr;
+    E-&amp;gt;rNode = nullptr;
 
-	// 建立联系
-	A-&amp;gt;lNode = B;
-	A-&amp;gt;rNode = C;
-	B-&amp;gt;lNode = D;
-	C-&amp;gt;rNode = E;
+    // 建立联系
+    A-&amp;gt;lNode = B;
+    A-&amp;gt;rNode = C;
+    B-&amp;gt;lNode = D;
+    C-&amp;gt;rNode = E;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;遍历&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#遍历&#34;&gt;#&lt;/a&gt; 遍历&lt;/h4&gt;
-&lt;h5 id=&#34;前序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前序&#34;&gt;#&lt;/a&gt; 前序&lt;/h5&gt;
-&lt;p&gt;根 --&amp;gt; 左子树 --&amp;gt; 右子树&lt;/p&gt;
-&lt;p&gt;leetcode 相关链接: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtcHJlb3JkZXItdHJhdmVyc2FsLw==&#34;&gt;二叉树的前序遍历&lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&#34;遍历&#34;&gt;&lt;a href=&#34;#遍历&#34; class=&#34;headerlink&#34; title=&#34;遍历&#34;&gt;&lt;/a&gt;遍历&lt;/h4&gt;&lt;h5 id=&#34;前序&#34;&gt;&lt;a href=&#34;#前序&#34; class=&#34;headerlink&#34; title=&#34;前序&#34;&gt;&lt;/a&gt;前序&lt;/h5&gt;&lt;p&gt;根 –&amp;gt; 左子树 –&amp;gt; 右子树&lt;/p&gt;
+&lt;p&gt;leetcode相关链接: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtcHJlb3JkZXItdHJhdmVyc2FsLw==&#34;&gt;二叉树的前序遍历&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void PrevOrder(RNode&amp;lt;int&amp;gt;* P)
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;void PrevOrder(RNode&amp;lt;int&amp;gt;* P)
 {
-	if (P == nullptr)
-	{
-		cout &amp;lt;&amp;lt; &#34;NULL &#34;;
-		return;
-	}
-	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
-	PrevOrder(P-&amp;gt;lNode);
-	PrevOrder(P-&amp;gt;rNode);
+    if (P == nullptr)
+    {
+        cout &amp;lt;&amp;lt; &#34;NULL &#34;;
+        return;
+    }
+    cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
+    PrevOrder(P-&amp;gt;lNode);
+    PrevOrder(P-&amp;gt;rNode);
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;附上 leetcode 上的迭代写法&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;class Solution {
 public:
     vector&amp;lt;int&amp;gt; preorderTraversal(TreeNode* root) {
         vector&amp;lt;int&amp;gt;ans;
@@ -187,24 +185,23 @@ public:
     }
 };
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;中序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#中序&#34;&gt;#&lt;/a&gt; 中序&lt;/h5&gt;
-&lt;p&gt;左子树 --&amp;gt; 根 --&amp;gt; 右子树&lt;/p&gt;
-&lt;p&gt;leetcode 相关链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtaW5vcmRlci10cmF2ZXJzYWwv&#34;&gt; 二叉树的中序遍历&lt;/span&gt;&lt;/p&gt;
+&lt;h5 id=&#34;中序&#34;&gt;&lt;a href=&#34;#中序&#34; class=&#34;headerlink&#34; title=&#34;中序&#34;&gt;&lt;/a&gt;中序&lt;/h5&gt;&lt;p&gt;左子树 –&amp;gt; 根 –&amp;gt; 右子树&lt;/p&gt;
+&lt;p&gt;leetcode相关链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtaW5vcmRlci10cmF2ZXJzYWwv&#34;&gt;二叉树的中序遍历&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void MidOrder(RNode&amp;lt;int&amp;gt;* P)
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;void MidOrder(RNode&amp;lt;int&amp;gt;* P)
 {
-	if (P == nullptr)
-	{
-		cout &amp;lt;&amp;lt; &#34;NULL &#34;;
-		return;
-	}
-	MidOrder(P-&amp;gt;lNode);
-	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
-	MidOrder(P-&amp;gt;rNode);
+    if (P == nullptr)
+    {
+        cout &amp;lt;&amp;lt; &#34;NULL &#34;;
+        return;
+    }
+    MidOrder(P-&amp;gt;lNode);
+    cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
+    MidOrder(P-&amp;gt;rNode);
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;附上 leetcode 上的迭代写法&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
+&lt;p&gt;附上leetcode上的迭代写法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;class Solution {
 public:
     vector&amp;lt;int&amp;gt; inorderTraversal(TreeNode* root) {
         vector&amp;lt;int&amp;gt;ans;
@@ -228,24 +225,23 @@ public:
     }
 };
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;后序&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#后序&#34;&gt;#&lt;/a&gt; 后序&lt;/h5&gt;
-&lt;p&gt;左子树 --&amp;gt; 右子树 --&amp;gt; 根&lt;/p&gt;
-&lt;p&gt;leetcode 相关链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtcHJlb3JkZXItdHJhdmVyc2FsLw==&#34;&gt; 二叉树的后序遍历&lt;/span&gt;&lt;/p&gt;
+&lt;h5 id=&#34;后序&#34;&gt;&lt;a href=&#34;#后序&#34; class=&#34;headerlink&#34; title=&#34;后序&#34;&gt;&lt;/a&gt;后序&lt;/h5&gt;&lt;p&gt;左子树 –&amp;gt;右子树 –&amp;gt;根&lt;/p&gt;
+&lt;p&gt;leetcode 相关链接:&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtcHJlb3JkZXItdHJhdmVyc2FsLw==&#34;&gt;二叉树的后序遍历&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;代码&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;void LastOrder(RNode&amp;lt;int&amp;gt;* P)
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;void LastOrder(RNode&amp;lt;int&amp;gt;* P)
 {
-	if (P == nullptr)
-	{
-		cout &amp;lt;&amp;lt; &#34;NULL &#34;;
-		return;
-	}
-	LastOrder(P-&amp;gt;lNode);
-	LastOrder(P-&amp;gt;rNode);
-	cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
+    if (P == nullptr)
+    {
+        cout &amp;lt;&amp;lt; &#34;NULL &#34;;
+        return;
+    }
+    LastOrder(P-&amp;gt;lNode);
+    LastOrder(P-&amp;gt;rNode);
+    cout &amp;lt;&amp;lt; P-&amp;gt;data &amp;lt;&amp;lt; &#34; &#34;;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;附上 leetcode 上的迭代写法&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
+&lt;p&gt;附上leetcode上的迭代写法&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;class Solution {
 public:
     vector&amp;lt;int&amp;gt; postorderTraversal(TreeNode *root) {
         vector&amp;lt;int&amp;gt; res;
@@ -278,21 +274,16 @@ public:
 &lt;p&gt;相关解释&lt;/p&gt;
 &lt;p&gt;为了实现这一顺序，该方法中&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;由于左子树始终首先输出，那么依旧存入所有的左子树结点&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;由于左子树始终首先输出，那么依旧存入所有的左子树结点&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;为了防止根先于右子树输出，在该方法中，使用了 &lt;code&gt;prev&lt;/code&gt;  这一变量，代表的是前一个右子树，只有当右子树为空或者右子树之前输出过了才可以输入 &lt;code&gt;root&lt;/code&gt;  的内容，而为了先输出右子树的内容，会将右子树的根节点存入栈中，并指向该节点的右子树&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;为了防止根先于右子树输出，在该方法中，使用了&lt;code&gt;prev&lt;/code&gt;这一变量，代表的是前一个右子树，只有当右子树为空或者右子树之前输出过了才可以输入&lt;code&gt;root&lt;/code&gt;的内容，而为了先输出右子树的内容，会将右子树的根节点存入栈中，并指向该节点的右子树&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;然后再判断上面的指向是否为存在子树 (即进入 while 循环判断，如果有，那么继续深入)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;然后再判断上面的指向是否为存在子树(即进入while循环判断，如果有，那么继续深入)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;之后按照正常输出即可&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;之后按照正常输出即可&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id=&#34;其他相关题目&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他相关题目&#34;&gt;#&lt;/a&gt; 其他相关题目&lt;/h1&gt;
-&lt;ol&gt;
+&lt;h1 id=&#34;其他相关题目&#34;&gt;&lt;a href=&#34;#其他相关题目&#34; class=&#34;headerlink&#34; title=&#34;其他相关题目&#34;&gt;&lt;/a&gt;其他相关题目&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWF4aW11bS1kZXB0aC1vZi1iaW5hcnktdHJlZS8=&#34;&gt;二叉树的最大深度&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmFsYW5jZWQtYmluYXJ5LXRyZWUv&#34;&gt;平衡二叉树&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvYmluYXJ5LXRyZWUtbGV2ZWwtb3JkZXItdHJhdmVyc2FsLw==&#34;&gt;二叉树的层序遍历&lt;/span&gt;&lt;/li&gt;

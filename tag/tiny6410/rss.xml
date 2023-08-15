@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>dpm12345 • Posts by &#34;tiny6410&#34; tag</title>
+        <link>http://dpm12345.cn</link>
+        <description>学习记录</description>
+        <language>zh-CN</language>
+        <pubDate>Sun, 02 Jul 2023 14:00:33 +0800</pubDate>
+        <lastBuildDate>Sun, 02 Jul 2023 14:00:33 +0800</lastBuildDate>
+        <category>Qt</category>
+        <category>ms17</category>
+        <category>msf</category>
+        <category>git</category>
+        <category>CTF</category>
+        <category>sql注入</category>
+        <category>笔记</category>
+        <category>SSRF</category>
+        <category>kali</category>
+        <category>nmap</category>
+        <category>Misc</category>
+        <category>MFC</category>
+        <category>cryptography</category>
+        <category>ctfshow</category>
+        <category>Web</category>
+        <category>树</category>
+        <category>二叉树</category>
+        <category>数据结构</category>
+        <category>hexo</category>
+        <category>队列</category>
+        <category>前缀和</category>
+        <category>动态规划</category>
+        <category>滑动窗口</category>
+        <category>数组</category>
+        <category>哈希表</category>
+        <category>链表</category>
+        <category>矩阵</category>
+        <category>递归</category>
+        <category>贪心</category>
+        <category>子序列</category>
+        <category>最长公共子序列</category>
+        <category>最长回文子序列</category>
+        <category>字符串</category>
+        <category>括号</category>
+        <category>vector</category>
+        <category>栈</category>
+        <category>双指针（快慢指针）</category>
+        <category>排列组合</category>
+        <category>等差数列</category>
+        <category>深度优先搜索</category>
+        <category>广度优先搜索</category>
+        <category>ciscn</category>
+        <category>SSTI</category>
+        <category>arm-linux</category>
+        <category>Tiny6410</category>
+        <category>信息安全</category>
+        <category>linux</category>
+        <category>web</category>
+        <category>javascript</category>
+        <category>XXE</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/d4e86cbd/</guid>
+            <title>ubuntu下arm-linux编译环境的搭建</title>
+            <link>http://dpm12345.cn/posts/d4e86cbd/</link>
+            <category>arm-linux</category>
+            <category>Tiny6410</category>
+            <pubDate>Sun, 02 Jul 2023 14:00:33 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;这学期的一门《嵌入式系统课程设计》,需要进行交叉编译，由于依托于实验室的环境，且实验室的计算机系统为windows，编译需在虚拟机进行，但少些文件又在windows系统下进行&lt;/p&gt;
+&lt;p&gt;由于以上带来的不便，便突发奇想在自己电脑上配置环境，使编写、编译、烧写均在一个系统上，提高效率&lt;/p&gt;
+&lt;h1 id=&#34;环境&#34;&gt;&lt;a href=&#34;#环境&#34; class=&#34;headerlink&#34; title=&#34;环境&#34;&gt;&lt;/a&gt;环境&lt;/h1&gt;&lt;p&gt;Ubuntu16.04LTS(一开始使用的为Ubuntu22，但由于烧写程序Minitools需要QT4，而且不管怎么找解决方法也解决不了，最终还是换了系统解决的)&lt;/p&gt;
+&lt;h1 id=&#34;所需文件&#34;&gt;&lt;a href=&#34;#所需文件&#34; class=&#34;headerlink&#34; title=&#34;所需文件&#34;&gt;&lt;/a&gt;所需文件&lt;/h1&gt;&lt;h2 id=&#34;arm-linux-gcc交叉编译器安装包&#34;&gt;&lt;a href=&#34;#arm-linux-gcc交叉编译器安装包&#34; class=&#34;headerlink&#34; title=&#34;arm-linux-gcc交叉编译器安装包&#34;&gt;&lt;/a&gt;arm-linux-gcc交叉编译器安装包&lt;/h2&gt;&lt;p&gt;由于使用的是64位系统，故安装64位的编译器&lt;/p&gt;
+&lt;p&gt;链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wYW4uYmFpZHUuY29tL3MvMU9TNTNfVWhyQUtQQTY5Mkl3a3NhcVE=&#34;&gt;https://pan.baidu.com/s/1OS53_UhrAKPA692IwksaqQ&lt;/span&gt;&lt;br&gt;提取码：2vft&lt;/p&gt;
+&lt;h2 id=&#34;MiniTools&#34;&gt;&lt;a href=&#34;#MiniTools&#34; class=&#34;headerlink&#34; title=&#34;MiniTools&#34;&gt;&lt;/a&gt;MiniTools&lt;/h2&gt;&lt;p&gt;为烧写程序，为方便操作，这里直接下载Linux版，该文件在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJpZW5kbHllbGVjLmNvbS8=&#34;&gt;FriendlyElec官网&lt;/span&gt;上有&lt;/p&gt;
+&lt;p&gt;点击搜索框下的&lt;code&gt;DOWNLOADS&lt;/code&gt;–&amp;gt; 下拉选择&lt;code&gt;Tiny6410&lt;/code&gt; –&amp;gt; 选择下载渠道(这里我选择OneDrive，网盘限速，但用这个需要点魔法) –&amp;gt; 点击&lt;code&gt;FriendlyARM-Tiny6410-DVD-A&lt;/code&gt;–&amp;gt;点击&lt;code&gt;tools&lt;/code&gt;–&amp;gt;下载&lt;code&gt;MiniTools-Linux-20150528.tgz&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;(这里不选择windows的又一个原因为，windows10安装时会提示驱动安装失败，需手动安装，而这个安装要将强制数字签名关闭，显得麻烦且不安全)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../post_images/tiny6410_1.png&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;Superboot-6410-bin&#34;&gt;&lt;a href=&#34;#Superboot-6410-bin&#34; class=&#34;headerlink&#34; title=&#34;Superboot-6410.bin&#34;&gt;&lt;/a&gt;Superboot-6410.bin&lt;/h2&gt;&lt;p&gt;烧写程序所需的文件，同样可在上面提到的官网上找到&lt;/p&gt;
+&lt;p&gt;前面同上面，路径为&lt;code&gt;Tiny6410/FriendlyARM-Tiny6410-DVD-B/images/Superboot-6410.bin&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../post_images/tiny6410_4.png&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;开始安装arm-linux-gcc&#34;&gt;&lt;a href=&#34;#开始安装arm-linux-gcc&#34; class=&#34;headerlink&#34; title=&#34;开始安装arm-linux-gcc&#34;&gt;&lt;/a&gt;开始安装arm-linux-gcc&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;把下载好的安装包移动到根目录下的tmp目录中（/tmp）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用tar命令解压安装包，即在Terminal中输入以下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo tar -xjvf /tmp/arm-linux-gcc-4.6.4-arm-x86_64.tar.bz2 -C /
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意是大写的字母【C】，此命令会把安装包解压到根目录下的【opt】的【TuxamitoSoftToolchains】文件夹中（/opt/TuxamitoSoftToolchains）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解压完成后，再在（/usr/local）中创建一个新目录【arm】，并授权：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo mkdir /usr/local/arm
+sudo chmod 777 /usr/local/arm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在路径&lt;code&gt;/opt/TuxamitoSoftToolchains/arm-arm1176jzfssf-linux-gnueabi/&lt;/code&gt;下找到&lt;code&gt;gcc-4.6.4&lt;/code&gt;,将其复制到前面创建arm文件夹中&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo cp -r /opt/TuxamitoSoftToolchains/arm-arm1176jzfssf-linux-gnueabi/gcc-4.6.4 /usr/local/arm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;打开（/etc/profile）配置环境变量和库变量，目的是以后可以在任何位置使用该交叉编译器&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;sudo vim /etc/profile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在文件最后添加两行，并输入以下代码：第一行是添加执行程序的环境变量，第二行是库文件的路径。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;export PATH=$PATH:/usr/local/arm/gcc-4.6.4/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/arm/gcc-4.6.4/lib
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存并退出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;使用source命令重新加载生效该配置文件&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;source /etc/profile
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;检验是否安装成功，在 Terminal 输入以下命令输出版本信息：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;arm-linux-gcc -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;若无报错，则安装成功&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../post_images/tiny6410_2.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;使用Minitools&#34;&gt;&lt;a href=&#34;#使用Minitools&#34; class=&#34;headerlink&#34; title=&#34;使用Minitools&#34;&gt;&lt;/a&gt;使用Minitools&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;将Minitools复制到ubuntu中&lt;/p&gt;
+&lt;p&gt;解压&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;tar -xzvf MiniTools-Linux-20150528.tgz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;进入解压后的文件夹&lt;code&gt;MiniTools-20150528&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;cd MiniTools-20150528
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;运行start.sh,之后会自动选择合适版本启动，要想关闭，直接在终端&lt;code&gt;Ctrl+C&lt;/code&gt;即可&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;./start.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../post_images/tiny6410_3.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;补充&#34;&gt;&lt;a href=&#34;#补充&#34; class=&#34;headerlink&#34; title=&#34;补充&#34;&gt;&lt;/a&gt;补充&lt;/h1&gt;&lt;p&gt;在FriendlyElec官网&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZnJpZW5kbHllbGVjLmNvbS8lRUYlQkMlOEMlRTYlOUMlODklRTYlQUYlOTQlRTglQkUlODMlRTUlQTQlOUElRTclOUElODQlRTglQjUlODQlRTYlOTYlOTklRTUlOEYlQUYlRTQlQkIlQTUlRTYlODklQkUlRTUlODglQjA=&#34;&gt;https://www.friendlyelec.com/，有比较多的资料可以找到&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;如&lt;code&gt;FriendlyARM-Tiny6410-DVD-A&lt;/code&gt;下的各种开发文档&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../post_images/tiny6410_5.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;FriendlyARM-Tiny6410-DVD-A/裸机程序&lt;/code&gt;下的所有文件，与实验报告的文件类似，并有相关的pdf文件开发指南，能解决一定疑问&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/../post_images/tiny6410_7.png&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

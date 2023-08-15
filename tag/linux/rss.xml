@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>dpm12345 • Posts by &#34;linux&#34; tag</title>
+        <link>http://dpm12345.cn</link>
+        <description>学习记录</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 19 Jul 2023 14:07:26 +0800</pubDate>
+        <lastBuildDate>Wed, 19 Jul 2023 14:07:26 +0800</lastBuildDate>
+        <category>Qt</category>
+        <category>ms17</category>
+        <category>msf</category>
+        <category>git</category>
+        <category>CTF</category>
+        <category>sql注入</category>
+        <category>笔记</category>
+        <category>SSRF</category>
+        <category>kali</category>
+        <category>nmap</category>
+        <category>Misc</category>
+        <category>MFC</category>
+        <category>cryptography</category>
+        <category>ctfshow</category>
+        <category>Web</category>
+        <category>树</category>
+        <category>二叉树</category>
+        <category>数据结构</category>
+        <category>hexo</category>
+        <category>队列</category>
+        <category>前缀和</category>
+        <category>动态规划</category>
+        <category>滑动窗口</category>
+        <category>数组</category>
+        <category>哈希表</category>
+        <category>链表</category>
+        <category>矩阵</category>
+        <category>递归</category>
+        <category>贪心</category>
+        <category>子序列</category>
+        <category>最长公共子序列</category>
+        <category>最长回文子序列</category>
+        <category>字符串</category>
+        <category>括号</category>
+        <category>vector</category>
+        <category>栈</category>
+        <category>双指针（快慢指针）</category>
+        <category>排列组合</category>
+        <category>等差数列</category>
+        <category>深度优先搜索</category>
+        <category>广度优先搜索</category>
+        <category>ciscn</category>
+        <category>SSTI</category>
+        <category>arm-linux</category>
+        <category>Tiny6410</category>
+        <category>信息安全</category>
+        <category>linux</category>
+        <category>web</category>
+        <category>javascript</category>
+        <category>XXE</category>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/f2a742a4/</guid>
+            <title>虚拟机网络问题</title>
+            <link>http://dpm12345.cn/posts/f2a742a4/</link>
+            <category>linux</category>
+            <pubDate>Wed, 19 Jul 2023 14:07:26 +0800</pubDate>
+            <description><![CDATA[ &lt;pre&gt;&lt;code class=&#34;bash&#34;&gt;ifconfig -a 查看所有网络设备
+sudo ifconfig ens33 up 开启指定网卡
+sudo dhclient ens33 自动分配ip地址
+&lt;/code&gt;&lt;/pre&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

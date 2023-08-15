@@ -48,6 +48,15 @@
         <category>等差数列</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
+        <category>ciscn</category>
+        <category>SSTI</category>
+        <category>arm-linux</category>
+        <category>Tiny6410</category>
+        <category>信息安全</category>
+        <category>linux</category>
+        <category>web</category>
+        <category>javascript</category>
+        <category>XXE</category>
         <item>
             <guid isPermalink="true">http://dpm12345.cn/posts/d98ef1d2/</guid>
             <title>两数之和</title>
@@ -57,8 +66,8 @@
             <pubDate>Fri, 18 Mar 2022 22:54:40 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;题目链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy90d28tc3VtLw==&#34;&gt;两数之和&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/%E7%B4%A0%E6%9D%90/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-c++&#34;&gt;class Solution {
+&lt;p&gt;&lt;img data-src=&#34;/../../../post_images/%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C_%E9%A2%98%E7%9B%AE%E8%AF%A6%E6%83%85.jpg&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;c++&#34;&gt;class Solution {
 public:
     vector&amp;lt;int&amp;gt; twoSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) {
         unordered_map&amp;lt;int,int&amp;gt;temp;

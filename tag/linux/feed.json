@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "dpm12345 • All posts by \"linux\" tag",
+    "description": "学习记录",
+    "home_page_url": "http://dpm12345.cn",
+    "items": [
+        {
+            "id": "http://dpm12345.cn/posts/f2a742a4/",
+            "url": "http://dpm12345.cn/posts/f2a742a4/",
+            "title": "虚拟机网络问题",
+            "date_published": "2023-07-19T06:07:26.000Z",
+            "content_html": "<pre><code class=\"bash\">ifconfig -a 查看所有网络设备\nsudo ifconfig ens33 up 开启指定网卡\nsudo dhclient ens33 自动分配ip地址\n</code></pre>\n",
+            "tags": [
+                "linux"
+            ]
+        }
+    ]
+}

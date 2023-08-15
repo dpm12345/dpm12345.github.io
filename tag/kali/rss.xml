@@ -48,6 +48,15 @@
         <category>等差数列</category>
         <category>深度优先搜索</category>
         <category>广度优先搜索</category>
+        <category>ciscn</category>
+        <category>SSTI</category>
+        <category>arm-linux</category>
+        <category>Tiny6410</category>
+        <category>信息安全</category>
+        <category>linux</category>
+        <category>web</category>
+        <category>javascript</category>
+        <category>XXE</category>
         <item>
             <guid isPermalink="true">http://dpm12345.cn/posts/558506d6/</guid>
             <title>MD5常见绕过</title>
@@ -56,124 +65,88 @@
             <category>kali</category>
             <category>nmap</category>
             <pubDate>Fri, 22 Jul 2022 23:10:32 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;maltego&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#maltego&#34;&gt;#&lt;/a&gt; Maltego&lt;/h1&gt;
-&lt;h1 id=&#34;nmap&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#nmap&#34;&gt;#&lt;/a&gt; Nmap&lt;/h1&gt;
-&lt;h2 id=&#34;扫描类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#扫描类型&#34;&gt;#&lt;/a&gt; 扫描类型&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;-sT TCP 连接扫描，需要建立三次握手，会在目标主机中记录大量的链接请求和错误信息&lt;/p&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;Maltego&#34;&gt;&lt;a href=&#34;#Maltego&#34; class=&#34;headerlink&#34; title=&#34;Maltego&#34;&gt;&lt;/a&gt;Maltego&lt;/h1&gt;&lt;h1 id=&#34;Nmap&#34;&gt;&lt;a href=&#34;#Nmap&#34; class=&#34;headerlink&#34; title=&#34;Nmap&#34;&gt;&lt;/a&gt;Nmap&lt;/h1&gt;&lt;h2 id=&#34;扫描类型&#34;&gt;&lt;a href=&#34;#扫描类型&#34; class=&#34;headerlink&#34; title=&#34;扫描类型&#34;&gt;&lt;/a&gt;扫描类型&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;-sT TCP 连接扫描，需要建立三次握手，会在目标主机中记录大量的链接请求和错误信息&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-sS SYN 扫描，不建立三次握手，很少有系统记入日志，默认使用，需要 root (admin) 权&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-sS SYN 扫描，不建立三次握手，很少有系统记入日志，默认使用，需要 root (admin) 权&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-sP Ping 扫描，默认使用，只有能 Ping 得通才会继续扫描&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-sP Ping 扫描，默认使用，只有能 Ping 得通才会继续扫描&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-PO 扫描之前不需要 Ping，用于绕过防火墙禁 Ping 功能&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-PO 扫描之前不需要 Ping，用于绕过防火墙禁 Ping 功能&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-sA 用来穿过防火墙的规则集 (ACK 置位)，扫描端口时效果不好:&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-sA 用来穿过防火墙的规则集 (ACK 置位)，扫描端口时效果不好:&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-sV 探测服务版本信息 (服务指纹)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-sV 探测服务版本信息 (服务指纹)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-sU UDP 扫描，扫描主机开启的 UDP 的服务，速度慢，结果不可靠&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-sU UDP 扫描，扫描主机开启的 UDP 的服务，速度慢，结果不可靠&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;扫描参数&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#扫描参数&#34;&gt;#&lt;/a&gt; 扫描参数&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;-v 显示扫描过程，推荐使用&lt;/p&gt;
+&lt;h2 id=&#34;扫描参数&#34;&gt;&lt;a href=&#34;#扫描参数&#34; class=&#34;headerlink&#34; title=&#34;扫描参数&#34;&gt;&lt;/a&gt;扫描参数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;-v 显示扫描过程，推荐使用&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-p 指定端口号，如 [1-65535],[22, 135, 1 433,3306,] 等格式&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-p 指定端口号，如 [1-65535],[22, 135, 1 433,3306,] 等格式&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-O 启动远程操作系统监测，存在误报&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-O 启动远程操作系统监测，存在误报&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-A 全面系统监测，使用脚本检测，扫描等，系统指纹)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-A 全面系统监测，使用脚本检测，扫描等，系统指纹)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-T4 针对 TCP 端口禁止动态扫描延迟超过 10ms&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-T4 针对 TCP 端口禁止动态扫描延迟超过 10ms&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-iL 批量扫描，读取主机列表，如 [-iL /home/ip.txt]&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-iL 批量扫描，读取主机列表，如 [-iL /home/ip.txt]&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;-oG 将扫描结果输出到某个文件&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;-oG 将扫描结果输出到某个文件&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;fping -a-g 192.1 68.157.0192.1 68.157.200 -q &amp;gt;/tmp/alive.txt&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;fping -a-g 192.1 68.157.0192.1 68.157.200 -q &amp;gt;/tmp/alive.txt&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Nmap -sS -iL /tmp/alive.txt&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Nmap -sS -iL /tmp/alive.txt&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Nmap -p80，443 --script=http-waf-detect &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NhZmVkb2cuY24=&#34;&gt;safedog.cn&lt;/span&gt; // 扫描 waf&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Nmap -p80，443 –script=http-waf-detect safedog.cn // 扫描 waf&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;wafw0Of &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NhZmVkb2cuY24=&#34;&gt;safedog.cn&lt;/span&gt; // 扫描 waf&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;wafw0Of safedog.cn // 扫描 waf&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;p0f&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#p0f&#34;&gt;#&lt;/a&gt; P0f&lt;/h1&gt;
-&lt;p&gt;被动指纹识别工具，通过分析目标主机发出的数据包，对主机上的操作系统进行鉴别，即使目标主机上安装有防火墙设备。&lt;/p&gt;
+&lt;h1 id=&#34;P0f&#34;&gt;&lt;a href=&#34;#P0f&#34; class=&#34;headerlink&#34; title=&#34;P0f&#34;&gt;&lt;/a&gt;P0f&lt;/h1&gt;&lt;p&gt;被动指纹识别工具，通过分析目标主机发出的数据包，对主机上的操作系统进行鉴别，即使目标主机上安装有防火墙设备。&lt;/p&gt;
 &lt;p&gt;能识别以下信息:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;操作系统类型&lt;/li&gt;
-&lt;li&gt;端口&lt;/li&gt;
-&lt;li&gt;系统启动时间&lt;/li&gt;
-&lt;li&gt;是否运行于防火墙之后&lt;/li&gt;
+&lt;li&gt;操作系统类型 &lt;/li&gt;
+&lt;li&gt;端口 &lt;/li&gt;
+&lt;li&gt;系统启动时间 &lt;/li&gt;
+&lt;li&gt;是否运行于防火墙之后 &lt;/li&gt;
 &lt;li&gt;是否运行于 NAT 模式&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;使用：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;p0f [.. 选项..] [&#39; 过滤规则 &#39; ]
-&lt;ul&gt;
-&lt;li&gt;-i 指定监听的网络接口&lt;/li&gt;
-&lt;li&gt;-r 分析已抓取到的网络数据文件&lt;/li&gt;
-&lt;li&gt;-p 将网卡设置为混杂模式&lt;/li&gt;
-&lt;li&gt;-L 列出所有可用接口&lt;/li&gt;
+&lt;li&gt;p0f [.. 选项..] [‘ 过滤规则 ‘ ] &lt;ul&gt;
+&lt;li&gt;-i 指定监听的网络接口 &lt;/li&gt;
+&lt;li&gt;-r 分析已抓取到的网络数据文件 &lt;/li&gt;
+&lt;li&gt;-p 将网卡设置为混杂模式 &lt;/li&gt;
+&lt;li&gt;-L 列出所有可用接口 &lt;/li&gt;
 &lt;li&gt;-o 将信息写入指定的文件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&#34;google-hack-google-搜索&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#google-hack-google-搜索&#34;&gt;#&lt;/a&gt; Google Hack (Google 搜索)&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;默认模糊搜索，会自动进行词语拆分，加引号，会严格搜索被引住的内容，如 (web 渗透测试)&lt;/p&gt;
+&lt;h1 id=&#34;Google-Hack-Google-搜索&#34;&gt;&lt;a href=&#34;#Google-Hack-Google-搜索&#34; class=&#34;headerlink&#34; title=&#34;Google Hack (Google 搜索)&#34;&gt;&lt;/a&gt;Google Hack (Google 搜索)&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;默认模糊搜索，会自动进行词语拆分，加引号，会严格搜索被引住的内容，如 (web 渗透测试)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;通配符，与双引号同时使用， * 表示匹配任意关键字，. 表示匹配任意字符，如 (“web * 渗透测试”)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;通配符，与双引号同时使用， * 表示匹配任意关键字，. 表示匹配任意字符，如 (“web * 渗透测试”)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;布尔逻辑，默认情况下，多个关键字之间带空格时，表示逻辑与的关系，如果是逻辑或，用 | 来分隔 (可配置括号使用)，如 (web (渗透 | 测试))。&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;布尔逻辑，默认情况下，多个关键字之间带空格时，表示逻辑与的关系，如果是逻辑或，用 | 来分隔 (可配置括号使用)，如 (web (渗透 | 测试))。&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;逻辑非用 (- 关键字)，如 (“web 测试”- 渗透), intitle 在网页标题中进行搜索，如 ( intitle: “web 渗透”)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;逻辑非用 (- 关键字)，如 (“web 测试”- 渗透), intitle 在网页标题中进行搜索，如 ( intitle: “web 渗透”)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Intext 在网页或文档正文中进行搜索，如 (intitle: 渗透 intext:(kali|web) )&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Intext 在网页或文档正文中进行搜索，如 (intitle: 渗透 intext:(kali|web) )&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;inurl 网页链接中搜索，如: (inurl:phpmyadmin/index.php (intext:username password))&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;inurl 网页链接中搜索，如: (inurl:phpmyadmin/index.php (intext:username password))&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;filetype , 对搜索的文档类型进行限定，支持的文档有: pdf、 ppt、 doC、xls， 支持的网页文件有: htm、asp、php，如: (web 渗透 filetype:pdf)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;filetype , 对搜索的文档类型进行限定，支持的文档有: pdf、 ppt、 doC、xls， 支持的网页文件有: htm、asp、php，如: (web 渗透 filetype:pdf)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;cache, 想要搜索某个被修改之前的网页，如: cache:aliyun.com&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;cache, 想要搜索某个被修改之前的网页，如: cache:aliyun.com&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;related, 搜索某 - - 类相关的网址，如: related:aliyun.com&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;related, 搜索某 - - 类相关的网址，如: related:aliyun.com&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;link，搜索所有链接到某一个特定 URL 上的页面，如：(link:freebuf. com -site:freebuf.com)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;link，搜索所有链接到某一个特定 URL 上的页面，如：(link:freebuf. com -site:freebuf.com)&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;site，将搜索范围限制在某个网站或域名中，如：(web 渗透 site:freebuf.com)&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;site，将搜索范围限制在某个网站或域名中，如：(web 渗透 site:freebuf.com)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
  ]]></description>

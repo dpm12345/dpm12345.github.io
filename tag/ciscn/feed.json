@@ -1,0 +1,30 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "dpm12345 • All posts by \"ciscn\" tag",
+    "description": "学习记录",
+    "home_page_url": "http://dpm12345.cn",
+    "items": [
+        {
+            "id": "http://dpm12345.cn/posts/3f9caa7c/",
+            "url": "http://dpm12345.cn/posts/3f9caa7c/",
+            "title": "2022ciscn",
+            "date_published": "2023-06-10T12:15:40.000Z",
+            "content_html": "<h1 id=\"Web\"><a href=\"#Web\" class=\"headerlink\" title=\"Web\"></a>Web</h1><h1 id=\"Crypto\"><a href=\"#Crypto\" class=\"headerlink\" title=\"Crypto\"></a>Crypto</h1><h2 id=\"签到电台\"><a href=\"#签到电台\" class=\"headerlink\" title=\"签到电台\"></a>签到电台</h2><p>根据公众号给出的提示，得到了“弼时安全到达了”所对应的7个电码：</p>\n<p>1732 2514 1344 0356 0451 6671 0055</p>\n<p>知道是要从密码表截取前28位，每位相加然后模除以10，加不进位，减不借位</p>\n<p>访问题目中的密码本(应该不是唯一的)，得到密码本数字形式，然后编写代码</p>\n<pre><code class=\"python\">m = \"1284683471560012137323347563938960841270469827366977500196640227941488448145897061841685191437684841119472109545934488885156171671993203375440354577656740329709619670665414032766626359844634630934599849134748530511184845463803767779616315360123277646772394938151789063860995163647777792137876650152636001627761020415317881961532438857008239094959088216460909214888315796229117908997790669101643964602287249240028873946674862423569188143490016408265512470104752732003296551760935140476083726165638433195194685432776534485956790061\"\ns = \"1732251413440356045166710055\" \n\nans = \"\"\nfor i in range(len(s)):\n    ans +=str((int(m[i])+int(s[i])) % 10)\n\nprint(ans)\n# 2916834884900368172489057518\n</code></pre>\n<p>然后抓包提交即可</p>\n<h2 id=\"基于挑战码的双向认证\"><a href=\"#基于挑战码的双向认证\" class=\"headerlink\" title=\"基于挑战码的双向认证\"></a>基于挑战码的双向认证</h2><p><code>find / | grep flag</code></p>\n<p>可以发现两条flag</p>\n<p><img data-src=\"/./../../post_images/2022ciscn/%E6%8C%91%E6%88%98%E7%A0%811.png\" alt=\"挑战码1\"></p>\n<p>分别cat，得到</p>\n<pre><code>//flag1.txt\nflag{cde68814-f2b0-4ae2-b23e-b67213476da2}\n//flag2.txt\nflag{34f5fdaf-c373-47fd-afab-01ed2914c11a}\n</code></pre>\n<p>提交flag1即为此题flag</p>\n<h2 id=\"基于挑战码的双向认证2\"><a href=\"#基于挑战码的双向认证2\" class=\"headerlink\" title=\"基于挑战码的双向认证2\"></a>基于挑战码的双向认证2</h2><p>上题得到的第二个flag就是</p>\n<h1 id=\"Misc\"><a href=\"#Misc\" class=\"headerlink\" title=\"Misc\"></a>Misc</h1><h1 id=\"PWN\"><a href=\"#PWN\" class=\"headerlink\" title=\"PWN\"></a>PWN</h1>",
+            "tags": [
+                "CTF",
+                "ciscn"
+            ]
+        },
+        {
+            "id": "http://dpm12345.cn/posts/f4c079d9/",
+            "url": "http://dpm12345.cn/posts/f4c079d9/",
+            "title": "2023ciscn",
+            "date_published": "2023-05-28T12:15:40.000Z",
+            "content_html": "<h1 id=\"Web\"><a href=\"#Web\" class=\"headerlink\" title=\"Web\"></a>Web</h1><h2 id=\"unzip\"><a href=\"#unzip\" class=\"headerlink\" title=\"unzip\"></a>unzip</h2><p>属于文件上传的一种，根据题目可以知道是上传压缩包文件</p>\n<p>上传一个文件后，可以看到源码</p>\n<pre><code class=\"php\">&lt;?php\nerror_reporting(0);\nhighlight_file(__FILE__);\n\n$finfo = finfo_open(FILEINFO_MIME_TYPE);\nif (finfo_file($finfo, $_FILES[\"file\"][\"tmp_name\"]) === 'application/zip'){\n    exec('cd /tmp &amp;&amp; unzip -o ' . $_FILES[\"file\"][\"tmp_name\"]);\n};\n\n//only this!\n</code></pre>\n<p>根据其代码逻辑，可知在上传的文件是zip文件时，其会自动进入到<code>/tmp</code>文件夹中，并自动对压缩包进行解压</p>\n<p>这里主要用到的是软连接</p>\n<h1 id=\"Crypto\"><a href=\"#Crypto\" class=\"headerlink\" title=\"Crypto\"></a>Crypto</h1><h1 id=\"Misc\"><a href=\"#Misc\" class=\"headerlink\" title=\"Misc\"></a>Misc</h1><h1 id=\"Reverse\"><a href=\"#Reverse\" class=\"headerlink\" title=\"Reverse\"></a>Reverse</h1><h1 id=\"Pwn\"><a href=\"#Pwn\" class=\"headerlink\" title=\"Pwn\"></a>Pwn</h1>",
+            "tags": [
+                "CTF",
+                "ciscn"
+            ]
+        }
+    ]
+}
