@@ -1,0 +1,836 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN"  
+      data-theme-mode="auto"
+  >
+  <head>
+  <meta charset="utf-8">
+  
+  
+  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://dpm12345.top';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
+  <title>
+    shoka主题添加文章统计 | dpm12345
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_4k4bc36ef96.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+    <meta name="description" content="title: shoka主题添加文章统计math: truecategories: - - hexo - shokatags: - hexoabbrlink: f5c52549date: 2023-01-20 23:50:11参考自Lavender的文章：Shoka主题：新增文章统计页面添加统...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shoka主题添加文章统计">
+<meta property="og:url" content="http://dpm12345.top/posts/f5c52549/index.html">
+<meta property="og:site_name" content="dpm12345">
+<meta property="og:description" content="title: shoka主题添加文章统计math: truecategories: - - hexo - shokatags: - hexoabbrlink: f5c52549date: 2023-01-20 23:50:11参考自Lavender的文章：Shoka主题：新增文章统计页面添加统...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852701071-52c3546d-4faa-4d7b-99ca-397d0cebb365.jpg">
+<meta property="article:published_time" content="2023-01-20T15:50:11.000Z">
+<meta property="article:modified_time" content="2025-12-27T17:17:34.000Z">
+<meta property="article:author" content="dpm12345">
+<meta property="article:tag" content="hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852701071-52c3546d-4faa-4d7b-99ca-397d0cebb365.jpg">
+      <meta name="keywords" content="notes, blog, hexo, code">
+    <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
+      <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css" integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz+YI" crossorigin="anonymous">
+      
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+      <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script>
+<div id="copy-tooltip"></div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
+        <a class="main-nav-link-wrap" href="/">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">首页</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/archives">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">归档</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/about">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">关于</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/friend">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">友链</span>
+        </span>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation">
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a>
+  </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">简体中文</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" class="selected" aria-selected="true">简体中文</li>
+            <li data-value="en" role="option" aria-selected="false">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/posts/f5c52549/';
+              langMap['en'] = '/en/posts/f5c52549/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
+  <a href="https://github.com/dpm12345" class="triangle-badge" title="github" target="_blank" rel="noopener nofollow noreferrer">
+    <div class="icon icon-github triangle-badge-icon"></div>
+  </a>
+</div>
+<header id="header" aria-label="Site header">
+    <picture></picture>
+    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852701071-52c3546d-4faa-4d7b-99ca-397d0cebb365.jpg" alt="shoka主题添加文章统计">
+  <div id="header-outer">
+    <div id="header-title">
+          <span id="logo">
+            <h1 data-aos="slide-up">shoka主题添加文章统计</h1>
+          </span>
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+        </h2>
+    </div>
+  </div>
+</header>
+
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
+          <aside id="sidebar" aria-label="Sidebar">
+  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-wrap" data-aos="fade-up">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%9F%E8%AE%A1%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text"> 添加统计页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%B9%E5%BA%94%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text"> 修改对应配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text"> 添加代码</span></a></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="dpm12345" class="lazyload">
+  <div class="sidebar-author-name">dpm12345</div>
+  <div class="sidebar-description">学习记录</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">40</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">33</div>
+  </div>
+</div>
+<div class="sidebar-social">
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/dpm12345 itemprop="url" target="_blank" aria-label="github" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/142478620 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+</div>
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+  </div>
+  </div>
+</aside>
+
+          <section id="main" aria-label="Main content"><article id="post-hexo/shoka/shoka主题添加文章统计" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2023-01-20T15:50:11.000Z" itemprop="datePublished">2023-01-20</time>
+    <time style="display: none;" id="post-update-time">2025-12-28</time>
+  </span>
+</div>
+
+        <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/" title="hexo">hexo</a><a class="article-category-link" href="/categories/hexo/shoka/" title="shoka">shoka</a>
+  </div>
+
+    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <p>参考自<a target="_blank" rel="noopener" href="https://www.lavenderdh.cn/">Lavender</a>的文章：<a target="_blank" rel="noopener" href="https://www.lavenderdh.cn/posts/3265173701/">Shoka主题：新增文章统计页面</a></p>
+<h1 id="添加统计页面"><a class="markdownIt-Anchor" href="#添加统计页面"></a> 添加统计页面</h1>
+<ol>
+<li>安装 <code>cheerio</code>，控制台执行</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i cheerio --save`</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>新建统计页面</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page statistics</span><br></pre></td></tr></table></figure>
+<p>可以看到<code>source</code>目录下(如果没改)多了一个<code>statistics</code>文件夹，其中有一个<code>index.md</code>文件，进入后，可以修改<code>title</code>项，即改变该页面的标题显示文字</p>
+<p>之后复制以下内容，作为页面内容(开头和结尾的<code>\</code>均需删掉)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">&#123;% raw %&#125; &#123;% raw %&#125; &#123;% endraw %&#125;</span><br><span class="line">&lt;script src=&quot;https://cdn.jsdelivr.net/npm/echarts@5.2.2/dist/echarts.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">function switchPostChart () &#123;</span><br><span class="line">  // 这里为了统一颜色选取的是 “明暗模式” 下的两种字体颜色，也可以自己定义</span><br><span class="line">  let color = document.documentElement.getAttribute(&#x27;data-theme&#x27;) === &#x27;dark&#x27; ? &#x27;#333&#x27; : &#x27;#ccc&#x27;</span><br><span class="line">  let darkmode = color === &quot;#ccc&quot; ? true : false</span><br><span class="line">  if (document.getElementById(&#x27;posts-calendar&#x27;)) &#123;</span><br><span class="line">    let postsCalendarNew = postsCalendarOption</span><br><span class="line">    postsCalendarNew.darkMode = darkmode</span><br><span class="line">    postsCalendarNew.textStyle.color = color</span><br><span class="line">    postsCalendarNew.title.textStyle.color = color</span><br><span class="line">    postsCalendarNew.visualMap.textStyle.color = color</span><br><span class="line">    for (var i = 0; i &lt; postsCalendarNew.calendar.length; i++) &#123;</span><br><span class="line">      postsCalendarNew.calendar[i].yearLabel.color = color</span><br><span class="line">      postsCalendarNew.calendar[i].monthLabel.color = color</span><br><span class="line">      postsCalendarNew.calendar[i].dayLabel.color = color</span><br><span class="line">    &#125;</span><br><span class="line">    postsCalendar.setOption(postsCalendarNew)</span><br><span class="line">  &#125;</span><br><span class="line">  if (document.getElementById(&#x27;posts-chart&#x27;)) &#123;</span><br><span class="line">    let postsOptionNew = postsOption</span><br><span class="line">    postsOptionNew.darkMode = darkmode</span><br><span class="line">    postsOptionNew.textStyle.color = color</span><br><span class="line">    postsOptionNew.title.textStyle.color = color</span><br><span class="line">    postsOptionNew.xAxis.axisLine.lineStyle.color = color</span><br><span class="line">    postsOptionNew.yAxis.axisLine.lineStyle.color = color</span><br><span class="line">    postsChart.setOption(postsOptionNew)</span><br><span class="line">  &#125;</span><br><span class="line">  if (document.getElementById(&#x27;tags-chart&#x27;)) &#123;</span><br><span class="line">    let tagsOptionNew = tagsOption</span><br><span class="line">    tagsOptionNew.darkMode = darkmode</span><br><span class="line">    tagsOptionNew.textStyle.color = color</span><br><span class="line">    tagsOptionNew.title.textStyle.color = color</span><br><span class="line">    tagsOptionNew.xAxis.axisLine.lineStyle.color = color</span><br><span class="line">    tagsOptionNew.yAxis.axisLine.lineStyle.color = color</span><br><span class="line">    tagsChart.setOption(tagsOptionNew)</span><br><span class="line">  &#125;</span><br><span class="line">  if (document.getElementById(&#x27;categories-chart&#x27;)) &#123;</span><br><span class="line">    let categoriesOptionNew = categoriesOption</span><br><span class="line">    categoriesOptionNew.darkMode = darkmode</span><br><span class="line">    categoriesOptionNew.textStyle.color = color</span><br><span class="line">    categoriesOptionNew.title.textStyle.color = color</span><br><span class="line">    categoriesOptionNew.legend.textStyle.color = color</span><br><span class="line">    categoriesChart.setOption(categoriesOptionNew)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">document.getElementsByClassName(&quot;theme&quot;)[0].addEventListener(&quot;click&quot;, function () &#123; setTimeout(switchPostChart, 100) &#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文章发布日历 --&gt;</span><br><span class="line">&lt;div id=&quot;posts-calendar&quot; style=&quot;border-radius: 8px; height: 300px; padding: 10px;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文章发布时间统计图 --&gt;</span><br><span class="line">&lt;div id=&quot;posts-chart&quot; style=&quot;border-radius: 8px; height: 300px; padding: 10px;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文章标签统计图 --&gt;</span><br><span class="line">&lt;div id=&quot;tags-chart&quot; data-length=&quot;10&quot; style=&quot;border-radius: 8px; height: 300px; padding: 10px;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 文章分类统计图 --&gt;</span><br><span class="line">&lt;div id=&quot;categories-chart&quot;  style=&quot;border-radius: 8px; height: 300px; padding: 10px;&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&#123;% raw %&#125; &#123;% endraw %&#125; &#123;% endraw %&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="修改对应配置"><a class="markdownIt-Anchor" href="#修改对应配置"></a> 修改对应配置</h1>
+<ol start="3">
+<li>然后找到<code>themes/shoka/languages</code>文件夹，找到对应的使用语言的<code>yml</code>文件，在这里，我使用的是<code>zh-CN.yml</code></li>
+</ol>
+<p>找到<code>menu</code>项</p>
+<p>原内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  posts: 文章</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br></pre></td></tr></table></figure>
+<p>修改后</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  posts: 文章</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br><span class="line">  search: 搜索</span><br><span class="line">  statistics: 统计</span><br></pre></td></tr></table></figure>
+<p>其中<code>统计</code>为页面导航栏显示的文字</p>
+<ol start="4">
+<li>设置路径</li>
+</ol>
+<p>找到主题配置文件<code>_config.shoka.yml</code>下的<code>menu</code>栏,添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">statistics: /statistics/ || shuzhuangtu</span><br></pre></td></tr></table></figure>
+<p>其中<code>/statistic/</code>为该页面文件在网站目录的路径</p>
+<p><code>shuzhuangtu</code>为使用的<code>iconfont</code>，具体添加方法参考<a target="_blank" rel="noopener" href="https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/config/#iconfont%E5%9B%BE%E6%A0%87">shoka主题基本配置</a></p>
+<h1 id="添加代码"><a class="markdownIt-Anchor" href="#添加代码"></a> 添加代码</h1>
+<ol start="5">
+<li>添加文章统计代码</li>
+</ol>
+<p>找到<code>themes\shoka\scripts\helpers</code>，新建<code>charts.js</code>文件，输入以下内容</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&#x27;use strict&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> cheerio = <span class="built_in">require</span>(<span class="string">&#x27;cheerio&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> moment = <span class="built_in">require</span>(<span class="string">&#x27;moment&#x27;</span>)</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">filter</span>.<span class="title function_">register</span>(<span class="string">&#x27;after_render:html&#x27;</span>, <span class="keyword">function</span> (<span class="params">locals</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> $ = cheerio.<span class="title function_">load</span>(locals)</span><br><span class="line">  <span class="keyword">const</span> calendar = $(<span class="string">&#x27;#posts-calendar&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> post = $(<span class="string">&#x27;#posts-chart&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> tag = $(<span class="string">&#x27;#tags-chart&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> category = $(<span class="string">&#x27;#categories-chart&#x27;</span>)</span><br><span class="line">  <span class="keyword">let</span> htmlEncode = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">var</span> dateMap = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">  hexo.<span class="property">locals</span>.<span class="title function_">get</span>(<span class="string">&#x27;posts&#x27;</span>).<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">post</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> date = post.<span class="property">date</span>.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)</span><br><span class="line">    <span class="keyword">var</span> count = dateMap.<span class="title function_">get</span>(date);</span><br><span class="line">    dateMap.<span class="title function_">set</span>(date, count == <span class="literal">null</span> || count == <span class="literal">undefined</span> ? <span class="number">1</span> : count + <span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// calculate range.</span></span><br><span class="line">  <span class="keyword">const</span> start_date = <span class="title function_">getMinDate</span>(<span class="title class_">Array</span>.<span class="title function_">from</span>(dateMap.<span class="title function_">keys</span>())).<span class="title function_">startOf</span>(<span class="string">&#x27;year&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> end_date = <span class="title function_">moment</span>();</span><br><span class="line">  <span class="keyword">const</span> start_year = start_date.<span class="title function_">year</span>()</span><br><span class="line">  <span class="keyword">const</span> end_year = end_date.<span class="title function_">year</span>()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (calendar.<span class="property">length</span> &gt; <span class="number">0</span> || post.<span class="property">length</span> &gt; <span class="number">0</span> || tag.<span class="property">length</span> &gt; <span class="number">0</span> || category.<span class="property">length</span> &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (calendar.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; $(<span class="string">&#x27;#postsCalendar&#x27;</span>).<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (calendar.<span class="title function_">attr</span>(<span class="string">&#x27;data-encode&#x27;</span>) === <span class="string">&#x27;true&#x27;</span>) htmlEncode = <span class="literal">true</span></span><br><span class="line">      calendar.<span class="title function_">attr</span>(<span class="string">&#x27;style&#x27;</span>, <span class="keyword">function</span> (<span class="params">i, content</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> content.<span class="title function_">replace</span>(<span class="string">&quot;height:300px&quot;</span>, <span class="string">&quot;height:&quot;</span> + (<span class="number">300</span> + (end_year - start_year) * <span class="number">150</span>) + <span class="string">&quot;px&quot;</span>)</span><br><span class="line">      &#125;)</span><br><span class="line">      calendar.<span class="title function_">after</span>(<span class="title function_">postsCalendar</span>())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (post.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; $(<span class="string">&#x27;#postsChart&#x27;</span>).<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (post.<span class="title function_">attr</span>(<span class="string">&#x27;data-encode&#x27;</span>) === <span class="string">&#x27;true&#x27;</span>) htmlEncode = <span class="literal">true</span></span><br><span class="line">      post.<span class="title function_">after</span>(<span class="title function_">postsChart</span>())</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (tag.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; $(<span class="string">&#x27;#tagsChart&#x27;</span>).<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (tag.<span class="title function_">attr</span>(<span class="string">&#x27;data-encode&#x27;</span>) === <span class="string">&#x27;true&#x27;</span>) htmlEncode = <span class="literal">true</span></span><br><span class="line">      tag.<span class="title function_">after</span>(<span class="title function_">tagsChart</span>(tag.<span class="title function_">attr</span>(<span class="string">&#x27;data-length&#x27;</span>)))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (category.<span class="property">length</span> &gt; <span class="number">0</span> &amp;&amp; $(<span class="string">&#x27;#categoriesChart&#x27;</span>).<span class="property">length</span> === <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (category.<span class="title function_">attr</span>(<span class="string">&#x27;data-encode&#x27;</span>) === <span class="string">&#x27;true&#x27;</span>) htmlEncode = <span class="literal">true</span></span><br><span class="line">      category.<span class="title function_">after</span>(<span class="title function_">categoriesChart</span>())</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (htmlEncode) &#123;</span><br><span class="line">      <span class="keyword">return</span> $.<span class="title function_">root</span>().<span class="title function_">html</span>().<span class="title function_">replace</span>(<span class="regexp">/&amp;amp;#/g</span>, <span class="string">&#x27;&amp;#&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> $.<span class="title function_">root</span>().<span class="title function_">html</span>()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> locals</span><br><span class="line">  &#125;</span><br><span class="line">&#125;, <span class="number">15</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getMinDate</span>(<span class="params">dateList</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> dates = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; dateList.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    dates[i] = <span class="title function_">moment</span>(dateList[i], <span class="string">&#x27;YYYY-MM-DD&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">var</span> minDate = moment.<span class="title function_">min</span>(dates)</span><br><span class="line">  <span class="keyword">return</span> minDate</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getCalendar</span>(<span class="params">start, end, end_date</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> res = <span class="string">&#x27;[&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> year = start; year &lt;= end; year += <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> range</span><br><span class="line">    <span class="keyword">if</span> (year &lt; end) &#123;</span><br><span class="line">      range = <span class="string">&quot;&#x27;&quot;</span> + year + <span class="string">&quot;&#x27;&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">      range = <span class="string">&quot;[&#x27;&quot;</span> + <span class="title function_">moment</span>().<span class="title function_">year</span>(year).<span class="title function_">startOf</span>(<span class="string">&#x27;year&#x27;</span>).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>) + <span class="string">&quot;&#x27;,&#x27;&quot;</span> + end_date.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>) + <span class="string">&quot;&#x27;]&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">    res += <span class="string">`</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">      top : <span class="subst">$&#123;<span class="number">60</span> + (year - start) * <span class="number">150</span>&#125;</span>,</span></span><br><span class="line"><span class="string">      range: <span class="subst">$&#123;range&#125;</span>,</span></span><br><span class="line"><span class="string">      cellSize: [13, 13],</span></span><br><span class="line"><span class="string">      splitLine: &#123;</span></span><br><span class="line"><span class="string">          show: true</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      yearLabel: &#123;</span></span><br><span class="line"><span class="string">          position: &#x27;left&#x27;,</span></span><br><span class="line"><span class="string">          show: true,</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      monthLabel: &#123;</span></span><br><span class="line"><span class="string">          nameMap: [&#x27;Jan&#x27;,&#x27;Feb&#x27;,&#x27;Mar&#x27;,&#x27;Apr&#x27;,&#x27;May&#x27;,&#x27;Jun&#x27;,&#x27;Jul&#x27;,&#x27;Aug&#x27;,&#x27;Sep&#x27;,&#x27;Oct&#x27;,&#x27;Nov&#x27;,&#x27;Dec&#x27;],</span></span><br><span class="line"><span class="string">          fontSize: 11,</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      dayLabel: &#123;</span></span><br><span class="line"><span class="string">          formatter: &#x27;&#123;start&#125;  1st&#x27;,</span></span><br><span class="line"><span class="string">          nameMap: [&#x27;&#x27;,&#x27;Mon&#x27;,&#x27;&#x27;,&#x27;Wed&#x27;,&#x27;&#x27;,&#x27;Fri&#x27;,&#x27;&#x27;],</span></span><br><span class="line"><span class="string">          fontSize: 11,</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    &#125;,`</span></span><br><span class="line">  &#125;</span><br><span class="line">  res += <span class="string">&#x27;],&#x27;</span></span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getCalendarSeries</span>(<span class="params">dateMap, start_year, end_date</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> res = <span class="string">&#x27;[&#x27;</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> year = start_year; year &lt;= end_date.<span class="title function_">year</span>(); year += <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> tmp_start_date = <span class="title function_">moment</span>().<span class="title function_">year</span>(year).<span class="title function_">startOf</span>(<span class="string">&#x27;year&#x27;</span>)</span><br><span class="line">    <span class="keyword">var</span> tmp_end_date = year == end_date.<span class="title function_">year</span>() ? end_date : <span class="title function_">moment</span>().<span class="title function_">year</span>(year).<span class="title function_">endOf</span>(<span class="string">&#x27;year&#x27;</span>)</span><br><span class="line">    <span class="keyword">var</span> datePosts = <span class="string">&#x27;[&#x27;</span></span><br><span class="line">    <span class="keyword">var</span> day_time = <span class="number">3600</span> * <span class="number">24</span> * <span class="number">1000</span></span><br><span class="line">    <span class="keyword">var</span> i = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> time = tmp_start_date; time &lt;= tmp_end_date; time += day_time) &#123;</span><br><span class="line">      <span class="keyword">var</span> date = <span class="title function_">moment</span>(time).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)</span><br><span class="line">      datePosts = (i === <span class="number">0</span> ? datePosts + <span class="string">&#x27;[&quot;&#x27;</span> : datePosts + <span class="string">&#x27;, [&quot;&#x27;</span>) + date + <span class="string">&#x27;&quot;, &#x27;</span> + (dateMap.<span class="title function_">has</span>(date) ? dateMap.<span class="title function_">get</span>(date) : <span class="number">0</span>) + <span class="string">&#x27;]&#x27;</span></span><br><span class="line">      i++</span><br><span class="line">    &#125;</span><br><span class="line">    datePosts += <span class="string">&#x27;]&#x27;</span>;</span><br><span class="line">    res += <span class="string">`&#123;</span></span><br><span class="line"><span class="string">    type: &#x27;heatmap&#x27;,</span></span><br><span class="line"><span class="string">    coordinateSystem: &#x27;calendar&#x27;,</span></span><br><span class="line"><span class="string">    calendarIndex: <span class="subst">$&#123;year - start_year&#125;</span>,</span></span><br><span class="line"><span class="string">    data: <span class="subst">$&#123;datePosts&#125;</span>,</span></span><br><span class="line"><span class="string">    itemStyle: &#123;</span></span><br><span class="line"><span class="string">      borderColor: &#x27;#fff&#x27;,</span></span><br><span class="line"><span class="string">      borderWidth: 2,</span></span><br><span class="line"><span class="string">      borderRadius: 4</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;,`</span></span><br><span class="line">  &#125;</span><br><span class="line">  res += <span class="string">&#x27;]&#x27;</span></span><br><span class="line">  <span class="keyword">return</span> res</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">postsCalendar</span>(<span class="params"></span>) &#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// post and count map.</span></span><br><span class="line">  <span class="keyword">var</span> dateMap = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line">  hexo.<span class="property">locals</span>.<span class="title function_">get</span>(<span class="string">&#x27;posts&#x27;</span>).<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">post</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> date = post.<span class="property">date</span>.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM-DD&#x27;</span>)</span><br><span class="line">    <span class="keyword">var</span> count = dateMap.<span class="title function_">get</span>(date);</span><br><span class="line">    dateMap.<span class="title function_">set</span>(date, count == <span class="literal">null</span> || count == <span class="literal">undefined</span> ? <span class="number">1</span> : count + <span class="number">1</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// calculate range.</span></span><br><span class="line">  <span class="keyword">const</span> start_date = <span class="title function_">getMinDate</span>(<span class="title class_">Array</span>.<span class="title function_">from</span>(dateMap.<span class="title function_">keys</span>())).<span class="title function_">startOf</span>(<span class="string">&#x27;year&#x27;</span>)</span><br><span class="line">  <span class="keyword">const</span> end_date = <span class="title function_">moment</span>();</span><br><span class="line">  <span class="keyword">const</span> start_year = start_date.<span class="title function_">year</span>()</span><br><span class="line">  <span class="keyword">const</span> end_year = end_date.<span class="title function_">year</span>()</span><br><span class="line">  <span class="keyword">const</span> calendar_data = <span class="title function_">getCalendar</span>(start_year, end_year, end_date)</span><br><span class="line">  <span class="keyword">const</span> series_data = <span class="title function_">getCalendarSeries</span>(dateMap, start_year, end_date)</span><br><span class="line">  <span class="keyword">const</span> darkmode = hexo.<span class="property">theme</span>.<span class="property">config</span>[<span class="string">&#x27;darkmode&#x27;</span>]</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">  &lt;script id=&quot;postsCalendar&quot;&gt;</span></span><br><span class="line"><span class="string">    var color</span></span><br><span class="line"><span class="string">    if (localStorage[&#x27;theme&#x27;] === &#x27;dark&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#ccc&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else if (localStorage[&#x27;theme&#x27;] === &#x27;light&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else &#123;</span></span><br><span class="line"><span class="string">      color = <span class="subst">$&#123;darkmode&#125;</span> ? &#x27;#ccc&#x27; : &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    var postsCalendar = echarts.init(document.getElementById(&#x27;posts-calendar&#x27;), &#x27;light&#x27;);</span></span><br><span class="line"><span class="string">    var postsCalendarOption = &#123;</span></span><br><span class="line"><span class="string">      darkMode: color === &#x27;#ccc&#x27; ? true : false,</span></span><br><span class="line"><span class="string">      textStyle: &#123;</span></span><br><span class="line"><span class="string">        color: color</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      title: &#123;</span></span><br><span class="line"><span class="string">          top: 0,</span></span><br><span class="line"><span class="string">          text: &#x27;文章发布日历&#x27;,</span></span><br><span class="line"><span class="string">          left: &#x27;center&#x27;,</span></span><br><span class="line"><span class="string">          textStyle: &#123;</span></span><br><span class="line"><span class="string">              color: color</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      tooltip: &#123;</span></span><br><span class="line"><span class="string">          formatter: function (obj) &#123;</span></span><br><span class="line"><span class="string">              var value = obj.value;</span></span><br><span class="line"><span class="string">              return &#x27;&lt;div style=&quot;font-size: 14px;&quot;&gt;&#x27; + value[0] + &#x27;:&#x27; + value[1] + &#x27;&lt;/div&gt;&#x27;;</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      visualMap: &#123;</span></span><br><span class="line"><span class="string">          type: &#x27;piecewise&#x27;,</span></span><br><span class="line"><span class="string">          min: 0,</span></span><br><span class="line"><span class="string">          show: true,</span></span><br><span class="line"><span class="string">          showLabel: true,</span></span><br><span class="line"><span class="string">          pieces: [</span></span><br><span class="line"><span class="string">            &#123;gte: 11, color: &#x27;#216E39&#x27;&#125;, </span></span><br><span class="line"><span class="string">            &#123;gte: 8, lte: 10, color: &#x27;#30A14E&#x27;&#125;,</span></span><br><span class="line"><span class="string">            &#123;gte: 5, lte: 7, color: &#x27;#3FC262&#x27;&#125;,</span></span><br><span class="line"><span class="string">            &#123;gte: 1, lte: 4, color: &#x27;#9BE9A8&#x27;&#125;,</span></span><br><span class="line"><span class="string">            &#123;value: 0, color: &#x27;#EBEDF0&#x27;&#125;</span></span><br><span class="line"><span class="string">          ],</span></span><br><span class="line"><span class="string">          calculable: true,</span></span><br><span class="line"><span class="string">          textStyle:&#123;</span></span><br><span class="line"><span class="string">            color: color</span></span><br><span class="line"><span class="string">          &#125;,</span></span><br><span class="line"><span class="string">          inRange: &#123;</span></span><br><span class="line"><span class="string">              symbol: &#x27;rect&#x27;,</span></span><br><span class="line"><span class="string">              color: [&#x27;#EBEDF0&#x27;,&#x27;#9BE9A8&#x27;,&#x27;#3FC262&#x27;,&#x27;#30A14E&#x27;,&#x27;#216E39&#x27;],</span></span><br><span class="line"><span class="string">          &#125;,</span></span><br><span class="line"><span class="string">          itemWidth: 12,</span></span><br><span class="line"><span class="string">          itemHeight: 12,</span></span><br><span class="line"><span class="string">          orient: &#x27;horizontal&#x27;,</span></span><br><span class="line"><span class="string">          left: &#x27;center&#x27;,</span></span><br><span class="line"><span class="string">          bottom: 80</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      calendar: <span class="subst">$&#123;calendar_data&#125;</span></span></span><br><span class="line"><span class="string">      series: <span class="subst">$&#123;series_data&#125;</span></span></span><br><span class="line"><span class="string">    &#125;;</span></span><br><span class="line"><span class="string">    postsCalendar.setOption(postsCalendarOption);</span></span><br><span class="line"><span class="string">    window.addEventListener(&quot;resize&quot;, () =&gt; &#123; </span></span><br><span class="line"><span class="string">      postsCalendar.resize();</span></span><br><span class="line"><span class="string">    &#125;);</span></span><br><span class="line"><span class="string">    &lt;/script&gt;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">postsChart</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> startDate = <span class="title function_">moment</span>(<span class="string">&#x27;2021-08&#x27;</span>)  <span class="comment">// 开始统计的时间</span></span><br><span class="line">  <span class="keyword">const</span> endDate = <span class="title function_">moment</span>()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> monthMap = <span class="keyword">new</span> <span class="title class_">Map</span>()</span><br><span class="line">  <span class="keyword">const</span> dayTime = <span class="number">3600</span> * <span class="number">24</span> * <span class="number">1000</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> time = startDate; time &lt;= endDate; time += dayTime) &#123;</span><br><span class="line">    <span class="keyword">const</span> month = <span class="title function_">moment</span>(time).<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> (!monthMap.<span class="title function_">has</span>(month)) &#123;</span><br><span class="line">      monthMap.<span class="title function_">set</span>(month, <span class="number">0</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  hexo.<span class="property">locals</span>.<span class="title function_">get</span>(<span class="string">&#x27;posts&#x27;</span>).<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">post</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> month = post.<span class="property">date</span>.<span class="title function_">format</span>(<span class="string">&#x27;YYYY-MM&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> (monthMap.<span class="title function_">has</span>(month)) &#123;</span><br><span class="line">      monthMap.<span class="title function_">set</span>(month, monthMap.<span class="title function_">get</span>(month) + <span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">const</span> monthArr = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>([...monthMap.<span class="title function_">keys</span>()])</span><br><span class="line">  <span class="keyword">const</span> monthValueArr = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>([...monthMap.<span class="title function_">values</span>()])</span><br><span class="line">  <span class="keyword">const</span> darkmode = hexo.<span class="property">theme</span>.<span class="property">config</span>[<span class="string">&#x27;darkmode&#x27;</span>]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">  &lt;script id=&quot;postsChart&quot;&gt;</span></span><br><span class="line"><span class="string">    var color</span></span><br><span class="line"><span class="string">    if (localStorage[&#x27;theme&#x27;] === &#x27;dark&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#ccc&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else if (localStorage[&#x27;theme&#x27;] === &#x27;light&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else &#123;</span></span><br><span class="line"><span class="string">      color = <span class="subst">$&#123;darkmode&#125;</span> ? &#x27;#ccc&#x27; : &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    var postsChart = echarts.init(document.getElementById(&#x27;posts-chart&#x27;), &#x27;light&#x27;);</span></span><br><span class="line"><span class="string">    var postsOption = &#123;</span></span><br><span class="line"><span class="string">      darkMode: color === &#x27;#ccc&#x27; ? true : false,</span></span><br><span class="line"><span class="string">      textStyle: &#123;</span></span><br><span class="line"><span class="string">        color: color</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      title: &#123;</span></span><br><span class="line"><span class="string">        text: &#x27;文章发布统计图&#x27;,</span></span><br><span class="line"><span class="string">        x: &#x27;center&#x27;,</span></span><br><span class="line"><span class="string">        textStyle: &#123;</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      tooltip: &#123;</span></span><br><span class="line"><span class="string">        trigger: &#x27;axis&#x27;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      xAxis: &#123;</span></span><br><span class="line"><span class="string">        name: &#x27;日期&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;category&#x27;,</span></span><br><span class="line"><span class="string">        axisTick: &#123;</span></span><br><span class="line"><span class="string">          show: false</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        axisLine: &#123;</span></span><br><span class="line"><span class="string">          show: true,</span></span><br><span class="line"><span class="string">          lineStyle: &#123;</span></span><br><span class="line"><span class="string">            color: color</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        data: <span class="subst">$&#123;monthArr&#125;</span></span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      yAxis: &#123;</span></span><br><span class="line"><span class="string">        name: &#x27;文章篇数&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;value&#x27;,</span></span><br><span class="line"><span class="string">        splitLine: &#123;</span></span><br><span class="line"><span class="string">          show: false</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        axisTick: &#123;</span></span><br><span class="line"><span class="string">          show: false</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        axisLine: &#123;</span></span><br><span class="line"><span class="string">          show: true,</span></span><br><span class="line"><span class="string">          lineStyle: &#123;</span></span><br><span class="line"><span class="string">            color: color</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      series: [&#123;</span></span><br><span class="line"><span class="string">        name: &#x27;文章篇数&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;line&#x27;,</span></span><br><span class="line"><span class="string">        smooth: true,</span></span><br><span class="line"><span class="string">        lineStyle: &#123;</span></span><br><span class="line"><span class="string">            width: 0</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        showSymbol: false,</span></span><br><span class="line"><span class="string">        itemStyle: &#123;</span></span><br><span class="line"><span class="string">          opacity: 1,</span></span><br><span class="line"><span class="string">          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [&#123;</span></span><br><span class="line"><span class="string">            offset: 0,</span></span><br><span class="line"><span class="string">            color: &#x27;rgba(128, 255, 165)&#x27;</span></span><br><span class="line"><span class="string">          &#125;,</span></span><br><span class="line"><span class="string">          &#123;</span></span><br><span class="line"><span class="string">            offset: 1,</span></span><br><span class="line"><span class="string">            color: &#x27;rgba(1, 191, 236)&#x27;</span></span><br><span class="line"><span class="string">          &#125;])</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        areaStyle: &#123;</span></span><br><span class="line"><span class="string">          opacity: 1,</span></span><br><span class="line"><span class="string">          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [&#123;</span></span><br><span class="line"><span class="string">            offset: 0,</span></span><br><span class="line"><span class="string">            color: &#x27;rgba(128, 255, 165)&#x27;</span></span><br><span class="line"><span class="string">          &#125;, &#123;</span></span><br><span class="line"><span class="string">            offset: 1,</span></span><br><span class="line"><span class="string">            color: &#x27;rgba(1, 191, 236)&#x27;</span></span><br><span class="line"><span class="string">          &#125;])</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        data: <span class="subst">$&#123;monthValueArr&#125;</span>,</span></span><br><span class="line"><span class="string">        markLine: &#123;</span></span><br><span class="line"><span class="string">          data: [&#123;</span></span><br><span class="line"><span class="string">            name: &#x27;平均值&#x27;,</span></span><br><span class="line"><span class="string">            type: &#x27;average&#x27;</span></span><br><span class="line"><span class="string">          &#125;]</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;]</span></span><br><span class="line"><span class="string">    &#125;;</span></span><br><span class="line"><span class="string">    postsChart.setOption(postsOption);</span></span><br><span class="line"><span class="string">    window.addEventListener(&quot;resize&quot;, () =&gt; &#123; </span></span><br><span class="line"><span class="string">      postsChart.resize();</span></span><br><span class="line"><span class="string">    &#125;);</span></span><br><span class="line"><span class="string">    &lt;/script&gt;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">tagsChart</span>(<span class="params">len</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> tagArr = []</span><br><span class="line">  hexo.<span class="property">locals</span>.<span class="title function_">get</span>(<span class="string">&#x27;tags&#x27;</span>).<span class="title function_">map</span>(<span class="keyword">function</span> (<span class="params">tag</span>) &#123;</span><br><span class="line">    tagArr.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: tag.<span class="property">name</span>, <span class="attr">value</span>: tag.<span class="property">length</span> &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  tagArr.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123; <span class="keyword">return</span> b.<span class="property">value</span> - a.<span class="property">value</span> &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> dataLength = <span class="title class_">Math</span>.<span class="title function_">min</span>(tagArr.<span class="property">length</span>, len) || tagArr.<span class="property">length</span></span><br><span class="line">  <span class="keyword">const</span> tagNameArr = []</span><br><span class="line">  <span class="keyword">const</span> tagCountArr = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; dataLength; i++) &#123;</span><br><span class="line">    tagNameArr.<span class="title function_">push</span>(tagArr[i].<span class="property">name</span>)</span><br><span class="line">    tagCountArr.<span class="title function_">push</span>(tagArr[i].<span class="property">value</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> tagNameArrJson = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(tagNameArr)</span><br><span class="line">  <span class="keyword">const</span> tagCountArrJson = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(tagCountArr)</span><br><span class="line">  <span class="keyword">const</span> darkmode = hexo.<span class="property">theme</span>.<span class="property">config</span>[<span class="string">&#x27;darkmode&#x27;</span>]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">  &lt;script id=&quot;tagsChart&quot;&gt;</span></span><br><span class="line"><span class="string">    var color</span></span><br><span class="line"><span class="string">    if (localStorage[&#x27;theme&#x27;] === &#x27;dark&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#ccc&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else if (localStorage[&#x27;theme&#x27;] === &#x27;light&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else &#123;</span></span><br><span class="line"><span class="string">      color = <span class="subst">$&#123;darkmode&#125;</span> ? &#x27;#ccc&#x27; : &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    var tagsChart = echarts.init(document.getElementById(&#x27;tags-chart&#x27;), &#x27;light&#x27;);</span></span><br><span class="line"><span class="string">    var tagsOption = &#123;</span></span><br><span class="line"><span class="string">      darkMode: color === &#x27;#ccc&#x27; ? true : false,</span></span><br><span class="line"><span class="string">      textStyle: &#123;</span></span><br><span class="line"><span class="string">        color: color</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      title: &#123;</span></span><br><span class="line"><span class="string">        text: &#x27;Top <span class="subst">$&#123;dataLength&#125;</span> 标签统计图&#x27;,</span></span><br><span class="line"><span class="string">        x: &#x27;center&#x27;,</span></span><br><span class="line"><span class="string">        textStyle: &#123;</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      tooltip: &#123;&#125;,</span></span><br><span class="line"><span class="string">      xAxis: &#123;</span></span><br><span class="line"><span class="string">        name: &#x27;标签&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;category&#x27;,</span></span><br><span class="line"><span class="string">        axisTick: &#123;</span></span><br><span class="line"><span class="string">          show: false</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        axisLine: &#123;</span></span><br><span class="line"><span class="string">          show: true,</span></span><br><span class="line"><span class="string">          lineStyle: &#123;</span></span><br><span class="line"><span class="string">            color: color</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        data: <span class="subst">$&#123;tagNameArrJson&#125;</span></span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      yAxis: &#123;</span></span><br><span class="line"><span class="string">        name: &#x27;文章篇数&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;value&#x27;,</span></span><br><span class="line"><span class="string">        splitLine: &#123;</span></span><br><span class="line"><span class="string">          show: false</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        axisTick: &#123;</span></span><br><span class="line"><span class="string">          show: false</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        axisLine: &#123;</span></span><br><span class="line"><span class="string">          show: true,</span></span><br><span class="line"><span class="string">          lineStyle: &#123;</span></span><br><span class="line"><span class="string">            color: color</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      series: [&#123;</span></span><br><span class="line"><span class="string">        name: &#x27;文章篇数&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;bar&#x27;,</span></span><br><span class="line"><span class="string">        data: <span class="subst">$&#123;tagCountArrJson&#125;</span>,</span></span><br><span class="line"><span class="string">        itemStyle: &#123;</span></span><br><span class="line"><span class="string">          opacity: 1,</span></span><br><span class="line"><span class="string">          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [&#123;</span></span><br><span class="line"><span class="string">            offset: 0,</span></span><br><span class="line"><span class="string">            color: &#x27;rgba(128, 255, 165)&#x27;</span></span><br><span class="line"><span class="string">          &#125;,</span></span><br><span class="line"><span class="string">          &#123;</span></span><br><span class="line"><span class="string">            offset: 1,</span></span><br><span class="line"><span class="string">            color: &#x27;rgba(1, 191, 236)&#x27;</span></span><br><span class="line"><span class="string">          &#125;])</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        emphasis: &#123;</span></span><br><span class="line"><span class="string">          itemStyle: &#123;</span></span><br><span class="line"><span class="string">            opacity: 1,</span></span><br><span class="line"><span class="string">            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [&#123;</span></span><br><span class="line"><span class="string">              offset: 0,</span></span><br><span class="line"><span class="string">              color: &#x27;rgba(128, 255, 195)&#x27;</span></span><br><span class="line"><span class="string">            &#125;,</span></span><br><span class="line"><span class="string">            &#123;</span></span><br><span class="line"><span class="string">              offset: 1,</span></span><br><span class="line"><span class="string">              color: &#x27;rgba(1, 211, 255)&#x27;</span></span><br><span class="line"><span class="string">            &#125;])</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        markLine: &#123;</span></span><br><span class="line"><span class="string">          data: [&#123;</span></span><br><span class="line"><span class="string">            name: &#x27;平均值&#x27;,</span></span><br><span class="line"><span class="string">            type: &#x27;average&#x27;</span></span><br><span class="line"><span class="string">          &#125;]</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;]</span></span><br><span class="line"><span class="string">    &#125;;</span></span><br><span class="line"><span class="string">    tagsChart.setOption(tagsOption);</span></span><br><span class="line"><span class="string">    window.addEventListener(&quot;resize&quot;, () =&gt; &#123; </span></span><br><span class="line"><span class="string">      tagsChart.resize();</span></span><br><span class="line"><span class="string">    &#125;);</span></span><br><span class="line"><span class="string">    &lt;/script&gt;`</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">categoriesChart</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> categoryArr = []</span><br><span class="line">  hexo.<span class="property">locals</span>.<span class="title function_">get</span>(<span class="string">&#x27;categories&#x27;</span>).<span class="title function_">map</span>(<span class="keyword">function</span> (<span class="params">category</span>) &#123;</span><br><span class="line">    categoryArr.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: category.<span class="property">name</span>, <span class="attr">value</span>: category.<span class="property">length</span> &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  categoryArr.<span class="title function_">sort</span>(<span class="function">(<span class="params">a, b</span>) =&gt;</span> &#123; <span class="keyword">return</span> b.<span class="property">value</span> - a.<span class="property">value</span> &#125;);</span><br><span class="line">  <span class="keyword">const</span> categoryArrJson = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(categoryArr)</span><br><span class="line">  <span class="keyword">const</span> darkmode = hexo.<span class="property">theme</span>.<span class="property">config</span>[<span class="string">&#x27;darkmode&#x27;</span>]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">`</span></span><br><span class="line"><span class="string">  &lt;script id=&quot;categoriesChart&quot;&gt;</span></span><br><span class="line"><span class="string">    var color</span></span><br><span class="line"><span class="string">    if (localStorage[&#x27;theme&#x27;] === &#x27;dark&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#ccc&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else if (localStorage[&#x27;theme&#x27;] === &#x27;light&#x27;) &#123;</span></span><br><span class="line"><span class="string">      color = &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">    else &#123;</span></span><br><span class="line"><span class="string">      color = <span class="subst">$&#123;darkmode&#125;</span> ? &#x27;#ccc&#x27; : &#x27;#333&#x27;</span></span><br><span class="line"><span class="string">    &#125; </span></span><br><span class="line"><span class="string">    var categoriesChart = echarts.init(document.getElementById(&#x27;categories-chart&#x27;), &#x27;light&#x27;);</span></span><br><span class="line"><span class="string">    var categoriesOption = &#123;</span></span><br><span class="line"><span class="string">      darkMode: color === &#x27;#ccc&#x27; ? true : false,</span></span><br><span class="line"><span class="string">      textStyle: &#123;</span></span><br><span class="line"><span class="string">        color: color</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      title: &#123;</span></span><br><span class="line"><span class="string">        text: &#x27;文章分类统计图&#x27;,</span></span><br><span class="line"><span class="string">        x: &#x27;center&#x27;,</span></span><br><span class="line"><span class="string">        textStyle: &#123;</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      legend: &#123;</span></span><br><span class="line"><span class="string">        top: &#x27;bottom&#x27;,</span></span><br><span class="line"><span class="string">        textStyle: &#123;</span></span><br><span class="line"><span class="string">          color: color</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      tooltip: &#123;</span></span><br><span class="line"><span class="string">        trigger: &#x27;item&#x27;,</span></span><br><span class="line"><span class="string">        formatter: &quot;&#123;a&#125; &lt;br/&gt;&#123;b&#125; : &#123;c&#125; (&#123;d&#125;%)&quot;,</span></span><br><span class="line"><span class="string">      &#125;,</span></span><br><span class="line"><span class="string">      series: [&#123;</span></span><br><span class="line"><span class="string">        name: &#x27;文章篇数&#x27;,</span></span><br><span class="line"><span class="string">        type: &#x27;pie&#x27;,</span></span><br><span class="line"><span class="string">        radius: [30, 80],</span></span><br><span class="line"><span class="string">        center: [&#x27;50%&#x27;, &#x27;50%&#x27;],</span></span><br><span class="line"><span class="string">        roseType: &#x27;area&#x27;,</span></span><br><span class="line"><span class="string">        label: &#123;</span></span><br><span class="line"><span class="string">          formatter: &quot;&#123;b&#125; : &#123;c&#125; (&#123;d&#125;%)&quot;</span></span><br><span class="line"><span class="string">        &#125;,</span></span><br><span class="line"><span class="string">        data: <span class="subst">$&#123;categoryArrJson&#125;</span>,</span></span><br><span class="line"><span class="string">        itemStyle: &#123;</span></span><br><span class="line"><span class="string">          emphasis: &#123;</span></span><br><span class="line"><span class="string">            shadowBlur: 10,</span></span><br><span class="line"><span class="string">            shadowOffsetX: 0,</span></span><br><span class="line"><span class="string">            shadowColor: &#x27;rgba(255, 255, 255, 0.5)&#x27;</span></span><br><span class="line"><span class="string">          &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      &#125;]</span></span><br><span class="line"><span class="string">    &#125;;</span></span><br><span class="line"><span class="string">    categoriesChart.setOption(categoriesOption);</span></span><br><span class="line"><span class="string">    window.addEventListener(&quot;resize&quot;, () =&gt; &#123; </span></span><br><span class="line"><span class="string">      categoriesChart.resize();</span></span><br><span class="line"><span class="string">    &#125;);</span></span><br><span class="line"><span class="string">    &lt;/script&gt;`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>更多统计图的自定义属性可以查看 <a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/option.html">ECharts 配置项文档</a>，根据自行喜好对 ECharts 统计图进行修改。</p>
+<p>在这里，文章发布日历我是仿github的绿色样式</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852701071-52c3546d-4faa-4d7b-99ca-397d0cebb365.jpg" alt="" /></p>
+
+    </div>
+    <footer class="article-footer">
+        <a data-aos="zoom-in" href="/posts/f5c52549/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/posts/f5c52549/" itemprop="commentCount"></span>
+          留言
+        </a>
+        <span data-aos="zoom-in" class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/posts/f5c52549/">0</span>
+          <em class="post-meta-item-text">阅读量</em>
+        </span>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag" title="hexo">hexo</a></li></ul>
+
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+      <div class="article-nav-link-wrap left">
+          <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852730129-ff31e5e7-3724-4c13-b8dd-b86b9aab25fa.png" data-sizes="auto" alt="最小覆盖子串" class="lazyload">
+        <a href="/posts/1c771f88/" aria-label="前一篇: 最小覆盖子串" title="前一篇: 最小覆盖子串"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+            最小覆盖子串
+        </h3>
+      </div>
+    <div class="article-nav-link-wrap right">
+          <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="sqli-labs 练习" class="lazyload">
+      <a href="/posts/29fef1ad/" aria-label="后一篇: sqli-labs 练习"  title="后一篇: sqli-labs 练习"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+          sqli-labs 练习
+      </h3>
+    </div>
+  </nav>
+
+</article>
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+        
+      <h2 class="comment-title">说些什么吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            <div class="selector-item" data-selector="waline">
+              <span>waline</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+          <div class="comment waline-comment" data-aos="fade-up"
+            id="waline-comment">
+          </div>
+    </div>
+  </section>
+
+</section>
+        </div>
+        <footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+        2021-2025
+      <span class="footer-info-sep rotate"></span>
+      dpm12345
+    </div>
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+      <div>
+        <span class="icon-brush"></span>
+        42k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        03:35
+      </div>
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+  </div>
+</footer>
+
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%BB%9F%E8%AE%A1%E9%A1%B5%E9%9D%A2"><span class="toc-number">1.</span> <span class="toc-text"> 添加统计页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AF%B9%E5%BA%94%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text"> 修改对应配置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text"> 添加代码</span></a></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="dpm12345" class="lazyload">
+  <div class="sidebar-author-name">dpm12345</div>
+  <div class="sidebar-description">学习记录</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">40</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">33</div>
+  </div>
+</div>
+<div class="sidebar-social">
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/dpm12345 itemprop="url" target="_blank" aria-label="github" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/142478620 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+</div>
+</div>
+  </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+</nav>
+
+    </div>
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+  <script>
+    var ALGOLIA_CONFIG = {
+      logo: "/images/algolia_logo.svg",
+      algolia: {
+        applicationID: "5CP954TV5T",
+        apiKey: "63f89848095cb6fa39b55341d95cbe98",
+        indexName: "dpm12345_search",
+        hits: {
+          "per_page": parseInt("10")
+        },
+        labels: {
+          "input_placeholder": "搜索.....",
+          "hits_empty": "未发现与 「${query}」相关内容",
+          "hits_stats": "找到${hits}条结果（用时 ${time} ms）"
+        }
+      }
+    };
+  </script>
+  
+<script src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js" integrity="sha384-xvLS0jfKuoREs7pqkRI&#x2F;OI8GcqohO5S+jQz7ZBtQXnsXmD+9jDOOY4cL6dCPzlrk" crossorigin="anonymous" defer></script>
+
+  
+<script src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js" integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l+M5Q2WH&#x2F;Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous" defer></script>
+
+  
+<script src="/js/algolia_search.js" defer></script>
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js" integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8+pUoWX8n1rgq282T" crossorigin="anonymous"></script>
+
+  <script>
+    if (!false || !window.matchMedia('(max-width: 768px)').matches) {
+      window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
+    }
+  </script>
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "dpm12345",
+          title: "shoka主题添加文章统计",
+          url: "http://dpm12345.top/posts/f5c52549/",
+          excerpt: "",
+          description: "title: shoka主题添加文章统计math: truecategories: - - hexo - shokatags: - hexoabbrlink: f5c52549date: 2023-01-20 23:50:11参考自Lavender的文章：Shoka主题：新增文章统计页面添加统...",
+          stripContent: "参考自Lavender的文章：Shoka主题：新增文章统计页面  添加统计页面  安装 cheerio，控制台执行  1npm i cheerio --save`  新建统计页面  1hexo new page statistics 可以看到source目录下(如果没改)多了一个statistics文件夹，其中有一个index.md文件，进入后，可以修改title项，即改变该页面的标题显示文字 之后复制以下内容，作为页面内容(开头和结尾的\均需删掉) 1234567891011121314151",
+          date: "Fri Jan 20 2023 23:50:11 GMT+0800",
+          updated: "Sun Dec 28 2025 01:17:34 GMT+0800",
+          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852701071-52c3546d-4faa-4d7b-99ca-397d0cebb365.jpg",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+        
+<script src="/js/tabs.js" data-pjax></script>
+
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+        
+<script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+
+  var commentConfigKeys = ["waline"];
+  var commentConfig = {
+    waline: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.mjs';
+        const walineIntegrity = 'sha384-9sbqJjrfGjbkI6/PI4nU/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH/KinBEAZII/5';
+
+        const module = await safeImport(walineCdn, walineIntegrity);
+        walineInit = module.init;
+
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: 'https://blogwaline-eta.vercel.app/',
+          lang: document.documentElement.lang || 'en',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick","mail"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]',
+          pageview: JSON.parse('true'),
+        });
+      }
+    },
+  }
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    // 1. 首先检查localStorage中是否有保存的评论类型
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    // 2. 如果localStorage中有值且对应的评论系统可用，就使用它
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    // 3. 如果localStorage无效，检查配置的默认评论系统
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    // 4. 如果前两项都无效，按指定顺序找到第一个可用的评论系统
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    // 隐藏所有评论容器
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    // 按需加载评论系统
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        // 如果已加载，只需显示对应容器
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      // 根据类型加载对应的脚本
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    // 评论组件选择器
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      // 获取要加载的评论系统类型
+      const commentType = item.getAttribute('data-selector');
+
+      // 隐藏所有评论系统
+      hideAllComments();
+
+      // 加载选中的评论系统
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      // 评论组件选择器点击事件
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          // 保存选择器状态
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          // 切换选中状态
+          changeActiveCommentItems(item);
+        });
+      }
+
+      // 检查是否需要加载默认评论系统
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script>
+
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.11.1' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+  </body>
+  </html>

@@ -1,0 +1,853 @@
+  <!DOCTYPE html>
+  <html lang="zh-CN"  
+      data-theme-mode="auto"
+  >
+  <head>
+  <meta charset="utf-8">
+  
+  
+  
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_4k4bc36ef96';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'http://dpm12345.top';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
+  <title>
+    三个无重叠子数组的最大和 | dpm12345
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish%3A400%2C400italic%2C700%2C700italic%7CNoto+Serif+SC%3A400%2C400italic%2C700%2C700italic&display=swap" media="print" onload="this.media&#x3D;&#39;all&#39;">
+    <link rel="preload" href="//at.alicdn.com/t/c/font_4552607_4k4bc36ef96.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    
+<link rel="stylesheet" href="/css/loader.css">
+
+    <meta name="description" content="title: 三个无重叠子数组的最大和categories: - - leetcode - leetcode刷题math: truetags: - 前缀和 - 动态规划 - 滑动窗口abbrlink: ca7417edate: 2021-12-08 09:54:40题目链接: 三个无重叠子数组...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="三个无重叠子数组的最大和">
+<meta property="og:url" content="http://dpm12345.top/posts/ca7417e/index.html">
+<meta property="og:site_name" content="dpm12345">
+<meta property="og:description" content="title: 三个无重叠子数组的最大和categories: - - leetcode - leetcode刷题math: truetags: - 前缀和 - 动态规划 - 滑动窗口abbrlink: ca7417edate: 2021-12-08 09:54:40题目链接: 三个无重叠子数组...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/846e6e304741d51520e8887f2ce3768e.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/f4f7d25cac632702c96360019456a958.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/224ed8f743256e75d625bc19cc3a1b23.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a404c735cf24607ccd7851f0c8dc2ce2.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e8ca6055e064d9b9497e0cd931184ff7.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/4e115dc7a3ba59a4a842a265602d0b2a.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/1beb5324d8eef54fd8b3ee6a810e5518.svg">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702620-bb97fe5f-e18d-42b5-8bbb-8afdb02edc48.png">
+<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702677-fe1494de-43c0-4f51-95f8-90eddaaba6b2.png">
+<meta property="article:published_time" content="2021-12-08T01:54:40.000Z">
+<meta property="article:modified_time" content="2025-12-27T17:17:47.000Z">
+<meta property="article:author" content="dpm12345">
+<meta property="article:tag" content="前缀和">
+<meta property="article:tag" content="动态规划">
+<meta property="article:tag" content="滑动窗口">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg">
+      <meta name="keywords" content="notes, blog, hexo, code">
+    <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.css" integrity="sha384-IfxC36XL&#x2F;toUyJ939C73PcgMuRzAZuIzZxE38drsmO5p6jD7ei+Zx&#x2F;1oA&#x2F;0l8ysE" crossorigin="anonymous">
+      <link rel="preload" as="style" onload="this.onload&#x3D;null;this.rel&#x3D;&#39;stylesheet&#39;" href="https://npm.webcache.cn/katex@0.16.24/dist/katex.min.css" integrity="sha384-tTgKLjMYmJr94v8qu2PE5MUGSMbyN2xiH266JUB3gpm8vnnJywd1dWSOEfrFz+YI" crossorigin="anonymous">
+      
+<link rel="stylesheet" href="https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.css" integrity="sha384-vltfZtesCdl6NYVcFVcjEaIi5RpNvZe9t7fXvq8twVtcoy+Ub9QgnxUYJmwOhYCK" crossorigin="anonymous">
+
+    
+<script src="https://npm.webcache.cn/pace-js@1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous"></script>
+
+    
+<link rel="stylesheet" href="https://npm.webcache.cn/@reimujs/aos@0.1.2/dist/aos.css" integrity="sha384-GMRP93c6Hkz9JVKGAuRR3nTS7M07RwPgTFenXiosjq2VbVgvdDNcz1g6Mkj8AONa" crossorigin="anonymous">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+  <body>
+      <div id='loader'>
+    <div class="loading-left-bg loading-bg"></div>
+    <div class="loading-right-bg loading-bg"></div>
+    <div class="spinner-box">
+      <div class="loading-taichi rotate">
+          <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="https://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+            <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="var(--red-1, #ff5252)" />
+            <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z 
+           M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
+          </svg>
+      </div>
+      <div class="loading-word">少女祈祷中...</div>
+    </div>
+  </div>
+  </div>
+  <script>
+    var time = null;
+    var loaderEl = document.getElementById('loader');
+    var startLoading = () => {
+      time = Date.now();
+      loaderEl.classList.remove("loading");
+    }
+    var hideLoader = () => {
+      document.body.style.overflow = 'auto';
+      loader.classList.add('loading');
+    };
+
+    var endLoading = () => {
+      if (!time) {
+        hideLoader();
+      } else {
+        if (Date.now() - time > 500) {
+          time = null;
+          hideLoader();
+        } else {
+          setTimeout(endLoading, 500 - (Date.now() - time));
+          time = null;
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', endLoading);
+    loaderEl.addEventListener('click', endLoading);
+  </script>
+<div id="copy-tooltip"></div>
+<div id="heatmap-tooltip"></div>
+
+
+    <div id="container">
+      <div id="wrap">
+        <div id="header-nav">
+  <nav id="main-nav" aria-label="Primary navigation">
+        <a class="main-nav-link-wrap" href="/">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">首页</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/archives">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">归档</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/about">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">关于</span>
+        </span>
+        <a class="main-nav-link-wrap" href="/friend">
+          <div class="main-nav-icon icon rotate">
+              &#xe62b;
+          </div>
+          <span class="main-nav-link">友链</span>
+        </span>
+    <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
+  </nav>
+  <nav id="sub-nav" aria-label="Secondary navigation">
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索" aria-label="搜索"></a>
+  </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">简体中文</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" class="selected" aria-selected="true">简体中文</li>
+            <li data-value="en" role="option" aria-selected="false">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/posts/ca7417e/';
+              langMap['en'] = '/en/posts/ca7417e/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
+  <a href="https://github.com/dpm12345" class="triangle-badge" title="github" target="_blank" rel="noopener nofollow noreferrer">
+    <div class="icon icon-github triangle-badge-icon"></div>
+  </a>
+</div>
+<header id="header" aria-label="Site header">
+    <picture></picture>
+    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg" alt="三个无重叠子数组的最大和">
+  <div id="header-outer">
+    <div id="header-title">
+          <span id="logo">
+            <h1 data-aos="slide-up">三个无重叠子数组的最大和</h1>
+          </span>
+        <h2 id="subtitle-wrap" data-aos="slide-down">
+        </h2>
+    </div>
+  </div>
+</header>
+
+        <div id="content" aria-label="Page content" class="sidebar-left"  >
+          <aside id="sidebar" aria-label="Sidebar">
+  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper">
+    <div class="sidebar-wrap" data-aos="fade-up">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%8A%A3%E8%B4%A8%E7%89%88"><span class="toc-number">1.</span> <span class="toc-text"> 动态规划（劣质版）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-number">2.</span> <span class="toc-text"> 滑动窗口</span></a></li></ol>
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="dpm12345" class="lazyload">
+  <div class="sidebar-author-name">dpm12345</div>
+  <div class="sidebar-description">学习记录</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">40</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">33</div>
+  </div>
+</div>
+<div class="sidebar-social">
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/dpm12345 itemprop="url" target="_blank" aria-label="github" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/142478620 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+</div>
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
+    </div>
+  </div>
+  <div class="sidebar-widget">
+  </div>
+  </div>
+</aside>
+
+          <section id="main" aria-label="Main content"><article id="post-leetcode/regular-exercise/三个无重叠子数组的最大和_13c789ea81df3b406f5acd6b4c7c7a17" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2021-12-08T01:54:40.000Z" itemprop="datePublished">2021-12-08</time>
+    <time style="display: none;" id="post-update-time">2025-12-28</time>
+  </span>
+</div>
+
+        <div class="article-category">
+    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+  </div>
+
+    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <p>题目链接:<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-sum-of-3-non-overlapping-subarrays/"> 三个无重叠子数组的最大和</a></p>
+<p>题目详情：</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg" alt="" /></p>
+<p>该题为 2021-12-8 的每日一题，可解决该问题的方法涉及到前缀和，动态规划，滑动窗口知识</p>
+<p>思路: 题目要求求出某一数组三个长度为 k 的无重叠数组，使它们的元素之和为最大。</p>
+<p>看到这个个数为 k，很容易想到滑动窗口这一算法，只是在这里，需要同时存在三个滑动窗口，</p>
+<p>同样的，在这题，也可以用动态规划进行解决</p>
+<p>下面是我自己在解题时的过程</p>
+<h1 id="动态规划劣质版"><a class="markdownIt-Anchor" href="#动态规划劣质版"></a> 动态规划（劣质版）</h1>
+<p>刚拿到题目时，我能想到，该题可以使用动态规划解决，但并无方向该从哪个地方下手将什么作为<img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />所表达的意义，</p>
+<p>思考了大约20分钟后，我还是无从下手，于是打开了题解，第一眼看到的是”单个子数组的最大和“，顿时恍然大悟，我可以将不同个数的子数组作为一个<img src="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg" alt="image" /> ，在计算个数加一时，便可以利用前面的<img src="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg" alt="image" /> ，得到最优解。仔细思考，该方案的时间复杂度为<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" />。</p>
+<p>在以下的代码中，我是如此考虑的：</p>
+<p>先用<img src="https://cdn.nlark.com/yuque/__latex/846e6e304741d51520e8887f2ce3768e.svg" alt="image" />计算前缀和，为后续计算提供便利再分别使用<img src="https://cdn.nlark.com/yuque/__latex/f4f7d25cac632702c96360019456a958.svg" alt="image" /> ， <img src="https://cdn.nlark.com/yuque/__latex/224ed8f743256e75d625bc19cc3a1b23.svg" alt="image" /> ， <img src="https://cdn.nlark.com/yuque/__latex/a404c735cf24607ccd7851f0c8dc2ce2.svg" alt="image" />记录不同个数的子数组元素的最大值，其转移方程分别为：</p>
+<p><img src="https://cdn.nlark.com/yuque/__latex/e8ca6055e064d9b9497e0cd931184ff7.svg" alt="image" /></p>
+<p><img src="https://cdn.nlark.com/yuque/__latex/4e115dc7a3ba59a4a842a265602d0b2a.svg" alt="image" /></p>
+<p><img src="https://cdn.nlark.com/yuque/__latex/1beb5324d8eef54fd8b3ee6a810e5518.svg" alt="image" /></p>
+<p>但这样并不能记录下标输出答案，所以这里我采用了，三个flag数组，用于记录下标，具体见代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; maxSumOfThreeSubarrays(vector&lt;int&gt;&amp; nums, int k) &#123;</span><br><span class="line">        int n=nums.size();</span><br><span class="line">        vector&lt;int&gt;dp1(n),dp2(n),dp3(n);</span><br><span class="line">        vector&lt;int&gt;flag1(n);</span><br><span class="line">        vector&lt;pair&lt;int,int&gt;&gt;flag2(n);</span><br><span class="line">        vector&lt;pair&lt;int,int&gt;&gt;flag3(n);</span><br><span class="line">        vector&lt;int&gt;sum(n+1,0);</span><br><span class="line">        vector&lt;int&gt;ans;</span><br><span class="line">        for(int i=0;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum[i+1]+=nums[i]+sum[i];           </span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=k-1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp1[i]=max(dp1[i-1],sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp1[i]==dp1[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag1[i]=flag1[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag1[i]=i-k+1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=2*k-1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp2[i]=max(dp2[i-1],dp1[i-k]+sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp2[i]==dp2[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag2[i]=flag2[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag2[i]=&#123;flag1[i-k],i-k+1&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=3*k-1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp3[i]=max(dp3[i-1],dp2[i-k]+sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp3[i]==dp3[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag3[i]=flag3[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag3[i]=&#123;flag2[i-k].second,i-k+1&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;flag2[flag3[n-1].first].first,flag3[n-1].first,flag3[n-1].second&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>xxxxxxxxxx class Solution {public:    int maxResult(vector&amp; nums, int k) {        int n = nums.size();        vector dp(n);        dp[0] = nums[0];        priority_queue&lt;pair&lt;int, int&gt;&gt; q;        q.emplace(nums[0], 0);        for (int i = 1; i &lt; n; ++i) {            while (i - q.top().second &gt; k) {                q.pop();            }            dp[i] = q.top().first + nums[i];            q.emplace(dp[i], i);        }        return dp[n - 1];    }};cpp 优先级队列2</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702620-bb97fe5f-e18d-42b5-8bbb-8afdb02edc48.png" alt="" /></p>
+<p>观察报错信息，可知，在我的代码中，并未考虑<code>k==1</code>的情况，因为代码中我是通过<code>for(int i=k-1;i&lt;n;i++)</code>实现循环的，k-1 就会为 0，至于后面 i-1 造成错误</p>
+<p>改进代码:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if(k==1)                      // 考虑 k==1 的情况</span><br><span class="line">    &#123;</span><br><span class="line">        vector&lt;int&gt;ans(3);</span><br><span class="line">        for(int i=0;i&lt;3;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ans[i]=max_element(nums.begin(),nums.end())-nums.begin();</span><br><span class="line">                *max_element(nums.begin(),nums.end())=0;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(ans.begin(),ans.end());</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>再次提交，发现答案出错，如下:</p>
+<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702677-fe1494de-43c0-4f51-95f8-90eddaaba6b2.png" alt="" /></p>
+<p>在这并不能看出什么，为此，我进行了多组数据的尝试，发现第一个大部分都不符合答案，但后两个一直都是正确的，说明<code>flag1</code>求解过程无误，而是输出出错</p>
+<p>对此，进行代码分析，最后输出时，我写的是</p>
+<p><code>return {flag2[flag3[n-1].first].first,flag3[n-1].first,flag3[n-1].second};</code></p>
+<p><code>[flag2[flag3[n-1].first].first</code>，因为我在<code>flag3.first</code>存入的是<code>flag2</code>的索引的第二个元素，以此来得到<code>flag1</code>明显是不可行的，因为对应<code>flag1</code>的下标与<code>flag2</code>的第二个元素并无关系，<code>flag1[i-k]</code>可能是前一个继承来的，与<code>flag2</code>的第二个元素无关，也有可能与其有关，总之该方法不一定正确</p>
+<p>那么我做以下修改</p>
+<ol>
+<li>重新定义<code>flag3</code>数组类型，为<code>&lt;pair&lt;pair&lt;int,int&gt;，int&gt;&gt;</code></li>
+<li>存入<code>flag3</code>时存入<code>{flag2 [i-k],i-k+1}</code></li>
+<li>读取第一个使用<code>flag3[n-1].first.first</code>，第二个使用<code>flag3[n-1].first.second</code></li>
+</ol>
+<p>以下为修改后的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; maxSumOfThreeSubarrays(vector&lt;int&gt;&amp; nums, int k) &#123;</span><br><span class="line">        int n=nums.size();</span><br><span class="line">        if(k==1)                      // 考虑 k==1 的情况</span><br><span class="line">        &#123;</span><br><span class="line">            vector&lt;int&gt;ans(3);</span><br><span class="line">            for(int i=0;i&lt;3;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                ans[i]=max_element(nums.begin(),nums.end())-nums.begin();</span><br><span class="line">                *max_element(nums.begin(),nums.end())=0;</span><br><span class="line">            &#125;</span><br><span class="line">            sort(ans.begin(),ans.end());</span><br><span class="line">            return ans;</span><br><span class="line">        &#125;</span><br><span class="line">        //dp [i] 表示 0 到该位置所能得到的 x 个无重叠数组和的最大值</span><br><span class="line">        vector&lt;int&gt;dp1(n),dp2(n),dp3(n);</span><br><span class="line">        </span><br><span class="line">        //flag1 记录某一位置 1 个最大无重叠数组的下标       </span><br><span class="line">        vector&lt;int&gt;flag1(n);</span><br><span class="line">        </span><br><span class="line">        //flag2 记录某一位置 2 个最大无重叠数组的下标    </span><br><span class="line">        vector&lt;pair&lt;int,int&gt;&gt;flag2(n);</span><br><span class="line">        </span><br><span class="line">        //flag3 记录某一位置 3 个最大无重叠数组的下标                  </span><br><span class="line">        vector&lt;pair&lt;pair&lt;int,int&gt;,int&gt;&gt;flag3(n);              </span><br><span class="line">        </span><br><span class="line">        //sum [i] 表示前 i 个数之和</span><br><span class="line">        vector&lt;int&gt;sum(n+1,0); </span><br><span class="line">        </span><br><span class="line">        for(int i=0;i&lt;n;i++)                       // 计算前缀和</span><br><span class="line">        &#123;</span><br><span class="line">            sum[i+1]+=nums[i]+sum[i];           </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 计算从 k-1 开始 1 个无重叠子数组最大的值，用 flag1 记录下标值</span><br><span class="line">        for(int i=k-1;i&lt;n;i++)                      </span><br><span class="line">        &#123;</span><br><span class="line">            dp1[i]=max(dp1[i-1],sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp1[i]==dp1[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag1[i]=flag1[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag1[i]=i-k+1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 计算从 2*k-1 开始 2 个无重叠子数组最大的值，用 flag2 记录下标值</span><br><span class="line">        for(int i=2*k-1;i&lt;n;i++)                   </span><br><span class="line">        &#123;</span><br><span class="line">            dp2[i]=max(dp2[i-1],dp1[i-k]+sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp2[i]==dp2[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag2[i]=flag2[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag2[i]=&#123;flag1[i-k],i-k+1&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 计算从 3*k-1 位置开始 3 个无重叠子数组最大的值，用 flag2 记录下标值</span><br><span class="line">        for(int i=3*k-1;i&lt;n;i++)                        </span><br><span class="line">        &#123; </span><br><span class="line">            dp3[i]=max(dp3[i-1],dp2[i-k]+sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp3[i]==dp3[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag3[i]=flag3[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag3[i]=&#123;flag2[i-k],i-k+1&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 根据 flag3 找寻下标</span><br><span class="line">        return &#123;flag3[n-1].first.first,flag3[n-1].first.second,flag3[n-1].second&#125;;   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="滑动窗口"><a class="markdownIt-Anchor" href="#滑动窗口"></a> 滑动窗口</h1>
+<p>维护<code>sum1</code>，<code>sum2</code>，<code>sum3</code>，分别表示<code>n</code>个子数组的最大值，若大于原来的更新下标(代码中为<code>sum1maxid,sum2maxid1,sum2maxid2</code>) 当数组个数大于等于k时，那么需删去首个元素，更新窗口</p>
+<p>以下为代码实现</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; maxSumOfThreeSubarrays(vector&lt;int&gt;&amp; nums, int k) &#123;</span><br><span class="line">        int n=nums.size();</span><br><span class="line">        int sum1=0,sum2=0,sum3=0;</span><br><span class="line">        int sum1max=0,sum2max=0,sum3max=0;</span><br><span class="line">        int sum1maxid,sum2maxid1,sum2maxid2;</span><br><span class="line">        vector&lt;int&gt;ans;</span><br><span class="line">        for(int i=2*k;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum1+=nums[i-2*k];</span><br><span class="line">            sum2+=nums[i-k];</span><br><span class="line">            sum3+=nums[i];</span><br><span class="line">            if(i&gt;=3*k-1)</span><br><span class="line">            &#123;</span><br><span class="line">                if(sum1&gt;sum1max)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum1max=sum1;</span><br><span class="line">                    sum1maxid=i-3*k+1;          // 更新 1 个子数组最大值下标</span><br><span class="line">                &#125;</span><br><span class="line">                if(sum1max+sum2&gt;sum2max)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum2max=sum1max+sum2;</span><br><span class="line">                    sum2maxid1=sum1maxid;       // 更新两个子数组中 1 个子数组最大值下标</span><br><span class="line">                    sum2maxid2=i-2*k+1;         // 更新 1 个子数组最大值下标</span><br><span class="line">                &#125;</span><br><span class="line">                if(sum2max+sum3&gt;sum3max)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum3max=sum2max+sum3;</span><br><span class="line">                    ans=&#123;sum2maxid1,sum2maxid2,i-k+1&#125;;  // 更新答案</span><br><span class="line">                &#125;</span><br><span class="line">                sum1-=nums[i-3*k+1];             // 删去首个</span><br><span class="line">                sum2-=nums[i-2*k+1];             // 删去首个</span><br><span class="line">                sum3-=nums[i-k+1];               // 删去首个</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+    </div>
+    <footer class="article-footer">
+        <a data-aos="zoom-in" href="/posts/ca7417e/#comments" class="article-comment-link">
+          <span class="post-comments-count waline-comment-count" data-path="/posts/ca7417e/" itemprop="commentCount"></span>
+          留言
+        </a>
+        <span data-aos="zoom-in" class="article-visitor-link">
+          <span class="waline-pageview-count" data-path="/posts/ca7417e/">0</span>
+          <em class="post-meta-item-text">阅读量</em>
+        </span>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%BC%80%E5%92%8C/" rel="tag" title="前缀和">前缀和</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="tag" title="动态规划">动态规划</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/" rel="tag" title="滑动窗口">滑动窗口</a></li></ul>
+
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+      <div class="article-nav-link-wrap left">
+          <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852714476-18e66626-d3c6-4eac-ac08-91e538160b66.png" data-sizes="auto" alt="子序列问题" class="lazyload">
+        <a href="/posts/9e6e8fdc/" aria-label="前一篇: 子序列问题" title="前一篇: 子序列问题"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+            子序列问题
+        </h3>
+      </div>
+    <div class="article-nav-link-wrap right">
+        <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852739393-e7b8667e-a8f2-47b1-98f1-17699295e5d3.jpg" data-sizes="auto" alt="边界着色 岛屿数量" class="lazyload">
+      <a href="/posts/65c00a51/" aria-label="后一篇: 边界着色 岛屿数量"  title="后一篇: 边界着色 岛屿数量"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+          边界着色 岛屿数量
+      </h3>
+    </div>
+  </nav>
+
+</article>
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+        
+      <h2 class="comment-title">说些什么吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            <div class="selector-item" data-selector="waline">
+              <span>waline</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+          <div class="comment waline-comment" data-aos="fade-up"
+            id="waline-comment">
+          </div>
+    </div>
+  </section>
+
+</section>
+        </div>
+        <footer id="footer" aria-label="Site footer">
+  <div style="width: 100%; overflow: hidden">
+    <div class="footer-line"></div>
+  </div>
+  <div id="footer-info">
+    <div>
+      <span class="icon-copyright"></span>
+        2021-2025
+      <span class="footer-info-sep rotate"></span>
+      dpm12345
+    </div>
+      <div>
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
+      </div>
+      <div>
+        <span class="icon-brush"></span>
+        42k
+        &nbsp;|&nbsp;
+        <span class="icon-coffee"></span>
+        03:35
+      </div>
+      <div>
+        <span class="icon-eye"></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        &nbsp;|&nbsp;
+        <span class="icon-user"></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+      </div>
+  </div>
+</footer>
+
+          <div class="sidebar-top">
+            <div class="sidebar-top-taichi rotate"></div>
+            <div class="arrow-up"></div>
+          </div>
+        <div id="mask" class="hide"></div>
+      </div>
+      <nav id="mobile-nav" aria-label="Mobile navigation">
+  <div class="sidebar-wrap">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%8A%A3%E8%B4%A8%E7%89%88"><span class="toc-number">1.</span> <span class="toc-text"> 动态规划（劣质版）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="toc-number">2.</span> <span class="toc-text"> 滑动窗口</span></a></li></ol>
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+  <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="dpm12345" class="lazyload">
+  <div class="sidebar-author-name">dpm12345</div>
+  <div class="sidebar-description">学习记录</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    <div class="sidebar-state-number">40</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">33</div>
+  </div>
+</div>
+<div class="sidebar-social">
+    <div class="icon-github sidebar-social-icon">
+      <a href=https://github.com/dpm12345 itemprop="url" target="_blank" aria-label="github" rel="noopener nofollow noreferrer"></a>
+    </div>
+    <div class="icon-bilibili sidebar-social-icon">
+      <a href=https://space.bilibili.com/142478620 itemprop="url" target="_blank" aria-label="bilibili" rel="noopener nofollow noreferrer"></a>
+    </div>
+</div>
+<div class="sidebar-menu">
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">首页</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">归档</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">关于</div>
+      </div>
+      <div class="sidebar-menu-link-wrap">
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <div class="sidebar-menu-icon icon rotate">
+            &#xe62b;
+        </div>
+        <div class="sidebar-menu-link">友链</div>
+      </div>
+</div>
+</div>
+  </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
+</nav>
+
+    </div>
+      <div class="site-search">
+        <div class="reimu-popup popup">
+          <div class="reimu-search">
+            <div class="reimu-search-input-icon"></div>
+            <div id="reimu-search-input"></div>
+            <div class="popup-btn-close"></div>
+          </div>
+          <div class="reimu-results">
+            <div id="reimu-stats"></div>
+            <div id="reimu-hits"></div>
+            <div id="reimu-pagination" class="reimu-pagination"></div>
+          </div>
+          <img class="reimu-bg" src="/images/reimu.png"/>
+        </div>
+      </div>
+    
+<script src="https://npm.webcache.cn/lazysizes@5.3.2/lazysizes.min.js" integrity="sha384-3gT&#x2F;vsepWkfz&#x2F;ff7PpWNUeMzeWoH3cDhm&#x2F;A8jM7ouoAK0&#x2F;fP&#x2F;9bcHHR5kHq2nf+e" crossorigin="anonymous"></script>
+
+
+<script src="https://npm.webcache.cn/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha384-J08i8An&#x2F;QeARD9ExYpvphB8BsyOj3Gh2TSh1aLINKO3L0cMSH2dN3E22zFoXEi0Q" crossorigin="anonymous"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+  
+<script src="/js/aos.js"></script>
+
+  <script>
+    var aosInit = () => {
+      AOS.init({
+        duration: 1000,
+        easing: "ease",
+        once: true,
+        offset: 50,
+      });
+    };
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', aosInit);
+    } else {
+      aosInit();
+    }
+  </script>
+
+
+<script src="/js/pjax_script.js" data-pjax></script>
+
+
+
+  <script>
+    var ALGOLIA_CONFIG = {
+      logo: "/images/algolia_logo.svg",
+      algolia: {
+        applicationID: "5CP954TV5T",
+        apiKey: "63f89848095cb6fa39b55341d95cbe98",
+        indexName: "dpm12345_search",
+        hits: {
+          "per_page": parseInt("10")
+        },
+        labels: {
+          "input_placeholder": "搜索.....",
+          "hits_empty": "未发现与 「${query}」相关内容",
+          "hits_stats": "找到${hits}条结果（用时 ${time} ms）"
+        }
+      }
+    };
+  </script>
+  
+<script src="https://npm.webcache.cn/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js" integrity="sha384-xvLS0jfKuoREs7pqkRI&#x2F;OI8GcqohO5S+jQz7ZBtQXnsXmD+9jDOOY4cL6dCPzlrk" crossorigin="anonymous" defer></script>
+
+  
+<script src="https://npm.webcache.cn/@reimujs/instantsearch.js@4.57.0-beta.1/dist/instantsearch.production.min.js" integrity="sha384-aagKMe8nkqaP2DYQc8kkYOL5l+M5Q2WH&#x2F;Uhr4teOh0Ybp0RZj0kUSDm45qPikMjK" crossorigin="anonymous" defer></script>
+
+  
+<script src="/js/algolia_search.js" defer></script>
+
+
+  
+<script src="https://npm.webcache.cn/mouse-firework@0.2.0/dist/index.umd.js" integrity="sha384-qi9WggRt19tv8Vc7pCHW3ulMNLwrn515zaLEWZjl1px07vz8+pUoWX8n1rgq282T" crossorigin="anonymous"></script>
+
+  <script>
+    if (!false || !window.matchMedia('(max-width: 768px)').matches) {
+      window.firework && window.firework(JSON.parse('{"excludeElements":["a","button"],"particles":[{"shape":"circle","move":["emit"],"easing":"easeOutExpo","colors":["var(--red-1)","var(--red-2)","var(--red-3)","var(--red-4)"],"number":20,"duration":[1200,1800],"shapeOptions":{"radius":[16,32],"alpha":[0.3,0.5]}},{"shape":"circle","move":["diffuse"],"easing":"easeOutExpo","colors":["var(--red-0)"],"number":1,"duration":[1200,1800],"shapeOptions":{"radius":20,"alpha":[0.2,0.5],"lineWidth":6}}]}'));
+    }
+  </script>
+
+  
+<script src="https://npm.webcache.cn/theme-shokax-pjax@0.0.3/dist/index.umd.js" integrity="sha384-xneY1WY8hOfUzswrE4CrYq35N4BdVcxqxwHPr9zawE&#x2F;jMSCxD+jAPU55x&#x2F;jj3wlf" crossorigin="anonymous"></script>
+
+  
+<script src="/js/pjax.js"></script>
+
+
+
+
+
+<div id="lazy-script">
+  <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "dpm12345",
+          title: "三个无重叠子数组的最大和",
+          url: "http://dpm12345.top/posts/ca7417e/",
+          excerpt: "",
+          description: "title: 三个无重叠子数组的最大和categories: - - leetcode - leetcode刷题math: truetags: - 前缀和 - 动态规划 - 滑动窗口abbrlink: ca7417edate: 2021-12-08 09:54:40题目链接: 三个无重叠子数组...",
+          stripContent: "题目链接: 三个无重叠子数组的最大和 题目详情：  该题为 2021-12-8 的每日一题，可解决该问题的方法涉及到前缀和，动态规划，滑动窗口知识 思路: 题目要求求出某一数组三个长度为 k 的无重叠数组，使它们的元素之和为最大。 看到这个个数为 k，很容易想到滑动窗口这一算法，只是在这里，需要同时存在三个滑动窗口， 同样的，在这题，也可以用动态规划进行解决 下面是我自己在解题时的过程  动态规划（劣质版） 刚拿到题目时，我能想到，该题可以使用动态规划解决，但并无方向该从哪个地方下手将什么作为所",
+          date: "Wed Dec 08 2021 09:54:40 GMT+0800",
+          updated: "Sun Dec 28 2025 01:17:47 GMT+0800",
+          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+        
+<script src="/js/tabs.js" data-pjax></script>
+
+      <script type="module" data-pjax>
+        const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+        const initPswp = (gallery, children) => {
+          if (_$$(`${gallery} ${children}`).length > 0) {
+            new PhotoSwipeLightbox({
+              gallery,
+              children,
+              pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+            }).init();
+          }
+        }
+        const pswp = () => {
+          initPswp('.article-entry', 'a.article-gallery-item');
+          initPswp('.article-gallery', 'a.article-gallery-item');
+          window.lightboxStatus = 'done';
+          window.removeEventListener('lightbox:ready', pswp);
+        }
+        if(window.lightboxStatus === 'ready') {
+          pswp()
+        } else {
+          window.addEventListener('lightbox:ready', pswp);
+        }
+      </script>
+        
+<script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+
+  var commentConfigKeys = ["waline"];
+  var commentConfig = {
+    waline: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.waline-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        let walineInit;
+        const walineCdn = 'https://npm.webcache.cn/@waline/client@2.15.8/dist/waline.mjs';
+        const walineIntegrity = 'sha384-9sbqJjrfGjbkI6/PI4nU/MvBfEmkkPC4YK9I4zBeMIf1CVCZdCMH/KinBEAZII/5';
+
+        const module = await safeImport(walineCdn, walineIntegrity);
+        walineInit = module.init;
+
+        window.walineInstance = walineInit({
+          el: '.waline-comment',
+          serverURL: 'https://blogwaline-eta.vercel.app/',
+          lang: document.documentElement.lang || 'en',
+          locale: {},
+          emoji: ["https://unpkg.com/@waline/emojis@1.2.0/weibo","https://unpkg.com/@waline/emojis@1.2.0/alus","https://unpkg.com/@waline/emojis@1.2.0/bilibili","https://unpkg.com/@waline/emojis@1.2.0/qq","https://unpkg.com/@waline/emojis@1.2.0/tieba","https://unpkg.com/@waline/emojis@1.2.0/tw-emoji"],
+          meta: ["nick","mail","link"],
+          requiredMeta: ["nick","mail"],
+          wordLimit: JSON.parse('0'),
+          comment: true,
+          pageSize: JSON.parse('10'),
+          dark: 'html[data-theme="dark"]',
+          pageview: JSON.parse('true'),
+        });
+      }
+    },
+  }
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    // 1. 首先检查localStorage中是否有保存的评论类型
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    // 2. 如果localStorage中有值且对应的评论系统可用，就使用它
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    // 3. 如果localStorage无效，检查配置的默认评论系统
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    // 4. 如果前两项都无效，按指定顺序找到第一个可用的评论系统
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false
+    };
+
+    // 隐藏所有评论容器
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    // 按需加载评论系统
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        // 如果已加载，只需显示对应容器
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      // 根据类型加载对应的脚本
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    // 评论组件选择器
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      // 获取要加载的评论系统类型
+      const commentType = item.getAttribute('data-selector');
+
+      // 隐藏所有评论系统
+      hideAllComments();
+
+      // 加载选中的评论系统
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      // 评论组件选择器点击事件
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          // 保存选择器状态
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          // 切换选中状态
+          changeActiveCommentItems(item);
+        });
+      }
+
+      // 检查是否需要加载默认评论系统
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script>
+
+  </div>
+</div>
+
+
+  <script>
+    console.log(String.raw`%c 
+ ______     ______     __     __    __     __  __    
+/\  == \   /\  ___\   /\ \   /\ "-./  \   /\ \/\ \   
+\ \  __<   \ \  __\   \ \ \  \ \ \-./\ \  \ \ \_\ \  
+ \ \_\ \_\  \ \_____\  \ \_\  \ \_\ \ \_\  \ \_____\ 
+  \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
+                                                  
+`,'color: #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.11.1' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+  </script>
+  
+
+
+  
+<script src="https://npm.webcache.cn/busuanzi@2.3.0/bsz.pure.mini.js" integrity="sha384-0M75wtSkhjIInv4coYlaJU83+OypaRCIq2SukQVQX04eGTCBXJDuWAbJet56id+S" crossorigin="anonymous" async></script>
+
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  }
+</script>
+
+
+
+
+
+  </body>
+  </html>

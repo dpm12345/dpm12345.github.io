@@ -6,7 +6,7 @@
   <link href="http://dpm12345.top/atom.xml" rel="self"/>
   
   <link href="http://dpm12345.top/"/>
-  <updated>2025-12-27T18:09:54.123Z</updated>
+  <updated>2025-12-27T17:16:26.000Z</updated>
   <id>http://dpm12345.top/</id>
   
   <author>
@@ -17,20 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.366Z</published>
-    <updated>2025-12-27T18:09:54.123Z</updated>
+    <title>Hello World</title>
+    <link href="http://dpm12345.top/posts/4a17b156/"/>
+    <id>http://dpm12345.top/posts/4a17b156/</id>
+    <published>2025-12-27T16:25:00.000Z</published>
+    <updated>2025-12-27T17:16:26.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">title: Hello Worldabbrlink: 4a17b156Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when ...</summary>
     
     
     
@@ -38,22 +32,14 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.365Z</published>
-    <updated>2025-12-27T18:09:54.128Z</updated>
+    <title>ubuntu安装zsh</title>
+    <link href="http://dpm12345.top/posts/6c7ab92a/"/>
+    <id>http://dpm12345.top/posts/6c7ab92a/</id>
+    <published>2023-07-29T07:03:38.000Z</published>
+    <updated>2025-12-27T17:25:28.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Git 为分布式版本控制工具&lt;/p&gt;
-&lt;h1 id=&quot;工作流程&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#工作流程&quot;&gt;&lt;/a&gt; 工作流程&lt;/h1&gt;
-&lt;p&gt;工作区 ——&amp;gt; 暂存区 ——&amp;gt; 本地库（——&amp;gt;</summary>
-        
-      
+    <summary type="html">title: ubuntu安装zshmath: trueabbrlink: 6c7ab92adate: 2023-07-29 15:03:38categories:tags:安装zshsudo apt install zsh安装 Zim安装zimfwcurl -fsSL https://raw...</summary>
     
     
     
@@ -61,20 +47,164 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.365Z</published>
-    <updated>2025-12-27T18:09:54.231Z</updated>
+    <title>虚拟机网络问题</title>
+    <link href="http://dpm12345.top/posts/f2a742a4/"/>
+    <id>http://dpm12345.top/posts/f2a742a4/</id>
+    <published>2023-07-19T06:07:26.000Z</published>
+    <updated>2025-12-27T17:26:07.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;参考自&lt;a href=&quot;https://www.lavenderdh.cn/&quot;&gt;Lavender&lt;/a&gt;的文章：&lt;a</summary>
-        
-      
+    <summary type="html">title: 虚拟机网络问题tags: - linuxabbrlink: f2a742a4date: 2023-07-19 14:07:26ifconfig -a 查看所有网络设备 sudo ifconfig ens33 up 开启指定网卡 sudo dhclient ens33 自动分配ip...</summary>
+    
+    
+    
+    
+    <category term="linux" scheme="http://dpm12345.top/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu下arm-linux编译环境的搭建</title>
+    <link href="http://dpm12345.top/posts/d4e86cbd/"/>
+    <id>http://dpm12345.top/posts/d4e86cbd/</id>
+    <published>2023-07-02T06:00:33.000Z</published>
+    <updated>2025-12-27T17:25:20.000Z</updated>
+    
+    
+    <summary type="html">title: ubuntu下arm-linux编译环境的搭建math: truetags: - arm-linux - Tiny6410abbrlink: d4e86cbddate: 2023-07-02 14:00:33categories:这学期的一门《嵌入式系统课程设计》,需要进行交叉编...</summary>
+    
+    
+    
+    
+    <category term="arm-linux" scheme="http://dpm12345.top/tags/arm-linux/"/>
+    
+    <category term="Tiny6410" scheme="http://dpm12345.top/tags/Tiny6410/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最小覆盖子串</title>
+    <link href="http://dpm12345.top/posts/1c771f88/"/>
+    <id>http://dpm12345.top/posts/1c771f88/</id>
+    <published>2023-04-15T02:20:40.000Z</published>
+    <updated>2025-12-27T17:22:47.000Z</updated>
+    
+    
+    <summary type="html">title: 最小覆盖子串categories: - - leetcode - leetcode刷题math: truetags: - 滑动窗口abbrlink: 1c771f88date: 2023-04-15 10:20:40题目链接:最小覆盖子串题目详情:</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="滑动窗口" scheme="http://dpm12345.top/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shoka主题添加文章统计</title>
+    <link href="http://dpm12345.top/posts/f5c52549/"/>
+    <id>http://dpm12345.top/posts/f5c52549/</id>
+    <published>2023-01-20T15:50:11.000Z</published>
+    <updated>2025-12-27T17:17:34.000Z</updated>
+    
+    
+    <summary type="html">title: shoka主题添加文章统计math: truecategories: - - hexo - shokatags: - hexoabbrlink: f5c52549date: 2023-01-20 23:50:11参考自Lavender的文章：Shoka主题：新增文章统计页面添加统...</summary>
+    
+    
+    
+    <category term="hexo" scheme="http://dpm12345.top/categories/hexo/"/>
+    
+    <category term="shoka" scheme="http://dpm12345.top/categories/hexo/shoka/"/>
+    
+    
+    <category term="hexo" scheme="http://dpm12345.top/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqli-labs 练习</title>
+    <link href="http://dpm12345.top/posts/29fef1ad/"/>
+    <id>http://dpm12345.top/posts/29fef1ad/</id>
+    <published>2022-09-22T16:07:26.000Z</published>
+    <updated>2025-12-27T17:24:59.000Z</updated>
+    
+    
+    <summary type="html">title: sqli-labs 练习math: truetags: - CTF - sql注入abbrlink: 29fef1addate: 2022-09-23 00:07:26categories:less 1输入 id 值，测试为字符型注入 (此处注释符不能用 # ，可用 --+ ) ...</summary>
+    
+    
+    
+    
+    <category term="CTF" scheme="http://dpm12345.top/tags/CTF/"/>
+    
+    <category term="sql注入" scheme="http://dpm12345.top/tags/sql%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>信息安全铁人三项学习</title>
+    <link href="http://dpm12345.top/posts/5463b311/"/>
+    <id>http://dpm12345.top/posts/5463b311/</id>
+    <published>2022-08-31T06:16:37.000Z</published>
+    <updated>2025-12-27T17:25:50.000Z</updated>
+    
+    
+    <summary type="html">title: 信息安全铁人三项学习math: trueabbrlink: 5463b311date: 2022-08-31 14:16:37categories:tags: - 信息安全nessus/bin/systemctl start nessusd.service提权分类数据库提权：ud...</summary>
+    
+    
+    
+    
+    <category term="信息安全" scheme="http://dpm12345.top/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ms17-010 漏洞复现</title>
+    <link href="http://dpm12345.top/posts/65089f0a/"/>
+    <id>http://dpm12345.top/posts/65089f0a/</id>
+    <published>2022-08-24T05:05:51.000Z</published>
+    <updated>2025-12-27T17:24:46.000Z</updated>
+    
+    
+    <summary type="html">title: ms17-010 漏洞复现math: truetags: - ms17 - msfabbrlink: 65089f0adate: 2022-08-24 13:05:51categories:漏洞介绍名称MS17-010，又称永恒之蓝利用原理永恒之蓝漏洞通过 TCP 的 445 和...</summary>
+    
+    
+    
+    
+    <category term="ms17" scheme="http://dpm12345.top/tags/ms17/"/>
+    
+    <category term="msf" scheme="http://dpm12345.top/tags/msf/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git学习</title>
+    <link href="http://dpm12345.top/posts/e28ceec1/"/>
+    <id>http://dpm12345.top/posts/e28ceec1/</id>
+    <published>2022-07-22T19:28:35.000Z</published>
+    <updated>2025-12-27T17:16:31.000Z</updated>
+    
+    
+    <summary type="html">title: git学习math: truetags: - gitabbrlink: e28ceec1date: 2022-07-23 03:28:35categories:Git 为分布式版本控制工具工作流程工作区 ——&amp;gt; 暂存区 ——&amp;gt; 本地库（——&amp;gt; 代码托管平台）git status ...</summary>
+    
+    
+    
+    
+    <category term="git" scheme="http://dpm12345.top/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开启 ssh 远程登陆</title>
+    <link href="http://dpm12345.top/posts/9794bd28/"/>
+    <id>http://dpm12345.top/posts/9794bd28/</id>
+    <published>2022-07-22T08:10:32.000Z</published>
+    <updated>2025-12-27T17:25:58.000Z</updated>
+    
+    
+    <summary type="html">title: 开启 ssh 远程登陆abbrlink: 9794bd28date: 2022-07-22 16:10:32categories:tags:前提检查是否按章sshd，如果没有，则sudo apt-get update sudo apt-get install openssh-se...</summary>
     
     
     
@@ -82,389 +212,196 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.364Z</published>
-    <updated>2025-12-27T18:12:21.639Z</updated>
+    <title>Qt</title>
+    <link href="http://dpm12345.top/posts/b511cbcf/"/>
+    <id>http://dpm12345.top/posts/b511cbcf/</id>
+    <published>2022-06-21T12:46:09.000Z</published>
+    <updated>2025-12-27T18:17:49.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;操作&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#操作&quot;&gt;&lt;/a&gt; 操作&lt;/h1&gt;
-&lt;h2 id=&quot;设置控件根据内容自动调整大小&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
+    <summary type="html">---title: Qtmath: truetags: - Qtabbrlink: b511cbcfdate: 2022-06-21 20:46:09categories:---操作设置控件根据内容自动调整大小adjustSize()方法将会根据内容自动调整大小，需将该方法调用放在设置内容之后...</summary>
     
     
+    
+    
+    <category term="Qt" scheme="http://dpm12345.top/tags/Qt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两数相加</title>
+    <link href="http://dpm12345.top/posts/b6465ced/"/>
+    <id>http://dpm12345.top/posts/b6465ced/</id>
+    <published>2022-03-18T15:54:40.000Z</published>
+    <updated>2025-12-27T17:18:56.000Z</updated>
+    
+    
+    <summary type="html">title: 两数相加categories: - - leetcode - leetcode刷题math: truetags: - 链表 - 哈希表abbrlink: b6465ceddate: 2022-03-18 23:54:40题目链接：两数相加题目详情：不带头节点</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="哈希表" scheme="http://dpm12345.top/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="链表" scheme="http://dpm12345.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>两数之和</title>
+    <link href="http://dpm12345.top/posts/d98ef1d2/"/>
+    <id>http://dpm12345.top/posts/d98ef1d2/</id>
+    <published>2022-03-18T14:54:40.000Z</published>
+    <updated>2025-12-27T17:18:39.000Z</updated>
+    
+    
+    <summary type="html">title: 两数之和categories: - - leetcode - leetcode刷题math: truetags: - 数组 - 哈希表abbrlink: d98ef1d2date: 2022-03-18 22:54:40题目链接：两数之和题目详情：cl</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="数组" scheme="http://dpm12345.top/tags/%E6%95%B0%E7%BB%84/"/>
+    
+    <category term="哈希表" scheme="http://dpm12345.top/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无重复字符的最长子串</title>
+    <link href="http://dpm12345.top/posts/d10e2ef2/"/>
+    <id>http://dpm12345.top/posts/d10e2ef2/</id>
+    <published>2022-03-18T12:54:40.000Z</published>
+    <updated>2025-12-27T17:22:30.000Z</updated>
+    
+    
+    <summary type="html">title: 无重复字符的最长子串categories: - - leetcode - leetcode刷题math: truetags: - 哈希表 - 字符串 - 滑动窗口abbrlink: d10e2ef2date: 2022-03-18 20:54:40题目链接：无重复字符的最长子串题...</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="滑动窗口" scheme="http://dpm12345.top/tags/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3/"/>
+    
+    <category term="哈希表" scheme="http://dpm12345.top/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="字符串" scheme="http://dpm12345.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最小栈</title>
+    <link href="http://dpm12345.top/posts/5c639822/"/>
+    <id>http://dpm12345.top/posts/5c639822/</id>
+    <published>2022-01-24T14:54:40.000Z</published>
+    <updated>2025-12-27T17:22:39.000Z</updated>
+    
+    
+    <summary type="html">title: 最小栈categories: - - leetcode - leetcode刷题math: truetags: - vector - 栈abbrlink: 5c639822date: 2022-01-24 22:54:40题目链接:最小栈题目详情:要完成题目所要的功能，首先至少需...</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="vector" scheme="http://dpm12345.top/tags/vector/"/>
+    
+    <category term="栈" scheme="http://dpm12345.top/tags/%E6%A0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>丑数</title>
+    <link href="http://dpm12345.top/posts/73645ce2/"/>
+    <id>http://dpm12345.top/posts/73645ce2/</id>
+    <published>2022-01-14T14:54:40.000Z</published>
+    <updated>2025-12-27T17:18:21.000Z</updated>
+    
+    
+    <summary type="html">title: 丑数categories: - - leetcode - leetcode刷题math: truetags: - 动态规划abbrlink: 73645ce2date: 2022-01-14 22:54:40丑数，其所有因数均属于所给的数字集合，如对于因数2，3，5，2，6，10...</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="动态规划" scheme="http://dpm12345.top/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>环形链表</title>
+    <link href="http://dpm12345.top/posts/45daaf11/"/>
+    <id>http://dpm12345.top/posts/45daaf11/</id>
+    <published>2021-12-31T11:54:40.000Z</published>
+    <updated>2025-12-27T17:23:16.000Z</updated>
+    
+    
+    <summary type="html">title: 环形链表categories: - - leetcode - leetcode刷题math: truetags: - 链表 - 哈希表 - 双指针（快慢指针）abbrlink: 45daaf11date: 2021-12-31 19:54:40环形链表题目链接：环形链表题目详情：</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode刷题" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/"/>
+    
+    
+    <category term="哈希表" scheme="http://dpm12345.top/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/"/>
+    
+    <category term="链表" scheme="http://dpm12345.top/tags/%E9%93%BE%E8%A1%A8/"/>
+    
+    <category term="双指针（快慢指针）" scheme="http://dpm12345.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%88%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%EF%BC%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 第 273 场周赛</title>
+    <link href="http://dpm12345.top/posts/80d31d12/"/>
+    <id>http://dpm12345.top/posts/80d31d12/</id>
+    <published>2021-12-28T15:20:34.000Z</published>
+    <updated>2025-12-27T17:24:24.000Z</updated>
+    
+    
+    <summary type="html">title: leetcode 第 273 场周赛math: truecategories: - - leetcode - leetcode周赛abbrlink: 80d31d12date: 2021-12-28 23:20:34tags:【战绩】总结:此次周赛，成绩差，只做出来了两题，并且第...</summary>
+    
+    
+    
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
+    
+    <category term="leetcode周赛" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%91%A8%E8%B5%9B/"/>
     
     
   </entry>
   
   <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.363Z</published>
-    <updated>2025-12-27T18:09:54.160Z</updated>
+    <title>leetcode 第 68 场双周赛</title>
+    <link href="http://dpm12345.top/posts/274338ea/"/>
+    <id>http://dpm12345.top/posts/274338ea/</id>
+    <published>2021-12-28T15:20:34.000Z</published>
+    <updated>2025-12-27T17:24:32.000Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接:&lt;a href=&quot;https://leetcode-cn.com/problems/maximum-sum-of-3-non-overlapping-subarrays/&quot;&gt; 三个无重叠子数组的最大和&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
+    <summary type="html">title: leetcode 第 68 场双周赛math: truecategories: - - leetcode - leetcode周赛abbrlink: 274338eadate: 2021-12-28 23:20:34tags:【战绩】总结:此次双周赛的成绩，看排名似乎还行，但事实...</summary>
     
     
     
+    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
     
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.362Z</published>
-    <updated>2025-12-27T18:09:54.185Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode-cn.com/problems/minimum-falling-path-sum/&quot;&gt;下降路径最小和&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.362Z</published>
-    <updated>2025-12-27T18:09:54.183Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;丑数，其所有因数均属于所给的数字集合，如对于因数2，3，5，&lt;/p&gt;
-&lt;p&gt;2，6，10均为满足条件的丑数&lt;/p&gt;
-&lt;p&gt;以下为leetcode上丑数的相关问题&lt;/p&gt;
-&lt;h1 id=&quot;丑数&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.361Z</published>
-    <updated>2025-12-27T18:09:54.173Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode.cn/problems/add-two-numbers/&quot;&gt;两数相加&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.360Z</published>
-    <updated>2025-12-27T18:09:54.170Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode.cn/problems/two-sum/&quot;&gt;两数之和&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.360Z</published>
-    <updated>2025-12-27T18:09:54.215Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode-cn.com/problems/range-sum-query-2d-immutable/&quot;&gt;二维区域和检索 - 矩阵不可变&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情:&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.359Z</published>
-    <updated>2025-12-27T18:09:54.177Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode.cn/problems/gas-station/&quot;&gt;加油站&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.359Z</published>
-    <updated>2025-12-27T18:09:54.175Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;无重复数字的全排列&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#无重复数字的全排列&quot;&gt;&lt;/a&gt; 无重复数字的全排列&lt;/h1&gt;
-&lt;p&gt;先考虑 2</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.358Z</published>
-    <updated>2025-12-27T18:09:54.179Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;最长公共子序列&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#最长公共子序列&quot;&gt;&lt;/a&gt; 最长公共子序列&lt;/h1&gt;
-&lt;p&gt;题目链接:&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.357Z</published>
-    <updated>2025-12-27T18:09:54.200Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode-cn.com/problems/powx-n/&quot;&gt;快速幂&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：实现 Pow (x,n)&lt;/p&gt;
-&lt;h1 id=&quot;递归&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.357Z</published>
-    <updated>2025-12-27T18:09:54.187Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接:&lt;a href=&quot;https://leetcode-cn.com/problems/water-bottles/&quot;&gt;换酒问题&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情:&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.356Z</published>
-    <updated>2025-12-27T18:09:54.181Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;[题目链接:]{.orange}&lt;a href=&quot;https://leetcode-cn.com/problems/wiggle-subsequence/&quot;&gt;摆动序列&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[题目详情:]{.orange}&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.356Z</published>
-    <updated>2025-12-27T18:09:54.198Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;[题目链接:]{.orange}&lt;a href=&quot;https://leetcode-cn.com/problems/integer-break/&quot;&gt;整数拆分&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;[题目详情]{.orange}&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.355Z</published>
-    <updated>2025-12-27T18:09:54.163Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode-cn.com/problems/rotate-function/&quot;&gt;旋转函数&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.355Z</published>
-    <updated>2025-12-27T18:09:54.189Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;括号问题&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#括号问题&quot;&gt;&lt;/a&gt; 括号问题&lt;/h1&gt;
-&lt;h2 id=&quot;是否为有效括号&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#是否为有效括号&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://dpm12345.top/posts/0/"/>
-    <id>http://dpm12345.top/posts/0/</id>
-    <published>2025-12-27T18:09:52.354Z</published>
-    <updated>2025-12-27T18:09:54.203Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;题目链接：&lt;a href=&quot;https://leetcode.cn/problems/longest-substring-without-repeating-characters/&quot;&gt;无重复字符的最长子串&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;题目详情：&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
+    <category term="leetcode周赛" scheme="http://dpm12345.top/categories/leetcode/leetcode%E5%91%A8%E8%B5%9B/"/>
     
     
   </entry>
