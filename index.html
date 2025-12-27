@@ -298,17 +298,16 @@
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2025-12-28</span>
-        <span><span class="icon-pencil"></span>212 字</span>
+        <span><span class="icon-pencil"></span>101 字</span>
         <span><span class="icon-clock"></span>1 分钟</span>
       </div>
       <h2 class="post-title"></h2>
       <article class="post-article">
-          题目链接：有效的括号
-题目详情：
+          [题目链接:]{.orange}整数拆分
+[题目详情]{.orange}
 
-思路：因为相同括号只能连续出现，那么我们可以利用栈的特性，当找到一个左括号时，压入栈；当找到一个右括号时，判断栈顶是不是与其相配对的括号，若不是，则返回false，是则去除栈顶元素，到最后，因为有一直压入栈顶的情况，故不能直接return true，而是可以返回empty()
-代码如下
-123456789101112131415161718192021222324class Solution &amp;#123;public:    bool isValid(string s) &amp;#123;        if(s.length()&amp;lt;2)return fals
+[数学方法可以证明乘积最大时，因子最终都可以分解为若干个3和若干个2，且3的个数尽可能多]{.blue}
+1234567891011121314class Solution &amp;#123;public:    int integerBreak(int n) &amp;#123;        if (n == 2)return 1;        if (n == 3)return 2;        int num_3 = n / 3, num_2 = (n % 3) / 2;        if (n % 3 == 1)  
       </article>
     </div>
   </div>
