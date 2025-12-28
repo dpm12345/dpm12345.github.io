@@ -17,20 +17,20 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 有效的括号categories: - - leetcode - leetcode刷题math: truetags: - 栈abbrlink: &#39;308e5841&#39;date: 2021-11-28 21:54:40题目链接：有效的括号题目详情：思路：因为相同">
+    <meta name="description" content="题目链接：有效的括号 题目详情：  思路：因为相同括号只能连续出现，那么我们可以利用栈的特性，当找到一个左括号时，压入栈；当找到一个右括号时，判断栈顶是不是与其相配对的括号，若不是，则返回false，是则去除栈顶元素，到最后，因为有一直压入栈顶的情况，故不能直接return true，而是可以返回empty() 代码如下 12345678910111213141516171819202122232">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有效的括号">
 <meta property="og:url" content="http://dpm12345.top/posts/308e5841/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 有效的括号categories: - - leetcode - leetcode刷题math: truetags: - 栈abbrlink: &#39;308e5841&#39;date: 2021-11-28 21:54:40题目链接：有效的括号题目详情：思路：因为相同">
+<meta property="og:description" content="题目链接：有效的括号 题目详情：  思路：因为相同括号只能连续出现，那么我们可以利用栈的特性，当找到一个左括号时，压入栈；当找到一个右括号时，判断栈顶是不是与其相配对的括号，若不是，则返回false，是则去除栈顶元素，到最后，因为有一直压入栈顶的情况，故不能直接return true，而是可以返回empty() 代码如下 12345678910111213141516171819202122232">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852731603-2f935a1f-0241-402a-a009-f8d5afcb7afe.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eeeb1ea6d1d32b12b5df5bdeadd7fe90.jpg">
 <meta property="article:published_time" content="2021-11-28T13:54:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:22:56.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:17.940Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="栈">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852731603-2f935a1f-0241-402a-a009-f8d5afcb7afe.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eeeb1ea6d1d32b12b5df5bdeadd7fe90.jpg">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -183,8 +183,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852731603-2f935a1f-0241-402a-a009-f8d5afcb7afe.jpg" alt="有效的括号">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="有效的括号">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -286,7 +287,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -296,7 +297,7 @@
     <div class="e-content article-entry" itemprop="articleBody">
         <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/">有效的括号</a></p>
 <p>题目详情：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852731603-2f935a1f-0241-402a-a009-f8d5afcb7afe.jpg" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eeeb1ea6d1d32b12b5df5bdeadd7fe90.jpg" alt="" /></p>
 <p>思路：因为相同括号只能连续出现，那么我们可以利用栈的特性，当找到一个左括号时，压入栈；当找到一个右括号时，判断栈顶是不是与其相配对的括号，若不是，则返回<code>false</code>，是则去除栈顶元素，到最后，因为有一直压入栈顶的情况，故不能直接<code>return true</code>，而是可以返回<code>empty()</code></p>
 <p>代码如下</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool isValid(string s) &#123;</span><br><span class="line">        if(s.length()&lt;2)return false;</span><br><span class="line">        unordered_map&lt;char,char&gt;dict=&#123;</span><br><span class="line">            &#123;&#x27;)&#x27;, &#x27;(&#x27;&#125;,</span><br><span class="line">            &#123;&#x27;]&#x27;, &#x27;[&#x27;&#125;,</span><br><span class="line">            &#123;&#x27;&#125;&#x27;, &#x27;&#123;&#x27;&#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        stack&lt;char&gt;a;</span><br><span class="line">        for(int i=0;i&lt;s.size();i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(dict.count(s[i]))</span><br><span class="line">            &#123;</span><br><span class="line">                if(a.empty()||a.top()!=dict[s[i]])</span><br><span class="line">                return false;</span><br><span class="line">                a.pop();</span><br><span class="line">            &#125;</span><br><span class="line">            else </span><br><span class="line">                a.push(s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        return a.empty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -317,7 +318,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710154-2a1d64fe-0064-441f-981e-4c8a1569a53d.jpg" data-sizes="auto" alt="有效的括号" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c5e3b3be43e0d30e10339a.png" data-sizes="auto" alt="有效的括号" class="lazyload">
         <a href="/posts/308e5841/" aria-label="前一篇: 有效的括号" title="前一篇: 有效的括号"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
@@ -325,7 +326,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852713035-ffc194c8-ddb4-4e62-b0ab-9cb6087357a9.jpg" data-sizes="auto" alt="加油站" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e1f5be43e0d30e0e8dc2.jpg" data-sizes="auto" alt="加油站" class="lazyload">
       <a href="/posts/b115b06a/" aria-label="后一篇: 加油站"  title="后一篇: 加油站"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
@@ -576,11 +577,11 @@
           title: "有效的括号",
           url: "http://dpm12345.top/posts/308e5841/",
           excerpt: "",
-          description: "title: 有效的括号categories: - - leetcode - leetcode刷题math: truetags: - 栈abbrlink: &#39;308e5841&#39;date: 2021-11-28 21:54:40题目链接：有效的括号题目详情：思路：因为相同",
+          description: "",
           stripContent: "题目链接：有效的括号 题目详情：  思路：因为相同括号只能连续出现，那么我们可以利用栈的特性，当找到一个左括号时，压入栈；当找到一个右括号时，判断栈顶是不是与其相配对的括号，若不是，则返回false，是则去除栈顶元素，到最后，因为有一直压入栈顶的情况，故不能直接return true，而是可以返回empty() 代码如下 123456789101112131415161718192021222324class Solution &amp;#123;public:    bool isValid(stri",
           date: "Sun Nov 28 2021 21:54:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:22:56 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852731603-2f935a1f-0241-402a-a009-f8d5afcb7afe.jpg",
+          updated: "Sun Dec 28 2025 17:04:17 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         

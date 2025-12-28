@@ -17,42 +17,42 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 摆动序列categories: - - leetcode - leetcode刷题math: truetags: - 动态规划 - 贪心abbrlink: 723dcd0cdate: 2021-11-26 10:20:40[题目链接:]{.orange}摆动序列[题目详情:]{....">
+    <meta name="description" content="[题目链接:]{.orange}摆动序列 [题目详情:]{.orange}   动态规划  原始 思路：关键点在于，当增添一个数成为摆动序列中的一个元素时，那么这个数要么小于，要么大于其前面的一个数 其大于或小于取决于前面一个数与再前面一个数之间的大小关系 就此，可利用动态规划的思想，分别用,记录前个数的最长摆动序列。(其中记录末尾为上升的， 记录下降的) 将题目解决方法转换为三方面：  当Par">
 <meta property="og:type" content="article">
 <meta property="og:title" content="摆动序列">
 <meta property="og:url" content="http://dpm12345.top/en/posts/723dcd0c/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 摆动序列categories: - - leetcode - leetcode刷题math: truetags: - 动态规划 - 贪心abbrlink: 723dcd0cdate: 2021-11-26 10:20:40[题目链接:]{.orange}摆动序列[题目详情:]{....">
+<meta property="og:description" content="[题目链接:]{.orange}摆动序列 [题目详情:]{.orange}   动态规划  原始 思路：关键点在于，当增添一个数成为摆动序列中的一个元素时，那么这个数要么小于，要么大于其前面的一个数 其大于或小于取决于前面一个数与再前面一个数之间的大小关系 就此，可利用动态规划的思想，分别用,记录前个数的最长摆动序列。(其中记录末尾为上升的， 记录下降的) 将题目解决方法转换为三方面：  当Par">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852719111-6a3de8e4-59b7-45ec-8839-47a1a5579013.jpg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/ef641a858a2cbe77d7656beb54d1874f.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/0371f332b071e7c2b9d89c004a6bf9b9.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/19bff7e3ad7a63a7b2406f4f51b530dc.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/914537e56829476b49141a3a78f3abab.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/80b158fb3426b1d01d657661151e90bd.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/07b66eb5eec8f483e8fbd69e672e9f42.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/9d36eb0cafcc89d1fcf7c162e21e625a.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/77461a315f6b193385c2a7aa1bf4e9e7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/1d3863a532c157fdb8c9ea5ec81c75d7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/c96d75ee1fb3192173a8219500aa8449.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/122ac439e382049c7535895b9e4e449c.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/54c92b24091ba4677e8b985cb04c53ec.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1acbf1af281238d14d540f0924dae0b7.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/6b7e79702301a098af266710a4cba634.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f2f0734878fff83409ce474ff07f9f2c.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/0e7ee922c7a5fcffe9bed9825ab5673c.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1aea8e3a1f35e8f6a9e0a212ba45474d.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b00092f503c6df7c0397a3d60ffe3bac.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/2d746c8a97a382e21b574cb9a28c7d52.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/da6554e6d3945800ee1d6700fd7b6207.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ff07847e63a48163f7ee3720d561bb56.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/e1cd120760d8626de89ba99983ec951b.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/199e12095ac99ea1433619385225d2b0.svg">
 <meta property="article:published_time" content="2021-11-26T02:20:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:21:38.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:18.004Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="贪心">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852719111-6a3de8e4-59b7-45ec-8839-47a1a5579013.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/54c92b24091ba4677e8b985cb04c53ec.jpg">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -205,8 +205,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852719111-6a3de8e4-59b7-45ec-8839-47a1a5579013.jpg" alt="摆动序列">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="摆动序列">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -308,7 +309,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -318,28 +319,28 @@
     <div class="e-content article-entry" itemprop="articleBody">
         <p>[题目链接:]{.orange}<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/wiggle-subsequence/">摆动序列</a></p>
 <p>[题目详情:]{.orange}</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852719111-6a3de8e4-59b7-45ec-8839-47a1a5579013.jpg" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/54c92b24091ba4677e8b985cb04c53ec.jpg" alt="" /></p>
 <h1 id="动态规划"><a class="markdownIt-Anchor" href="#动态规划"></a> 动态规划</h1>
 <h2 id="原始"><a class="markdownIt-Anchor" href="#原始"></a> 原始</h2>
-<p>思路：关键点在于，当增添一个数成为摆动序列中的一个元素时，那么这个数要么小于，要么大于其前面的一个数 其大于或小于取决于前面一个数与再前面一个数之间的大小关系 就此，可利用动态规划的思想，分别用<img src="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg" alt="image" />,<img src="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg" alt="image" />记录前<img src="https://cdn.nlark.com/yuque/__latex/ef641a858a2cbe77d7656beb54d1874f.svg" alt="image" />个数的最长摆动序列。(其中<img src="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg" alt="image" />记录末尾为上升的， <img src="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg" alt="image" />记录下降的)</p>
+<p>思路：关键点在于，当增添一个数成为摆动序列中的一个元素时，那么这个数要么小于，要么大于其前面的一个数 其大于或小于取决于前面一个数与再前面一个数之间的大小关系 就此，可利用动态规划的思想，分别用<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg" alt="image" />,<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg" alt="image" />记录前<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1acbf1af281238d14d540f0924dae0b7.svg" alt="image" />个数的最长摆动序列。(其中<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg" alt="image" />记录末尾为上升的， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg" alt="image" />记录下降的)</p>
 <p>将题目解决方法转换为三方面：</p>
 <ol>
-<li>当<span class="katex-error" title=" nums[i]&amp;lt;nums[i-1] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 9:  nums[i]&amp;̲lt;nums[i-1] </span>时，该元素不可添加到<img src="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg" alt="image" />中，而对于<img src="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg" alt="image" /> ，取<img src="https://cdn.nlark.com/yuque/__latex/0371f332b071e7c2b9d89c004a6bf9b9.svg" alt="image" />(不加上该数),<img src="https://cdn.nlark.com/yuque/__latex/19bff7e3ad7a63a7b2406f4f51b530dc.svg" alt="image" />(加上该数)中的最大值，即</li>
+<li>当<span class="katex-error" title=" nums[i]&amp;lt;nums[i-1] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 9:  nums[i]&amp;̲lt;nums[i-1] </span>时，该元素不可添加到<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg" alt="image" />中，而对于<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg" alt="image" /> ，取<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/6b7e79702301a098af266710a4cba634.svg" alt="image" />(不加上该数),<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f2f0734878fff83409ce474ff07f9f2c.svg" alt="image" />(加上该数)中的最大值，即</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/__latex/914537e56829476b49141a3a78f3abab.svg" alt="image" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/0e7ee922c7a5fcffe9bed9825ab5673c.svg" alt="image" /></p>
 <ol start="2">
-<li>当<span class="katex-error" title=" nums[i]&amp;gt;nums[i-1] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 9:  nums[i]&amp;̲gt;nums[i-1] </span>时，该元素不可添加到<img src="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg" alt="image" />中,而对于<img src="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg" alt="image" />,取<img src="https://cdn.nlark.com/yuque/__latex/80b158fb3426b1d01d657661151e90bd.svg" alt="image" />(不加上该数),<img src="https://cdn.nlark.com/yuque/__latex/07b66eb5eec8f483e8fbd69e672e9f42.svg" alt="image" />(加上该数)中的最大值，即</li>
+<li>当<span class="katex-error" title=" nums[i]&amp;gt;nums[i-1] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 9:  nums[i]&amp;̲gt;nums[i-1] </span>时，该元素不可添加到<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg" alt="image" />中,而对于<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg" alt="image" />,取<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1aea8e3a1f35e8f6a9e0a212ba45474d.svg" alt="image" />(不加上该数),<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b00092f503c6df7c0397a3d60ffe3bac.svg" alt="image" />(加上该数)中的最大值，即</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/__latex/9d36eb0cafcc89d1fcf7c162e21e625a.svg" alt="image" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/2d746c8a97a382e21b574cb9a28c7d52.svg" alt="image" /></p>
 <ol start="3">
-<li>当<img src="https://cdn.nlark.com/yuque/__latex/77461a315f6b193385c2a7aa1bf4e9e7.svg" alt="image" />时，都不能加上,故</li>
+<li>当<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/da6554e6d3945800ee1d6700fd7b6207.svg" alt="image" />时，都不能加上,故</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/__latex/1d3863a532c157fdb8c9ea5ec81c75d7.svg" alt="image" /></p>
-<p><img src="https://cdn.nlark.com/yuque/__latex/c96d75ee1fb3192173a8219500aa8449.svg" alt="image" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ff07847e63a48163f7ee3720d561bb56.svg" alt="image" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/e1cd120760d8626de89ba99983ec951b.svg" alt="image" /></p>
 <p>以下为代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int wiggleMaxLength(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int n = nums.size();</span><br><span class="line">        if (n == 1) return n;</span><br><span class="line">        vector&lt;int&gt;up(n), down(n);</span><br><span class="line">        up[0] = down[0] = 1;</span><br><span class="line">        for (int i = 1; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (nums[i]&lt;nums[i - 1])</span><br><span class="line">            &#123;</span><br><span class="line">                up[i] = up[i - 1];</span><br><span class="line">                down[i] = max(down[i - 1], up[i - 1] + 1);</span><br><span class="line">            &#125;</span><br><span class="line">            else if (nums[i]&gt;nums[i - 1])</span><br><span class="line">            &#123;</span><br><span class="line">                up[i] = max(up[i - 1], down[i - 1] + 1);</span><br><span class="line">                down[i] = down[i - 1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                up[i] = up[i - 1];</span><br><span class="line">                down[i] = down[i - 1];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return max(up[n - 1], down[n - 1]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="动态规划的空间优化"><a class="markdownIt-Anchor" href="#动态规划的空间优化"></a> 动态规划的空间优化</h3>
-<p>由于<img src="https://cdn.nlark.com/yuque/__latex/eaa20f41afb59bf45e3abc993c8eb146.svg" alt="image" />,<img src="https://cdn.nlark.com/yuque/__latex/5d36749c2a9edcfd4e5490655f5e2420.svg" alt="image" />只与下标为<img src="https://cdn.nlark.com/yuque/__latex/122ac439e382049c7535895b9e4e449c.svg" alt="image" />的值有关，那么可以用两个变量代替数组，最后取这两个变量的最大值</p>
+<p>由于<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ab08c700a664482fee82837b2e33eacd.svg" alt="image" />,<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/61944ae55593a1d2403f31347b646c8f.svg" alt="image" />只与下标为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/199e12095ac99ea1433619385225d2b0.svg" alt="image" />的值有关，那么可以用两个变量代替数组，最后取这两个变量的最大值</p>
 <p>优化代码如下:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int wiggleMaxLength(vector&lt;int&gt;&amp; nums) &#123;</span><br><span class="line">        int n = nums.size();</span><br><span class="line">        if (n == 1) return n;</span><br><span class="line">        int up = 1, down = 1;</span><br><span class="line">        for (int i = 1; i&lt;n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (nums[i]&lt;nums[i - 1])</span><br><span class="line">            &#123;</span><br><span class="line">                down = max(down, up + 1);</span><br><span class="line">            &#125;</span><br><span class="line">            else if (nums[i]&gt;nums[i - 1])</span><br><span class="line">            &#123;</span><br><span class="line">                up = max(up, down + 1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return max(up, down);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="贪心算法"><a class="markdownIt-Anchor" href="#贪心算法"></a> 贪心算法</h1>
@@ -367,7 +368,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852704122-dac2fd09-55fe-4e89-9d8a-d28bcbc041d3.jpg" data-sizes="auto" alt="下降路径最小和" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c5e1c1be43e0d30e0e6854.jpg" data-sizes="auto" alt="下降路径最小和" class="lazyload">
         <a href="/en/posts/ccc6bc8a/" aria-label="Prev: 下降路径最小和" title="Prev: 下降路径最小和"></a>
         <div class="article-nav-caption">Prev</div>
         <h3 class="article-nav-title">
@@ -375,7 +376,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852736444-329036a2-d8ab-4e5c-87b9-9ad15ce0ddde.png" data-sizes="auto" alt="等差数列划分" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e1acbe43e0d30e0e54ef.jpg" data-sizes="auto" alt="等差数列划分" class="lazyload">
       <a href="/en/posts/80d626cb/" aria-label="Next: 等差数列划分"  title="Next: 等差数列划分"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -626,11 +627,11 @@
           title: "摆动序列",
           url: "http://dpm12345.top/posts/723dcd0c/",
           excerpt: "",
-          description: "title: 摆动序列categories: - - leetcode - leetcode刷题math: truetags: - 动态规划 - 贪心abbrlink: 723dcd0cdate: 2021-11-26 10:20:40[题目链接:]{.orange}摆动序列[题目详情:]{....",
+          description: "",
           stripContent: "[题目链接:]{.orange}摆动序列 [题目详情:]{.orange}   动态规划  原始 思路：关键点在于，当增添一个数成为摆动序列中的一个元素时，那么这个数要么小于，要么大于其前面的一个数 其大于或小于取决于前面一个数与再前面一个数之间的大小关系 就此，可利用动态规划的思想，分别用,记录前个数的最长摆动序列。(其中记录末尾为上升的， 记录下降的) 将题目解决方法转换为三方面：  当ParseError: KaTeX parse error: Expected &amp;#039;EOF&amp;#03",
           date: "Fri Nov 26 2021 10:20:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:21:38 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852719111-6a3de8e4-59b7-45ec-8839-47a1a5579013.jpg",
+          updated: "Sun Dec 28 2025 17:04:18 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         

@@ -17,28 +17,28 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 快速幂categories: - - leetcode - leetcode刷题math: truetags: - 递归abbrlink: 20c47d09date: 2021-12-05 10:54:40题目链接：快速幂题目详情：实现 Pow (x,n)递归思路：要实现 ，显然...">
+    <meta name="description" content="题目链接：快速幂 题目详情：实现 Pow (x,n)  递归 思路：要实现 ，显然不可能用for或while循环进行一个一个相乘，这样时间相对较长，那么可以做以下简化，若要求 ，当n为奇数时，那么就等于次方的的平方再乘一个；当n为偶数时， 等于的平方，以此类推，递归方程就可写出以下为代码 123456789101112131415class Solution &#123;public:    do">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速幂">
 <meta property="og:url" content="http://dpm12345.top/en/posts/20c47d09/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 快速幂categories: - - leetcode - leetcode刷题math: truetags: - 递归abbrlink: 20c47d09date: 2021-12-05 10:54:40题目链接：快速幂题目详情：实现 Pow (x,n)递归思路：要实现 ，显然...">
+<meta property="og:description" content="题目链接：快速幂 题目详情：实现 Pow (x,n)  递归 思路：要实现 ，显然不可能用for或while循环进行一个一个相乘，这样时间相对较长，那么可以做以下简化，若要求 ，当n为奇数时，那么就等于次方的的平方再乘一个；当n为偶数时， 等于的平方，以此类推，递归方程就可写出以下为代码 123456789101112131415class Solution &#123;public:    do">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/03dd136c2e4459d3a49c1b992402804d.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/712ecf7894348e92d8779c3ee87eeeb0.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a53c6aeee51bd76d663d06b5f85f7e02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/712ecf7894348e92d8779c3ee87eeeb0.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a53c6aeee51bd76d663d06b5f85f7e02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/023fd4d754d8590e4d91e490b521f31a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4e185082f24e57a7ac3bfc64542f769b.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/58c1913dc1e5007d7c472aa54aaa3724.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4e185082f24e57a7ac3bfc64542f769b.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/58c1913dc1e5007d7c472aa54aaa3724.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg">
 <meta property="article:published_time" content="2021-12-05T02:54:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:21:13.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:18.004Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="递归">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/__latex/03dd136c2e4459d3a49c1b992402804d.svg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/023fd4d754d8590e4d91e490b521f31a.svg">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -191,8 +191,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/__latex/03dd136c2e4459d3a49c1b992402804d.svg" alt="快速幂">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="快速幂">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -294,7 +295,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -305,12 +306,12 @@
         <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/powx-n/">快速幂</a></p>
 <p>题目详情：实现 Pow (x,n)</p>
 <h1 id="递归"><a class="markdownIt-Anchor" href="#递归"></a> 递归</h1>
-<p>思路：要实现<img src="https://cdn.nlark.com/yuque/__latex/03dd136c2e4459d3a49c1b992402804d.svg" alt="image" /> ，显然不可能用for或while循环进行一个一个<img src="https://cdn.nlark.com/yuque/__latex/712ecf7894348e92d8779c3ee87eeeb0.svg" alt="image" />相乘，这样时间相对较长，那么可以做以下简化，若要求<img src="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg" alt="image" /> ，当n为奇数时，那么<img src="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg" alt="image" />就等于<img src="https://cdn.nlark.com/yuque/__latex/a53c6aeee51bd76d663d06b5f85f7e02.svg" alt="image" />次方的的平方再乘一个<img src="https://cdn.nlark.com/yuque/__latex/712ecf7894348e92d8779c3ee87eeeb0.svg" alt="image" />；当n为偶数时， <img src="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg" alt="image" />等于<img src="https://cdn.nlark.com/yuque/__latex/a53c6aeee51bd76d663d06b5f85f7e02.svg" alt="image" />的平方，以此类推，递归方程就可写出以下为代码</p>
+<p>思路：要实现<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/023fd4d754d8590e4d91e490b521f31a.svg" alt="image" /> ，显然不可能用for或while循环进行一个一个<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4e185082f24e57a7ac3bfc64542f769b.svg" alt="image" />相乘，这样时间相对较长，那么可以做以下简化，若要求<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg" alt="image" /> ，当n为奇数时，那么<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg" alt="image" />就等于<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/58c1913dc1e5007d7c472aa54aaa3724.svg" alt="image" />次方的的平方再乘一个<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4e185082f24e57a7ac3bfc64542f769b.svg" alt="image" />；当n为偶数时， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg" alt="image" />等于<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/58c1913dc1e5007d7c472aa54aaa3724.svg" alt="image" />的平方，以此类推，递归方程就可写出以下为代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    double quickMul(double x, long long N) &#123;</span><br><span class="line">        if (N == 0) &#123;</span><br><span class="line">            return 1.0;</span><br><span class="line">        &#125;</span><br><span class="line">        double y = quickMul(x, N / 2);</span><br><span class="line">        return N % 2 == 0 ? y * y : y * y * x;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    double myPow(double x, int n) &#123;</span><br><span class="line">        long long N = n;</span><br><span class="line">        return N &gt;= 0 ? quickMul(x, N) : 1.0 / quickMul(x, -N);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>注意：代码中递归结束条件为<code>N==0</code>，而不是<code>N==1</code>；原因为考虑一开始<code>N==0</code>的情况</p>
 <h1 id="迭代优化"><a class="markdownIt-Anchor" href="#迭代优化"></a> 迭代优化</h1>
 <p>在递归方法中，我们是通过倒序来进行判断什么时候乘x，什么时候不乘x的，而要实现迭代优化，那么必然要正序遍历，所以现在的目的便是要找到怎样正序遍历的方法。</p>
-<p>我们再仔细想一下第一种确定乘x和不乘x的方法，是偶数不乘，是奇数则乘x，倒序遍历，或许这样说还不够明白，那么换一种说法，偶数乘x的零次方(和不乘结果相同), 而奇数乘x的1次方，倒序排列，换成这样的说法，我们很容易得到，这便是n的二进制形式，它的二进制的每一位表示着乘x的权，而每次计算时又会平方，那么也就是幂的二进制乘2，若偶数末尾即零，奇数末尾即1，如此继续下去，最后得到的值便为<img src="https://cdn.nlark.com/yuque/__latex/722eebfa0ac87ff7cbadf3b46424b7f6.svg" alt="image" />的值，因此这样便可得到迭代优化后的程序</p>
+<p>我们再仔细想一下第一种确定乘x和不乘x的方法，是偶数不乘，是奇数则乘x，倒序遍历，或许这样说还不够明白，那么换一种说法，偶数乘x的零次方(和不乘结果相同), 而奇数乘x的1次方，倒序排列，换成这样的说法，我们很容易得到，这便是n的二进制形式，它的二进制的每一位表示着乘x的权，而每次计算时又会平方，那么也就是幂的二进制乘2，若偶数末尾即零，奇数末尾即1，如此继续下去，最后得到的值便为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/eddcc782a74e17c0e9bd84afcd098d54.svg" alt="image" />的值，因此这样便可得到迭代优化后的程序</p>
 <p>代码如下:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    double myPow(double x, int n) &#123;</span><br><span class="line">        double ans=1;</span><br><span class="line">        int flag=n;</span><br><span class="line">        double xc=x;         // 记录每一位如果为 1 应乘的 x 次方</span><br><span class="line">        while(n!=0)</span><br><span class="line">        &#123;</span><br><span class="line">            if(n%2)</span><br><span class="line">                ans*=xc;</span><br><span class="line">            xc=xc*xc;               // 每进一位则平方一次 xc</span><br><span class="line">            n/=2;</span><br><span class="line">        &#125;</span><br><span class="line">        return flag&gt;0?ans:1.0/ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
@@ -330,7 +331,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852737946-e35e5abc-7e7f-4ccc-9149-5079d16d618f.jpg" data-sizes="auto" alt="跳跃游戏 VI" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c5e1eabe43e0d30e0e868f.jpg" data-sizes="auto" alt="跳跃游戏 VI" class="lazyload">
         <a href="/en/posts/6f1a75f/" aria-label="Prev: 跳跃游戏 VI" title="Prev: 跳跃游戏 VI"></a>
         <div class="article-nav-caption">Prev</div>
         <h3 class="article-nav-title">
@@ -338,7 +339,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852733005-60ca0a80-2d29-477e-8334-67b4f01d5ec3.png" data-sizes="auto" alt="爬楼梯与零钱兑换题目对比" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e246be43e0d30e0ecbb4.jpg" data-sizes="auto" alt="爬楼梯与零钱兑换题目对比" class="lazyload">
       <a href="/en/posts/47ade4a0/" aria-label="Next: 爬楼梯与零钱兑换题目对比"  title="Next: 爬楼梯与零钱兑换题目对比"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -589,11 +590,11 @@
           title: "快速幂",
           url: "http://dpm12345.top/posts/20c47d09/",
           excerpt: "",
-          description: "title: 快速幂categories: - - leetcode - leetcode刷题math: truetags: - 递归abbrlink: 20c47d09date: 2021-12-05 10:54:40题目链接：快速幂题目详情：实现 Pow (x,n)递归思路：要实现 ，显然...",
+          description: "",
           stripContent: "题目链接：快速幂 题目详情：实现 Pow (x,n)  递归 思路：要实现 ，显然不可能用for或while循环进行一个一个相乘，这样时间相对较长，那么可以做以下简化，若要求 ，当n为奇数时，那么就等于次方的的平方再乘一个；当n为偶数时， 等于的平方，以此类推，递归方程就可写出以下为代码 123456789101112131415class Solution &amp;#123;public:    double quickMul(double x, long long N) &amp;#123;       ",
           date: "Sun Dec 05 2021 10:54:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:21:13 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/__latex/03dd136c2e4459d3a49c1b992402804d.svg",
+          updated: "Sun Dec 28 2025 17:04:18 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         

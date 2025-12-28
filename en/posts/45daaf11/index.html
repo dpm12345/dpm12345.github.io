@@ -17,42 +17,42 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 环形链表categories: - - leetcode - leetcode刷题math: truetags: - 链表 - 哈希表 - 双指针（快慢指针）abbrlink: 45daaf11date: 2021-12-31 19:54:40环形链表题目链接：环形链表题目详情：">
+    <meta name="description" content="环形链表 题目链接：环形链表 题目详情：   利用哈希表 **方法详情：**由于如果一个链表是环形链表，那么在不断地跳入下一个结点坐标时，其地址必然与前面d的某个地址相同，也就是说，我们可以把每个结点的地址存入哈希表中，当出现要存入结点地址已经在哈希表中存过之后，那么该链表必然是环形链表，否则不是。据此，时间方面，我们可知只需最长只需遍历链表结点一遍；空间方面，我们创建了一个哈希表，最多存入链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="环形链表">
 <meta property="og:url" content="http://dpm12345.top/en/posts/45daaf11/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 环形链表categories: - - leetcode - leetcode刷题math: truetags: - 链表 - 哈希表 - 双指针（快慢指针）abbrlink: 45daaf11date: 2021-12-31 19:54:40环形链表题目链接：环形链表题目详情：">
+<meta property="og:description" content="环形链表 题目链接：环形链表 题目详情：   利用哈希表 **方法详情：**由于如果一个链表是环形链表，那么在不断地跳入下一个结点坐标时，其地址必然与前面d的某个地址相同，也就是说，我们可以把每个结点的地址存入哈希表中，当出现要存入结点地址已经在哈希表中存过之后，那么该链表必然是环形链表，否则不是。据此，时间方面，我们可知只需最长只需遍历链表结点一遍；空间方面，我们创建了一个哈希表，最多存入链表">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734640-36de7f9e-f3c0-4297-be17-eb1cdaa2c29c.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/df378375e7693bdcf9535661c023c02e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/df378375e7693bdcf9535661c023c02e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/53072c2388d69edc65c2377681e4e87c.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/d99b0d4a3394f8bd00707cc0268920d3.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/459f3c80a50b7be28751b0869ef5386a.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5022c4cea5ec63104535406e88a1ff00.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/bd9efcd20c8e6957fa960cdccc70ec40.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a622e417fa7ed3b5163990ed4f039616.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734701-9bf00e43-1b2e-4581-8a58-ec4c82bdd43f.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852734752-6bbf216d-f9f9-4960-a808-b25269e354e9.jpg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ac1feed707224ffc7c44a00821797157.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5b22ebd49ff3a39d8e08cec36761bf48.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5b22ebd49ff3a39d8e08cec36761bf48.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/62319579e28031c3dedd00527a7a726e.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/9169c977c8b61e9ec126d33d98e3825f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/497bc8ddea5b26b7af8dd0f9033d914b.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7ec37ef3c25733f4086f8514b0c25b39.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/8003255401356cedac15be445bb78eda.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/460df5013252dc6357bbba7c379b4874.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/bdf6b4b712f98d885c40a714ecff7baf.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/04fb681b3afa190a21bd6ca95e92c62b.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg">
 <meta property="article:published_time" content="2021-12-31T11:54:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:23:16.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:17.936Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="双指针（快慢指针）">
 <meta property="article:tag" content="哈希表">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734640-36de7f9e-f3c0-4297-be17-eb1cdaa2c29c.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ac1feed707224ffc7c44a00821797157.png">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -205,8 +205,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734640-36de7f9e-f3c0-4297-be17-eb1cdaa2c29c.png" alt="环形链表">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="环形链表">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -308,7 +309,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -319,44 +320,44 @@
         <h1 id="环形链表"><a class="markdownIt-Anchor" href="#环形链表"></a> 环形链表</h1>
 <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/">环形链表</a></p>
 <p>题目详情：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734640-36de7f9e-f3c0-4297-be17-eb1cdaa2c29c.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ac1feed707224ffc7c44a00821797157.png" alt="" /></p>
 <h2 id="利用哈希表"><a class="markdownIt-Anchor" href="#利用哈希表"></a> 利用哈希表</h2>
-<p>**方法详情：**由于如果一个链表是环形链表，那么在不断地跳入下一个结点坐标时，其地址必然与前面d的某个地址相同，也就是说，我们可以把每个结点的地址存入哈希表中，当出现要存入结点地址已经在哈希表中存过之后，那么该链表必然是环形链表，否则不是。据此，时间方面，我们可知只需最长只需遍历链表结点一遍；空间方面，我们创建了一个哈希表，最多存入链表的总个数<img src="https://cdn.nlark.com/yuque/__latex/df378375e7693bdcf9535661c023c02e.svg" alt="image" /></p>
+<p>**方法详情：**由于如果一个链表是环形链表，那么在不断地跳入下一个结点坐标时，其地址必然与前面d的某个地址相同，也就是说，我们可以把每个结点的地址存入哈希表中，当出现要存入结点地址已经在哈希表中存过之后，那么该链表必然是环形链表，否则不是。据此，时间方面，我们可知只需最长只需遍历链表结点一遍；空间方面，我们创建了一个哈希表，最多存入链表的总个数<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5b22ebd49ff3a39d8e08cec36761bf48.svg" alt="image" /></p>
 <ul>
-<li>时间复杂度<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" /></li>
-<li>空间复杂度<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" /></li>
+<li>时间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" /></li>
+<li>空间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" /></li>
 </ul>
 <p>以下为代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool hasCycle(ListNode *head) &#123;</span><br><span class="line">        unordered_map&lt;ListNode*,int&gt;a;</span><br><span class="line">        while(head!=NULL)</span><br><span class="line">        &#123;</span><br><span class="line">            if(a.count(head))</span><br><span class="line">            return true;</span><br><span class="line">            a.insert(&#123;head,0&#125;);</span><br><span class="line">            head=head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="利用双指针快慢指针"><a class="markdownIt-Anchor" href="#利用双指针快慢指针"></a> 利用双指针（快慢指针）</h2>
-<p>题目中的进阶要求我们使用<img src="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg" alt="image" />的内存，该方案是可以实现的，具体涉及到双指针方法详情：我们可以创建两个指针，快指针fast，每次走两步，慢指针slow，每次走一步。那么就很容易得到如果该环形链表为环形链表，快指针必定会在环形结点的某一个结点与慢指针相遇(或者说是追上慢指针)，那么只需判断最后两个指针是否指向同一个结点即可</p>
-<p>**证明：**在该方法中，使用了分别走一步和两步的指针。如果该链表是环形链表，当慢指针进入环形部分中，此时快指针也在某处，设他们相差<img src="https://cdn.nlark.com/yuque/__latex/df378375e7693bdcf9535661c023c02e.svg" alt="image" />个结点，而他们的速度之差为<img src="https://cdn.nlark.com/yuque/__latex/53072c2388d69edc65c2377681e4e87c.svg" alt="image" /> ， <img src="https://cdn.nlark.com/yuque/__latex/d99b0d4a3394f8bd00707cc0268920d3.svg" alt="image" /> 也就是说，必定存在某一时刻能够使两指针指向同一个地址据此，时间方面，在慢指针进入环形结点后，快慢指针初始相距最长为<span class="katex-error" title=" L(L&amp;lt;=N) ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 5:  L(L&amp;̲lt;=N) </span>, 而在此之前遍历次数也只和<img src="https://cdn.nlark.com/yuque/__latex/459f3c80a50b7be28751b0869ef5386a.svg" alt="image" />有关，如果没有环形链表，那么遍历次数为<img src="https://cdn.nlark.com/yuque/__latex/5022c4cea5ec63104535406e88a1ff00.svg" alt="image" /><img src="https://cdn.nlark.com/yuque/__latex/bd9efcd20c8e6957fa960cdccc70ec40.svg" alt="image" /><img src="https://cdn.nlark.com/yuque/__latex/a622e417fa7ed3b5163990ed4f039616.svg" alt="image" /></p>
+<p>题目中的进阶要求我们使用<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg" alt="image" />的内存，该方案是可以实现的，具体涉及到双指针方法详情：我们可以创建两个指针，快指针fast，每次走两步，慢指针slow，每次走一步。那么就很容易得到如果该环形链表为环形链表，快指针必定会在环形结点的某一个结点与慢指针相遇(或者说是追上慢指针)，那么只需判断最后两个指针是否指向同一个结点即可</p>
+<p>**证明：**在该方法中，使用了分别走一步和两步的指针。如果该链表是环形链表，当慢指针进入环形部分中，此时快指针也在某处，设他们相差<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5b22ebd49ff3a39d8e08cec36761bf48.svg" alt="image" />个结点，而他们的速度之差为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/62319579e28031c3dedd00527a7a726e.svg" alt="image" /> ， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/9169c977c8b61e9ec126d33d98e3825f.svg" alt="image" /> 也就是说，必定存在某一时刻能够使两指针指向同一个地址据此，时间方面，在慢指针进入环形结点后，快慢指针初始相距最长为<span class="katex-error" title=" L(L&amp;lt;=N) ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 5:  L(L&amp;̲lt;=N) </span>, 而在此之前遍历次数也只和<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/497bc8ddea5b26b7af8dd0f9033d914b.svg" alt="image" />有关，如果没有环形链表，那么遍历次数为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7ec37ef3c25733f4086f8514b0c25b39.svg" alt="image" /><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/8003255401356cedac15be445bb78eda.svg" alt="image" /><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/460df5013252dc6357bbba7c379b4874.svg" alt="image" /></p>
 <ul>
-<li>时间复杂度<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" /></li>
-<li>空间复杂度<img src="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg" alt="image" /></li>
+<li>时间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" /></li>
+<li>空间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg" alt="image" /></li>
 </ul>
 <p>以下为代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    bool hasCycle(ListNode *head) &#123;</span><br><span class="line">        ListNode*fast=head,*slow=head;</span><br><span class="line">        while(fast!=NULL&amp;&amp;fast-&gt;next!=NULL)</span><br><span class="line">        &#123;</span><br><span class="line">            fast=fast-&gt;next-&gt;next;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            if(fast==slow)</span><br><span class="line">                return true;</span><br><span class="line">        &#125;</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="环形链表-ii求出环形链表开始结点位置"><a class="markdownIt-Anchor" href="#环形链表-ii求出环形链表开始结点位置"></a> 环形链表 II（求出环形链表开始结点位置）</h1>
 <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">环形链表 II</a></p>
 <p>题目详情：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734701-9bf00e43-1b2e-4581-8a58-ec4c82bdd43f.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/bdf6b4b712f98d885c40a714ecff7baf.png" alt="" /></p>
 <p>该题与上面题目比较像，但在确定环的同时也要返回环开始结点</p>
 <h2 id="哈希表"><a class="markdownIt-Anchor" href="#哈希表"></a> 哈希表</h2>
 <p>在上一个问题中，我们是找到重复就返回true，那么同理在这里我们可以使用相同的代码，仅仅把返回值的true和false分别改成对应节点和NULL即可</p>
 <ul>
-<li>时间复杂度<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" /></li>
-<li>空间复杂度<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" /></li>
+<li>时间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" /></li>
+<li>空间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" /></li>
 </ul>
 <p>代码如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    ListNode *detectCycle(ListNode *head) &#123;</span><br><span class="line">        unordered_map&lt;ListNode*,int&gt;a;</span><br><span class="line">        while(head!=NULL)</span><br><span class="line">        &#123;</span><br><span class="line">            if(a.count(head))</span><br><span class="line">               return head;</span><br><span class="line">            a.insert(&#123;head,1&#125;);</span><br><span class="line">            head=head-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        return NULL;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="双指针快慢指针"><a class="markdownIt-Anchor" href="#双指针快慢指针"></a> 双指针（快慢指针）</h2>
-<p>为了降低内存我们同样也可以使用快慢指针，将空间复杂度降到<img src="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg" alt="image" /> ，这里涉及到一个证明</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852734752-6bbf216d-f9f9-4960-a808-b25269e354e9.jpg" alt="" /></p>
+<p>为了降低内存我们同样也可以使用快慢指针，将空间复杂度降到<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg" alt="image" /> ，这里涉及到一个证明</p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/04fb681b3afa190a21bd6ca95e92c62b.jpg" alt="" /></p>
 <p>所以我们可以在双指针基础上，在他们相遇时新建两个指针 (或者直接用现成的<code>head</code>和<code>slow/fast</code>指针，不断往后面走，相遇时得到该位置</p>
 <ul>
-<li>时间复杂度<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" /></li>
-<li>空间复杂度<img src="https://cdn.nlark.com/yuque/__latex/a2006f1ac61cb1902beacb3e29fff089.svg" alt="image" /></li>
+<li>时间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" /></li>
+<li>空间复杂度<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a02793a21d399cdfe8c896c25697f0f1.svg" alt="image" /></li>
 </ul>
 <p>代码如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    ListNode *detectCycle(ListNode *head) &#123;</span><br><span class="line">        ListNode *slow=head,*fast=head;</span><br><span class="line">        while(fast&amp;&amp;fast-&gt;next)</span><br><span class="line">        &#123;</span><br><span class="line">            slow=slow-&gt;next;</span><br><span class="line">            fast=fast-&gt;next-&gt;next;</span><br><span class="line">            if(slow==fast)</span><br><span class="line">            &#123;</span><br><span class="line">                ListNode* start=head,*meet=slow;</span><br><span class="line">                while(start!=meet)</span><br><span class="line">                &#123;</span><br><span class="line">                    start=start-&gt;next;</span><br><span class="line">                    meet=meet-&gt;next;</span><br><span class="line">                &#125;</span><br><span class="line">                return meet;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return NULL;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -377,7 +378,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852705582-43ab2649-5367-44a2-a355-8c14c7d841f3.png" data-sizes="auto" alt="丑数" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c5e472be43e0d30e10d441.jpg" data-sizes="auto" alt="丑数" class="lazyload">
         <a href="/en/posts/73645ce2/" aria-label="Prev: 丑数" title="Prev: 丑数"></a>
         <div class="article-nav-caption">Prev</div>
         <h3 class="article-nav-title">
@@ -385,7 +386,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852744831-7805a893-e7d0-461f-98ee-f2c21a3dda2d.png" data-sizes="auto" alt="leetcode 第 273 场周赛" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e3b9be43e0d30e10389e.jpg" data-sizes="auto" alt="leetcode 第 273 场周赛" class="lazyload">
       <a href="/en/posts/80d31d12/" aria-label="Next: leetcode 第 273 场周赛"  title="Next: leetcode 第 273 场周赛"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -636,11 +637,11 @@
           title: "环形链表",
           url: "http://dpm12345.top/posts/45daaf11/",
           excerpt: "",
-          description: "title: 环形链表categories: - - leetcode - leetcode刷题math: truetags: - 链表 - 哈希表 - 双指针（快慢指针）abbrlink: 45daaf11date: 2021-12-31 19:54:40环形链表题目链接：环形链表题目详情：",
+          description: "",
           stripContent: " 环形链表 题目链接：环形链表 题目详情：   利用哈希表 **方法详情：**由于如果一个链表是环形链表，那么在不断地跳入下一个结点坐标时，其地址必然与前面d的某个地址相同，也就是说，我们可以把每个结点的地址存入哈希表中，当出现要存入结点地址已经在哈希表中存过之后，那么该链表必然是环形链表，否则不是。据此，时间方面，我们可知只需最长只需遍历链表结点一遍；空间方面，我们创建了一个哈希表，最多存入链表的总个数  时间复杂度 空间复杂度  以下为代码： 123456789101112131415cla",
           date: "Fri Dec 31 2021 19:54:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:23:16 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852734640-36de7f9e-f3c0-4297-be17-eb1cdaa2c29c.png",
+          updated: "Sun Dec 28 2025 17:04:17 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         

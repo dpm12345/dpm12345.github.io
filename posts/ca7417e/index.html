@@ -17,35 +17,35 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 三个无重叠子数组的最大和categories: - - leetcode - leetcode刷题math: truetags: - 前缀和 - 动态规划 - 滑动窗口abbrlink: ca7417edate: 2021-12-08 09:54:40题目链接: 三个无重叠子数组...">
+    <meta name="description" content="题目链接: 三个无重叠子数组的最大和 题目详情：  该题为 2021-12-8 的每日一题，可解决该问题的方法涉及到前缀和，动态规划，滑动窗口知识 思路: 题目要求求出某一数组三个长度为 k 的无重叠数组，使它们的元素之和为最大。 看到这个个数为 k，很容易想到滑动窗口这一算法，只是在这里，需要同时存在三个滑动窗口， 同样的，在这题，也可以用动态规划进行解决 下面是我自己在解题时的过程  动态规划">
 <meta property="og:type" content="article">
 <meta property="og:title" content="三个无重叠子数组的最大和">
 <meta property="og:url" content="http://dpm12345.top/posts/ca7417e/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 三个无重叠子数组的最大和categories: - - leetcode - leetcode刷题math: truetags: - 前缀和 - 动态规划 - 滑动窗口abbrlink: ca7417edate: 2021-12-08 09:54:40题目链接: 三个无重叠子数组...">
+<meta property="og:description" content="题目链接: 三个无重叠子数组的最大和 题目详情：  该题为 2021-12-8 的每日一题，可解决该问题的方法涉及到前缀和，动态规划，滑动窗口知识 思路: 题目要求求出某一数组三个长度为 k 的无重叠数组，使它们的元素之和为最大。 看到这个个数为 k，很容易想到滑动窗口这一算法，只是在这里，需要同时存在三个滑动窗口， 同样的，在这题，也可以用动态规划进行解决 下面是我自己在解题时的过程  动态规划">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/846e6e304741d51520e8887f2ce3768e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/f4f7d25cac632702c96360019456a958.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/224ed8f743256e75d625bc19cc3a1b23.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a404c735cf24607ccd7851f0c8dc2ce2.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e8ca6055e064d9b9497e0cd931184ff7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/4e115dc7a3ba59a4a842a265602d0b2a.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/1beb5324d8eef54fd8b3ee6a810e5518.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702620-bb97fe5f-e18d-42b5-8bbb-8afdb02edc48.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702677-fe1494de-43c0-4f51-95f8-90eddaaba6b2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/e6796dbbec6777c594082e0fcec97f67.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/60276b430e8f5fd0ed2b6a79c4bf8c21.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/60276b430e8f5fd0ed2b6a79c4bf8c21.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/449bd9e375babcd0bfd11bab0a969de6.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a95a6f323435b1511368f0f2968eebed.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/78bfba5190a369f133786c579d7facf4.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4e16d7df68a6e5f086e01e5b931728a2.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/6d8ec9ecb0cb47e573514ad68f034fb8.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/fe20aea39ff1fb3a807c86ace7de4523.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/0c678c1adadd46fbb6e9b23fee1da77f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/bd9549624f8cafd91c02bd2480266ed9.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f2e2e5798b6903d26a808a3d2d362155.png">
 <meta property="article:published_time" content="2021-12-08T01:54:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:17:47.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:18.016Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="前缀和">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="滑动窗口">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/e6796dbbec6777c594082e0fcec97f67.jpg">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -198,8 +198,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg" alt="三个无重叠子数组的最大和">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="三个无重叠子数组的最大和">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -301,7 +302,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -311,29 +312,29 @@
     <div class="e-content article-entry" itemprop="articleBody">
         <p>题目链接:<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-sum-of-3-non-overlapping-subarrays/"> 三个无重叠子数组的最大和</a></p>
 <p>题目详情：</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/e6796dbbec6777c594082e0fcec97f67.jpg" alt="" /></p>
 <p>该题为 2021-12-8 的每日一题，可解决该问题的方法涉及到前缀和，动态规划，滑动窗口知识</p>
 <p>思路: 题目要求求出某一数组三个长度为 k 的无重叠数组，使它们的元素之和为最大。</p>
 <p>看到这个个数为 k，很容易想到滑动窗口这一算法，只是在这里，需要同时存在三个滑动窗口，</p>
 <p>同样的，在这题，也可以用动态规划进行解决</p>
 <p>下面是我自己在解题时的过程</p>
 <h1 id="动态规划劣质版"><a class="markdownIt-Anchor" href="#动态规划劣质版"></a> 动态规划（劣质版）</h1>
-<p>刚拿到题目时，我能想到，该题可以使用动态规划解决，但并无方向该从哪个地方下手将什么作为<img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />所表达的意义，</p>
-<p>思考了大约20分钟后，我还是无从下手，于是打开了题解，第一眼看到的是”单个子数组的最大和“，顿时恍然大悟，我可以将不同个数的子数组作为一个<img src="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg" alt="image" /> ，在计算个数加一时，便可以利用前面的<img src="https://cdn.nlark.com/yuque/__latex/32ed5e9e580d123173ac55ad90458209.svg" alt="image" /> ，得到最优解。仔细思考，该方案的时间复杂度为<img src="https://cdn.nlark.com/yuque/__latex/e65a67ac353abeeff44c359310d05c02.svg" alt="image" />。</p>
+<p>刚拿到题目时，我能想到，该题可以使用动态规划解决，但并无方向该从哪个地方下手将什么作为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg" alt="image" />所表达的意义，</p>
+<p>思考了大约20分钟后，我还是无从下手，于是打开了题解，第一眼看到的是”单个子数组的最大和“，顿时恍然大悟，我可以将不同个数的子数组作为一个<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/60276b430e8f5fd0ed2b6a79c4bf8c21.svg" alt="image" /> ，在计算个数加一时，便可以利用前面的<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/60276b430e8f5fd0ed2b6a79c4bf8c21.svg" alt="image" /> ，得到最优解。仔细思考，该方案的时间复杂度为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1285b6689687f755e87175533f8e53ed.svg" alt="image" />。</p>
 <p>在以下的代码中，我是如此考虑的：</p>
-<p>先用<img src="https://cdn.nlark.com/yuque/__latex/846e6e304741d51520e8887f2ce3768e.svg" alt="image" />计算前缀和，为后续计算提供便利再分别使用<img src="https://cdn.nlark.com/yuque/__latex/f4f7d25cac632702c96360019456a958.svg" alt="image" /> ， <img src="https://cdn.nlark.com/yuque/__latex/224ed8f743256e75d625bc19cc3a1b23.svg" alt="image" /> ， <img src="https://cdn.nlark.com/yuque/__latex/a404c735cf24607ccd7851f0c8dc2ce2.svg" alt="image" />记录不同个数的子数组元素的最大值，其转移方程分别为：</p>
-<p><img src="https://cdn.nlark.com/yuque/__latex/e8ca6055e064d9b9497e0cd931184ff7.svg" alt="image" /></p>
-<p><img src="https://cdn.nlark.com/yuque/__latex/4e115dc7a3ba59a4a842a265602d0b2a.svg" alt="image" /></p>
-<p><img src="https://cdn.nlark.com/yuque/__latex/1beb5324d8eef54fd8b3ee6a810e5518.svg" alt="image" /></p>
+<p>先用<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/449bd9e375babcd0bfd11bab0a969de6.svg" alt="image" />计算前缀和，为后续计算提供便利再分别使用<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/a95a6f323435b1511368f0f2968eebed.svg" alt="image" /> ， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/78bfba5190a369f133786c579d7facf4.svg" alt="image" /> ， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4e16d7df68a6e5f086e01e5b931728a2.svg" alt="image" />记录不同个数的子数组元素的最大值，其转移方程分别为：</p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/6d8ec9ecb0cb47e573514ad68f034fb8.svg" alt="image" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/fe20aea39ff1fb3a807c86ace7de4523.svg" alt="image" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/0c678c1adadd46fbb6e9b23fee1da77f.svg" alt="image" /></p>
 <p>但这样并不能记录下标输出答案，所以这里我采用了，三个flag数组，用于记录下标，具体见代码</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;int&gt; maxSumOfThreeSubarrays(vector&lt;int&gt;&amp; nums, int k) &#123;</span><br><span class="line">        int n=nums.size();</span><br><span class="line">        vector&lt;int&gt;dp1(n),dp2(n),dp3(n);</span><br><span class="line">        vector&lt;int&gt;flag1(n);</span><br><span class="line">        vector&lt;pair&lt;int,int&gt;&gt;flag2(n);</span><br><span class="line">        vector&lt;pair&lt;int,int&gt;&gt;flag3(n);</span><br><span class="line">        vector&lt;int&gt;sum(n+1,0);</span><br><span class="line">        vector&lt;int&gt;ans;</span><br><span class="line">        for(int i=0;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            sum[i+1]+=nums[i]+sum[i];           </span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=k-1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp1[i]=max(dp1[i-1],sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp1[i]==dp1[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag1[i]=flag1[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag1[i]=i-k+1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=2*k-1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp2[i]=max(dp2[i-1],dp1[i-k]+sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp2[i]==dp2[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag2[i]=flag2[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag2[i]=&#123;flag1[i-k],i-k+1&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        for(int i=3*k-1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            dp3[i]=max(dp3[i-1],dp2[i-k]+sum[i+1]-sum[i-k+1]);</span><br><span class="line">            if(dp3[i]==dp3[i-1])</span><br><span class="line">            &#123;</span><br><span class="line">                flag3[i]=flag3[i-1];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                flag3[i]=&#123;flag2[i-k].second,i-k+1&#125;;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return &#123;flag2[flag3[n-1].first].first,flag3[n-1].first,flag3[n-1].second&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>xxxxxxxxxx class Solution {public:    int maxResult(vector&amp; nums, int k) {        int n = nums.size();        vector dp(n);        dp[0] = nums[0];        priority_queue&lt;pair&lt;int, int&gt;&gt; q;        q.emplace(nums[0], 0);        for (int i = 1; i &lt; n; ++i) {            while (i - q.top().second &gt; k) {                q.pop();            }            dp[i] = q.top().first + nums[i];            q.emplace(dp[i], i);        }        return dp[n - 1];    }};cpp 优先级队列2</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702620-bb97fe5f-e18d-42b5-8bbb-8afdb02edc48.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/bd9549624f8cafd91c02bd2480266ed9.png" alt="" /></p>
 <p>观察报错信息，可知，在我的代码中，并未考虑<code>k==1</code>的情况，因为代码中我是通过<code>for(int i=k-1;i&lt;n;i++)</code>实现循环的，k-1 就会为 0，至于后面 i-1 造成错误</p>
 <p>改进代码:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if(k==1)                      // 考虑 k==1 的情况</span><br><span class="line">    &#123;</span><br><span class="line">        vector&lt;int&gt;ans(3);</span><br><span class="line">        for(int i=0;i&lt;3;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ans[i]=max_element(nums.begin(),nums.end())-nums.begin();</span><br><span class="line">                *max_element(nums.begin(),nums.end())=0;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(ans.begin(),ans.end());</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>再次提交，发现答案出错，如下:</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852702677-fe1494de-43c0-4f51-95f8-90eddaaba6b2.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f2e2e5798b6903d26a808a3d2d362155.png" alt="" /></p>
 <p>在这并不能看出什么，为此，我进行了多组数据的尝试，发现第一个大部分都不符合答案，但后两个一直都是正确的，说明<code>flag1</code>求解过程无误，而是输出出错</p>
 <p>对此，进行代码分析，最后输出时，我写的是</p>
 <p><code>return {flag2[flag3[n-1].first].first,flag3[n-1].first,flag3[n-1].second};</code></p>
@@ -367,7 +368,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852714476-18e66626-d3c6-4eac-ac08-91e538160b66.png" data-sizes="auto" alt="子序列问题" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c56ab0be43e0d30e75f603.jpg" data-sizes="auto" alt="子序列问题" class="lazyload">
         <a href="/posts/9e6e8fdc/" aria-label="前一篇: 子序列问题" title="前一篇: 子序列问题"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
@@ -375,7 +376,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852739393-e7b8667e-a8f2-47b1-98f1-17699295e5d3.jpg" data-sizes="auto" alt="边界着色 岛屿数量" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e304be43e0d30e0f7d20.jpg" data-sizes="auto" alt="边界着色 岛屿数量" class="lazyload">
       <a href="/posts/65c00a51/" aria-label="后一篇: 边界着色 岛屿数量"  title="后一篇: 边界着色 岛屿数量"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
@@ -626,11 +627,11 @@
           title: "三个无重叠子数组的最大和",
           url: "http://dpm12345.top/posts/ca7417e/",
           excerpt: "",
-          description: "title: 三个无重叠子数组的最大和categories: - - leetcode - leetcode刷题math: truetags: - 前缀和 - 动态规划 - 滑动窗口abbrlink: ca7417edate: 2021-12-08 09:54:40题目链接: 三个无重叠子数组...",
+          description: "",
           stripContent: "题目链接: 三个无重叠子数组的最大和 题目详情：  该题为 2021-12-8 的每日一题，可解决该问题的方法涉及到前缀和，动态规划，滑动窗口知识 思路: 题目要求求出某一数组三个长度为 k 的无重叠数组，使它们的元素之和为最大。 看到这个个数为 k，很容易想到滑动窗口这一算法，只是在这里，需要同时存在三个滑动窗口， 同样的，在这题，也可以用动态规划进行解决 下面是我自己在解题时的过程  动态规划（劣质版） 刚拿到题目时，我能想到，该题可以使用动态规划解决，但并无方向该从哪个地方下手将什么作为所",
           date: "Wed Dec 08 2021 09:54:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:17:47 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852702550-36c7df9d-6f89-436e-bc04-b7f191d46d3e.jpg",
+          updated: "Sun Dec 28 2025 17:04:18 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         

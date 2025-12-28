@@ -17,37 +17,37 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 有效的括号categories: - - leetcode - leetcode刷题math: truetags: - 矩阵abbrlink: &#39;308e5841&#39;date: 2021-11-29 20:54:40题目链接：二维区域和检索 - 矩阵不可变题目详情:思路：该题考查了...">
+    <meta name="description" content="题目链接：二维区域和检索 - 矩阵不可变 题目详情:  思路：该题考查了矩形的相关知识，同时涉及到前缀和。那么必须知道矩形的前缀和如何求。这里给出两种解法：  以表示第行从下标到下标为元素的和,那么计算左上端点为, 右下端点为的矩形区域内元素总和，就可以将每一行每一行加起来代码形式为 以表示以为左上端点， 为右上端点的矩形区域内元素总和,那么计算左上端点为, 右下端点为的矩形区域内元素总和时 可试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="有效的括号">
 <meta property="og:url" content="http://dpm12345.top/en/posts/308e5841/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 有效的括号categories: - - leetcode - leetcode刷题math: truetags: - 矩阵abbrlink: &#39;308e5841&#39;date: 2021-11-29 20:54:40题目链接：二维区域和检索 - 矩阵不可变题目详情:思路：该题考查了...">
+<meta property="og:description" content="题目链接：二维区域和检索 - 矩阵不可变 题目详情:  思路：该题考查了矩形的相关知识，同时涉及到前缀和。那么必须知道矩形的前缀和如何求。这里给出两种解法：  以表示第行从下标到下标为元素的和,那么计算左上端点为, 右下端点为的矩形区域内元素总和，就可以将每一行每一行加起来代码形式为 以表示以为左上端点， 为右上端点的矩形区域内元素总和,那么计算左上端点为, 右下端点为的矩形区域内元素总和时 可试">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710154-2a1d64fe-0064-441f-981e-4c8a1569a53d.jpg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/fe3408d148f6bf96328041de426bccde.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/cbf673dc93141418322bb8aff6a8b8e0.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/22d0feea96d3bb2fc273f7598ce748c1.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/036441a335dd85c838f76d63a3db2363.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/bad7e3a23dbc39bf53dd930320031686.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/99982136d4c963b9dc01ded4beb7d1a9.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/cb0d511627b2a091935c803a38cbf945.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/31f10dc5c7ac37c71b578af84ac54fd1.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/d061a784089eb61e3c2aa07012bbe75d.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/23514e56e37f8bfa3d9641f6202b90f7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/bad7e3a23dbc39bf53dd930320031686.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/99982136d4c963b9dc01ded4beb7d1a9.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710230-1526befa-ae5a-401e-b558-a5225e2cad51.jpg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/5223c469658bf6fabee4238990f03580.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/3c1656a4e6a20d332506da2a63bd0a13.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/4f53c31c4f90767526a7f77d2a5d9a8f.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/92e802e8eeee50fcb20422e4f7d6bd3a.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/84968cf949f12995db25e3b48253ee83.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/aa9dd91a4e44887bb030874c5998f422.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b1aa5eb36dc7276f7ddf6b1109023715.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7b1b766ed1b162c3c061a0fccb8407a0.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/099bb2410403ff4263fa94d2713e07c9.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5a130e3d42bb82e661aaf1a65255a56b.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/99851640374bfd871e650f3e58dfff4a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b9275d59d77167549935a7c8fcaa9a05.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/cf449b2d416253ca6ace8a7dfb78c69e.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ce814184c9eee17cb80440c5fc8a163d.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/099bb2410403ff4263fa94d2713e07c9.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5a130e3d42bb82e661aaf1a65255a56b.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f06b059ab1db1fa669ab3734cb6a7762.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7e5ab4e2f25b6c76e2669da3ec8e6e4d.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ea1dda279b51f5eb42b90aa6dfd52bcc.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/392396e361ef4034ca90db9d9ba9c0ff.svg">
 <meta property="article:published_time" content="2021-11-29T12:54:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:19:16.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:18.012Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="矩阵">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710154-2a1d64fe-0064-441f-981e-4c8a1569a53d.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/92e802e8eeee50fcb20422e4f7d6bd3a.jpg">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -200,8 +200,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710154-2a1d64fe-0064-441f-981e-4c8a1569a53d.jpg" alt="有效的括号">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="有效的括号">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -303,7 +304,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/en/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/en/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -313,17 +314,17 @@
     <div class="e-content article-entry" itemprop="articleBody">
         <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/range-sum-query-2d-immutable/">二维区域和检索 - 矩阵不可变</a></p>
 <p>题目详情:</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710154-2a1d64fe-0064-441f-981e-4c8a1569a53d.jpg" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/92e802e8eeee50fcb20422e4f7d6bd3a.jpg" alt="" /></p>
 <p>思路：该题考查了矩形的相关知识，同时涉及到前缀和。那么必须知道矩形的前缀和如何求。这里给出两种解法：</p>
 <ol>
-<li>以<img src="https://cdn.nlark.com/yuque/__latex/fe3408d148f6bf96328041de426bccde.svg" alt="image" />表示<img src="https://cdn.nlark.com/yuque/__latex/cbf673dc93141418322bb8aff6a8b8e0.svg" alt="image" />第<img src="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg" alt="image" />行从下标<img src="https://cdn.nlark.com/yuque/__latex/22d0feea96d3bb2fc273f7598ce748c1.svg" alt="image" />到下标为<img src="https://cdn.nlark.com/yuque/__latex/036441a335dd85c838f76d63a3db2363.svg" alt="image" />元素的和,那么计算左上端点为<img src="https://cdn.nlark.com/yuque/__latex/bad7e3a23dbc39bf53dd930320031686.svg" alt="image" />, 右下端点为<img src="https://cdn.nlark.com/yuque/__latex/99982136d4c963b9dc01ded4beb7d1a9.svg" alt="image" />的矩形区域内元素总和，就可以将每一行每一行加起来代码形式为<img src="https://cdn.nlark.com/yuque/__latex/cb0d511627b2a091935c803a38cbf945.svg" alt="image" /></li>
-<li>以<img src="https://cdn.nlark.com/yuque/__latex/31f10dc5c7ac37c71b578af84ac54fd1.svg" alt="image" />表示以<img src="https://cdn.nlark.com/yuque/__latex/d061a784089eb61e3c2aa07012bbe75d.svg" alt="image" />为左上端点， <img src="https://cdn.nlark.com/yuque/__latex/23514e56e37f8bfa3d9641f6202b90f7.svg" alt="image" />为右上端点的矩形区域内元素总和,那么计算左上端点为<img src="https://cdn.nlark.com/yuque/__latex/bad7e3a23dbc39bf53dd930320031686.svg" alt="image" />, 右下端点为<img src="https://cdn.nlark.com/yuque/__latex/99982136d4c963b9dc01ded4beb7d1a9.svg" alt="image" />的矩形区域内元素总和时<br />
+<li>以<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/84968cf949f12995db25e3b48253ee83.svg" alt="image" />表示<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/aa9dd91a4e44887bb030874c5998f422.svg" alt="image" />第<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg" alt="image" />行从下标<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b1aa5eb36dc7276f7ddf6b1109023715.svg" alt="image" />到下标为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7b1b766ed1b162c3c061a0fccb8407a0.svg" alt="image" />元素的和,那么计算左上端点为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/099bb2410403ff4263fa94d2713e07c9.svg" alt="image" />, 右下端点为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5a130e3d42bb82e661aaf1a65255a56b.svg" alt="image" />的矩形区域内元素总和，就可以将每一行每一行加起来代码形式为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/99851640374bfd871e650f3e58dfff4a.svg" alt="image" /></li>
+<li>以<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b9275d59d77167549935a7c8fcaa9a05.svg" alt="image" />表示以<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/cf449b2d416253ca6ace8a7dfb78c69e.svg" alt="image" />为左上端点， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ce814184c9eee17cb80440c5fc8a163d.svg" alt="image" />为右上端点的矩形区域内元素总和,那么计算左上端点为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/099bb2410403ff4263fa94d2713e07c9.svg" alt="image" />, 右下端点为<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5a130e3d42bb82e661aaf1a65255a56b.svg" alt="image" />的矩形区域内元素总和时<br />
 可试着画图</li>
 </ol>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710230-1526befa-ae5a-401e-b558-a5225e2cad51.jpg" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f06b059ab1db1fa669ab3734cb6a7762.jpg" alt="" /></p>
 <p>那么由此可以推得解法代码为：</p>
-<p><img src="https://cdn.nlark.com/yuque/__latex/5223c469658bf6fabee4238990f03580.svg" alt="image" /></p>
-<p>但为了防止<img src="https://cdn.nlark.com/yuque/__latex/3c1656a4e6a20d332506da2a63bd0a13.svg" alt="image" />,<img src="https://cdn.nlark.com/yuque/__latex/4f53c31c4f90767526a7f77d2a5d9a8f.svg" alt="image" />越界，在创建数组时可以顺便将其行列各增加一行，排除越界情况具体代码只需下标加一即可</p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7e5ab4e2f25b6c76e2669da3ec8e6e4d.svg" alt="image" /></p>
+<p>但为了防止<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ea1dda279b51f5eb42b90aa6dfd52bcc.svg" alt="image" />,<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/392396e361ef4034ca90db9d9ba9c0ff.svg" alt="image" />越界，在创建数组时可以顺便将其行列各增加一行，排除越界情况具体代码只需下标加一即可</p>
 <p>以下为代码</p>
 <h1 id="解法一"><a class="markdownIt-Anchor" href="#解法一"></a> 解法一</h1>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">class NumMatrix &#123;</span><br><span class="line">public:</span><br><span class="line">    vector&lt;vector&lt;int&gt;&gt;sum;</span><br><span class="line">    NumMatrix(vector&lt;vector&lt;int&gt;&gt;&amp; matrix) &#123;</span><br><span class="line">        int m=matrix.size();</span><br><span class="line">        if(m&gt;0)</span><br><span class="line">        &#123;</span><br><span class="line">            sum.resize(m,vector&lt;int&gt;(matrix[0].size()+1));</span><br><span class="line">            for(int i=0;i&lt;m;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                for(int j=0;j&lt;matrix[0].size();j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    sum[i][j+1]=sum[i][j]+matrix[i][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    int sumRegion(int row1, int col1, int row2, int col2) &#123;</span><br><span class="line">        int ans=0;</span><br><span class="line">        for(int i=row1;i&lt;=row2;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            ans+=sum[i][col2+1]-sum[i][col1];</span><br><span class="line">        &#125;</span><br><span class="line">        return ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -346,7 +347,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852733005-60ca0a80-2d29-477e-8334-67b4f01d5ec3.png" data-sizes="auto" alt="爬楼梯与零钱兑换题目对比" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c5e29abe43e0d30e0f0ef8.jpg" data-sizes="auto" alt="爬楼梯与零钱兑换题目对比" class="lazyload">
         <a href="/en/posts/47ade4a0/" aria-label="Prev: 爬楼梯与零钱兑换题目对比" title="Prev: 爬楼梯与零钱兑换题目对比"></a>
         <div class="article-nav-caption">Prev</div>
         <h3 class="article-nav-title">
@@ -354,7 +355,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852731603-2f935a1f-0241-402a-a009-f8d5afcb7afe.jpg" data-sizes="auto" alt="有效的括号" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e20abe43e0d30e0e9cec.jpg" data-sizes="auto" alt="有效的括号" class="lazyload">
       <a href="/en/posts/308e5841/" aria-label="Next: 有效的括号"  title="Next: 有效的括号"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -605,11 +606,11 @@
           title: "有效的括号",
           url: "http://dpm12345.top/posts/308e5841/",
           excerpt: "",
-          description: "title: 有效的括号categories: - - leetcode - leetcode刷题math: truetags: - 矩阵abbrlink: &#39;308e5841&#39;date: 2021-11-29 20:54:40题目链接：二维区域和检索 - 矩阵不可变题目详情:思路：该题考查了...",
+          description: "",
           stripContent: "题目链接：二维区域和检索 - 矩阵不可变 题目详情:  思路：该题考查了矩形的相关知识，同时涉及到前缀和。那么必须知道矩形的前缀和如何求。这里给出两种解法：  以表示第行从下标到下标为元素的和,那么计算左上端点为, 右下端点为的矩形区域内元素总和，就可以将每一行每一行加起来代码形式为 以表示以为左上端点， 为右上端点的矩形区域内元素总和,那么计算左上端点为, 右下端点为的矩形区域内元素总和时 可试着画图   那么由此可以推得解法代码为：  但为了防止,越界，在创建数组时可以顺便将其行列各增加一行",
           date: "Mon Nov 29 2021 20:54:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:19:16 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852710154-2a1d64fe-0064-441f-981e-4c8a1569a53d.jpg",
+          updated: "Sun Dec 28 2025 17:04:18 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         

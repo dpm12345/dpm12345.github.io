@@ -17,42 +17,42 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="title: 跳跃游戏 VIcategories: - - leetcode - leetcode刷题math: truetags: - 队列 - 动态规划abbrlink: 6f1a75fdate: 2021-12-05 14:54:40题目链接：跳跃游戏 VI题目详情:初期想法">
+    <meta name="description" content="题目链接：跳跃游戏 VI 题目详情:   初期想法 看到题目，很容易想到使用动态规划算法， 表示跳到位置能取到的最大的值,其中, 那么很容易写出代码 如图  但是已提交便发现，超时了，也就是说纯纯动态规划不能完成题目要求。  反思 思考初期想法的代码，哪里造成了代码超时呢？ 不难发现，在确定位置前的范围内的最小值时，每一个都比较了一次，而当加一时，除去上次的 ，和新增的 ，其他位置又比较了一次，如">
 <meta property="og:type" content="article">
 <meta property="og:title" content="跳跃游戏 VI">
 <meta property="og:url" content="http://dpm12345.top/posts/6f1a75f/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="title: 跳跃游戏 VIcategories: - - leetcode - leetcode刷题math: truetags: - 队列 - 动态规划abbrlink: 6f1a75fdate: 2021-12-05 14:54:40题目链接：跳跃游戏 VI题目详情:初期想法">
+<meta property="og:description" content="题目链接：跳跃游戏 VI 题目详情:   初期想法 看到题目，很容易想到使用动态规划算法， 表示跳到位置能取到的最大的值,其中, 那么很容易写出代码 如图  但是已提交便发现，超时了，也就是说纯纯动态规划不能完成题目要求。  反思 思考初期想法的代码，哪里造成了代码超时呢？ 不难发现，在确定位置前的范围内的最小值时，每一个都比较了一次，而当加一时，除去上次的 ，和新增的 ，其他位置又比较了一次，如">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852737946-e35e5abc-7e7f-4ccc-9149-5079d16d618f.jpg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/caf91e0911e0cdaf7251263eb2113846.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852738018-03b4139f-bc54-4b97-b3df-9ff85812b2ac.png">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/e60f502533247071953fd97621eff931.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/122ac439e382049c7535895b9e4e449c.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/ef641a858a2cbe77d7656beb54d1874f.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/a910c56c99b33e7a3b723b7cbb29c30f.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/ef641a858a2cbe77d7656beb54d1874f.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/b26c65a4b2e7887ecdf8393dbe1405fb.svg">
-<meta property="og:image" content="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5f888768d565fb1796353d5f72234119.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f55320e86c605ced113127fd9df51f38.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ea96d8edc11a7f7b03ce3c6e37ef25e1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7a94bda058f447d22886e1ab8591cfac.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/199e12095ac99ea1433619385225d2b0.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1acbf1af281238d14d540f0924dae0b7.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/36dee337188ffb8fea6fbec81098854c.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1acbf1af281238d14d540f0924dae0b7.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1dd952c430c76dd6492f78a3e58072a3.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg">
 <meta property="article:published_time" content="2021-12-05T06:54:40.000Z">
-<meta property="article:modified_time" content="2025-12-27T17:23:35.000Z">
+<meta property="article:modified_time" content="2025-12-28T09:04:17.936Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="动态规划">
 <meta property="article:tag" content="队列">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852737946-e35e5abc-7e7f-4ccc-9149-5079d16d618f.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5f888768d565fb1796353d5f72234119.jpg">
       <meta name="keywords" content="notes, blog, hexo, code">
     <link rel="alternate" href="/atom.xml" title="dpm12345" type="application/atom+xml">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -205,8 +205,9 @@
   </a>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852737946-e35e5abc-7e7f-4ccc-9149-5079d16d618f.jpg" alt="跳跃游戏 VI">
+        <picture>
+        </picture>
+          <img  fetchpriority="high" src="/images/banner.webp" alt="跳跃游戏 VI">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
@@ -308,7 +309,7 @@
 </div>
 
         <div class="article-category">
-    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/leetcode%E5%88%B7%E9%A2%98/" title="leetcode刷题">leetcode刷题</a>
+    <a class="article-category-link" href="/categories/leetcode/" title="leetcode">leetcode</a><a class="article-category-link" href="/categories/leetcode/regular-exercise/" title="leetcode刷题">leetcode刷题</a>
   </div>
 
     </div>
@@ -318,19 +319,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
         <p>题目链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/jump-game-vi/">跳跃游戏 VI</a></p>
 <p>题目详情:</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852737946-e35e5abc-7e7f-4ccc-9149-5079d16d618f.jpg" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/5f888768d565fb1796353d5f72234119.jpg" alt="" /></p>
 <h1 id="初期想法"><a class="markdownIt-Anchor" href="#初期想法"></a> 初期想法</h1>
-<p>看到题目，很容易想到使用动态规划算法， <img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />表示跳到位置<img src="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg" alt="image" />能取到的最大的值,其中<img src="https://cdn.nlark.com/yuque/__latex/caf91e0911e0cdaf7251263eb2113846.svg" alt="image" />, 那么很容易写出代码 如图</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852738018-03b4139f-bc54-4b97-b3df-9ff85812b2ac.png" alt="" /></p>
+<p>看到题目，很容易想到使用动态规划算法， <img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg" alt="image" />表示跳到位置<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg" alt="image" />能取到的最大的值,其中<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/f55320e86c605ced113127fd9df51f38.svg" alt="image" />, 那么很容易写出代码 如图</p>
+<p><img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/ea96d8edc11a7f7b03ce3c6e37ef25e1.png" alt="" /></p>
 <p>但是已提交便发现，超时了，也就是说纯纯动态规划不能完成题目要求。</p>
 <h1 id="反思"><a class="markdownIt-Anchor" href="#反思"></a> 反思</h1>
 <p>思考初期想法的代码，哪里造成了代码超时呢？</p>
-<p>不难发现，在确定<img src="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg" alt="image" />位置前的<img src="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg" alt="image" />范围内的最小值时，每一个都比较了一次，而当<img src="https://cdn.nlark.com/yuque/__latex/2443fbcfeb7e85e1d62b6f5e4f27207e.svg" alt="image" />加一时，除去上次的<img src="https://cdn.nlark.com/yuque/__latex/e60f502533247071953fd97621eff931.svg" alt="image" /> ，和新增的<img src="https://cdn.nlark.com/yuque/__latex/122ac439e382049c7535895b9e4e449c.svg" alt="image" /> ，其他位置又比较了一次，如果最大值，即比较过后仍然比较，其原因是缺少记录最大值的渠道。那么是否可以在循环时加上一个变量MAX记录<img src="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg" alt="image" />的最大值，当<img src="https://cdn.nlark.com/yuque/__latex/ef641a858a2cbe77d7656beb54d1874f.svg" alt="image" />时，将MAX与<img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />比较呢？</p>
-<p>其结果是只能解决一部分，因为假设<img src="https://cdn.nlark.com/yuque/__latex/a910c56c99b33e7a3b723b7cbb29c30f.svg" alt="image" /> ，当<img src="https://cdn.nlark.com/yuque/__latex/ef641a858a2cbe77d7656beb54d1874f.svg" alt="image" />时，MAX的值明显不在之后的<img src="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg" alt="image" />范围之内了，因此要将原来范围内的次大值与<img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />比较，这样我们又多了个任务，求次大值，所以单纯增加一个变量并不能解决问题。</p>
+<p>不难发现，在确定<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg" alt="image" />位置前的<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg" alt="image" />范围内的最小值时，每一个都比较了一次，而当<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/69cb376fa379f85b9a0f74e8071f01bb.svg" alt="image" />加一时，除去上次的<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/7a94bda058f447d22886e1ab8591cfac.svg" alt="image" /> ，和新增的<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/199e12095ac99ea1433619385225d2b0.svg" alt="image" /> ，其他位置又比较了一次，如果最大值，即比较过后仍然比较，其原因是缺少记录最大值的渠道。那么是否可以在循环时加上一个变量MAX记录<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg" alt="image" />的最大值，当<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1acbf1af281238d14d540f0924dae0b7.svg" alt="image" />时，将MAX与<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg" alt="image" />比较呢？</p>
+<p>其结果是只能解决一部分，因为假设<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/36dee337188ffb8fea6fbec81098854c.svg" alt="image" /> ，当<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1acbf1af281238d14d540f0924dae0b7.svg" alt="image" />时，MAX的值明显不在之后的<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg" alt="image" />范围之内了，因此要将原来范围内的次大值与<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg" alt="image" />比较，这样我们又多了个任务，求次大值，所以单纯增加一个变量并不能解决问题。</p>
 <p>下面为解决方案：</p>
 <h1 id="优化单调队列"><a class="markdownIt-Anchor" href="#优化单调队列"></a> 优化（单调队列）</h1>
-<p>经过上面的分析，我们需要存储<img src="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg" alt="image" />内的最大值，同时要在最大值被删去时能快速得到之后的最大值那么，队列无非是我们的选择</p>
-<p>方法：为方便，我们将元素下标存入队列中队列内的元素按降序排序，即队首为最大元素的下标，队列第二个元素即为次大值循环时，首先先确保队首元素满足在下标<img src="https://cdn.nlark.com/yuque/__latex/623a799bf7d9e1d50d380e4551265d25.svg" alt="image" />范围内，如不满足则删除队首，然后再进行<img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />的计算<img src="https://cdn.nlark.com/yuque/__latex/b26c65a4b2e7887ecdf8393dbe1405fb.svg" alt="image" /> ，最后向队列中存入元素<img src="https://cdn.nlark.com/yuque/__latex/17f3d537d68496b4afdf0175bae049a7.svg" alt="image" />（若<span class="katex-error" title=" dp[i]&amp;gt;dp[q.back()] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 7:  dp[i]&amp;̲gt;dp[q.back()]…</span>, 便可将队尾元素删除，直到<span class="katex-error" title=" dp[i]&amp;lt;=dp[q.back] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 7:  dp[i]&amp;̲lt;=dp[q.back] </span>或队列为空），这样便为后面取最大值做准备。</p>
+<p>经过上面的分析，我们需要存储<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg" alt="image" />内的最大值，同时要在最大值被删去时能快速得到之后的最大值那么，队列无非是我们的选择</p>
+<p>方法：为方便，我们将元素下标存入队列中队列内的元素按降序排序，即队首为最大元素的下标，队列第二个元素即为次大值循环时，首先先确保队首元素满足在下标<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/421c799fe2c563a1dfd9ffd3aae658c4.svg" alt="image" />范围内，如不满足则删除队首，然后再进行<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg" alt="image" />的计算<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/1dd952c430c76dd6492f78a3e58072a3.svg" alt="image" /> ，最后向队列中存入元素<img src="https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/4062e1e65d4b0fbc7d1ed33e887fae2a.svg" alt="image" />（若<span class="katex-error" title=" dp[i]&amp;gt;dp[q.back()] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 7:  dp[i]&amp;̲gt;dp[q.back()]…</span>, 便可将队尾元素删除，直到<span class="katex-error" title=" dp[i]&amp;lt;=dp[q.back] ">ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;&amp;&#039; at position 7:  dp[i]&amp;̲lt;=dp[q.back] </span>或队列为空），这样便为后面取最大值做准备。</p>
 <p>因此，代码如下</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    int maxResult(vector&lt;int&gt;&amp; nums, int k) &#123;</span><br><span class="line">        int n=nums.size();</span><br><span class="line">        vector&lt;int&gt;dp(n);</span><br><span class="line">        dp[0]=nums[0];</span><br><span class="line">        deque&lt;int&gt;q;</span><br><span class="line">        q.push_back(0);</span><br><span class="line">        for(int i=1;i&lt;n;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            while(q.size()&amp;&amp;i-q.front()&gt;k)</span><br><span class="line">            &#123;</span><br><span class="line">                q.pop_front();</span><br><span class="line">            &#125;</span><br><span class="line">            dp[i]=dp[q.front()]+nums[i];</span><br><span class="line">            while(q.size()&amp;&amp;dp[i]&gt;dp[q.back()])</span><br><span class="line">            &#123;</span><br><span class="line">                q.pop_back();</span><br><span class="line">            &#125;</span><br><span class="line">            q.push_back(i);</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n-1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h1 id="优化优先级队列"><a class="markdownIt-Anchor" href="#优化优先级队列"></a> 优化（优先级队列）</h1>
@@ -354,7 +355,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
       <div class="article-nav-link-wrap left">
-          <img data-src="https://cdn.nlark.com/yuque/0/2025/png/56529101/1766852725917-77f3f938-69d8-4cd9-af4f-5c4515b528c0.png" data-sizes="auto" alt="无重叠区间" class="lazyload">
+            <img data-src="https://pic1.imgdb.cn/item/63c56b35be43e0d30e76e433.jpg" data-sizes="auto" alt="无重叠区间" class="lazyload">
         <a href="/posts/5beb97b2/" aria-label="前一篇: 无重叠区间" title="前一篇: 无重叠区间"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
@@ -362,7 +363,7 @@
         </h3>
       </div>
     <div class="article-nav-link-wrap right">
-        <img data-src="https://cdn.nlark.com/yuque/__latex/03dd136c2e4459d3a49c1b992402804d.svg" data-sizes="auto" alt="快速幂" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e20abe43e0d30e0e9cec.jpg" data-sizes="auto" alt="快速幂" class="lazyload">
       <a href="/posts/20c47d09/" aria-label="后一篇: 快速幂"  title="后一篇: 快速幂"></a>
       <div class="article-nav-caption">后一篇</div>
       <h3 class="article-nav-title">
@@ -613,11 +614,11 @@
           title: "跳跃游戏 VI",
           url: "http://dpm12345.top/posts/6f1a75f/",
           excerpt: "",
-          description: "title: 跳跃游戏 VIcategories: - - leetcode - leetcode刷题math: truetags: - 队列 - 动态规划abbrlink: 6f1a75fdate: 2021-12-05 14:54:40题目链接：跳跃游戏 VI题目详情:初期想法",
+          description: "",
           stripContent: "题目链接：跳跃游戏 VI 题目详情:   初期想法 看到题目，很容易想到使用动态规划算法， 表示跳到位置能取到的最大的值,其中, 那么很容易写出代码 如图  但是已提交便发现，超时了，也就是说纯纯动态规划不能完成题目要求。  反思 思考初期想法的代码，哪里造成了代码超时呢？ 不难发现，在确定位置前的范围内的最小值时，每一个都比较了一次，而当加一时，除去上次的 ，和新增的 ，其他位置又比较了一次，如果最大值，即比较过后仍然比较，其原因是缺少记录最大值的渠道。那么是否可以在循环时加上一个变量MAX记",
           date: "Sun Dec 05 2021 14:54:40 GMT+0800",
-          updated: "Sun Dec 28 2025 01:23:35 GMT+0800",
-          cover: "https://cdn.nlark.com/yuque/0/2025/jpg/56529101/1766852737946-e35e5abc-7e7f-4ccc-9149-5079d16d618f.jpg",
+          updated: "Sun Dec 28 2025 17:04:17 GMT+0800",
+          cover: "/images/banner.webp",
         };
       </script>
         
