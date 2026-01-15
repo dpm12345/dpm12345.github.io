@@ -6,7 +6,7 @@
   <link href="http://dpm12345.top/atom.xml" rel="self"/>
   
   <link href="http://dpm12345.top/"/>
-  <updated>2025-12-28T09:04:18.020Z</updated>
+  <updated>2026-01-15T11:15:02.007Z</updated>
   <id>http://dpm12345.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Agent 经典范式构建</title>
+    <link href="http://dpm12345.top/posts/1c62f5a8/"/>
+    <id>http://dpm12345.top/posts/1c62f5a8/</id>
+    <published>2026-01-15T10:40:40.000Z</published>
+    <updated>2026-01-15T11:15:02.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;开始&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#开始&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Agent" scheme="http://dpm12345.top/categories/Agent/"/>
+    
+    
+    <category term="Agent" scheme="http://dpm12345.top/tags/Agent/"/>
+    
+    <category term="ReAct" scheme="http://dpm12345.top/tags/ReAct/"/>
+    
+    <category term="PlanAndExcute" scheme="http://dpm12345.top/tags/PlanAndExcute/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -514,32 +543,6 @@
         
     <summary type="html">&lt;p&gt;【战绩】&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/0e6a6dd0a2bc3cec8e2d083c1d2d9b85.png&quot; alt=&quot;&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
-    
-    <category term="leetcode周赛" scheme="http://dpm12345.top/categories/leetcode/week-competition/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 第 68 场双周赛</title>
-    <link href="http://dpm12345.top/posts/274338ea/"/>
-    <id>http://dpm12345.top/posts/274338ea/</id>
-    <published>2021-12-28T15:20:34.000Z</published>
-    <updated>2025-12-28T09:04:17.932Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;【战绩】&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/b222ca9b3e7ea9550f577c3155982cd2.png&quot; alt=&quot;&quot;</summary>
         
       
     

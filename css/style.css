@@ -644,7 +644,7 @@ button {
   display: flex;
   padding-top: 8px;
   align-items: stretch;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   overflow: visible;
 }
