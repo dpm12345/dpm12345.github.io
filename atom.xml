@@ -6,7 +6,7 @@
   <link href="http://dpm12345.top/atom.xml" rel="self"/>
   
   <link href="http://dpm12345.top/"/>
-  <updated>2026-01-16T02:15:02.414Z</updated>
+  <updated>2026-01-16T11:14:58.323Z</updated>
   <id>http://dpm12345.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>构建自己的Agent框架</title>
+    <link href="http://dpm12345.top/posts/1a98bcbf/"/>
+    <id>http://dpm12345.top/posts/1a98bcbf/</id>
+    <published>2026-01-16T10:40:40.000Z</published>
+    <updated>2026-01-16T11:14:58.323Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;消息&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#消息&quot;&gt;&lt;/a&gt; 消息&lt;/h2&gt;
+&lt;p&gt;建立消息基类&lt;/p&gt;
+&lt;h2 id=&quot;记忆与检索&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Agent" scheme="http://dpm12345.top/categories/Agent/"/>
+    
+    
+    <category term="Agent" scheme="http://dpm12345.top/tags/Agent/"/>
+    
+  </entry>
   
   <entry>
     <title>Agent 经典范式构建</title>
@@ -526,32 +553,6 @@
     <category term="链表" scheme="http://dpm12345.top/tags/%E9%93%BE%E8%A1%A8/"/>
     
     <category term="双指针（快慢指针）" scheme="http://dpm12345.top/tags/%E5%8F%8C%E6%8C%87%E9%92%88%EF%BC%88%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88%EF%BC%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 第 273 场周赛</title>
-    <link href="http://dpm12345.top/posts/80d31d12/"/>
-    <id>http://dpm12345.top/posts/80d31d12/</id>
-    <published>2021-12-28T15:20:34.000Z</published>
-    <updated>2025-12-28T09:04:17.932Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;【战绩】&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/dpm12345/blog/master/blog_images/0e6a6dd0a2bc3cec8e2d083c1d2d9b85.png&quot; alt=&quot;&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="leetcode" scheme="http://dpm12345.top/categories/leetcode/"/>
-    
-    <category term="leetcode周赛" scheme="http://dpm12345.top/categories/leetcode/week-competition/"/>
-    
     
   </entry>
   
