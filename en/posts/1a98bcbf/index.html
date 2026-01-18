@@ -17,15 +17,15 @@
     
 <link rel="stylesheet" href="/css/loader.css">
 
-    <meta name="description" content="消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  1  记忆类型 四种记忆类型  工作记忆（WorkingMemory） 情景记忆（Ep">
+    <meta name="description" content="消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):">
 <meta property="og:type" content="article">
 <meta property="og:title" content="构建自己的Agent框架">
 <meta property="og:url" content="http://dpm12345.top/en/posts/1a98bcbf/index.html">
 <meta property="og:site_name" content="dpm12345">
-<meta property="og:description" content="消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  1  记忆类型 四种记忆类型  工作记忆（WorkingMemory） 情景记忆（Ep">
+<meta property="og:description" content="消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-16T10:40:40.000Z">
-<meta property="article:modified_time" content="2026-01-18T11:14:59.816Z">
+<meta property="article:modified_time" content="2026-01-18T14:14:59.717Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="Agent">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
     <div class="sidebar-wrap" data-aos="fade-up">
           <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text"> 消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86"><span class="toc-number">2.</span> <span class="toc-text"> 记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%AE%9E%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text"> 记忆实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text"> 记忆类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 工作记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E6%99%AF%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 情景记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 语义记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%84%9F%E7%9F%A5%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 感知记忆</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text"> 检索</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text"> 消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86"><span class="toc-number">2.</span> <span class="toc-text"> 记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%AE%9E%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text"> 记忆实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text"> 记忆配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.3.</span> <span class="toc-text"> 记忆类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 工作记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E6%99%AF%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 情景记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 语义记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%84%9F%E7%9F%A5%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.4.</span> <span class="toc-text"> 感知记忆</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text"> 检索</span></a></li></ol>
 </div>
 </div>
           <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -324,15 +324,29 @@
 <li>importance：记忆重要程度</li>
 <li>metadata：记忆元数据</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MemoryItem</span>(<span class="title class_ inherited__">BaseModel</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;记忆项数据结构&quot;&quot;&quot;</span></span><br><span class="line">    <span class="built_in">id</span>: <span class="built_in">str</span></span><br><span class="line">    content: <span class="built_in">str</span></span><br><span class="line">    memory_type: <span class="built_in">str</span></span><br><span class="line">    user_id: <span class="built_in">str</span></span><br><span class="line">    timestamp: datetime</span><br><span class="line">    importance: <span class="built_in">float</span> = <span class="number">0.5</span></span><br><span class="line">    metadata: <span class="type">Dict</span>[<span class="built_in">str</span>, <span class="type">Any</span>] = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Config</span>:</span><br><span class="line">        arbitrary_types_allowed = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<p>其中，<code>class Config</code>为Pydantic的模型配置选项，<code>arbitrary_types_allowed = True</code> 表示 Pydantic 会允许字段包含任意的 Python 对象实例，而不仅仅是 JSON 可序列化的类型。</p>
+<h3 id="记忆配置"><a class="markdownIt-Anchor" href="#记忆配置"></a> 记忆配置</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MemoryConfig</span>(<span class="title class_ inherited__">BaseModel</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;记忆系统配置&quot;&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 存储路径</span></span><br><span class="line">    storage_path: <span class="built_in">str</span> = <span class="string">&quot;./memory_data&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 统计显示用的基础配置（仅用于展示）</span></span><br><span class="line">    max_capacity: <span class="built_in">int</span> = <span class="number">100</span></span><br><span class="line">    importance_threshold: <span class="built_in">float</span> = <span class="number">0.1</span></span><br><span class="line">    decay_factor: <span class="built_in">float</span> = <span class="number">0.95</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 工作记忆特定配置</span></span><br><span class="line">    working_memory_capacity: <span class="built_in">int</span> = <span class="number">10</span></span><br><span class="line">    working_memory_tokens: <span class="built_in">int</span> = <span class="number">2000</span></span><br><span class="line">    working_memory_ttl_minutes: <span class="built_in">int</span> = <span class="number">120</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 感知记忆特定配置</span></span><br><span class="line">    perceptual_memory_modalities: <span class="type">List</span>[<span class="built_in">str</span>] = [<span class="string">&quot;text&quot;</span>, <span class="string">&quot;image&quot;</span>, <span class="string">&quot;audio&quot;</span>, <span class="string">&quot;video&quot;</span>]</span><br></pre></td></tr></table></figure>
 <h3 id="记忆类型"><a class="markdownIt-Anchor" href="#记忆类型"></a> 记忆类型</h3>
 <p>四种记忆类型</p>
 <ol>
-<li>工作记忆（WorkingMemory）</li>
-<li>情景记忆（EpisodicMemory）</li>
-<li>语义记忆（SemanticMemory）</li>
-<li>感知记忆（PerceptualMemory）</li>
+<li>工作记忆（WorkingMemory）：负责存储当前对话会话中的临时信息。采用内存（列表）进行存储，</li>
+<li>情景记忆（EpisodicMemory）：负责存储事件的完整性和时间序列关系。采用 SQLite+Qdrant 的混合存储方案，SQLite负责结构化数据的存储和复杂查询，Qdrant负责高效的向量检索。</li>
+<li>语义记忆（SemanticMemory）：负责存储抽象的概念、规则和知识。采用了Neo4j图数据库和Qdrant向量数据库的混合架构，这种设计让系统既能进行快速的语义检索，又能利用知识图谱进行复杂的关系推理。</li>
+<li>感知记忆（PerceptualMemory）：负责文本、图像、音频等多种模态的数据存储和检索。它采用了模态分离的存储策略，为不同模态的数据创建独立的向量集合。</li>
 </ol>
+<p>对于一个记忆，其所需的动作如下</p>
+<ul>
+<li>添加记忆</li>
+<li>检索记忆</li>
+<li>更新记忆</li>
+<li>删除记忆</li>
+<li>判断记忆是否存在</li>
+<li>清空记忆</li>
+<li>获取记忆统计信息</li>
+</ul>
+<p>故这里创建一个记忆基类 <code>BaseMemory</code>，用于定义所有记忆的</p>
 <h4 id="工作记忆"><a class="markdownIt-Anchor" href="#工作记忆"></a> 工作记忆</h4>
 <h4 id="情景记忆"><a class="markdownIt-Anchor" href="#情景记忆"></a> 情景记忆</h4>
 <h4 id="语义记忆"><a class="markdownIt-Anchor" href="#语义记忆"></a> 语义记忆</h4>
@@ -364,7 +378,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
     <div class="article-nav-link-wrap right">
-          <img data-src="https://pic1.imgdb.cn/item/63c56acfbe43e0d30e762b82.jpg" data-sizes="auto" alt="Agent 经典范式构建" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e7b1be43e0d30e150ec0.jpg" data-sizes="auto" alt="Agent 经典范式构建" class="lazyload">
       <a href="/en/posts/1c62f5a8/" aria-label="Next: Agent 经典范式构建"  title="Next: Agent 经典范式构建"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -413,10 +427,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        45.7k
+        46.1k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        03:52
+        03:54
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -438,7 +452,7 @@
   <div class="sidebar-wrap">
         <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
 <div class="sidebar-toc-wrapper toc-div-class" >
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text"> 消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86"><span class="toc-number">2.</span> <span class="toc-text"> 记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%AE%9E%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text"> 记忆实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text"> 记忆类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 工作记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E6%99%AF%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 情景记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 语义记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%84%9F%E7%9F%A5%E8%AE%B0%E5%BF%86"><span class="toc-number">2.2.4.</span> <span class="toc-text"> 感知记忆</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text"> 检索</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B6%88%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text"> 消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86"><span class="toc-number">2.</span> <span class="toc-text"> 记忆</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E5%AE%9E%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text"> 记忆实体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E9%85%8D%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text"> 记忆配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.3.</span> <span class="toc-text"> 记忆类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 工作记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%83%85%E6%99%AF%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 情景记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%AD%E4%B9%89%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 语义记忆</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%84%9F%E7%9F%A5%E8%AE%B0%E5%BF%86"><span class="toc-number">2.3.4.</span> <span class="toc-text"> 感知记忆</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E7%B4%A2"><span class="toc-number">3.</span> <span class="toc-text"> 检索</span></a></li></ol>
 </div>
 </div>
         <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
@@ -616,9 +630,9 @@
           url: "http://dpm12345.top/posts/1a98bcbf/",
           excerpt: "",
           description: "",
-          stripContent: " 消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  1  记忆类型 四种记忆类型  工作记忆（WorkingMemory） 情景记忆（EpisodicMemory） 语义记忆（SemanticMemory） 感知记忆（Perceptual",
+          stripContent: " 消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):    &amp;quot;&amp;quot;&amp;quot;记忆项数据结构&amp;quot;&amp;quot;&amp;quot;   ",
           date: "Fri Jan 16 2026 18:40:40 GMT+0800",
-          updated: "Sun Jan 18 2026 19:14:59 GMT+0800",
+          updated: "Sun Jan 18 2026 22:14:59 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
