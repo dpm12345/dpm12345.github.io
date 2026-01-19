@@ -25,7 +25,7 @@
 <meta property="og:description" content="消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-16T10:40:40.000Z">
-<meta property="article:modified_time" content="2026-01-19T06:15:01.720Z">
+<meta property="article:modified_time" content="2026-01-19T07:15:03.203Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="Agent">
 <meta name="twitter:card" content="summary">
@@ -656,6 +656,15 @@
 </ol>
 <p>得到处理好后的分块文本后，按照<code>batch_size</code>，分批次使用嵌入模型对所有数据进行向量化处理</p>
 <p>对生成的向量进行统一格式处理，确保最终格式为 <code>List[List[float]]</code></p>
+<p>遍历原始分块 <code>chunks</code>，封装</p>
+<p>为每个切片构建元数据字典 <code>meta</code>，包含：</p>
+<ul>
+<li>基础信息：<code>memory_id</code>, <code>user_id</code>。</li>
+<li>重要：<code>content</code> 字段存储的是原始 Markdown 内容（非预处理后的），以便检索后展示给用户。</li>
+<li>RAG 标识：<code>rag_namespace</code>, <code>data_source</code> 等标签，用于后续检索过滤。</li>
+<li>合并切片原本携带的 <code>metadata</code>（如文件路径、页码等）。</li>
+</ul>
+<p>最后将向量和元数据存入到向量数据库中</p>
 <h3 id="高级检索策略"><a class="markdownIt-Anchor" href="#高级检索策略"></a> 高级检索策略</h3>
 <h4 id="多查询扩展mqe"><a class="markdownIt-Anchor" href="#多查询扩展mqe"></a> 多查询扩展（MQE）</h4>
 <p>让ai生成同一问题的不同问法，然后再进行检索增强</p>
@@ -687,7 +696,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
     <div class="article-nav-link-wrap right">
-          <img data-src="https://pic1.imgdb.cn/item/63c56aa8be43e0d30e75e85b.jpg" data-sizes="auto" alt="Agent 经典范式构建" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c5e1c1be43e0d30e0e6854.jpg" data-sizes="auto" alt="Agent 经典范式构建" class="lazyload">
       <a href="/en/posts/1c62f5a8/" aria-label="Next: Agent 经典范式构建"  title="Next: Agent 经典范式构建"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -736,7 +745,7 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        51.9k
+        52k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         04:18
@@ -941,7 +950,7 @@
           description: "",
           stripContent: " 消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):    &amp;quot;&amp;quot;&amp;quot;记忆项数据结构&amp;quot;&amp;quot;&amp;quot;   ",
           date: "Fri Jan 16 2026 18:40:40 GMT+0800",
-          updated: "Mon Jan 19 2026 14:15:01 GMT+0800",
+          updated: "Mon Jan 19 2026 15:15:03 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
