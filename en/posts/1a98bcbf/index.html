@@ -25,7 +25,7 @@
 <meta property="og:description" content="消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-01-16T10:40:40.000Z">
-<meta property="article:modified_time" content="2026-01-18T18:15:04.316Z">
+<meta property="article:modified_time" content="2026-01-19T06:15:01.720Z">
 <meta property="article:author" content="dpm12345">
 <meta property="article:tag" content="Agent">
 <meta name="twitter:card" content="summary">
@@ -604,10 +604,58 @@
 <h3 id="架构设计"><a class="markdownIt-Anchor" href="#架构设计"></a> 架构设计</h3>
 <h4 id="多模态文档载入"><a class="markdownIt-Anchor" href="#多模态文档载入"></a> 多模态文档载入</h4>
 <p>无论输入是PDF、Word、Excel、图片还是音频，最终都会转换为标准的Markdown格式，然后进入统一的分块、向量化和存储流程。</p>
+<p>使用工具 <code>MarkItDown</code>：<a target="_blank" rel="noopener" href="https://github.com/microsoft/markitdown">https://github.com/microsoft/markitdown</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">_convert_to_markdown</span>(<span class="params">path: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Universal document reader using MarkItDown with enhanced PDF processing.</span></span><br><span class="line"><span class="string">    Converts any supported file format to markdown text.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(path):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 对PDF文件使用增强处理</span></span><br><span class="line">    ext = (os.path.splitext(path)[<span class="number">1</span>] <span class="keyword">or</span> <span class="string">&#x27;&#x27;</span>).lower()</span><br><span class="line">    <span class="keyword">if</span> ext == <span class="string">&#x27;.pdf&#x27;</span>:</span><br><span class="line">        <span class="keyword">return</span> _enhanced_pdf_processing(path)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 其他格式使用原有MarkItDown</span></span><br><span class="line">    md_instance = _get_markitdown_instance()</span><br><span class="line">    <span class="keyword">if</span> md_instance <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">return</span> _fallback_text_reader(path)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        result = md_instance.convert(path)</span><br><span class="line">        text = <span class="built_in">getattr</span>(result, <span class="string">&quot;text_content&quot;</span>, <span class="literal">None</span>)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">isinstance</span>(text, <span class="built_in">str</span>) <span class="keyword">and</span> text.strip():</span><br><span class="line">            <span class="keyword">return</span> text</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">    <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;[WARNING] MarkItDown failed for <span class="subst">&#123;path&#125;</span>: <span class="subst">&#123;e&#125;</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> _fallback_text_reader(path)</span><br></pre></td></tr></table></figure>
+<p>其中<code>_enhanced_pdf_processing</code>为增强pdf处理，首先同样使用 <code>MarkItDown</code>转换成文本，然后智能处理得到文中的噪音文本（单个字符行、页眉页脚）、短行等数据</p>
 <h4 id="智能分块策略"><a class="markdownIt-Anchor" href="#智能分块策略"></a> 智能分块策略</h4>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">标准Markdown文本 → 标题层次解析 → 段落语义分割 → Token计算分块 → 重叠策略优化 → 向量化准备</span><br><span class="line">       ↓                ↓              ↓            ↓           ↓            ↓</span><br><span class="line">   统一格式          <span class="comment">#/##/###        语义边界      大小控制     信息连续性    嵌入向量</span></span><br><span class="line">   结构清晰          层次识别        完整性保证    检索优化     上下文保持    相似度匹配</span><br></pre></td></tr></table></figure>
+<p><code>hello-agents</code>的段落分割代码存在bug，当正文中出现代码块，而代码块中使用<code>#</code>进行注释时，<font style="background-color:#117CEE;">其会将注释行作为一个段落标题，这里需要找时间进行修复</font></p>
 <p>在Markdown段落分割的基础上，系统进一步根据Token数量进行智能分块。由于输入已经是结构化的Markdown文本，系统可以更精确地控制分块边界，确保每个分块既适合向量化处理，又保持Markdown结构的完整性：</p>
 <p>同时为了兼容不同语言，系统实现了针对中英文混合文本的Token估算算法，这对于准确控制分块大小至关重要：</p>
 <h4 id="统一嵌入与向量存储"><a class="markdownIt-Anchor" href="#统一嵌入与向量存储"></a> 统一嵌入与向量存储</h4>
+<p>在前面分块的基础上，将分块内容转换为向量，然后进行存储</p>
+<p>由于<code>markdown</code>格式的文本存在 <code>标题#</code>、<code>粗体 *</code>、<code>链接 []()</code>等符号，这对于语义理解来说通常是噪音，故这里使用 <code>_preprocess_markdown_for_embedding</code>，预处理分块的markdown文本，清除噪音</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">_preprocess_markdown_for_embedding</span>(<span class="params">text: <span class="built_in">str</span></span>) -&gt; <span class="built_in">str</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    Preprocess markdown text for better embedding quality.</span></span><br><span class="line"><span class="string">    Removes excessive markup while preserving semantic content.</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">import</span> re</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Remove markdown headers symbols but keep the text</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;^#&#123;1,6&#125;\s+&#x27;</span>, <span class="string">&#x27;&#x27;</span>, text, flags=re.MULTILINE)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Remove markdown links but keep the text</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;\[([^\]]+)\]\([^)]+\)&#x27;</span>, <span class="string">r&#x27;\1&#x27;</span>, text)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Remove markdown emphasis markers</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;\*\*([^*]+)\*\*&#x27;</span>, <span class="string">r&#x27;\1&#x27;</span>, text)  <span class="comment"># bold</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;\*([^*]+)\*&#x27;</span>, <span class="string">r&#x27;\1&#x27;</span>, text)      <span class="comment"># italic</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;`([^`]+)`&#x27;</span>, <span class="string">r&#x27;\1&#x27;</span>, text)        <span class="comment"># inline code</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Remove markdown code blocks but keep content</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;```[^\n]*\n([\s\S]*?)```&#x27;</span>, <span class="string">r&#x27;\1&#x27;</span>, text)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Remove excessive whitespace</span></span><br><span class="line">    text = re.sub(<span class="string">r&#x27;\n\s*\n&#x27;</span>, <span class="string">&#x27;\n\n&#x27;</span>, text)</span><br><span class="line">    text = re.sub(<span class="string">r&#x27;[ \t]+&#x27;</span>, <span class="string">&#x27; &#x27;</span>, text)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> text.strip()</span><br></pre></td></tr></table></figure>
+<p>具体做了以下 6 项清理工作：</p>
+<ol>
+<li>移除标题符号 (<code>#</code>)：
+<ul>
+<li><code>re.sub(r'^#{1,6}\s+', '', ...)</code></li>
+<li>去掉行首类似 <code>## 标题</code> 中的 <code>## </code>，保留“标题”文字。</li>
+</ul>
+</li>
+<li>移除链接格式：
+<ul>
+<li><code>re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', ...)</code></li>
+<li>将 <code>[OpenAI](https://openai.com)</code> 转换为 <code>OpenAI</code>，只保留显示文本。</li>
+</ul>
+</li>
+<li>移除强调标记（加粗、斜体、行内代码）：
+<ul>
+<li>去除 <code>**加粗**</code>、<code>*斜体*</code> 和 <code>代码</code> 两侧的符号，只保留内部文字。</li>
+</ul>
+</li>
+<li>移除代码块包裹：
+<ul>
+<li><code>re.sub(r'```[^\n]*\n([\s\S]*?)```', r'\1', ...)</code></li>
+<li>移除代码块的开始和结束标记（```），保留代码块内的内容。</li>
+</ul>
+</li>
+<li>规范化换行：
+<ul>
+<li><code>re.sub(r'\n\s*\n', '\n\n', ...)</code></li>
+<li>将连续的多个空行合并为标准的双换行（段落分隔），避免因为空行过多影响分块。</li>
+</ul>
+</li>
+<li>压缩空白字符：
+<ul>
+<li><code>re.sub(r'[ \t]+', ' ', ...)</code></li>
+<li>将连续的空格或制表符替换为单个空格。</li>
+</ul>
+</li>
+</ol>
+<p>得到处理好后的分块文本后，按照<code>batch_size</code>，分批次使用嵌入模型对所有数据进行向量化处理</p>
+<p>对生成的向量进行统一格式处理，确保最终格式为 <code>List[List[float]]</code></p>
 <h3 id="高级检索策略"><a class="markdownIt-Anchor" href="#高级检索策略"></a> 高级检索策略</h3>
 <h4 id="多查询扩展mqe"><a class="markdownIt-Anchor" href="#多查询扩展mqe"></a> 多查询扩展（MQE）</h4>
 <p>让ai生成同一问题的不同问法，然后再进行检索增强</p>
@@ -639,7 +687,7 @@
   </div>
     <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
     <div class="article-nav-link-wrap right">
-          <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="Agent 经典范式构建" class="lazyload">
+          <img data-src="https://pic1.imgdb.cn/item/63c56aa8be43e0d30e75e85b.jpg" data-sizes="auto" alt="Agent 经典范式构建" class="lazyload">
       <a href="/en/posts/1c62f5a8/" aria-label="Next: Agent 经典范式构建"  title="Next: Agent 经典范式构建"></a>
       <div class="article-nav-caption">Next</div>
       <h3 class="article-nav-title">
@@ -688,10 +736,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        51k
+        51.9k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        04:14
+        04:18
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -893,7 +941,7 @@
           description: "",
           stripContent: " 消息 建立消息基类  记忆  记忆实体 这里将每一段记忆都定义成为一个 MemoryItem对象，其中包含  id：记忆对象id content：记忆内容 memory_type：记忆类型 user_id：用户id timestamp：时间戳 importance：记忆重要程度 metadata：记忆元数据  123456789101112class MemoryItem(BaseModel):    &amp;quot;&amp;quot;&amp;quot;记忆项数据结构&amp;quot;&amp;quot;&amp;quot;   ",
           date: "Fri Jan 16 2026 18:40:40 GMT+0800",
-          updated: "Mon Jan 19 2026 02:15:04 GMT+0800",
+          updated: "Mon Jan 19 2026 14:15:01 GMT+0800",
           cover: "/images/banner.webp",
         };
       </script>
